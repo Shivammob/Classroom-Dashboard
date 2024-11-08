@@ -1,0 +1,178 @@
+/* Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+    .slick-list:focus {
+        outline: none;
+    }
+
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .slick-track:before,
+    .slick-track:after {
+        display: table;
+        content: '';
+    }
+
+    .slick-track:after {
+        clear: both;
+    }
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    background-color: rgba(186, 24, 24, 0.3) /*rgba(33, 150, 243, 0.2)*/;
+    margin: 5px 8px;
+    min-height: 1px;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.timetable-date {
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.3);
+    display: inline-block;
+}
+
+.timetable-day {
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.8);
+    display: inline-block;
+    font-weight: bold;
+}
+
+.timetable-teacher {
+    font-size: 1rem;
+    color: rgba(0,0,0,0.4);
+    float: right;
+    display: block;
+}
+
+.week-days {
+    border-radius: 6px !important;
+}
+
+.day-border {
+    border-right: 1px solid #999;
+}
+
+.timetable-start {
+    color: rgba(0,0,0,0.8);
+    font-weight: 600;
+}
+
+.timetable-end {
+    color: rgba(0,0,0,0.3);
+}
+
+.timetable-ellipsis {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*-webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;*/
+}
+
+    .timetable-ellipsis button {
+        background: transparent;
+        border: 0;
+        outline: none;
+        color: #555758;
+        opacity: .3;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+        filter: alpha(opacity=30);
+        margin: 0 .5rem 0 0;
+    }
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+    cursor:pointer;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.calender_click.slick-slide.slick-active:hover {
+    background-color: rgba(186, 24, 24, 0.6) /*rgba(33, 150, 243, 0.5)*/;
+}
+.calender_click.slick-slide.slick-active-clicked {
+    background-color: rgba(186, 24, 24, 0.5);    
+}
+.btn-default {
+    background-color: #ffffff !important;
+    border-radius: 20px !important;
+}

@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Admin - My Users</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+     <!-- dataTable css -->
+    <link href="css/addons/datatables.min.css" rel="stylesheet">
+    <link href="css/addons/datatables-select.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/addons/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <!-- <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a> -->
+                <a href="user-manage-user.html" class="list-group-item mt-2">
+                    <span class="ic-my-user title-icon"></span>My Users
+                </a>
+                <a href="roles-school-admin.html" class="list-group-item">
+                    <span class="ic-role-permissions title-icon"></span>Roles and Permissions
+                </a>
+
+                <a href="#auditmenu" class="list-group-item has-submenu" data-toggle="collapse" aria-expanded="false">
+					<span class="ic-notification title-icon"></span>Notification
+				</a>
+				<div id="auditmenu" class="collapse show sub-menu">
+					<a href="notification-profile.html" class="active"><i class="fas fa-minus mr-2"></i>Notification Profile</a>
+					<a href="reminder-profile.html"><i class="fas fa-minus mr-2"></i>Reminder</a>
+				</div>
+                <a href="#masters" class="list-group-item has-submenu" data-toggle="collapse" aria-expanded="false">
+					<span class="ic-master title-icon"></span>Masters
+				</a>
+				<div id="masters" class="collapse sub-menu">
+					<a href="#"><i class="fas fa-minus mr-2"></i>Business Unit</a>
+					<a href="#"><i class="fas fa-minus mr-2"></i>Map User Location</a>
+                    <a href="#"><i class="fas fa-minus mr-2"></i>Incident Category</a>
+				</div>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-students title-icon"></span>Student
+                </a>
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-parent title-icon"></span>Parent
+                </a>
+                <!-- <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a> -->
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid mt-3 mb-4">
+            <!-- subheader start -->
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+						<div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+							<h3 class="page-title text-capitalize text-blue text-semibold m-0">My users</h3>
+							<ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+								<li class="font-small text-medium"><a href="#" class="text-primary">Home</a></li>
+								<li class="font-small text-blue text-medium">My users</li>
+							</ul>
+						</div>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3 mr-2" type="button" data-toggle="modal" data-target="#bulk-password">
+                                Bulk Generate Password
+                            </button>
+                            <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3 mr-2" type="button" data-toggle="modal" data-target="#addNotification">
+                                Import User
+                            </button>
+                            <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3 mr-2" type="button" data-toggle="modal" data-target="#bulk-password">
+                                Add User
+                            </button>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<!-- subheader end -->
+
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+							<div class="pill-panel p-4">
+                                <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                                    role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0 " data-toggle="pill"
+                                            href="#student-List" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">Users List</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0 active" id="pills-profile-tab"
+                                            data-toggle="pill" href="#import-history" role="tab" aria-selected="false">Import history</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="">
+                                    <!-- student-List tab -->
+                                    <div class="tab-pane fade " id="student-List" role="tabpanel">
+                                        <!--Data filter -->
+                                        <div class="row">
+                                            <div
+                                                class="col-md-12 col-12 d-flex search-filter justify-content-between align-items-start flex-column flex-md-row">
+                                                <div class="md-form md-outline mb-0 w-75">
+                                                    <div class="d-flex w-100 flex-wrap">
+                                                        <div
+                                                            class="search-box d-flex justify-content-between align-items-center w-75 mr-2 mb-2">
+                                                            <input type="text" class="form-control bg-white border m-0 "
+                                                                placeholder="Search a keyword">
+                                                            <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                                        </div>
+                                                        <button
+                                                            class="btn bg-blue text-white d-flex align-items-center rounded-2x m-0 px-3 mb-2"
+                                                            type="button" data-toggle="modal"
+                                                            data-target="#users-list-filter">
+                                                            <i class="icon-filter text-semibold ic-2x mr-1"></i> Filter
+                                                            <span class="filter-count ml-1">(4)</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="order-category">
+                                                    <div
+                                                        class="box-height d-flex d-sm-inline-flex align-items-center border rounded-2x py-2 pl-2 my-2 my-sm-0">
+                                                        <span class="d-inline-block font-small flex-shrink-0">Order By
+                                                            :</span>
+                                                        <div class="md-form md-outline m-0">
+                                                            <select class="selectpicker"
+                                                                data-dropdown-align-right="true"
+                                                                data-style="border-0 font-small py-0 px-1"
+                                                                data-width="130px">
+                                                                <option selected="selected">Complete</option>
+                                                                <option>incomplete</option>
+                                                                <option>Category</option>
+                                                                <option>Date Occured</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Data filter end-->
+                                        <div class="row px-2 py-2">
+                                            <div class="col-md-12 col-12 d-flex align-items-center justify-content-end">
+                                                <div class="download-selection md-form md-outline m-0 d-flex d-sm-inline-flex">
+                                                    <select class="selectpicker" data-dropdown-align-right="true" title="Download"
+                                                        data-style="rounded-2x py-2" data-width="fit">
+                                                        <option>As PDF</option>
+                                                        <option>As Excel</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="mb-4 mt-2">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-12">
+                                                <table id="notificationList" class="table table-hover table-responsive-md" cellspacing="0"
+                                                    width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Module</th>
+                                                            <th style="width:200px">Profile Name</th>
+                                                            <th>Email</th>
+                                                            <th>SMS</th>
+                                                            <th>Web</th>
+                                                            <th style="width:320px">Description</th>
+                                                            <th class="text-center">Permissions</th>
+                                                            <th class="text-center">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-black-50 text-semibold">Zncident</td>
+                                                            <td class="text-medium">MSO HSE Committee</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">No</td>
+                                                            <td class="text-medium">
+                                                                Monthly First Aid contents Notification. Medical Staff MSO & MSO Admin will get Notified.
+                                                            </td>
+                                                            <td style="text-align: -webkit-center;"><a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-2 d-flex align-items-center justify-content-center">
+                                                                <i class="icon-plus ic-2x text-semibold"></i>
+                                                            </a></td>
+                                                            <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-black-50 text-semibold">Incident</td>
+                                                            <td class="text-medium">MSO HSE Committee</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">No</td>
+                                                            <td class="text-medium">
+                                                                Monthly First Aid contents Notification. Medical Staff MSO & MSO Admin will get Notified.
+                                                            </td>
+                                                            <td style="text-align: -webkit-center;"><a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-2 d-flex align-items-center justify-content-center">
+                                                                <i class="icon-plus ic-2x text-semibold"></i>
+                                                            </a></td>
+                                                            <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-black-50 text-semibold">Incident</td>
+                                                            <td class="text-medium">MSO HSE Committee</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">No</td>
+                                                            <td class="text-medium">
+                                                                Monthly First Aid contents Notification. Medical Staff MSO & MSO Admin will get Notified.
+                                                            </td>
+                                                            <td style="text-align: -webkit-center;"><a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-2 d-flex align-items-center justify-content-center">
+                                                                <i class="icon-plus ic-2x text-semibold"></i>
+                                                            </a></td>
+                                                            <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-black-50 text-semibold">Incident</td>
+                                                            <td class="text-medium">MSO HSE Committee</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">No</td>
+                                                            <td class="text-medium">
+                                                                Monthly First Aid contents Notification. Medical Staff MSO & MSO Admin will get Notified.
+                                                            </td>
+                                                            <td style="text-align: -webkit-center;"><a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-2 d-flex align-items-center justify-content-center">
+                                                                <i class="icon-plus ic-2x text-semibold"></i>
+                                                            </a></td>
+                                                            <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-black-50 text-semibold">Incident</td>
+                                                            <td class="text-medium">MSO HSE Committee</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">No</td>
+                                                            <td class="text-medium">
+                                                                Monthly First Aid contents Notification. Medical Staff MSO & MSO Admin will get Notified.
+                                                            </td>
+                                                            <td style="text-align: -webkit-center;"><a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-2 d-flex align-items-center justify-content-center">
+                                                                <i class="icon-plus ic-2x text-semibold"></i>
+                                                            </a></td>
+                                                            <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-black-50 text-semibold">Kncident</td>
+                                                            <td class="text-medium">MSO HSE Committee</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">No</td>
+                                                            <td class="text-medium">
+                                                                Monthly First Aid contents Notification. Medical Staff MSO & MSO Admin will get Notified.
+                                                            </td>
+                                                            <td style="text-align: -webkit-center;"><a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-2 d-flex align-items-center justify-content-center">
+                                                                <i class="icon-plus ic-2x text-semibold"></i>
+                                                            </a></td>
+                                                            <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-black-50 text-semibold">Ancident</td>
+                                                            <td class="text-medium">MSO HSE Committee</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">Yes</td>
+                                                            <td class="text-medium">No</td>
+                                                            <td class="text-medium">
+                                                                Monthly First Aid contents Notification. Medical Staff MSO & MSO Admin will get Notified.
+                                                            </td>
+                                                            <td style="text-align: -webkit-center;"><a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-2 d-flex align-items-center justify-content-center">
+                                                                <i class="icon-plus ic-2x text-semibold"></i>
+                                                            </a></td>
+                                                            <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- student-List tab end-->
+                                    <!-- import-history tab -->
+                                    <div class="tab-pane fade show active" id="import-history" role="tabpanel">
+                                        <!--Data filter -->
+                                        <div class="row">
+                                            <div
+                                                class="col-md-12 col-12 d-flex search-filter justify-content-between align-items-start flex-column flex-md-row">
+                                                <div class="md-form md-outline mb-0 w-75">
+                                                    <div class="d-flex w-100 flex-wrap">
+                                                        <div
+                                                            class="search-box d-flex justify-content-between align-items-center w-75 mr-2 mb-2">
+                                                            <input type="text" class="form-control bg-white border m-0 "
+                                                                placeholder="Search a keyword">
+                                                            <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                                        </div>
+                                                        <button
+                                                            class="btn bg-blue text-white d-flex align-items-center rounded-2x m-0 px-3 mb-2"
+                                                            type="button" data-toggle="modal"
+                                                            data-target="#myuser-history-filter">
+                                                            <i class="icon-filter text-semibold ic-2x mr-1"></i> Filter
+                                                            <span class="filter-count ml-1">(4)</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="order-category">
+                                                    <div
+                                                        class="box-height d-flex d-sm-inline-flex align-items-center border rounded-2x py-2 pl-2 my-2 my-sm-0">
+                                                        <span class="d-inline-block font-small flex-shrink-0">Order By
+                                                            :</span>
+                                                        <div class="md-form md-outline m-0">
+                                                            <select class="selectpicker"
+                                                                data-dropdown-align-right="true"
+                                                                data-style="border-0 font-small py-0 px-1"
+                                                                data-width="130px">
+                                                                <option selected="selected">Complete</option>
+                                                                <option>incomplete</option>
+                                                                <option>Category</option>
+                                                                <option>Date Occured</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Data filter end-->
+                                        <div class="row">
+                                            <div class="col-lg-12 col-12">
+                                                <table id="myUserList" class="table table-hover  myUserTable table-responsive-md" cellspacing="0"
+                                                width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th> <span class="position-relative">User Name</span> </th>
+                                                        <th> <span class="position-relative">Profile Name</span> </th>
+                                                        <th> <span class="position-relative">Email</span> </th>
+                                                        <th> <span class="position-relative">Role</span> </th>
+                                                        <th> <span class="position-relative">School</span> </th>
+                                                        <th class="th-lg"> <span class="position-relative">Generate Password</span> </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-black-50 text-semibold">a.surendranath_gaa</td>
+                                                        <td class="text-medium">AABHA SURENDRANATH PREMA</td>
+                                                        <td class="text-medium">1401_a.surendranath_gaa@gemsedu.com</td>
+                                                        <td class="text-medium">School Staff</td>
+                                                        <td class="text-medium">GAA</td>
+                                                        <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div></td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td class="text-black-50 text-semibold">skda.surendranath</td>
+                                                        <td class="text-medium"> KOMAL PATIL</td>
+                                                        <td class="text-medium">1401_a.surendranath_gaa@gemsedu.comeeeeeeeee</td>
+                                                        <td class="text-medium">School Stafddddf</td>
+                                                        <td class="text-medium">GSSSAA</td>
+                                                        <td style="text-align: -webkit-center;"><div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div></td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- import-history tab end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                            
+        </div>
+    </main>
+
+    <!--Add Notifiaction drawer -->
+      <div class="modal fade right" id="addNotification" tabindex="-1" role="dialog"
+      aria-labelledby="" aria-hidden="true">
+      <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+          <div class="modal-content rounded-0">
+              <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                  <h5 class="modal-title text-capitalize w-100 text-primary text-semibold text-medium line-height-1" id="myModalLabel">Add Notifiaction Profile</h5>
+                  <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                      <i class="icon-cross ic-3x text-primary"></i>
+                  </button>
+              </div>
+              <div class="modal-body p-4">
+                 <div class="row">
+                    <div class="col-md-12 col-12">
+                        <div class="category">
+                            <small class="text-medium">Profile Name</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Name">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <small class="text-medium">Reminder Name</small>
+                        <div class="md-form md-outline mb-3">
+                            <input type="text" class="form-control bg-white">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                    <label class="text-capitalize font-small text-medium text-black d-block">Description</label>
+                    <div class="md-form md-outline">
+                        <textarea id="txtarea" class="md-textarea form-control" rows="3"></textarea>
+                    </div>
+                    </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-12 col-12">
+                        <div class="completion d-flex align-items-baseline justify-content-between border-bottom py-3">
+                            <h6 class="font-small text-medium">Every Day Till Completion?</h6>
+                            <div class="radio-button-option">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="completionyes" >
+                                    <label class="custom-control-label" for="completionyes">Yes</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="completionno"  checked>
+                                    <label class="custom-control-label" for="completionno">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="completion d-flex align-items-baseline justify-content-between border-bottom py-3">
+                            <h6 class="font-small text-medium">Every Day Before Due Date?</h6>
+                            <div class="radio-button-option">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="beforeyes" >
+                                    <label class="custom-control-label" for="beforeyes">Yes</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="beforeno"  checked>
+                                    <label class="custom-control-label" for="beforeno">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="due d-flex align-items-baseline justify-content-between border-bottom py-3">
+                            <h6 class="font-small text-medium">After Due Date?</h6>
+                            <div class="radio-button-option">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="dueyes" >
+                                    <label class="custom-control-label" for="dueyes">Yes</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="dueno" checked>
+                                    <label class="custom-control-label" for="dueno">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="start d-flex align-items-baseline justify-content-between py-3">
+                            <h6 class="font-small text-medium">Before Start Date?</h6>
+                            <div class="radio-button-option">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="startyes" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label" for="startyes">Yes</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="startno" name="inlineDefaultRadiosExample" checked>
+                                    <label class="custom-control-label" for="startno">No</label>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+              </div>
+              <div class="modal-footer justify-content-between border-0 py-2">
+                  <a href="#" class="download-link-blue font-small text-semibold text-capitalize">version excel template <i class="icon-download text-semibold ic-2x ml-2"></i></a>
+                 <div class="footer-buttons">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                 </div>
+              </div>
+          </div>
+      </div>
+     </div>
+  <!-- Add Notifiaction drawer end -->
+   <!--Add bulk password -->
+   <div class="modal fade right" id="bulk-password" tabindex="-1" role="dialog"
+   aria-labelledby="" aria-hidden="true">
+   <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+       <div class="modal-content rounded-0">
+           <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+               <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Bulk Generate Password</h5>
+               <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                   <i class="icon-cross ic-3x text-primary"></i>
+               </button>
+           </div>
+           <div class="modal-body p-4">
+               <div class="p-3 bg-light rounded-2x">
+                   <div class="row">
+                       <div class="col-md-4 col-12">
+                           <div class="category">
+                               <small class="text-medium text-black">Country</small>
+                               <div class="md-form md-outline mb-3">
+                                   <select class="selectpicker" data-style="btn-white border-0 px-3 text-black-50 text-semibold" data-size="5" title="All">
+                                       <option value="1">Accident</option>
+                                       <option value="23">Child Safeguarding</option>
+                                       <option value="4">Environmental Incident</option>
+                                       <option value="29">Fire</option>
+                                       <option value="2">Illness</option>
+                                       <option value="3">Near Miss</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 col-12">
+                           <div class="category w-100">
+                               <small class="text-medium text-black">City</small>
+                               <div class="md-form md-outline mb-3">
+                                   <select class="selectpicker" data-style="btn-white border-0 px-3 text-black-50 text-semibold" data-size="5" title="All">
+                                       <option value="1">Accident</option>
+                                       <option value="23">Child Safeguarding</option>
+                                       <option value="4">Environmental Incident</option>
+                                       <option value="29">Fire</option>
+                                       <option value="2">Illness</option>
+                                       <option value="3">Near Miss</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 col-12">
+                        <div class="category w-100">
+                            <small class="text-medium text-black">School</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white border-0 px-3 text-black-50 text-semibold" data-size="5" title="All">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                    <option value="3">Near Miss</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <small class="text-medium">Search</small>
+                        <div class="md-form md-outline mb-3 rounded-2x d-flex align-items-center flex-row-reverse bg-white flex-1 search-field-front-icon">
+                            <input type="text" class="form-control flex-1 p-0 border-0 m-0"
+                                placeholder="Search here..">
+                        </div>
+                    </div>
+                   </div>
+               </div>     
+               <div class="bulk-password-list mt-3">
+                      <div class="row">
+                        <div class="col-12">
+                            <div class="staff-list">
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                    <input type="checkbox" class="custom-control-input" id="Select-All">
+                                    <label class="custom-control-label text-capitalize" for="Select-All">Select All</label>
+                                </div>
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                    <input type="checkbox" class="custom-control-input" id="liberty">
+                                    <label class="custom-control-label text-capitalize" for="liberty">Liberty School for boys (LBS)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                    <input type="checkbox" class="custom-control-input" id="GGI">
+                                    <label class="custom-control-label text-capitalize" for="GGI">Garden Grove Institute(GGI)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                    <input type="checkbox" class="custom-control-input" id="Oyster">
+                                    <label class="custom-control-label text-capitalize" for="Oyster">Oyster harbour School(OHS)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                    <input type="checkbox" class="custom-control-input" id="Gems">
+                                    <label class="custom-control-label text-capitalize" for="Gems">Gems virtual School(GVS)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                    <input type="checkbox" class="custom-control-input" id="pioneer">
+                                    <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                    <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                    <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Select-All">
+                                 <label class="custom-control-label text-capitalize" for="Select-All">Select All</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="liberty">
+                                 <label class="custom-control-label text-capitalize" for="liberty">Liberty School for boys (LBS)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="GGI">
+                                 <label class="custom-control-label text-capitalize" for="GGI">Garden Grove Institute(GGI)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Oyster">
+                                 <label class="custom-control-label text-capitalize" for="Oyster">Oyster harbour School(OHS)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Gems">
+                                 <label class="custom-control-label text-capitalize" for="Gems">Gems virtual School(GVS)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="pioneer">
+                                 <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                 <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Select-All">
+                                 <label class="custom-control-label text-capitalize" for="Select-All">Select All</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="liberty">
+                                 <label class="custom-control-label text-capitalize" for="liberty">Liberty School for boys (LBS)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="GGI">
+                                 <label class="custom-control-label text-capitalize" for="GGI">Garden Grove Institute(GGI)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Oyster">
+                                 <label class="custom-control-label text-capitalize" for="Oyster">Oyster harbour School(OHS)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Gems">
+                                 <label class="custom-control-label text-capitalize" for="Gems">Gems virtual School(GVS)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="pioneer">
+                                 <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                             </div>
+                             <div class="custom-control custom-checkbox py-2 border-bottom">
+                                 <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                 <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                             </div>
+                            </div>   
+                        </div>
+                      </div>
+               </div>
+                
+           </div>
+           <div class="modal-footer justify-content-end border-0 py-2">
+               <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+               <button class="btn btn-primary m-0 waves-effect waves-light px-4" type="button">Save</button>
+           </div>
+       </div>
+   </div>
+   </div>
+   <!-- Add bulk password -->
+    <!--Add users -->
+    <div class="modal fade right" id="addUserAdmin" tabindex="-1" role="dialog"
+    aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+        <div class="modal-content rounded-0">
+            <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Add User</h5>
+                <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-cross ic-3x text-primary"></i>
+                </button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row mb-4">
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">First Name <span class="text-primary">*</span></small>
+                        <div class="md-form md-outline mb-3">
+                            <input type="text" class="form-control bg-white">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">Last Name <span class="text-primary">*</span></small>
+                        <div class="md-form md-outline mb-3">
+                            <input type="text" class="form-control bg-white">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <div class="category">
+                            <small class="text-medium">Designation <span class="text-primary">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Name">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">Email <span class="text-primary">*</span></small>
+                        <div class="md-form md-outline mb-3">
+                            <input type="email" class="form-control bg-white">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">Phone number <span class="text-primary">*</span></small>
+                        <div class="md-form md-outline mb-3">
+                            <!-- <input type="text" class="form-control bg-white"> -->
+                            <div class="md-outline bg-white rounded-2x d-flex align-items-center flex-column flex-sm-row mb-3 border">
+                                <img src="img/svg/lang-Eng.svg" alt="" class="pl-2">
+                                <div class="md-form md-outline date-category m-0">
+                                    <select class="selectpicker" data-style="btn-white border-0 px-2" data-size="5" title="+971" data-width="fit">
+                                        <option>+972</option>
+                                        <option>+971</option>
+                                    </select>
+                                </div>
+                                <div class="w-100">
+                                    <div class="d-flex justify-content-between align-items-center cursor-pointer flex-shrink-0">
+                                        <input type="text" class="form-control bg-white border-0 mb-0" placeholder="56xxxx xxx">
+                                        <!-- <span></span> <i class="icon-calendar ic-2x pr-2"></i> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                           
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">Date of Birth <span class="text-primary">*</span></small>
+                        <div class="md-form md-outline mb-3">
+                            <input type="email" class="form-control bg-white">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">Gender <span class="text-primary">*</span></small>
+                        <div class="radio-button-gender mt-2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="Male" name="severityRadios">
+                                <label class="custom-control-label text-black font-small text-semibold" for="Male">Male</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="Female" name="severityRadios" checked>
+                                <label class="custom-control-label text-black font-small text-semibold" for="Female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="text-bold">Home Location Info</h6>
+                <hr class="mb-3">  
+                <div class="row mb-4">
+                    <div class="col-md-6 col-12">
+                        <div class="category">
+                            <small class="text-medium">Country <span class="text-primary">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Name">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="category">
+                            <small class="text-medium">City <span class="text-primary">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Name">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="category">
+                            <small class="text-medium">School <span class="text-primary">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Name">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="category">
+                            <small class="text-medium">Current Status <span class="text-primary">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Name">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">Username <span class="text-primary">*</span></small>
+                        <div class="md-form md-outline mb-3">
+                            <input type="text" class="form-control bg-white">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <small class="text-medium">System Language <span class="text-primary">*</span></small>
+                        <div class="md-form md-outline mb-3">
+                            <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Name">
+                                <option value="1">Accident</option>
+                                <option value="23">Child Safeguarding</option>
+                                <option value="4">Environmental Incident</option>
+                                <option value="29">Fire</option>
+                                <option value="2">Illness</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="custom-control custom-checkbox py-2">
+                            <input type="checkbox" class="custom-control-input" id="semd-password">
+                            <label class="custom-control-label text-capitalize" for="semd-password">Send Password email to user</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-end border-0 py-2">
+                <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                <button class="btn btn-primary m-0 waves-effect waves-light px-4" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Add users -->
+
+    <!--users-list-filter drawer -->
+    <div class="modal fade right" id="users-list-filter" tabindex="-1" role="dialog" aria-labelledby=""
+    aria-hidden="true">
+    <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+        <div class="modal-content rounded-0">
+            <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">User List</h5>
+                <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-cross ic-3x text-primary"></i>
+                </button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="show-by">
+                            <small class="text-medium">Country</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                    title="All">
+                                    <option value="1">Egypt</option>
+                                    <option value="23">India</option>
+                                    <option value="4">Malaysia</option>
+                                    <option value="23">Qatar</option>
+                                    <option value="23">Singapore</option>
+                                    <option value="23">UAE</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="School">
+                            <small class="text-medium">Region</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                    title="All">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <div class="person-type">
+                            <small class="text-medium">School</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                    title="All">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-end border-0 py-2">
+                <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                <button class="btn btn-primary m-0" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--userss-list-filter drawer end -->
+
+    <!--import-history-filter drawer -->
+    <div class="modal fade right" id="myuser-history-filter" tabindex="-1" role="dialog" aria-labelledby=""
+    aria-hidden="true">
+    <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+        <div class="modal-content rounded-0">
+            <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Users List</h5>
+                <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                    <i class="icon-cross ic-3x text-primary"></i>
+                </button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="show-by">
+                            <small class="text-medium">Records</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                    title="All">
+                                    <option value="1">Egypt</option>
+                                    <option value="23">India</option>
+                                    <option value="4">Malaysia</option>
+                                    <option value="23">Qatar</option>
+                                    <option value="23">Singapore</option>
+                                    <option value="23">UAE</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <small class="text-medium">Imported On</small>
+                        <div
+                            class="date-range-selector bg-white rounded-2x d-flex align-items-start align-items-sm-center flex-column flex-sm-row mb-3 p-2 border">
+                            <div id="dateTimeRange"
+                                class="dateTimeRangee cursor-pointer flex-shrink-0 position-relative pl-2 mb-2 ml-1 mb-sm-0 ml-sm-0 pl-sm-0 d-flex align-items-center justify-content-between w-100">
+                                <span class="font-small"></span>
+                                 <i class="icon-calendar ic-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <div class="person-type">
+                            <small class="text-medium">File Type</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                    title="All">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-end border-0 py-2">
+                <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                <button class="btn btn-primary m-0" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--student-list-filter drawer end -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+
+    <!-- dataTable js -->
+    <script src="js/addons/datatables.min.js" rel="stylesheet"></script>
+    <script src="js/addons/datatables-select.min.js" rel="stylesheet"></script>
+    <script src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/js/dataTables.checkboxes.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+     
+    <script>
+        $(document).ready(function () {
+            //initialize reminderList datatable
+            var notificationListTbl =  $('#myUserList').DataTable({
+                bLengthChange: false,
+                ordering: true,
+                columnDefs: [ 
+                    // {
+                    //     orderable: true,
+                    //     className: 'select-checkbox',
+                    //     targets:   0
+                    // },
+                    {
+                        orderable: true,
+                        targets: [0]
+                    },
+                    {
+                        orderable: false,
+                        targets: [5]
+                    }
+                ],
+                "lengthMenu": [ 5, 10, 15, 20, 25 ],
+                select: {
+                    style:    'multi',
+                    selector: 'td:first-child'
+                },
+                select: {
+                    style:    'multi',
+                    selector: 'td:first-child'
+                },
+                //order: [[ 0, 'asc' ]]
+            });
+            $("#notificationList_filter").hide();
+            // $(".dataTables_info").hide();
+            // $(".dataTables_paginate").hide();
+            $('.dtSearch').keyup(function(){
+                notificationListTbl.search($(this).val()).draw() ;
+            })
+
+        $(".staff-list").mCustomScrollbar({
+            autoExpandScrollbar: true,
+            autoHideScrollbar: true,
+            scrollbarPosition: "inside",
+            axis: "y"
+        });
+
+    });
+    </script>
+    <script>
+        $(function () {
+            //$('#advancedFilter').modal('show');
+            /* $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'M/DD hh:mm A',
+                }
+            }); */
+            var start = moment().subtract(7, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#dateTimeRange span').html(start.format('M/DD hh:mm A') + ' - ' + end.format('M/DD hh:mm A'));
+            }
+
+            $('#dateTimeRange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start, end);
+        })
+
+
+        $(document).ready(function () { 
+            $(".date-range-selector").click(function(){
+              $('.show-calendar').addClass('mr-5');
+            })
+        })
+
+        // $(document).ready(function () {
+        //     $("body").click(function () {
+        //         $('.daterangepicker.show-calendar').appendTo('.covid-19');
+        //     })
+        // });
+    </script>
+</body>
+
+</html>

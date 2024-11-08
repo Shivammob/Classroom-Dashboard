@@ -1,0 +1,139 @@
+.library {
+    .card {
+        .card-body {
+           .toggle-lib {
+            .ic-bg.active {
+                width: rem(30px);
+                height: rem(30px);
+                background: #F3F6F9 !important;
+            }
+           }  
+           .gridView, .listView {
+            display: none;
+           }
+           .gridView.active, .listView.active {
+            display: block;
+          }
+          .files-view {
+            display: none;
+            .fileGridView, .fileListView {
+                display: none;
+               }
+               .fileGridView.active, .fileListView.active {
+                display: block !important;
+              }
+           }
+           .files-view.active {
+            display: block !important;
+          }
+          .gridView {
+              .item {
+                  border: 1px solid #EEEEEE;
+              }
+              .caption {
+                  h5 {
+                      line-height: 1.5;
+                      height: rem(64px);
+                      overflow: auto;
+                  }
+              }
+              .quick-nav{
+                  top:0;
+                  right: rem(17px);
+                  .more-actions{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    transform: rotate(90deg); 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+              }
+          }
+          .listView {
+            .caption {
+                h5 {
+                    // overflow: auto;
+                    width: 350px;
+                    @include media-breakpoint-down(sm) {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+        .more-actions{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transform: rotate(90deg); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .file-data{
+            .quick-nav{
+                top:0;
+                right:17px;
+            }
+        }
+        .fileGridView{
+            .item {
+                  border: 1px solid #EEEEEE;
+              }
+            .quick-nav{
+                top: 0;
+                right: 10px;
+            }
+        }
+        .breadcrumb-list {
+            ul {
+                li {
+                    display: inline-block;
+                    padding-right: rem(15px);
+                    margin-right: rem(7px);
+                    position: relative;
+                    &:after {
+                        content: '\f054';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 700;
+                        font-size: rem(13px);
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        color: #9ca3aa;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                    }
+                    &:last-child {
+                        padding: 0;
+                        margin: 0;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+                li, a {
+                    font-size: rem($base-font-size - 4);
+                }
+            }
+        }
+        }
+    }
+} 
+
+.modal {
+    .modal-content {
+        .file-error-message {
+            position: relative;
+               .close.kv-error-close {
+                    position: absolute;
+                    right: 0.5rem !important;
+                    top: 1rem !important;
+            }
+        }
+    }
+}

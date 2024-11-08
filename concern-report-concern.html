@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>HSE- Concern-Report</title>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+      <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+      <!-- Material Design Bootstrap -->
+      <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <!-- header start -->
+      <header>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 col-md-12 col">
+                  <!--Navbar -->
+                  <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                     <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                     <span class="portal-name position-absolute">HSE</span>
+                     <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                     </a>
+                     <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                     <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                     </a>
+                     <button class="navbar-toggler first-button" type="button">
+                        <div class="animated-icon1"><span></span><span></span><span></span></div>
+                     </button>
+                     <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                           <li class="nav-item dropdown language-switcher mr-4">
+                              <button class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span> English
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                 <a class="dropdown-item d-block" href="#">
+                                 <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span> Arabic
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions" class="loggedInUser d-flex align-items-center my-3">
+                                 <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                 <img src="img/avatar-1.jpg" alt="">
+                                 </span>
+                                 <h3 class="text-medium font-small m-0 mr-2">
+                                    Jasmine Welch
+                                    <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                 </h3>
+                                 <i class="icon-chevron-down"></i>
+                              </a>
+                           </li>
+                           <!-- <li class="nav-item dropdown notifications">
+                              <a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              	<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+                              	<a class="dropdown-item" href="#">English</a>
+                              	<a class="dropdown-item" href="#">Arabic</a>
+                              </div>
+                              </li>
+                              <li class="nav-item avatar dropdown">
+                              <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              	<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+                              	<div class="profile-card clearfix d-flex">
+                              		<div class="profile-img float-left d-block">
+                              			<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+                              		</div>
+                              		<div class="profile-name float-left d-block align-middle align-self-center">
+                              			<h3>Emilia Clark</h3>
+                              			<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+                              				<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+                              			</a>
+                              		</div>
+                              	</div>
+                              	<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+                              	<ul class="profile-actions">
+                              		<li class="dropdown-divider"></li>
+                              		<li><a href="">View Profile</a></li>
+                              		<li><a href="">Account Settings</a></li>
+                              		<li class="dropdown-divider"></li>
+                              		<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+                              	</ul>
+                              </div>
+                              </li> -->
+                        </ul>
+                     </div>
+                  </nav>
+                  <!--/.Navbar -->
+               </div>
+            </div>
+         </div>
+         <!-- Sidebar -->
+         <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+               <a href="dashboard.html" class="list-group-item mt-2">
+               <span class="ic-dashboard title-icon"></span>Dashboard
+               </a>
+               <a href="incidents.html" class="list-group-item active">
+               <span class="ic-incidents title-icon"></span>Incidents
+               </a>
+               <a href="staff.html" class="list-group-item">
+               <span class="ic-staff title-icon"></span>Staff Student
+               </a>
+               <a href="covid19.html" class="list-group-item">
+               <span class="ic-covid-19 title-icon"></span>Covid-19
+               </a>
+               <!-- <a href="audits.html" class="list-group-item waves-effect">
+                  <span class="ic-audits title-icon"></span>Create Audit
+                  </a> -->
+               <!-- <div id="auditmenu" class="collapse sub-menu">
+                  <a href="#">View Audit</a>
+                  <a href="#">Edit Audit</a>
+                  </div> -->
+               <a href="audit-scheduled.html" class="list-group-item">
+               <span class="ic-audit-inspection title-icon"></span>Perform Audit
+               </a>
+               <a href="tasklist.html" class="list-group-item">
+               <span class="ic-tasks title-icon"></span>Tasks Details
+               </a>
+               <a href="library.html" class="list-group-item">
+               <span class="ic-library title-icon"></span>Library
+               </a>
+               <a href="reports.html" class="list-group-item">
+               <span class="ic-reports title-icon"></span>Reports
+               </a>
+               <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+               <span class="ic-score title-icon"></span>Score Card YTD
+               </a>
+            </div>
+         </div>
+         <!-- Sidebar -->
+      </header>
+      <!-- header end -->
+      <main class="pt-5 mx-lg-1 mt-4">
+         <div class="container-fluid mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+               <div class="col-12">
+                  <div class="sub-header bg-white rounded-2x d-flex align-items-center justify-content-between pl-4 pr-2">
+                     <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                        <h3 class="page-title text-blue text-semibold m-0">Concern</h3>
+                        <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                           <li class="font-small text-medium"><a href="#" class="text-primary">Home</a></li>
+                           <li class="font-small text-medium"><a href="#" class="text-primary">Concern</a></li>
+                           <li class="font-small text-medium text-blue">Report a Concern</li>
+                        </ul>
+                     </div>
+                     <!-- <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button">
+                        <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Accidents
+                        </button> -->
+                  </div>
+               </div>
+            </div>
+            <!-- subheader end -->
+            <!-- concern report data -->
+            <div class="row mt-3">
+               <div class="col-md-12 col-12">
+                  <div class="card mb-3">
+                     <div class="card-body p-4">
+                        <div class="row">
+                           <div class="col-md-8">
+                              <div class="basic-Details">
+                                 <h5 class="text-blue mb-3">Enter Basic Details</h5>
+                                 <div class="row mb-2">
+                                    <div class="col-lg-3 col-md-6 col-12">
+                                       <div class="country">
+                                          <small class="text-medium text-black-50">Country</small>
+                                          <div class="md-form md-outline mb-3">
+                                             <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                                title="UAE">
+                                                <option value="1">Accident</option>
+                                                <option value="23">Child Safeguarding</option>
+                                                <option value="4">Environmental Incident</option>
+                                                <option value="29">Fire</option>
+                                                <option value="2">Illness</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12">
+                                       <div class="region">
+                                          <small class="text-medium text-black-50">Region</small>
+                                          <div class="md-form md-outline mb-3">
+                                             <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                                title="Dubai">
+                                                <option value="1">Accident</option>
+                                                <option value="23">Child Safeguarding</option>
+                                                <option value="4">Environmental Incident</option>
+                                                <option value="29">Fire</option>
+                                                <option value="2">Illness</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-12">
+                                       <div class="school">
+                                          <small class="text-medium text-black-50">School</small>
+                                          <div class="md-form md-outline mb-3">
+                                             <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                                title="Garden Grove Institute (GGI)">
+                                                <option value="1">Accident</option>
+                                                <option value="23">Child Safeguarding</option>
+                                                <option value="4">Environmental Incident</option>
+                                                <option value="29">Fire</option>
+                                                <option value="2">Illness</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12">
+                                       <h6 class="font-14 text-black-50 mb-1">School</h6>
+                                       <h6 class="font-14 text-black-50 mb-3">Garden Grove Institute (GGI), Dubai - UAE</h6>
+                                       <div class="location mb-4">
+                                          <small class="text-medium text-black-50">Select Location</small>
+                                          <div class="md-form md-outline mb-3">
+                                             <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                                title="Select">
+                                                <option value="1">Accident</option>
+                                                <option value="23">Child Safeguarding</option>
+                                                <option value="4">Environmental Incident</option>
+                                                <option value="29">Fire</option>
+                                                <option value="2">Illness</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                       <div class="add-victims mb-4">
+                                          <h3 class="font-small text-semibold">Add Victim</h3>
+                                          <div class="bg-light rounded-1x">
+                                             <h4><a href="#" class="text-primary d-flex justify-content-center font-small text-medium py-3"> <i class="icon-plus text-medium"></i> Add</a></h4>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12">
+                                       <div class="d-flex student-meta mb-4 border rounded-1x p-3 justify-content-between flex-wrap">
+                                          <div class="d-flex student-details">
+                                             <figure class="mr-3 mb-0 rounded-2x">
+                                                <img src="img/student.png" alt="" class="img-fluid-backend">
+                                             </figure>
+                                             <div class="d-block grade-list-border">
+                                                <h3 class="font-16 text-semibold text-black text-underline">Aaron Avery</h3>
+                                                <ul class="d-flex flex-wrap">
+                                                   <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 pr-2 border-right border-default">
+                                                      Student ID : 12501800992704
+                                                   </li>
+                                                   <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                      Grade : 08
+                                                   </li>
+                                                   <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                      GGI
+                                                   </li>
+                                                   <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2">
+                                                      GGI
+                                                   </li>
+                                                </ul>
+                                                <ul class="d-flex flex-wrap">
+                                                   <li>
+                                                      <a href="javascript:void(0)" class="text-primary text-regular text-underline small border-right pr-2">5 Incidents</a> 
+                                                   </li>
+                                                   <li>
+                                                      <a href="javascript:void(0)" class="text-primary pl-2 text-regular text-underline small"  data-toggle="modal"
+                                                      data-target="#injuryDetailsPopup">Body Maping</a>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                          <div class="students-cta">
+                                             <a href="javascript:void(0)" class="text-primary ml-2 text-regular font-small"><i class="icon-trash text-primary bg-light-pink p-2 text-medium rounded-2x"></i></a>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex student-meta mt-3 mb-4 border rounded-1x p-3 justify-content-between flex-wrap">
+                                          <div class="d-flex student-details">
+                                             <figure class="mr-3 mb-0 rounded-2x">
+                                                <img src="img/student.png" alt="" class="img-fluid-backend">
+                                             </figure>
+                                             <div class="d-block grade-list-border">
+                                                <h3 class="font-16 text-semibold text-black text-underline">Aaron Avery</h3>
+                                                <ul class="d-flex flex-wrap">
+                                                   <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0">
+                                                      Staff ID : 34535
+                                                   </li>
+                                                   <!-- <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                      Grade : 08
+                                                      </li>
+                                                      <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                      GGI
+                                                      </li>
+                                                      <li
+                                                      class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2">
+                                                      GGI
+                                                      </li> -->
+                                                </ul>
+                                                <ul class="d-flex flex-wrap">
+                                                   <li>
+                                                      <a href="javascript:void(0)" class="text-primary text-regular text-underline small border-right pr-2">5 Incidents</a> 
+                                                   </li>
+                                                   <li>
+                                                      <a href="javascript:void(0)" class="text-primary pl-2 text-regular text-underline small"  data-toggle="modal" data-target="#student-info">5 Body Maping</a>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                          <div class="students-cta">
+                                             <a href="javascript:void(0)" class="text-primary ml-2 text-regular font-small"><i class="icon-trash text-primary bg-light-pink p-2 text-medium rounded-2x"></i></a>
+                                          </div>
+                                       </div>
+                                       <!-- <div class="d-flex student-meta flex-column flex-md-row mt-3 border rounded-1x p-3 justify-content-between mb-5">
+                                    <div class="d-flex student-details">
+                                       <div class="d-block grade-list-border">
+                                          <h3 class="font-16 text-dark text-semibold mb-3">Body Maping</h3>
+                                          <div class="body-parts mb-3">
+                                             <label
+                                                class="font-small text-medium text-semibold mb-0">Body Parts</label>
+                                             <ul
+                                                class="d-flex align-items-md-center m-0 p-0 flex-column flex-md-row flex-wrap">
+                                                <li>
+                                                   <span
+                                                      class="font-small d-flex text-regular bg-light rounded-1x py-2 px-3 mt-2 mr-2 text-blue">Right upper arm<a href="javascript:void(0)"><i
+                                                      class="icon-cross ml-2 text-semibold"></a></i></span>
+                                                </li>
+                                                <li class="my-2 my-md-0">
+                                                   <span
+                                                      class="font-small d-flex text-regular bg-light rounded-1x py-2 px-3 mt-2 mr-2 text-blue">Chest<a href="javascript:void(0)"><i
+                                                      class="icon-cross ml-2 text-semibold"></a></i></span>
+                                                </li>
+                                                <li>
+                                                   <span
+                                                      class="font-small d-flex text-regular bg-light rounded-1x py-2 px-3 mt-2 mr-2 text-blue">Mid to lower Back<a href="javascript:void(0)"><i
+                                                      class="icon-cross ml-2 text-semibold"></a></i></span>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <div class="head-section mb-3">
+                                             <label
+                                                class="font-small text-medium text-semibold mb-0">Head</label>
+                                             <ul
+                                                class="d-flex align-items-md-center m-0 p-0 flex-column flex-md-row flex-wrap">
+                                                <li>
+                                                   <span
+                                                      class="font-small d-flex text-regular bg-light rounded-1x py-2 px-3 mt-2 mr-2 text-blue">Right upper arm<a href="javascript:void(0)"><i
+                                                      class="icon-cross ml-2 text-semibold"></a></i></span>
+                                                </li>
+                                                <li class="my-2 my-md-0">
+                                                   <span
+                                                      class="font-small d-flex text-regular bg-light rounded-1x py-2 px-3 mt-2 mr-2 text-blue">Chest<a href="javascript:void(0)"><i
+                                                      class="icon-cross ml-2 text-semibold"></a></i></span>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="students-cta">
+                                       <a href="javascript:void(0)" class="text-primary ml-2 text-regular text-underline font-small" data-toggle="modal"
+                                          data-target="#injuryDetailsPopup">Map</a>
+                                    </div>
+                                    </div> -->
+                                    </div>
+                                 </div>
+                                 <div class="row mb-3">
+                                    <div class="col-12">
+                                       <label class="text-black font-16 text-semibold">Where did incident occur?</label>
+                                       <div class="category">
+                                          <small class="text-medium text-black-50">Section</small>
+                                          <div class="md-form md-outline mb-3">
+                                             <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Select">
+                                                <option value="1">Accident</option>
+                                                <option value="23">Child Safeguarding</option>
+                                                <option value="4">Environmental Incident</option>
+                                                <option value="29">Fire</option>
+                                                <option value="2">Illness</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row mb-4">
+                                    <div class="col-12">
+                                       <div class="d-flex justify-content-between align-items-baseline">
+                                          <label class="text-capitalize font-16 text-medium text-black text-semibold d-block">Incident Description</label>
+                                          <a href="#" class="text-primary text-regular text-underline small" data-toggle="modal" data-target="#add-description">Add</a> 
+                                       </div>
+                                       <div class="bg-light p-3 rounded-2x d-flex justify-content-between">
+                                          <p class="font-14 text-regular mb-0 addReadMore showlesscontent">Met with Aida Bugg Mother in PTC meeting and updated her on Allie ’s recent comment about his parents’ divorce. I offered our school counsellor support and she has asked me to email Allie ’s Father asking for permission. I offered our school counsellor support and she has asked me to email Allie ’s Father asking for permission. I will be arranging a meeting between Allie ’s Mother</p>
+                                          <a href="#" class="font-small"> <i class="icon-edit-2 text-semibold"></i></a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <hr class="mb-4">
+                                 <div class="row">
+                                    <div class="col-12">
+                                       <h5 class="text-black font-16 text-semibold">Incident Category <span class="info-popup"><a href="#" data-toggle="tooltip" title="Incident Category"><i class="fas fa-info-circle text-blue ml-2 font-small"></i></a></span> 
+                                       </h5>
+                                    </div>
+                                 </div>
+                                 <div class="row mb-4">
+                                    <div class="col-12">
+                                       <div class="custom-control custom-radio custom-control-inline">
+                                          <input type="radio" class="custom-control-input" id="child" name="inlineDefaultRadiosExample" checked>
+                                          <label class="custom-control-label" for="child">Child Safeguarding</label>
+                                       </div>
+                                       <div class="custom-control custom-radio custom-control-inline">
+                                          <input type="radio" class="custom-control-input" id="Adult" name="inlineDefaultRadiosExample">
+                                          <label class="custom-control-label" for="Adult">Adult Safeguarding</label>
+                                       </div>
+                                       <div class="custom-control custom-radio custom-control-inline">
+                                          <input type="radio" class="custom-control-input" id="allegation" name="inlineDefaultRadiosExample">
+                                          <label class="custom-control-label" for="allegation">Allegation against an adult</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- button group -->
+                                 <div class="add-sub-category mb-3">
+                                    <div class="row">
+                                       <div class="col-lg-12 col-12">
+                                          <h6 class="text-black font-16 text-semibold">Incident Sub Category <span class="info-popup"><a href="#" data-toggle="tooltip" title="Incident Sub Category"><i class="fas fa-info-circle text-blue ml-2 font-small"></i></a></span> </h6>
+                                          <div class="btn-group-toggle multiselect-btns" data-toggle="buttons">
+                                             <span class="btn py-2 active">
+                                             <i class="icon-check mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Behavioural
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Chemical Incident
+                                             </span>
+                                             <span class="btn py-2 active">
+                                             <i class="icon-check mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Chocking
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Behavioural
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Chemical Incident
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Chocking
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Behavioural
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Chemical Incident
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Chocking
+                                             </span>
+                                             <span class="btn py-2">
+                                             <i class="icon-plus mr-1"></i>
+                                             <input type="checkbox" autocomplete="off"> Behavioural
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- button group end -->
+                                 <h5 class="text-black text-semibold font-16">Severity <span class="info-popup"><a href="#" data-toggle="tooltip" title="Saverity"><i class="fas fa-info-circle text-blue ml-2 font-small"></i></a></span> </h5>
+                                 <div class="row mb-4">
+                                    <div class="col-12">
+                                       <div class="custom-control custom-radio d-inline-flex mr-3">
+                                          <input type="radio" class="custom-control-input" id="minor" name="severityRadios">
+                                          <label class="custom-control-label text-black font-small text-semibold" for="minor">Minor</label>
+                                       </div>
+                                       <div class="custom-control custom-radio d-inline-flex mr-3">
+                                          <input type="radio" class="custom-control-input" id="major" name="severityRadios" checked>
+                                          <label class="custom-control-label text-black font-small text-semibold" for="major">Major</label>
+                                       </div>
+                                       <div class="custom-control custom-radio d-inline-flex">
+                                          <input type="radio" class="custom-control-input" id="serious" name="severityRadios">
+                                          <label class="custom-control-label text-black font-small text-semibold" for="serious">Seriuos</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <h5 class="text-black font-16 text-semibold">Incident Occured On</h5>
+                                 <div class="row">
+                                    <div class="col-12">
+                                       <label class="font-small text-medium text-black-50">Date</label>
+                                       <div class="date-range-selector border mb-4 p-2 rounded-2x">
+                                          <div id="dateTimeRange" class="dateTimeRange cursor-pointer mt-n1 flex-shrink-0 position-relative pl-2 ml-1 mb-sm-0 ml-sm-0 pl-sm-0 d-flex justify-content-between align-items-center">
+                                             <span></span> <i class="icon-calendar text-blue ic-2x ml-1"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <h4 class="text-black font-16 text-semibold">Incident Reported by</h4>
+                                 <div class="row">
+                                    <div class="col-12">
+                                       <div class=" pb-4">
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                             <input type="radio" class="custom-control-input" id="self" name="incidentreportedRadios" checked>
+                                             <label class="custom-control-label" for="self">Self</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                             <input type="radio" class="custom-control-input" id="staff" name="incidentreportedRadios">
+                                             <label class="custom-control-label" for="staff">Staff</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                             <input type="radio" class="custom-control-input" id="student" name="incidentreportedRadios">
+                                             <label class="custom-control-label" for="student">Student</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                             <input type="radio" class="custom-control-input" id="external" name="incidentreportedRadios">
+                                             <label class="custom-control-label" for="external">External</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mt-5 mb-3 border-left">
+                              <div class="documents mb-4">
+                                 <h3 class="font-16 text-semibold">Add Document</h3>
+                                 <div class="bg-light rounded-1x mb-3">
+                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-small text-medium py-3"> <i class="icon-plus text-medium"></i> Add</a></h4>
+                                 </div>
+                                 <div class="d-flex justify-content-between
+                                    align-items-center border px-2 py-3 rounded-1x">
+                                    <span class="small text-medium d-flex align-items-end">
+                                    <i class="file-type-pdf ic-3x text-primary text-semibold mr-2"></i>
+                                    Document Name.pdf
+                                    </span>
+                                    <div class="action">
+                                       <i class="icon-trash text-primary bg-light-pink p-2 text-medium rounded-2x"></i>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="linked-students">
+                                 <h3 class="font-16 text-semibold">Witness</h3>
+                                 <div class="bg-light rounded-1x mb-3">
+                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-small text-medium py-3"> <i class="icon-plus text-medium"></i> Add</a></h4>
+                                 </div>
+                                 <div class="d-flex justify-content-between
+                                    align-items-baseline border p-2 rounded-1x mb-3">
+                                    <div class="avtar d-flex">
+                                       <figure class="avatar small-img mb-0">
+                                          <img src="img/student.png" alt="" class="img-fluid rounded-1x">
+                                       </figure>
+                                       <div class="userData ml-2">
+                                          <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Edwin George</h5>
+                                          <h6 class="text-black-50 text-medium font-14">Student</h6>
+                                          <ul class="d-flex flex-wrap mb-2">
+                                             <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                                12501800992704
+                                             </li>
+                                             <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                                Grade : 08
+                                             </li>
+                                          </ul>
+                                          <h6 class="text-medium text-primary mb-0 small text-underline">Add Statement</h6>
+                                       </div>
+                                    </div>
+                                    <div class="action">
+                                       <i class="icon-trash text-primary bg-light-pink p-2 text-medium rounded-2x"></i>
+                                    </div>
+                                 </div>
+                                 <div class="d-flex justify-content-between
+                                    align-items-baseline border p-2 rounded-1x mb-4">
+                                    <div class="avtar d-flex">
+                                       <figure class="avatar small-img mb-0">
+                                          <img src="img/student2.png" alt="" class="img-fluid rounded-1x">
+                                       </figure>
+                                       <div class="userData ml-2">
+                                          <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Michael John</h5>
+                                          <h6 class="text-black-50 text-medium font-14">
+                                          Student ID : 125018009
+                                          </h6>
+                                          <ul class="d-flex flex-wrap mb-2">
+                                             <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                                12501800992704
+                                             </li>
+                                             <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                                Grade : 08
+                                             </li>
+                                          </ul>
+                                          <h6 class="text-medium text-primary mb-0 small text-underline">Add Statement</h6>
+                                       </div>
+                                    </div>
+                                    <div class="action">
+                                       <i class="icon-trash text-primary bg-light-pink p-2 text-medium rounded-2x"></i>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- <div class="external-agency mb-3">
+                                 <h3 class="font-small text-semibold">External Agency</h3>
+                                 <div class="bg-light rounded-1x mb-3">
+                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-small text-medium py-3"> <i class="icon-plus text-medium"></i> Add</a></h4>
+                                 </div>
+                                 </div> -->
+                              <div class="assailant mb-4">
+                                 <h3 class="font-16 text-semibold">Assailant</h3>
+                                 <div class="bg-light rounded-1x mb-3">
+                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-small text-medium py-3" data-toggle="modal" data-target="#add-victim"> <i class="icon-plus text-medium"></i> Add</a></h4>
+                                 </div>
+                              </div>
+                              <div class="d-flex justify-content-between
+                                 align-items-baseline border p-2 rounded-1x mb-3">
+                                 <div class="avtar d-flex">
+                                    <figure class="avatar small-img mb-0">
+                                       <img src="img/student.png" alt="" class="img-fluid rounded-1x">
+                                    </figure>
+                                    <div class="userData ml-2">
+                                       <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Edwin George</h5>
+                                       <h6 class="text-black-50 text-medium font-14">Student</h6>
+                                       <ul class="d-flex flex-wrap mb-2">
+                                          <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                             12501800992704
+                                          </li>
+                                          <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                             Grade : 08
+                                          </li>
+                                       </ul>
+                                       <h6 class="text-medium text-primary mb-0 small text-underline">Add Actions</h6>
+                                    </div>
+                                 </div>
+                                 <div class="action">
+                                    <i class="icon-trash text-primary bg-light-pink p-2 text-medium rounded-2x"></i>
+                                 </div>
+                              </div>
+                              <div class="d-flex justify-content-between
+                                 align-items-baseline border p-2 rounded-1x mb-4">
+                                 <div class="avtar d-flex">
+                                    <figure class="avatar small-img mb-0">
+                                       <img src="img/student.png" alt="" class="img-fluid rounded-1x">
+                                    </figure>
+                                    <div class="userData ml-2">
+                                       <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Edwin George</h5>
+                                       <h6 class="text-black-50 text-medium font-14">Student</h6>
+                                       <ul class="d-flex flex-wrap mb-2">
+                                          <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                             12501800992704
+                                          </li>
+                                          <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                             Grade : 08
+                                          </li>
+                                       </ul>
+                                       <h6 class="text-medium text-primary mb-0 small text-underline">View Actions</h6>
+                                    </div>
+                                 </div>
+                                 <div class="action">
+                                    <i class="icon-trash text-primary bg-light-pink p-2 text-medium rounded-2x"></i>
+                                 </div>
+                              </div>
+                              <div class="ext-agency">
+                                 <h3 class="font-16 text-semibold">External agency</h3>
+                                 <div class="bg-light rounded-1x mb-3">
+                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-small text-medium py-3" data-toggle="modal" data-target="#acces-modal"> <i class="icon-plus text-medium"></i> Add</a></h4>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <hr class="my-2">
+                        <div class="row">
+                           <div class="col-12">
+                              <div class="d-flex justify-content-end mt-3">
+                                 <button type="button" class="btn btn-outline-primary px-3 px-sm-5 py-2 mr-2">Cancel</button>
+                                 <button type="button" class="btn btn-primary px-3 px-sm-5 py-2">Submit</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <!-- modal student info -->
+      <div class="modal fade right" id="student-info" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+         <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+               <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                  <h5 class="modal-title text-capitalize w-100 text-blue text-semibold text-medium line-height-1"
+                     id="myModalLabel">Student Info</h5>
+                  <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                  <i class="icon-cross ic-3x ttext-blue"></i>
+                  </button>
+               </div>
+               <div class="modal-body p-4">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="bg-light rounded-4x px-3 px-sm-4 py-3 mb-3">
+                           <div class="d-flex student-meta flex-column flex-md-row">
+                              <figure class="mr-3 rounded-2x mb-0">
+                                 <img src="img/student.png" alt="" class="img-fluid rounded-2x student-img">
+                              </figure>
+                              <div class="d-block grade-list-border w-100">
+                                 <div class="d-flex justify-content-between">
+                                    <h3 class="font-16 text-black text-semibold ">Abba Lacopetti</h3>
+                                    <h6 class="font-14 text-primary"> <a href="#" class="text-primary"><u>View Profile</u></a></h6>
+                                 </div>
+                                 <ul class="d-flex flex-column flex-md-row mb-2">
+                                    <li class="text-black-50 text-semibold font-small line-height-1  pr-md-2  border-right border-default">
+                                       ID : 12501800992704
+                                    </li>
+                                    <li class="text-black-50 text-semibold font-small line-height-1  px-md-2  border-right border-default">
+                                       Grade : 08
+                                    </li>
+                                    <li class="text-black-50 text-semibold font-small line-height-1  pt-1 pt-md-0 px-md-2">
+                                       Section: A
+                                    </li>
+                                 </ul>
+                                 <h4 class="text-black text-semibold font-small line-height-1 pr-3 mr-3 ">Teacher: Edwin Jeorge</h4>
+                                 <h4 class="text-black text-semibold font-small line-height-1 pr-3 mr-3 ">Gems virtual School (GVS)</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <h3 class="text-blue font-16 text-semibold">Past Incidents</h3>
+                        <hr class="mb-0">
+                        <div class="incidentList">
+                           <article class="py-3">
+                              <div class="incident-meta d-flex align-items-center">
+                                 <div class="meta-left d-inline-flex align-items-center">
+                                    <span class="badge badge-primary rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                    <h4 class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                       ID #11075623
+                                    </h4>
+                                 </div>
+                                 <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                    <h4 class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                       Accident <span class="text-medium text-black-50 text-initial ml-2">(
+                                       Struck by Object, Drawing, Chocking, .. )</span>
+                                    </h4>
+                                 </div>
+                              </div>
+                              <h3 class="incident-title font-small mt-3 mb-2">
+                                 <span class="d-inline-flex align-items-start align-items-sm-center">
+                                 <i class="icon-school-1 ic-2x mr-2"></i>
+                                 <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                 Academy Silicon Oasis (WSO)</span>
+                                 </span>
+                                 <span class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                 <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                 </span>
+                              </h3>
+                              <div class="incident-info">
+                                 <p class="m-0 addReadMore showlesscontent">Antonio was brought to the clinic by his nanny at 2p.m. According to the nanny, Antonio hit his head on the corner
+                                    of an open window. He had a 2-3 mm slightly gaping wound on his left upper forehead with minimal bleeding.of an open window. He had a 2-3 mm slightly gaping wound on his left upper forehead with minimal bleeding.
+                                 </p>
+                              </div>
+                           </article>
+                           <article class="py-3">
+                              <div class="incident-meta d-flex align-items-center">
+                                 <div class="meta-left d-inline-flex align-items-center">
+                                    <span class="badge badge-primary rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                    <h4 class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                       ID #11075623
+                                    </h4>
+                                 </div>
+                                 <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                    <h4 class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                       Accident <span class="text-medium text-black-50 text-initial ml-2">(
+                                       Struck by Object, Drawing, Chocking, .. )</span>
+                                    </h4>
+                                 </div>
+                              </div>
+                              <h3 class="incident-title font-small mt-3 mb-2">
+                                 <span class="d-inline-flex align-items-start align-items-sm-center">
+                                 <i class="icon-school-1 ic-2x mr-2"></i>
+                                 <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                 Academy Silicon Oasis (WSO)</span>
+                                 </span>
+                                 <span class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                 <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                 </span>
+                              </h3>
+                              <div class="incident-info">
+                                 <p class="m-0 addReadMore showlesscontent">Antonio was brought to the clinic by his nanny at 2p.m. According to the nanny, Antonio hit his head on the corner
+                                    of an open window. He had a 2-3 mm slightly gaping wound on hisleft upper forehead with minimal bleeding.of an open window. He had a 2-3 mm slightly gaping wound on his left upper forehead with minimal bleeding.
+                                 </p>
+                              </div>
+                           </article>
+                           <article class="py-3">
+                              <div class="incident-meta d-flex align-items-center">
+                                 <div class="meta-left d-inline-flex align-items-center">
+                                    <span class="badge badge-primary rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                    <h4 class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                       ID #11075623
+                                    </h4>
+                                 </div>
+                                 <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                    <h4 class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                       Accident <span class="text-medium text-black-50 text-initial ml-2">(
+                                       Struck by Object, Drawing, Chocking, .. )</span>
+                                    </h4>
+                                 </div>
+                              </div>
+                              <h3 class="incident-title font-small mt-3 mb-2">
+                                 <span class="d-inline-flex align-items-start align-items-sm-center">
+                                 <i class="icon-school-1 ic-2x mr-2"></i>
+                                 <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                 Academy Silicon Oasis (WSO)</span>
+                                 </span>
+                                 <span class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                 <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                 </span>
+                              </h3>
+                              <div class="incident-info">
+                                 <p class="m-0 addReadMore showlesscontent">Antonio was brought to the clinic by his nanny at 2p.m. According to the nanny, Antonio hit his head on the corner
+                                    of an open window. He had a 2-3 mm slightly gaping wound on his left upper forehead with minimal bleeding.of an open window. He had a 2-3 mm slightly gaping wound on his left upper forehead with minimal bleeding.
+                                    
+                                 </p>
+                              </div>
+                           </article>
+                        </div>
+                        <h6 class="text-right border-top pt-3"> <a href="#" class="text-primary font-12"><u>View 4 More Incidents</u></a> </h6>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- modal student info end-->
+      <!--acces-modal drawer -->
+      <div class="modal fade right" id="acces-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+         <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+               <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                  <h5 class="modal-title text-capitalize w-100 text-primary text-semibold text-medium line-height-1"
+                     id="myModalLabel">Acces</h5>
+                  <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                  <i class="icon-cross ic-3x text-primary"></i>
+                  </button>
+               </div>
+               <div class="modal-body p-4">
+                  <div class="row">
+                     <div class="col-md-12 col-12">
+                        <!-- data filters -->
+                        <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-4">
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6 col-12 px-md-1 px-lg-2">
+                                 <!-- <small class="text-medium">Search</small> -->
+                                 <div
+                                    class="md-form md-outline mb-0 rounded-2x d-flex align-items-center flex-row-reverse bg-white flex-1 search-field-front-icon mt-3 mb-2">
+                                    <input type="text" class="form-control flex-1 p-0 border-0 m-0 ml-2"
+                                       placeholder="Search">
+                                    <i class="icon-search text-primary text-semibold ic-2x"></i>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-12 px-md-1 px-lg-2">
+                                 <div class="md-form md-outline mb-0 rounded-2x mt-3 mb-2">
+                                    <select class="selectpicker" data-style="btn-white border-0 px-2" data-size="5"
+                                       title="Designation">
+                                       <option value="1">Accident</option>
+                                       <option value="23">Child Safeguarding</option>
+                                       <option value="4">Environmental Incident</option>
+                                       <option value="29">Fire</option>
+                                       <option value="2">Illness</option>
+                                       <option value="3">Near Miss</option>
+                                       <option value="7">Property Damage</option>
+                                       <option value="6">Security</option>
+                                       <option value="5">Vehicle</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- data filters end -->
+                     </div>
+                     <div class="col-md-12">
+                        <table class="w-100">
+                           <thead>
+                              <tr class="border-bottom">
+                                 <td style="width: 70%;"></td>
+                                 <td style="width: 10%;">
+                                    <h3 class="text-semibold font-14">View</h3>
+                                 </td>
+                                 <td style="width: 10%;">
+                                    <h3 class="text-semibold font-14">Edit</h3>
+                                 </td>
+                                 <td style="width: 10%;">
+                                    <h3 class="text-semibold font-14">Email</h3>
+                                 </td>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="py-2 border-bottom">
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3">User 1</label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="py-2 border-bottom">
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3">User 1</label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="py-2 border-bottom">
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3">User 1</label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="py-2 border-bottom">
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3">User 1</label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="py-2 border-bottom">
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3">User 1</label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="py-2 border-bottom">
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3">User 1</label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                                 <td class="py-2">
+                                    <div class="custom-control custom-checkbox mr-1">
+                                       <input type="checkbox" class="custom-control-input" id="chkbox3" checked>
+                                       <label class="custom-control-label" for="chkbox3"></label>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer justify-content-end border-0 py-2">
+                  <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex"
+                     data-dismiss="modal" aria-label="Close">Cancel</button>
+                  <button class="btn btn-primary m-0" type="button">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- acces-modal drawer end -->
+      <!-- add/view injury popup start -->
+      <div class="modal fade right" id="injuryDetailsPopup" tabindex="-1" role="dialog" aria-labelledby="injuryDetailsPopup" aria-hidden="true">
+         <form action="" class="m-0">
+            <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-100" role="document">
+               <div class="modal-content">
+                  <div class="modal-header justify-content-between">
+                     <h5 class="modal-title text-primary">Injury Details</h5>
+                  </div>
+                  <div class="modal-body">
+                     <div class="popup-form clearfix">
+                        <div class="injury-desktop vertical-nav-panel">
+                           <div class="row">
+                              <div class="col-md-2 mb-3">
+                                 <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                       <a class="nav-link active" id="Body-Parts-tab" data-toggle="tab" href="#Body-Parts" role="tab" aria-controls="Body-Parts" aria-selected="true" >
+                                          <h6 class="font-small text-black m-0 p-0">Body Parts</h6>
+                                          <span class="d-block font-small text-primary">6 Selected</span>
+                                       </a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" id="head-tab" data-toggle="tab" href="#head" role="tab" aria-controls="head" aria-selected="false">
+                                          <h6 class="m-0 p-0 text-black">Head</h6>
+                                          <span class="d-block font-small text-primary">6 Selected</span> 
+                                       </a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" id="Hand-tab" data-toggle="tab" href="#Hand" role="tab" aria-controls="Hand" aria-selected="false">
+                                          <h6 class="m-0 p-0 text-black">Hand</h6>
+                                          <span class="d-block font-small text-primary">6 Selected</span> 
+                                       </a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" id="Leg-tab" data-toggle="tab" href="#Leg" role="tab" aria-controls="Leg" aria-selected="false">
+                                          <h6 class="m-0 p-0 text-black">Leg</h6>
+                                          <span class="d-block font-small text-primary">6 Selected</span> 
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="col-md-10">
+                                 <div class="tab-content" id="myTabContent">
+                                    <!-- ---------Body-Parts Pills---------   -->
+                                    <div class="tab-pane fade show active" id="Body-Parts" role="tabpanel" aria-labelledby="Body-Parts-tab">
+                                       <div class="row">
+                                          <div class="col-lg-4 col-md-3 col-12 mt-4">
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb1">
+                                                <label class="custom-control-label" for="chkb1">Head</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb2">
+                                                <label class="custom-control-label" for="chkb2">Right Shoulder</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb3">
+                                                <label class="custom-control-label" for="chkb3">Right hand</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb4">
+                                                <label class="custom-control-label" for="chkb4">Stomach</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb5">
+                                                <label class="custom-control-label" for="chkb5">Right Knee</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb6">
+                                                <label class="custom-control-label" for="chkb6">Front of Head</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb7">
+                                                <label class="custom-control-label" for="chkb7">Right Shoulder</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb8">
+                                                <label class="custom-control-label" for="chkb8">Right hand</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb9">
+                                                <label class="custom-control-label" for="chkb9">Stomach</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb10">
+                                                <label class="custom-control-label" for="chkb10">Right Knee</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb11">
+                                                <label class="custom-control-label" for="chkb11">Face</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb12">
+                                                <label class="custom-control-label" for="chkb12">Right upper arm</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb13">
+                                                <label class="custom-control-label" for="chkb13">Right wrist</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb14">
+                                                <label class="custom-control-label" for="chkb14">Groin</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb15">
+                                                <label class="custom-control-label" for="chkb15">Right Lower leg</label>
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-4 col-md-6 col-12">
+                                             <img src="img/svg/human-body.svg" alt="">
+                                          </div>
+                                          <div class="col-lg-4 col-md-3 col-12 mt-4">
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb16">
+                                                <label class="custom-control-label" for="chkb16">Back of Head</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb17">
+                                                <label class="custom-control-label" for="chkb17">Right fore arm</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb18">
+                                                <label class="custom-control-label" for="chkb18">Chest</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb19">
+                                                <label class="custom-control-label" for="chkb19">Right Thigh</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb20">
+                                                <label class="custom-control-label" for="chkb20">Right ankle</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb21">
+                                                <label class="custom-control-label" for="chkb21">Back of Head</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb22">
+                                                <label class="custom-control-label" for="chkb22">Right fore arm</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb23">
+                                                <label class="custom-control-label" for="chkb23">Chest</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb24">
+                                                <label class="custom-control-label" for="chkb24">Right Thigh</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb25">
+                                                <label class="custom-control-label" for="chkb25">Right ankle</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb26">
+                                                <label class="custom-control-label" for="chkb26">Face</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb27">
+                                                <label class="custom-control-label" for="chkb27">Right upper arm</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb28">
+                                                <label class="custom-control-label" for="chkb28">Right wrist</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb29">
+                                                <label class="custom-control-label" for="chkb29">Groin</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb30">
+                                                <label class="custom-control-label" for="chkb30">Right Lower leg</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- ---------Body-Parts Pills end---------   -->
+                                    <div class="tab-pane fade" id="head" role="tabpanel" aria-labelledby="head-tab">
+                                       <div class="row">
+                                          <div class="col-lg-12 col-md-12 col-12">
+                                             <h4 class="sub-heading text-center text-medium">Face Injuries</h4>
+                                          </div>
+                                       </div>
+                                       <div class="row">
+                                          <div class="col-lg-3 col-md-3 col mt-5">
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox mb-4">
+                                                <input type="checkbox" class="custom-control-input" id="chkb61">
+                                                <label class="custom-control-label" for="chkb61">Forehead</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb62">
+                                                <label class="custom-control-label" for="chkb62">Right eye</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb63">
+                                                <label class="custom-control-label" for="chkb63">Right ear</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb64">
+                                                <label class="custom-control-label" for="chkb64">Right cheek</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb65">
+                                                <label class="custom-control-label" for="chkb65">Teeth</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb66">
+                                                <label class="custom-control-label" for="chkb66">Inner mouth</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb67">
+                                                <label class="custom-control-label" for="chkb67">Chin</label>
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-6 col-md-6 col text-center">
+                                             <img src="img/svg/human-face.svg" alt="" class="mt-4">
+                                          </div>
+                                          <div class="col-lg-3 col-md-3 col mt-5">
+                                             <div class="custom-control custom-checkbox back-hand mt-5">
+                                                <input type="checkbox" class="custom-control-input" id="chkb68">
+                                                <label class="custom-control-label" for="chkb68">Left eye</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb69">
+                                                <label class="custom-control-label" for="chkb69">Left ear</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb70">
+                                                <label class="custom-control-label" for="chkb70">Left cheek</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb71">
+                                                <label class="custom-control-label" for="chkb71">Nose</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb72">
+                                                <label class="custom-control-label" for="chkb72">Outer mouth</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb73">
+                                                <label class="custom-control-label" for="chkb73">Jaw</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="row mt-5">
+                                          <div class="col-lg-12 col-md-12 col-12">
+                                             <div class="md-form md-outline">
+                                                <textarea id="injuryDescription" class="md-textarea form-control" rows="4"></textarea>
+                                                <label for="injuryDescription">Enter injury description</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- ---------Head Pills end---------   -->
+                                    <div class="tab-pane fade" id="Hand" role="tabpanel" aria-labelledby="Hand-tab">
+                                       <div class="row">
+                                          <div class="col-lg-12 col-md-12 col-12">
+                                             <h4 class="sub-heading text-center text-medium">Hand Injuries</h4>
+                                          </div>
+                                       </div>
+                                       <div class="row hand-injuries">
+                                          <div class="col-lg-6 col-md-6 col-12 text-center left-hand-injuries">
+                                             <div class="custom-control custom-checkbox middle-finger right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb31">
+                                                <label class="custom-control-label" for="chkb31">Middle Finger  </label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox ring-finger right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb32">
+                                                <label class="custom-control-label" for="chkb32">Ring Finger  </label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox little-finger right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb33">
+                                                <label class="custom-control-label" for="chkb33">Little Finger </label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox palm right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb34">
+                                                <label class="custom-control-label" for="chkb34">Palm</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb35">
+                                                <label class="custom-control-label" for="chkb35">Back of hand</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox index-finger">
+                                                <input type="checkbox" class="custom-control-input" id="chkb36">
+                                                <label class="custom-control-label" for="chkb36">Index Finger</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox thumb">
+                                                <input type="checkbox" class="custom-control-input" id="chkb37">
+                                                <label class="custom-control-label" for="chkb37">Thumb</label>
+                                             </div>
+                                             <img src="img/svg/left-hand.svg" alt="">
+                                             <h4 class="sub-heading text-center mr-5 mt-4">Left Hand</h4>
+                                          </div>
+                                          <div class="col-lg-6 col-md-6 col-12 text-center right-hand-injuries">
+                                             <div class="custom-control custom-checkbox middle-finger">
+                                                <input type="checkbox" class="custom-control-input" id="chkb38">
+                                                <label class="custom-control-label" for="chkb38">Middle Finger  </label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox ring-finger">
+                                                <input type="checkbox" class="custom-control-input" id="chkb39">
+                                                <label class="custom-control-label" for="chkb39">Ring Finger  </label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox little-finger">
+                                                <input type="checkbox" class="custom-control-input" id="chkb40">
+                                                <label class="custom-control-label" for="chkb40">Little Finger </label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox palm">
+                                                <input type="checkbox" class="custom-control-input" id="chkb41">
+                                                <label class="custom-control-label" for="chkb41">Palm</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb42">
+                                                <label class="custom-control-label" for="chkb42">Back of hand</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox index-finger right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb43">
+                                                <label class="custom-control-label" for="chkb43">Index Finger</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox thumb right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb44">
+                                                <label class="custom-control-label" for="chkb44">Thumb</label>
+                                             </div>
+                                             <img src="img/svg/right-hand.svg" alt="">
+                                             <h4 class="sub-heading text-center ml-4 mt-4">Right Hand</h4>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- ---------Hand Pills end---------   -->
+                                    <div class="tab-pane fade" id="Leg" role="tabpanel" aria-labelledby="Leg-tab">
+                                       <div class="row">
+                                          <div class="col-lg-12 col-md-12 col-12">
+                                             <h4 class="sub-heading text-center text-medium">Foot Injuries</h4>
+                                          </div>
+                                       </div>
+                                       <div class="row foot-injuries">
+                                          <div class="col-lg-3 col-md-3">
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb45">
+                                                <label class="custom-control-label" for="chkb45">Large toe</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb46">
+                                                <label class="custom-control-label" for="chkb46">Toe 2</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb47">
+                                                <label class="custom-control-label" for="chkb47">Middle toe</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb48">
+                                                <label class="custom-control-label" for="chkb48">Toe 4</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb49">
+                                                <label class="custom-control-label" for="chkb49">Little toe</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb50">
+                                                <label class="custom-control-label" for="chkb50">Sole</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb51">
+                                                <label class="custom-control-label" for="chkb51">Top (bridge) of foot</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand right-aligned-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb52">
+                                                <label class="custom-control-label" for="chkb52">Heel</label>
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-3 col-md-3">
+                                             <img src="img/svg/left-foot.svg" alt="" class="mt-4">
+                                             <h4 class="sub-heading text-right mr-5 mt-4">Left Foot</h4>
+                                          </div>
+                                          <div class="col-lg-3 col-md-3 ">
+                                             <img src="img/svg/right-foot.svg" alt="" class="mt-4">
+                                             <h4 class="sub-heading text-left ml-5 mt-4">Right Foot</h4>
+                                          </div>
+                                          <div class="col-lg-3 col-md-3">
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb53">
+                                                <label class="custom-control-label" for="chkb53">Large toe</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb54">
+                                                <label class="custom-control-label" for="chkb54">Toe 2</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb55">
+                                                <label class="custom-control-label" for="chkb55">Middle toe</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb56">
+                                                <label class="custom-control-label" for="chkb56">Toe 4</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb57">
+                                                <label class="custom-control-label" for="chkb57">Little toe</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb58">
+                                                <label class="custom-control-label" for="chkb58">Sole</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="chkb59">
+                                                <label class="custom-control-label" for="chkb59">Top (bridge) of foot</label>
+                                             </div>
+                                             <div class="custom-control custom-checkbox back-hand">
+                                                <input type="checkbox" class="custom-control-input" id="chkb60">
+                                                <label class="custom-control-label" for="chkb60">Heel</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-outline-primary waves-effect waves-light px-5 mr-2" data-dismiss="modal">Cancel</button>
+                     <button type="button" class="btn btn-primary waves-effect waves-light px-5">Save</button>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <i class="icon-cross ic-3x"></i>
+                  </button>
+               </div>
+            </div>
+         </form>
+      </div>
+      <!-- add/view injury popup start -->
+      <!-- add/victim injury popup start -->
+      <div class="modal fade right" id="add-victim" tabindex="-1" role="dialog" aria-labelledby="add-victim" aria-hidden="true">
+         <form action="" class="m-0">
+            <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+               <div class="modal-content">
+                  <div class="modal-header justify-content-between">
+                     <h5 class="modal-title text-blue">Add victim/person injured </h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <i class="icon-cross ic-3x"></i>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <div class="popup-form clearfix">
+                        <div class="pill-panel">
+                           <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                                       role="tablist">
+                                       <li class="nav-item">
+                                          <a class="nav-link bg-white text-medium px-0 active" id="pills-profile-tab"
+                                             data-toggle="pill" href="#students" role="tab"
+                                             aria-selected="false">Students</a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link bg-white text-medium px-0" data-toggle="pill"
+                                             href="#staffs" role="tab" aria-controls="pills-home"
+                                             aria-selected="true">Staff</a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link bg-white text-medium px-0" data-toggle="pill"
+                                             href="#parents" role="tab" aria-controls="pills-home"
+                                             aria-selected="true">Parents</a>
+                                       </li>
+                           </ul>
+                           <div class="tab-content" id="">
+                              <!-- All tab -->
+                              <div class="tab-pane fade show active" id="students" role="tabpanel">
+                                 <div class="injury-desktop">
+                                    <div class="p-3 bg-light rounded-4x mb-4">
+                                       <div class="row">
+                                          <div class="col-md-6">
+                                             <div class="school">
+                                                <small class="text-medium">Search</small>
+                                                <div class="md-form md-outline mb-0">
+                                                   <div class="search-box d-flex justify-content-between align-items-center mb-2">
+                                                           <input type="text" class="bg-white border-0 line-height-2 px-2 py-1 rounded-2x w-100" placeholder="Student/ Teacher/ ID">
+                                                       <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                                   </div>
+                                               </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-3">
+                                             <div class="category">
+                                                <small class="text-medium">Grade</small>
+                                                <div class="md-form md-outline mb-3">
+                                                   <select class="selectpicker" data-style="btn-white border-0 px-3" data-size="5" title="Grade 04">
+                                                      <option value="1">Accident</option>
+                                                      <option value="23">Child Safeguarding</option>
+                                                      <option value="4">Environmental Incident</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-3">
+                                             <div class="category">
+                                                <small class="text-medium">Section</small>
+                                                <div class="md-form md-outline mb-3">
+                                                   <select class="selectpicker" data-style="btn-white border-0 px-3" data-size="5" title="A">
+                                                      <option value="1">A</option>
+                                                      <option value="23">B</option>
+                                                      <option value="4">C</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- <div class="row">
+                                       <div class="col-md-12">
+                                          <div class="md-form md-outline mb-0">
+                                             <div class="search-box d-flex justify-content-between align-items-center mb-2">
+                                                <input type="text" class="rounded-1x line-height-2 w-100 p-2" placeholder="Student/ Teacher/ ID">
+                                                <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div> -->
+                                    <div class="vistim-Popup-contnent">
+                                       <table class="table table-hover table-responsive-md" cellspacing="0" width="100%">
+                                          <tbody>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-1">
+                                                      <label class="custom-control-label text-medium" for="chkBox-1"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-2">
+                                                      <label class="custom-control-label text-medium" for="chkBox-2"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-3">
+                                                      <label class="custom-control-label text-medium" for="chkBox-3"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-4">
+                                                      <label class="custom-control-label text-medium" for="chkBox-4"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-5">
+                                                      <label class="custom-control-label text-medium" for="chkBox-5"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-6">
+                                                      <label class="custom-control-label text-medium" for="chkBox-6"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-7">
+                                                      <label class="custom-control-label text-medium" for="chkBox-7"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="chkBox-8">
+                                                      <label class="custom-control-label text-medium" for="chkBox-8"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="d-flex align-items-center">
+                                                   <div class="mr-2 img-container">
+                                                      <img src="img/student.png" alt="" class="img-fluid"> 
+                                                   </div>
+                                                   <div class="student-info">
+                                                      <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                                      <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">ID : 12501800992704</h4>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                                </td>
+                                                <td>
+                                                   <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Section : A</h4>
+                                                </td>
+                                                <td class="text-right">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" id="9">
+                                                      <label class="custom-control-label text-medium" for="9"></label>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <!-- <div class="d-flex justify-content-between align-items-center py-2 border-bottom-light">
+                                          <div class="d-flex align-items-center">
+                                              <figure class="mr-2">
+                                                 <img src="img/student.png" alt="" class="img-fluid"> 
+                                              </figure>
+                                              <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                          </div>
+                                          <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">ID : 12501800992704</h4>
+                                          <h4 class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">Grade : 04</h4>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="chkBox-1">
+                                            <label class="custom-control-label text-medium" for="chkBox-1"></label>
+                                           </div>
+                                          </div> -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="tab-pane fade" id="staffs" role="tabpanel">Staff</div>
+                              <div class="tab-pane fade" id="parents" role="tabpanel">Parents</div>
+                           </div>   
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer border-0">
+                     <div class="d-flex align-items-center justify-content-between w-100">
+                        <h6 class="text-black text-semibold font-small">5 Students Selected</h6>
+                        <div>
+                           <button type="button" class="btn btn-outline-primary px-5 mr-2" data-dismiss="modal">Cancel</button>
+                           <button type="button" class="btn btn-primary px-5">Add</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+      <!-- add/victim injury popup end--> 
+      <!-- add Incident Description -->
+      <div class="modal fade right" id="add-description" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+         <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+               <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                  <h5 class="modal-title text-capitalize w-100 text-blue text-semibold text-medium line-height-1"
+                     id="myModalLabel">Incident Description</h5>
+                  <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                  <i class="icon-cross ic-3x"></i>
+                  </button>
+               </div>
+               <div class="modal-body p-4">
+                  <div class="row mb-3">
+                     <div class="col-12">
+                        <label class="text-capitalize font-16 text-medium text-black text-semibold d-block">Incident Description <span class="text-primary">*</span></label>
+                        <div class="md-form md-outline">
+                           <textarea id="txtarea" class="md-textarea form-control" rows="8"></textarea>
+                        </div>
+                     </div>
+                  </div>  
+               </div>
+               <div class="modal-footer justify-content-end border-0 py-2">
+                  <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex"
+                     data-dismiss="modal" aria-label="Close">Cancel</button>
+                  <button class="btn btn-primary m-0" type="button">Add</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- add Incident Description end-->
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/popper.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/mdb.min.js"></script>
+      <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+      <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+      <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+      <script>
+         $(function() {
+             //$('#advancedFilter').modal('show');
+             /* $('input[name="datetimes"]').daterangepicker({
+                 timePicker: true,
+                 startDate: moment().startOf('hour'),
+                 endDate: moment().startOf('hour').add(32, 'hour'),
+                 locale: {
+                     format: 'M/DD hh:mm A',
+                 }
+             }); */
+             var start = moment().subtract(7, 'days');
+             var end = moment();
+         
+             function cb(start) {
+                 $('#dateTimeRange span').html(start.format(' hh:mm A, M/DD/YYYY'));
+             }
+         
+             $('#dateTimeRange').daterangepicker({
+                 startDate: start,
+                 // endDate: end,
+                 ranges: {
+                     'Today': [moment(), moment()],
+                     'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                     'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                     'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                     'This Month': [moment().startOf('month'), moment().endOf('month')],
+                     'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                 }
+             }, cb);
+         
+             cb(start);
+         })
+      </script>
+      <script>
+         function AddReadMore() {
+             //This limit you can set after how much characters you want to show Read More.
+             var carLmt = 300;
+             // Text to show when text is collapsed
+             var readMoreTxt = " ... Read More";
+             // Text to show when text is expanded
+             var readLessTxt = " Read Less";
+     
+     
+             //Traverse all selectors with this class and manupulate HTML part to show Read More
+             $(".addReadMore").each(function() {
+                 if ($(this).find(".firstSec").length)
+                     return;
+     
+                 var allstr = $(this).text();
+                 if (allstr.length > carLmt) {
+                     var firstSet = allstr.substring(0, carLmt);
+                     var secdHalf = allstr.substring(carLmt, allstr.length);
+                     var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + readMoreTxt + "</span><span class='readLess' title='Click to Show Less'>" + readLessTxt + "</span>";
+                     $(this).html(strtoadd);
+                 }
+     
+             });
+             //Read More and Read Less Click Event binding
+             $(document).on("click", ".readMore,.readLess", function() {
+                 $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+             });
+         }
+         $(function() {
+             //Calling function after Page Load
+             AddReadMore();
+         });
+      </script>
+   </body>
+</html>

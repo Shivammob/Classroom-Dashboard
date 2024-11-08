@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.626" height="19.619" viewBox="0 0 20.626 19.619">
+  <g id="history-clock-button" transform="translate(0.25 -12.5)">
+    <g id="history" transform="translate(0 12.75)">
+      <path id="Path_610" data-name="Path 610" d="M10.566,12.75a9.4,9.4,0,0,0-8.252,4.83L0,15.266v6.541H6.541L3.723,18.989a7.588,7.588,0,1,1-.3,5.836H1.308A9.575,9.575,0,1,0,10.566,12.75ZM9.057,17.781v5.132l4.73,2.818.805-1.308-4.025-2.415V17.781Z" transform="translate(0 -12.75)" fill="#adb0b3" stroke="#adb0b3" stroke-width="0.5" opacity="0.9"/>
+    </g>
+  </g>
+</svg>

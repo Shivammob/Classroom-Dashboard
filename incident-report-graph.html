@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>HSE - Report Graph</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- dataTable css -->
+    <link href="css/addons/datatables.min.css" rel="stylesheet">
+    <link href="css/addons/datatables-select.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+							<div class="animated-icon1"><span></span><span></span><span></span></div>
+						</button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span> English
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span> Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions" class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+	<main class="pt-5 mx-lg-1 mt-4">
+		<div class="container-fluid mt-3 mb-4">
+			<!-- subheader start -->
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+						<div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+							<h3 class="page-title text-primary text-semibold m-0">Incident Reports</h3>
+							<ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+								<li class="font-small text-medium text-black-50"><a href="#">Home</a></li>
+								<li class="font-small text-medium text-black-50"><a href="#">Reports</a></li>
+                                <li class="font-small text-medium text-black-50">Incident Reports</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- subheader end -->
+
+			<!-- incidents data -->
+			<div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+							<div class="p-4">
+								<div class="row">
+                                    <div class="col-12">
+                                       <div class="d-flex justify-content-between">
+                                        <select class="selectpicker" data-dropdown-align-right="true" data-style="border-0 text-black font-16 text-semibold" data-width="fit">
+                                            <option selected="selected">All Reports</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                        </select>
+                                        <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button"
+                                        data-toggle="modal" data-target="#addreminder">
+                                        <i class="icon-edit ic-2x mr-1"></i> Modify Search
+                                        </button>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 bg-light severity rounded-2x mt-3">
+                                    <div class="p-3 bg-white rounded-2x">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="severity-text position-relative">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <h6 class="text-capitalize text-semibold font-16 text-medium text-primary mb-0 d-block">severity wise Incident</h6>
+                                                        <p class="mb-0">Form <span class="text-black text-semibold text-medium">01/01/2020</span> to <span class="text-black text-semibold text-medium">01/01/2020</span> </p>
+                                                    </div>
+                                                    <div class="severity-icons position-absolute">
+                                                        <i class="file-type-pdf text-black-50 text-semibold ic-3x mr-2"></i>
+                                                        <i class="file-type-ppt text-black-50 text-semibold ic-3x"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="severity-graph-contain">
+                                                    <img src="img/severity-wise-graph1.PNG" alt="Phoenix" class="img-fluid logo">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 bg-white rounded-2x mt-3">
+                                        <div class="row severity-wise-graph">
+                                            <div class="col-12">
+                                                <div class="table-wrapper table-responsive-md">
+                                                <table id="table-wise-ghaph" class="table table-hover" cellspacing="0"
+                                                width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="position-relative">Day</span></th>
+                                                        <th><span class="position-relative">SEVERITY</span></th>
+                                                        <th><span class="position-relative">INCIDENTS</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-black-50">
+                                                    <tr>
+                                                        <td>13/02/2020</td>
+                                                        <td>MINOR</td>
+                                                        <td>Collision between students</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13/02/2020</td>
+                                                        <td>MAJOR</td>
+                                                        <td>Collision between students</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13/02/2020</td>
+                                                        <td>MINOR</td>
+                                                        <td>Collision between students</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13/02/2020</td>
+                                                        <td>MINOR</td>
+                                                        <td>Collision between students</td>
+                                                    </tr>
+                                                </tbody>    
+                                                </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- incidents data end -->						
+	    </div>
+    </main>
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+
+    <!-- dataTable js -->
+    <script src="js/addons/datatables.min.js" rel="stylesheet"></script>
+    <script src="js/addons/datatables-select.min.js" rel="stylesheet"></script>
+    <script src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/js/dataTables.checkboxes.min.js"></script>
+
+	<script type="text/javascript" src="js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //initialize reminderList datatable
+            var tableWiseGhaph =  $('#table-wise-ghaph').DataTable({
+                bLengthChange: false,
+                ordering: true,
+                columnDefs: [ 
+                    // {
+                    //     orderable: true,
+                    //     className: 'select-checkbox',
+                    //     targets:   0
+                    // },
+                    {
+                        orderable: true,
+                        targets: [0,1,2]
+                    },
+                    // {
+                    //     orderable: false,
+                    //     targets: [2]
+                    // }
+                ],
+                "lengthMenu": [ 5, 10, 15, 20, 25 ],
+                select: {
+                    style:    'multi',
+                    selector: 'td:first-child'
+                },
+                select: {
+                    style:    'multi',
+                    selector: 'td:first-child'
+                },
+                //order: [[ 0, 'asc' ]]
+            });
+            // $("#notificationList_filter").hide();
+            $(".dataTables_filter").hide();
+            // $(".dataTables_paginate").hide();
+        });
+    </script>
+    
+</body>
+</html>

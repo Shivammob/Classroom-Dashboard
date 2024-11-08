@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/scorecardTarget.scss"
+    ],
+    "names": [],
+    "file": "scorecardTarget.css"
+}

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Dashboard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/asProgress.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+    <!-- <style>
+        header .main-nav .profile-actions li {
+        height: 10px !important;
+}
+    </style> -->
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 px-3 text-uppercase text-blue"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <!-- <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span> -->
+                                        En
+                                    </button>
+                                    <div
+                                        class="dropdown-menu w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item font-small d-block text-uppercase text-blue" href="#">
+                                            <!-- <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span> -->
+                                            Ar
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="javascript:void(0)" class="d-flex align-items-center h-100" data-toggle="modal" data-target="#userGuide"><i class="icon-help-circle"></i></a>
+                                </li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium text-blue font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block small text-black-50 text-medium text-primary">Guard User </span>
+                                        </h3>
+                                        <i class="icon-chevron-down text-primary rounded-circle bg-light p-1"></i>
+                                    </a>
+                                </li> -->
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+                                        <h6 class="login-status text-semibold font-small px-3">Logged in as</h6>
+                                        <ul class="profile-actions login-actions">
+                                            <li class="bg-light mx-3 rounded-1x px-2 mb-2 d-flex align-items-center">
+                                                <a href="javascript:void(0)" class="px-1"><i class="icon-school-1 small text-semibold mr-2"></i><span class="small text-semibold">School Staff</span> </a>
+                                                <span class="icon-check text-semibold text-primary active"></span>
+                                            </li>
+                                            <li class="bg-light mx-3 rounded-1x px-2 mb-2 d-flex align-items-center">
+                                                <a href="javascript:void(0)" class="px-1"><i class="icon-settings text-semibold mr-2"></i><span class="small text-semibold">Admin</span>
+                                                </a>
+                                                <span class="icon-check text-semibold text-primary"></span>
+                                            </li>
+                                            <li class="bg-light mx-3 rounded-1x px-2 mb-3 d-flex align-items-center">
+                                                <a href="javascript:void(0)" class="px-1"><i class="icon-disc text-semibold mr-2"></i><span class="small text-semibold">Other</span>
+                                                </a>
+                                                <span class="icon-check text-semibold text-primary"></span>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="my-2">
+                                                <a href="javascript:void(0)">My account</a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="my-2">
+                                                <a href="javascript:void(0)">Terms & Condition</a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="my-2">
+                                                <a href="javascript:void(0)">Privacy Policy</a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="my-2">
+                                                <a href="javascript:void(0)" class="text-primary">Signout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item active mt-2">
+                    <span class="ic-dashboard title-icon active"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <a href="audits.html" class="list-group-item">
+					<span class="ic-create-audit title-icon"></span>Create Audit
+				</a>
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="scorecard.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+                <a class="list-group-item">
+                    <span class="ic-score-actual title-icon"></span>Score Card Actual
+                </a>
+                <a class="list-group-item pl-3">
+                    <img src="./img/svg/classroom.svg" alt="" style="max-width: 90px; height: 20px;">
+                </a>
+                <a class="list-group-item pl-3 mb-3">
+                    <img src="./img/svg/school.svg" alt="" style="max-width: 160px; height: 20px;">
+                </a>
+
+                
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid mt-3 mb-4">
+
+            <div class="row">
+                <div class="col-md-8 col-12">
+                    <!-- incident comparison widget -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="title-with-fields">
+                                <h3 class="card-title">Incident Comparison</h3>
+                                <!-- <select class="selectpicker small-select" data-style="rounded-5x px-3" data-width="fit">
+                                    <option selected="selected" value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                    <option value="3">Near Miss</option>
+                                    <option value="7">Property Damage</option>
+                                    <option value="6">Security</option>
+                                    <option value="5">Vehicle</option>
+                                </select> -->
+                                <div class="align-items-center border-blue d-flex d-sm-inline-flex flex-shrink-0 line-height-1 pl-2 py-1 rounded-2x">
+                                    <span class="d-flex text-semibold small text-black-50 flex-shrink-0">Incident Category :</span>
+                                    <div class="md-form md-outline m-0">
+                                        <select class="selectpicker" data-dropdown-align-right="true" data-style="border-0 small text-black text-semibold py-0 px-1" data-width="120px">
+                                            <option selected="Accident">Accident</option>
+                                            <option>Date Created</option>
+                                            <option>Incident</option>
+                                            <option>Date Occured</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deepak loaderOn">
+                                <div class="graph-container column-padding pb-4">
+                                    <img src="img/temp/incident-comparison.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- incident comparison widget end -->
+
+                    <!-- incident types widget -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="title-with-fields">
+                                <div class="heading-title">
+                                    <h3 class="card-title">Incident Types</h3>
+                                    <p class="small">Incident types short description goes here</p>
+                                </div>
+                                <div class="align-items-center border-blue d-flex d-sm-inline-flex flex-shrink-0 line-height-1 pl-2 py-1 rounded-2x">
+                                    <span class="d-flex text-semibold small text-black-50 flex-shrink-0">Academic Year :</span>
+                                    <div class="md-form md-outline m-0">
+                                        <select class="selectpicker" data-dropdown-align-right="true" data-style="border-0 small text-black text-semibold py-0 px-1" data-width="120px">
+                                            <option selected="Accident">2021-2022</option>
+                                            <option>2021-2022</option>
+                                            <option>2021-2022</option>
+                                            <option>2021-2022</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="graph-container column-padding pb-4">
+                                <img src="img/temp/incident-types.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- incident types widget end -->
+
+                    <!-- Audit list widget -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="title-with-fields">
+                                <div class="heading-title">
+                                    <h3 class="card-title">Scheduled Audits Summary - 2020 - 2021<a href="#" data-toggle="tooltip" title="Scheduled Audits Summary"><i class="fas fa-info-circle text-blue ml-2 font-small"></i></a></h3>
+                                    <p class="small mb-0">Details of <span class="text-primary text-medium">12 Schools</span></p>
+                                </div>
+                                <a href="javascript:void(0)" class="small text-primary text-medium text-underline">View All</a>
+                            </div>
+                            <div class="column-padding">
+                                <!-- Audit stats start -->
+                                <div class="row auditStatistics mx-n2 mb-4">
+                                    <div class="col-md-3 col-12 px-2">
+                                        <div class="rounded-progressbar successfulAudits px-4 py-3 rounded-2x border border-light">
+                                            <div class="position-relative" data-donutty data-min="0" data-max="100" data-value="91" data-color="#49A34D" data-bg="#F4F6F9" data-padding="0" data-thickness="10">
+                                                <span class="count position-absolute" style="--color: #49A34D">91</span>
+                                            </div>
+                                            <p class="m-0 text-center text-medium mt-3">Successful</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12 px-2">
+                                        <div class="rounded-progressbar successfulAudits px-4 py-3 rounded-2x border border-light">
+                                            <div class="position-relative" data-donutty data-min="0" data-max="100" data-value="38" data-color="#AB2C24" data-bg="#F4F6F9" data-padding="0" data-thickness="10">
+                                                <span class="count position-absolute" style="--color: #AB2C24">38</span>
+                                            </div>
+                                            <p class="m-0 text-center text-medium mt-3">Failed</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12 px-2">
+                                        <div class="rounded-progressbar successfulAudits px-4 py-3 rounded-2x border border-light">
+                                            <div class="position-relative" data-donutty data-min="0" data-max="100" data-value="12" data-color="#E98A2E" data-bg="#F4F6F9" data-padding="0" data-thickness="10">
+                                                <span class="count position-absolute" style="--color: #E98A2E">12</span>
+                                            </div>
+                                            <p class="m-0 text-center text-medium mt-3">Underway</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12 px-2">
+                                        <div class="rounded-progressbar successfulAudits px-4 py-3 rounded-2x border border-light">
+                                            <div class="position-relative" data-donutty data-min="0" data-max="100" data-value="3" data-color="#1DADE1" data-bg="#F4F6F9" data-padding="0" data-thickness="10">
+                                                <span class="count position-absolute" style="--color: #1DADE1">3</span>
+                                            </div>
+                                            <p class="m-0 text-center text-medium mt-3">To Do</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Audit stats end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- list -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row audit-success-rate-list">
+                                <div class="col-12">
+                                    <div class="title-with-fields">
+                                        <div class="heading-title">
+                                            <h3 class="card-title">Audit Summary - October 2021</h3>
+                                            <p class="small mb-0">Some description goes here</p>
+                                        </div>
+                                        <a href="javascript:void(0)" class="small text-primary text-medium text-underline">View All</a>
+                                    </div>
+                                    <div class="column-padding pb-2">
+                                        <div class="row no-gutters border-bottom border-dark pb-2 d-flex align-items-center">
+                                            <div class="col-6">
+                                                <h3 class="font-16 text-semibold mb-0 text-blue">Audits</h3>
+                                            </div>
+                                            <div class="col-6 pl-3">
+                                                <h3 class="font-16 text-semibold mb-0 text-blue">Number of successful audits</h3>
+                                            </div>
+                                        </div>
+                                        <article class="py-4">
+                                            <div class="row">
+                                                <div class="col-md-6 col-12 d-flex align-items-center">
+                                                    <h3 class="m-0 font-small text-medium">
+                                                        Infection Control Checklist
+                                                    </h3>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="h-progress">
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-left">0</h3>
+                                                        <div class="h-progressbar rounded-4x" data-count="039" data-maxcount="118">
+                                                            <span class="progressRail rounded-4x">
+                                                                <span class="progressCount"></span>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-right">867</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="py-4">
+                                            <div class="row">
+                                                <div class="col-md-6 col-12 d-flex align-items-center">
+                                                    <h3 class="m-0 font-small text-medium">
+                                                        Weekly fire inspection record
+                                                    </h3>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="h-progress">
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-left">0</h3>
+                                                        <div class="h-progressbar rounded-4x" data-count="116" data-maxcount="223">
+                                                            <span class="progressRail rounded-4x">
+                                                                <span class="progressCount"></span>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-right">242</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="py-4">
+                                            <div class="row">
+                                                <div class="col-md-6 col-12 d-flex align-items-center">
+                                                    <h3 class="m-0 font-small text-medium">
+                                                        Monthly EHS Inspection
+                                                    </h3>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="h-progress">
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-left">0</h3>
+                                                        <div class="h-progressbar rounded-4x" data-count="714" data-maxcount="999">
+                                                            <span class="progressRail rounded-4x">
+                                                                <span class="progressCount"></span>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-right">786</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="py-4">
+                                            <div class="row">
+                                                <div class="col-md-6 col-12 d-flex align-items-center">
+                                                    <h3 class="m-0 font-small text-medium">
+                                                        Monthly First aid Contents
+                                                    </h3>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="h-progress">
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-left">0</h3>
+                                                        <div class="h-progressbar rounded-4x" data-count="786" data-maxcount="936">
+                                                            <span class="progressRail rounded-4x">
+                                                                <span class="progressCount"></span>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="font-small flex-shrink-0 m-0 text-medium text-right">999</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- list end -->
+                    <!-- Audit list widget end -->
+                    <!-- ongoing audits -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="card-title pb-1">Ongoing Audits - October 2021</h3>
+                                    <div class="audit-success-rate-list column-padding pb-2">
+                                        <article class="py-3">
+                                            <ul class="d-flex align-items-center mb-2">
+                                                <li
+                                                    class="text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                    ID #13084</a></li>
+                                                <li
+                                                    class="font-small text-semibold m-0 text-uppercase text-warning text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="text-warning">
+                                                    AUDIT NOT STARTED</a>
+                                                </li>
+                                            </ul>
+                                            <h6 class="font-small text-medium mb-0">Weekly fire inspection record (GGI)</h6>
+                                        </article>
+                                        <article class="py-3">
+                                            <ul class="d-flex align-items-center mb-2">
+                                                <li
+                                                    class="text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                    ID #13084</a></li>
+                                                <li
+                                                    class="font-small text-semibold m-0 text-uppercase text-warning text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="text-warning">
+                                                    AUDIT NOT STARTED</a>
+                                                </li>
+                                            </ul>
+                                            <h6 class="font-small text-medium mb-0">Weekly fire inspection record (GGI)</h6>
+                                        </article>
+                                        <article class="py-3">
+                                            <ul class="d-flex align-items-center mb-2">
+                                                <li
+                                                    class="text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                    ID #13084</a></li>
+                                                <li
+                                                    class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="text-success">
+                                                    COMPLETED <span class="font-small text-dark text-medium">- 24 May 2021</span></a>
+                                                </li>
+                                            </ul>
+                                            <h6 class="font-small text-medium mb-0">Weekly fire inspection record (GGI)</h6>
+                                        </article>
+                                        <article class="py-3">
+                                            <ul class="d-flex align-items-center mb-2">
+                                                <li
+                                                    class="text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                    ID #13084</a></li>
+                                                <li
+                                                    class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="text-success">
+                                                    COMPLETED <span class="font-small text-dark text-medium">- 24 May 2021</span></a>
+                                                </li>
+                                            </ul>
+                                            <h6 class="font-small text-medium mb-0">Weekly fire inspection record (GGI)</h6>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ongoing audits end -->
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <!-- incident widget  -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="title-with-fields d-block">
+                                <h3 class="card-title">Incidents<a href="#" data-toggle="tooltip" title="Tasks"><i class="fas fa-info-circle text-blue ml-2 font-small"></i></a></h3>
+                                <p class="small">Overall status of reported incidents</p>
+                            </div>
+                            <div class="column-padding pb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-12 text-center pr-3 pr-sm-0 align-self-center">
+                                        <h3 class="m-0 text-semibold font-16">
+                                            273 <span class="d-block small text-medium mt-1">Open</span>
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="rounded-progressbar incidentStats rounded-2x">
+                                            <div class="position-relative" data-donutty data-min="0" data-max="508" data-value="235" data-color="#4EC19E" data-bg="#F4F6F9" data-padding="0" data-thickness="10">
+                                                <span class="count position-absolute font-16" style="--color: #ba1818">508 <small class="d-block text-medium">Total</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12 text-center pl-3 pl-sm-0 align-self-center">
+                                        <h3 class="m-0 text-semibold font-16 text-blue">
+                                            235 <span class="d-block small text-medium text-dark mt-1">Closed</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 mx-auto mt-5">
+                                        <button class="btn btn-outline-primary rounded-1x w-100 m-0 d-flex align-items-center justify-content-center" type="button"><i class="icon-plus text-medium ic-2x mr-1"></i>Report New Incident</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- incident widget end -->
+
+                    <!-- view files widget -->
+                    <div class="card mb-4 task-widget">
+                        <div class="card-body">
+                            <div class="title-with-fields">
+                                <div class="heading-title">
+                                    <h3 class="card-title">Tasks<a href="#" data-toggle="tooltip" title="Tasks"><i class="fas fa-info-circle text-blue ml-2 font-small"></i></a></h3>
+                                    <p class="small mb-0">Scheduled inspection Details of</p>
+                                </div>
+                                <a href="javascript:void(0)" class="small text-primary text-medium text-underline">View Details</a>
+                            </div>
+                            <div class="task-stats bg-light rounded-4x mx-3 mb-3 py-3">
+                                <div class="row no-gutters pr-3">
+                                    <div class="col-4 text-center">
+                                        <h3 class="text-blue text-semibold m-0">10 <small class="d-block mt-2 text-medium text-dark">Open</small></h3>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <h3 class="text-primary text-semibold m-0">1 <small class="d-block mt-2 text-medium text-dark">Overdue</small></h3>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <h3 class="text-warning text-semibold m-0">5 <small class="d-block mt-2 text-medium text-dark">In Progress</small></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-data mb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="column-padding pt-3 tasks-stats">
+                                            <li>
+                                                <div class="progress-title d-flex align-items-baseline justify-content-between">
+                                                    <h6 class="small text-medium">High Priority <span class="text-bold">6</span></h6>
+                                                    <a href="#" class="small text-bold">(60%)</a>
+                                                </div>
+                                                <div class="task-progress">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width: 60%;background:#D98C3F;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="progress-title d-flex align-items-baseline justify-content-between">
+                                                    <h6 class="small text-medium">Medium Priority <span class="text-bold">3</span></h6>
+                                                    <a href="#" class="small text-bold">(30%)</a>
+                                                </div>
+                                                <div class="task-progress">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width: 30%;background: #8773C6;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="progress-title d-flex align-items-baseline justify-content-between">
+                                                    <h6 class="small text-medium">Low Priority <span class="text-bold">1</span></h6>
+                                                    <a href="#" class="small text-bold">(10%)</a>
+                                                </div>
+                                                <div class="task-progress">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width: 10%;background: #7ECAF2;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-padding mb-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button class="btn btn-outline-primary rounded-1x w-100 m-0 d-flex align-items-center justify-content-center" type="button"><i class="icon-plus text-medium ic-2x mr-1"></i>Create New Task</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- view files widget end -->
+
+                    <!-- task widget -->
+                    <div class="card mb-4 task-widget">
+                        <div class="card-body">
+                            <div class="myTaskList column-padding">
+                                <div class="d-flex align-items-center justify-content-between border-bottom border-dark mb-0 pb-2 pt-3">
+                                    <h3 class="font-16 text-blue text-semibold flex-1 mr-2 mb-0">My Tasks</h3>
+                                    <a href="javascript:void(0)" class="small text-primary text-medium text-underline">View All</a>
+                                </div>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <p class="small text-medium text-black-50 flex-1 m-0">Due on : 12 June 2021</p>
+                                        <span class="status status-overdue flex-shrink-0 rounded-3x">Overdue</span>
+                                    </section>
+                                    <section class="d-flex align-items-center mb-1">
+                                        <i class="fas fa-map-marker-alt text-primary mr-2 font-small"></i>
+                                        <h6 class="mb-0 small text-medium text-black-50">Garden Grove Institute, Dubai - UAE</h6>
+                                    </section>
+                                    <p class="small text-medium mb-2">2.2 Have the findings of the risk assessments been communicated to relevant employee?</p>
+                                    <p class="small text-medium text-black-50 m-0">Created By : Edwin George</p>
+                                </article>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <p class="small text-medium text-black-50 flex-1 m-0">Due on : 12 June 2021</p>
+                                        <span class="status status-overdue flex-shrink-0 rounded-3x">Overdue</span>
+                                    </section>
+                                    <section class="d-flex align-items-center mb-1">
+                                        <i class="fas fa-map-marker-alt text-primary mr-2 font-small"></i>
+                                        <h6 class="mb-0 small text-medium text-black-50">Garden Grove Institute, Dubai - UAE</h6>
+                                    </section>
+                                    <p class="small text-medium mb-2">2.2 Have the findings of the risk assessments been communicated to relevant employee?</p>
+                                    <p class="small text-medium text-black-50 m-0">Created By : Edwin George</p>
+                                </article>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <p class="small text-medium text-black-50 flex-1 m-0">Due on : 12 June 2021</p>
+                                        <span class="status status-inprogress flex-shrink-0 rounded-3x">In Progress</span>
+                                    </section>
+                                    <section class="d-flex align-items-center mb-1">
+                                        <i class="fas fa-map-marker-alt text-primary mr-2 font-small"></i>
+                                        <h6 class="mb-0 small text-medium text-black-50">Garden Grove Institute, Dubai - UAE</h6>
+                                    </section>
+                                    <p class="small text-medium mb-2">2.2 Have the findings of the risk assessments been communicated to relevant employee?</p>
+                                    <p class="small text-medium text-black-50 m-0">Created By : Edwin George</p>
+                                </article>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <p class="small text-medium text-black-50 flex-1 m-0">Due on : 12 June 2021</p>
+                                        <span class="status status-inprogress flex-shrink-0 rounded-3x">In Progress</span>
+                                    </section>
+                                    <section class="d-flex align-items-center mb-1">
+                                        <i class="fas fa-map-marker-alt text-primary mr-2 font-small"></i>
+                                        <h6 class="mb-0 small text-medium text-black-50">Garden Grove Institute, Dubai - UAE</h6>
+                                    </section>
+                                    <p class="small text-medium mb-2">2.2 Have the findings of the risk assessments been communicated to relevant employee?</p>
+                                    <p class="small text-medium text-black-50 m-0">Created By : Edwin George</p>
+                                </article>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <p class="small text-medium text-black-50 flex-1 m-0">Due on : 12 June 2021</p>
+                                        <span class="status status-inprogress flex-shrink-0 rounded-3x">In Progress</span>
+                                    </section>
+                                    <section class="d-flex align-items-center mb-1">
+                                        <i class="fas fa-map-marker-alt text-primary mr-2 font-small"></i>
+                                        <h6 class="mb-0 small text-medium text-black-50">Garden Grove Institute, Dubai - UAE</h6>
+                                    </section>
+                                    <p class="small text-medium mb-2">2.2 Have the findings of the risk assessments been communicated to relevant employee?</p>
+                                    <p class="small text-medium text-black-50 m-0">Created By : Edwin George</p>
+                                </article>
+                                <!-- <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <span class="flex-shrink-0 bu-code text-semibold rounded px-2 mr-2">GGI</span>
+                                        <p class="small text-medium text-black-50 flex-1 m-0">22 Days ago</p>
+                                        <span class="status status-completed flex-shrink-0 rounded-3x">Completed</span>
+                                    </section>
+                                    <p class="small text-medium m-0">2.2 Have the findings of the risk assessments been communicated to relevant employee?</p>
+                                </article> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tasl widget end -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer start -->
+    <footer class="page-footer">
+        <p class="m-0 text-center">&copy; Copyright, GEMS Education</p>
+    </footer>
+    <!-- footer end -->
+
+    <div class="modal fade right userActions" id="userActions" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-right" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <div class="d-flex align-items-start">
+                        <div class="user-dp rounded-3x overflow-hidden flex-shrink-0 mr-2">
+                            <img src="img/avatar-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="user-info flex-1">
+                            <h3 class="font-16 text-medium mb-2">
+                                Jasmine Welch <span class="d-block font-small text-black-50 text-medium">School Nurse</span>
+                            </h3>
+                            <a href="#" class="btn-logout text-medium rounded-3x line-height-1 small">Sign Out</a>
+                        </div>
+                    </div>
+                    <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="list-group">
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">My Tasks <i class="icon-arrow-right font-16 text-primary"></i></a>
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">Incidents added by me <i class="icon-arrow-right font-16 text-primary"></i></a>
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">Files added By me <i class="icon-arrow-right font-16 text-primary"></i></a>
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">Saved Search <i class="icon-arrow-right font-16 text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0 py-1"></div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- user guid drawer -->
+      <div class="modal fade right userGuide" id="userGuide" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-right modal-dialog-scrollable" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-primary align-items-center border-0 d-block">
+                    <h5 class="modal-title w-100 text-white font-16 text-medium d-flex align-items-center justify-content-between line-height-1" id="">
+                        Search with a keyword
+                        <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-cross ic-3x text-white"></i>
+                        </button>
+                    </h5>
+                    <div class="searchInput position-relative">
+                        <i class="icon-search position-absolute font-16"></i>
+                        <input type="search" class="rounded form-control border-0 m-0" placeholder="Search">
+                    </div>
+                    <p class="text-white small line-height-1 helpSearchResultCount mb-0">5 instances found on this page</p>
+                </div>
+                <div class="modal-body pt-2 pl-3 pr-2 userguideSearchResult">
+                        <ul>
+                            <li class="mb-3">
+                                <a href="#" class="text-primary text-medium">Create an assignments</a>
+                                <p class="small text-medium line-height-1-half m-0">Etiam quis sagittis nulla, sit amet viverra est. In elementum suscipit justo</p>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-primary text-medium">Google drive</a>
+                                <p class="small text-medium line-height-1-half m-0">Etiam quis sagittis nulla, sit amet viverra est. In elementum suscipit justo</p>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-primary text-medium">Attach resources</a>
+                                <p class="small text-medium line-height-1-half m-0">Etiam quis sagittis nulla, sit amet viverra est. In elementum suscipit justo</p>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-primary text-medium">Assignment summary</a>
+                                <p class="small text-medium line-height-1-half m-0">Etiam quis sagittis nulla, sit amet viverra est. In elementum suscipit justo</p>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-primary text-medium">Assignment report</a>
+                                <p class="small text-medium line-height-1-half m-0">Etiam quis sagittis nulla, sit amet viverra est. In elementum suscipit justo</p>
+                            </li>
+                        </ul>
+                        <!-- <button class="btn btn-white btn-sm d-flex align-items-center m-0 px-2 mt-2" type="button">More help  like this <i class="icon-arrow-right1 ml-2"></i></button> -->
+                </div>
+                <div class="modal-footer justify-content-start px-3 py-1 border-0">
+                    <!-- <button type="button" class="btn btn-primary m-0" disabled>Save</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- <script type="text/javascript" src="js/charts.js"></script>
+	<script type="text/javascript" src="js/addons/chartjs-labels.js"></script> -->
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/donutty.min.js"></script>
+    <!-- <script type="text/javascript" src="js/addons/jquery-asProgress.js"></script> -->
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        $(document).ready(function() {
+            //$('#userActions').modal('show');
+
+            $(window).on('load', function() {
+                //alert('sdjfksdj')
+                //$('body').find('.card').removeClass('.loaderOn')
+                if ($('.deepak').hasClass("loaderOn")) {
+                    // if ($(".deepak.loaderOn")[0]){
+                    setTimeout(function () {
+                        $(".deepak").removeClass("loaderOn");
+                    }, 3000);
+                }
+            })
+
+            $('.h-progressbar').each(function() {
+                var progressCount = $(this).attr('data-count');
+                var progressMaxCount = $(this).attr('data-maxcount');
+                var count = progressCount / progressMaxCount;
+                var result = count * 100;
+                $(this).find('.progressCount').text(progressCount);
+                $(this).find('.progressRail').width(result + '%');
+            })
+           
+            $('ul.login-actions li').click(function() {
+               $('span.icon-check.active').removeClass('active');
+               $(this).children().addClass("active");
+            });
+            /* var totalCase = 22;
+            var solvedCase =  16;
+            var count = solvedCase / totalCase;
+            var result = count * 100;
+            console.log(result); */
+
+
+        });
+    </script>
+
+</body>
+
+</html>

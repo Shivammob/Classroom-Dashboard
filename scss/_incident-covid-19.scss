@@ -1,0 +1,57 @@
+.covid-19 {
+    .active-cases {
+        background-color: #F5BA34;
+        width: 100%;
+        height: 85%;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+    .today-cases {
+        .bord {
+            border-bottom: 1px solid #dee2e66e !important;
+        }
+        background-color: #E56D6D;
+        width: 100%;
+        height: 85%;
+    }
+    .recovery-cases {
+        .bord {
+            border-bottom: 1px solid #dee2e66e !important;
+         }
+        background-color: #8DBCA1;
+        width: 100%;
+        height: 85%;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    .show-calendar{
+        right: 40px !important;
+        // @include media-breakpoint-down(sm) {
+        //     right: 0 !important;
+        // }
+    }
+}
+.download-link-blue{
+    color: $student-download-link;
+}
+.three-result-purple{
+    color:$text-purple-result;
+}
+// .dropdown-menu{
+//     padding: 0;
+// }
+
+
+    @include media-breakpoint-down(sm) {
+        .search-filter{
+            .md-form.md-outline{
+                width: 100%!important;
+                .search-box{
+                    width: 100%!important;
+                }
+            }
+            .order-category{
+                width: 100%!important;
+            }
+        }
+    }

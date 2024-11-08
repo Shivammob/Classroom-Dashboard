@@ -1,0 +1,54 @@
+.create-audit{
+    .audit-border-bottom{
+        border-bottom: 1.5px solid #e4eaf0;
+    }
+        table{
+            thead {
+                :nth-child(1) {
+                   // width: rem(110px)!important;
+                     width: 10% !important;
+                }
+                :nth-child(2) {
+                    width: 33%!important;
+                }
+                :nth-child(3) {
+                    //width: rem(140px)!important;
+                    width: 15% !important;
+                }
+                :nth-child(4) {
+                    //width: rem(140px)!important;
+                    width: 15% !important;
+                }
+                :nth-child(5) {
+                    //width: rem(140px)!important;
+                    width: 15% !important;
+                }
+            }
+            tbody{
+                td {
+                    max-width: rem(240px);
+                }
+            }
+        }
+    
+   
+    .md-form textarea ~ label.active {
+        color: rgb(117, 117, 117) !important;
+    }
+}
+
+.create-audit-details{
+    .audit-details{
+        .incident-meta{
+            .details-action-right{
+                top: 0.875rem;
+                right: 1.375rem;
+            }
+        }
+    }
+}
+
+.md-form textarea ~ label.dark-text-label{
+    color: rgb(117, 117, 117) !important;
+}
+

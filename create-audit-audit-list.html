@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Create Audit</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+
+    <!-- dataTable css -->
+    <link href="css/addons/datatables.min.css" rel="stylesheet">
+    <link href="css/addons/datatables-select.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid library mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white d-flex align-items-center justify-content-between rounded-2x pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-blue text-semibold m-0">Audit List</h3>
+                            <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium text-black-50"><a class="text-primary" href="#">Home</a></li>
+                                <li class="font-small text-medium text-blue ">List & Create </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary d-flex align-items-center rounded-2x m-0 px-3" type="button"
+                            data-toggle="modal" data-target="#created-Audit">
+                            <i class="icon-plus text-semibold ic-2x mr-1"></i> Create Audit
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pill-panel create-audit p-4">
+                                <!-- <h6 class="text-black text-semibold pb-3 mb-3 audit-border-bottom">Audit List</h6> -->
+                                <!-- Data-filter  -->
+                                <div class="row">
+                                    <div
+                                        class="col-md-12 col-12 d-flex search-filter justify-content-between align-items-start flex-column flex-md-row mb-3">
+                                        <div class="md-form md-outline mb-0 w-75">
+                                            <div class="d-flex w-100 flex-wrap">
+                                                <div
+                                                    class="search-box d-flex justify-content-between align-items-center w-75 mr-2 mb-2">
+                                                    <input type="text" class="form-control bg-white border m-0 "
+                                                        placeholder="Search a keyword">
+                                                    <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                                </div>
+                                                <button
+                                                    class="btn bg-blue text-white d-flex align-items-center rounded-2x m-0 px-3 mb-2"
+                                                    type="button" data-toggle="modal"
+                                                    data-target="#users-list-filter">
+                                                    <i class="icon-filter text-semibold ic-2x mr-1"></i> Filter
+                                                    <span class="filter-count ml-1">(4)</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="order-category">
+                                            <div
+                                                class="box-height d-flex d-sm-inline-flex align-items-center border rounded-2x py-2 pl-2 my-2 my-sm-0">
+                                                <span class="d-inline-block font-small flex-shrink-0">Order By
+                                                    :</span>
+                                                <div class="md-form md-outline m-0">
+                                                    <select class="selectpicker"
+                                                        data-dropdown-align-right="true"
+                                                        data-style="border-0 font-small py-0 px-1"
+                                                        data-width="130px">
+                                                        <option selected="selected">Complete</option>
+                                                        <option>incomplete</option>
+                                                        <option>Category</option>
+                                                        <option>Date Occured</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- data-filter end -->
+                                <!-- Create Audit Table -->
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-12">
+                                        <div class="table-responsive-xl">
+                                            <table id="create_Audit_table" class="table table-hover"
+                                                cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th-lg" rowspan="1" colspan="1" ><span class="position-relative"> Audit Id </span></th>
+                                                        <th class="th-lg" rowspan="1" colspan="1" > <span class="position-relative">Title</span></th>
+                                                        <th class="th-lg" rowspan="1" colspan="1" ><span class="position-relative">Score Type</span> </th>
+                                                        <th class="th-lg" rowspan="1" colspan="1" ><span class="position-relative">Created By</span> </th>
+                                                        <th class="th-lg" rowspan="1" colspan="1" ><span class="position-relative">Created On</span> </th>
+                                                        <th class="" rowspan="1" colspan="1" >Status</th>
+                                                        <th class="" rowspan="1" colspan="1" >View</th>
+                                                        <th class=" tbl-actions"  rowspan="1" colspan="1" >Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Monthly First Aid Contents 1</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span>
+                                                        </td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                        <!-- <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="modal" data-target="#score-types" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                            </div>
+                                                        </td> -->
+                                                        <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Monthly First Aid Contents 2</td>
+                                                        <td >Regular</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Monthly First Aid Contents 3</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Monthly First Aid Contents 4</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Monthly First Aid Contents 5</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                          <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Monthly First Aid Contents 6</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Monthly First Aid Contents 7</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Monthly First Aid Contents 8</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Monthly First Aid Contents 9</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Monthly First Aid Contents 10</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Monthly First Aid Contents 11</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Monthly First Aid Contents 12</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>Monthly First Aid Contents</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>Monthly First Aid Contents</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>Monthly First Aid Contents</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td>Monthly First Aid Contents</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td>Monthly First Aid Contents</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>Monthly First Aid Contents</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>19</td>
+                                                        <td>Monthly First Aid Contents</td>
+                                                        <td >Score Calc</td>
+                                                        <td >Joseph</td>
+                                                        <td >06 Jun 2021</td>
+                                                        <td> <span
+                                                                class="bc-green-active text-success font-small text-semibold px-2 py-1 rounded-1x">
+                                                                Active</span></td>
+                                                        <td class="text-primary text-uppercase text-semibold">Details</td>
+                                                              <td style="text-align: -webkit-center;">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types">Score Type</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal" data-target="#score-types-edit">Edit
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <!-- <tfoot>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
+                                                        <th>Office</th>
+                                                        <th>Age</th>
+                                                        <th>Start date</th>
+                                                        <th>Salary</th>
+                                                    </tr>
+                                                </tfoot> -->
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Create Audit Table end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!--created Audit drawer -->
+    <div class="modal fade right" id="created-Audit" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title text-capitalize w-100 text-primary text-semibold text-medium line-height-1"
+                        id="myModalLabel">Create Audit</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <small class="text-medium">Audit Name <span
+                                    class="text-primary text-semibold">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="text-capitalize font-small text-medium text-black d-block">Description</label>
+                            <div class="md-form md-outline">
+                                <textarea id="txtarea" class="md-textarea form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                            <div class="category">
+                                <small class="text-medium">Answer Type</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Select">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="Active">
+                                <label class="custom-control-label" for="Active">Active</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex"
+                        data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Created Audit drawer end -->
+
+
+    <!--score types drawer -->
+    <div class="modal fade right" id="score-types" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title text-capitalize w-100 text-primary text-semibold text-medium line-height-1"
+                        id="myModalLabel">Score Types</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <div class="score-calculation">
+                                <small class="text-medium">Score Calculation</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Regular">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="severity">
+                                <small class="text-medium">Severity</small>
+                                <div class="md-form md-outline">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Select">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <small class="text-medium">Negative %</small>
+                            <div class="md-form md-outline">
+                                <input type="text" class="form-control bg-white" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <small class="text-medium">Positive %</small>
+                            <div class="md-form md-outline">
+                                <input type="text" class="form-control bg-white" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-outline-primary rounded-2x m-0 px-3 py-2 mb-3" type="button">
+                                <i class="icon-plus text-semibold ml-1"></i> Add
+                           </button>
+                        </div>
+                        <div class="col-lg-12 col-12">
+                            <table id="severityList" class="table table-hover table-responsive-md" cellspacing="0"
+                                width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Severity</th>
+                                        <th>Positive %</th>
+                                        <th>Negative %</th>
+                                        <th >Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-medium">Critical</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">Major</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">Moderate</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">Minor</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">None</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex"
+                        data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- score types drawer end -->
+       <!--score types edit drawer -->
+       <div class="modal fade right" id="score-types-edit" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title text-capitalize w-100 text-primary text-semibold text-medium line-height-1"
+                        id="myModalLabel">Score Types Edit</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <div class="score-calculation">
+                                <small class="text-medium">Score Calculation</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Regular">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="severity">
+                                <small class="text-medium">Severity</small>
+                                <div class="md-form md-outline">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Select">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <small class="text-medium">Negative %</small>
+                            <div class="md-form md-outline">
+                                <input type="text" class="form-control bg-white" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <small class="text-medium">Positive %</small>
+                            <div class="md-form md-outline">
+                                <input type="text" class="form-control bg-white" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-outline-primary rounded-2x m-0 px-3 py-2 mb-3" type="button">
+                                <i class="icon-plus text-semibold ml-1"></i> Add
+                           </button>
+                        </div>
+                        <div class="col-lg-12 col-12">
+                            <table id="severityList" class="table table-hover table-responsive-md" cellspacing="0"
+                                width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Severity</th>
+                                        <th>Positive %</th>
+                                        <th>Negative %</th>
+                                        <th >Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-medium">Critical</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">Major</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">Moderate</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">Minor</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-medium">None</td>
+                                        <td class="text-medium">0</td>
+                                        <td class="text-medium">5</td>
+                                        <td style="text-align: -webkit-center;">
+                                            <a href="javascript:void(0)" class="text-primary rounded-circle bg-light plus-rounded p-3 d-flex align-items-center justify-content-center">
+                                                <i class="icon-trash ic-2x"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex"
+                        data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- score types edit drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+
+    <!-- dataTable js -->
+    <script src="js/addons/datatables.min.js" rel="stylesheet"></script>
+    <script src="js/addons/datatables-select.min.js" rel="stylesheet"></script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).ready(function () {
+                var createAudit = $('#create_Audit_table').DataTable({
+                    bLengthChange: false,
+                    "ordering": true,
+                    columnDefs: [{
+                        orderable: false,
+                        targets: [6, 7]
+                    }],
+                    "lengthMenu": [ 5, 10, 15, 20, 25 ],
+                    //"scrollY": "500px",
+                    //"scrollCollapse": true,
+                    //"searching": false
+                });
+                $(".dataTables_filter").hide();
+                // $("#createAudit_filter").hide();
+                $('.auditDataSearch').keyup(function () {
+                    createAudit.search($(this).val()).draw();
+                });
+
+                //    $('.dataTables_length').addClass('bs-select');
+            });
+        })
+    </script>
+</body>
+
+</html>

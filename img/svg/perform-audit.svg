@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17">
+  <g id="perform-audit" transform="translate(-4 -4)">
+    <path id="Path_32" data-name="Path 32" d="M14.293,16.707a1,1,0,1,1,1.414-1.414l4,4a1,1,0,1,1-1.414,1.414Z" fill="#7e89b9" opacity="0.3"/>
+    <path id="Path_33" data-name="Path 33" d="M11,16a5,5,0,1,0-5-5,5,5,0,0,0,5,5Zm0,2a7,7,0,1,1,7-7,7,7,0,0,1-7,7Z" fill="#7e89b9"/>
+    <path id="Path_34" data-name="Path 34" d="M10.5,10.5v-1a.5.5,0,0,1,1,0v1h1a.5.5,0,0,1,0,1h-1v1a.5.5,0,0,1-1,0v-1h-1a.5.5,0,0,1,0-1Z" fill="#7e89b9" opacity="0.3"/>
+  </g>
+</svg>

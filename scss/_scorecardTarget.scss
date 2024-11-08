@@ -1,0 +1,42 @@
+.scoreCardTarget{
+    .more-actions{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transform: rotate(90deg); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .vertical-nav-panel{
+        .accident-incident{
+            ul{
+                .custom-input{
+                    width: rem(100px);
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.bg-no-box-width {
+    width: rem(85px);
+    outline: none !important;
+}
+
+.dropleft, .dropright {
+    .more-actions{
+         transform: rotate(90deg);
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         width: 1.875rem;
+         height: 1.875rem;
+         background: #F3F6F9;
+    }
+}
+.plus-rounded{
+    width: rem(25px);
+    height: rem(25px);
+}

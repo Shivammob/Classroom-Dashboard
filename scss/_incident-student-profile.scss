@@ -1,0 +1,28 @@
+.student-profile {
+    .card {
+        .card-body {
+            .student-meta {
+                .avatar-small img{
+                    width: rem(40px);
+                    height: rem(40px);
+                }
+            } 
+            .border-left {
+                @include media-breakpoint-down(sm) {
+                    border-left: none!important;
+                }
+            }
+            .width-mob {
+                @include media-breakpoint-down(sm) {
+                    width: 100%!important;
+                }
+            } 
+        }
+    }
+
+}
+.img-fluid-backend{
+    width: 60px;
+    height: 60px;
+    border-radius: rem(10px);
+}

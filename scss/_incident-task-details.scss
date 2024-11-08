@@ -1,0 +1,49 @@
+.task-detail {
+    .card {
+        .card-body {
+            .quick-nav {
+                button.more-actions {
+                    width: 1.875rem;
+                    height: 1.875rem;
+                    background: #F3F6F9 !important;
+                    transform: rotate(90deg);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .avatar {
+                height: rem(40px);
+                width: rem(40px);
+                background: #e3c9c9;
+            }
+            .bordr{
+                border: 1px solid #EEEEEE;
+            }
+            .right-content {
+                .widt-bg {
+                    width: 133px;
+                }
+            }
+        }
+    }
+}
+.no-data-found {
+    background: url(../Content/HSE/img/no-data-found.png) no-repeat center top;
+    background-size: contain;
+    text-align: center;
+    padding-top: 75px;
+    background-size: 100px;
+    color: #9b9b9b;
+}
+.table-darkGrey{
+    border: 1px solid #EEEEEE;
+    .table-bg {
+        thead  {
+            background-color: #999999;
+        }
+        th, td {
+            padding: rem(15px);
+        }
+    }
+}

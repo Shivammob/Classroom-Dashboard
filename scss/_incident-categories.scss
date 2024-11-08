@@ -1,0 +1,64 @@
+.incident-categories {
+    .safeguarding{
+        &__right{
+            width: 60%;
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+        &__Left{
+            width: 40%;
+            @include media-breakpoint-down(sm) {
+                border-right: none !important;
+                width:100%
+            }
+        }
+        .left-scroll {
+            // max-height: calc(100vh - 100px) !important;
+            max-height: 400px;
+        }
+        // .sub-category:last-of-type {
+        //     margin-bottom: rem(55px)!important;
+        // }
+        .sub-category:last-of-type, .corner-edge:last-of-type {
+            .quick-nav {
+                .dropdown-menu {
+                    top: unset !important;
+                    bottom: 0;
+                }
+            }
+        }
+        .quick-nav {
+            .dropdown-menu {
+                top: -32px !important; 
+            }
+        }
+        .custom-control-label.label-font {
+            font-size: rem(12px);
+        }
+        .incident-cate-tabActive{
+            .nav-pills {
+                //  li:last-child {
+                //      margin-bottom: rem(30px)!important;
+                // }
+                //    overwriting display none class while add d-flex to html  
+                .corner-edge{
+                    display: flex;
+                    align-items: center;
+                    .active::after {
+                        top: rem(30px);
+                    } 
+                } 
+            }
+            .nav-link.active + .quick-nav.dropleft .more-actions{
+                background-color: #fff!important;
+            }
+        } 
+    }
+}
+// .incident-cate-tabActive{
+//     .nav-link.active + .quick-nav.dropleft .more-actions{
+//         background-color: #fff!important;
+//     }
+// }
+ 

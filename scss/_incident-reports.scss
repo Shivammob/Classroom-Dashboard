@@ -1,0 +1,36 @@
+.severity{
+    .severity-text{
+        .severity-icons{
+             right: 20px;
+             top: 0;
+        }
+    }
+    .severity-wise-graph{
+        table{
+            thead{
+                color:$primary-color;
+                text-transform: uppercase;
+            }
+            tbody{
+                td{
+                    font-weight: 600;
+                }
+            }
+            // &.table-bordered {
+            //     border-color: $stroke-color;
+            //     td,
+            //     th {
+            //         border-color: $stroke-color;
+            //         border: none;
+            //         border-bottom: 1px;
+            //     }
+            // }
+        }
+    }
+    .position-or{
+        top: 34px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+

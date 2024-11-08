@@ -1,0 +1,19 @@
+.scorecard-details {
+    .card {
+        .ic-bg {
+            width: rem(30px);
+            height: rem(30px);
+            background: #F3F6F9 !important;
+        }
+        .bordr {
+            border: 1px solid #EEEEEE;
+        }
+        .scorecard-actual-table{
+            table.table{
+                td {
+                    vertical-align: bottom;
+                }
+            } 
+        }
+    }
+} 

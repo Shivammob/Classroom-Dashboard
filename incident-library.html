@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Library</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- Material Design Bootstrap -->
+     <!-- file upload css -->
+    <link href="css/addons/fileinput/fileinput.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/fileinput/explorer-fas-theme.css" rel="stylesheet" type="text/css">
+
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid library mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-primary text-semibold m-0">Library</h3>
+                            <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium text-black-50"><a href="#">Home</a></li>
+                                <li class="font-small text-medium text-black-50">Library</li>
+                            </ul>
+                        </div>
+                        <!-- <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button">
+                            <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Accidents
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+
+            <!-- library data -->
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pill-panel p-4">
+                                <!-- Tab start -->
+                                <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab" role="tablist">
+									<li class="nav-item">
+									  	<a class="nav-link bg-white text-medium px-0 active" data-toggle="pill" href="#General" role="tab" aria-controls="pills-General" aria-selected="true">General</a>
+									</li>
+									<li class="nav-item">
+									  <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab" data-toggle="pill" href="#Safeguarding" role="tab" aria-selected="false">Safeguarding</a>
+									</li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab" data-toggle="pill" href="#Uploaded" role="tab" aria-selected="false">Uploaded by me</a>
+                                      </li>
+								</ul>
+								<div class="tab-content" id="">
+                                    <div class="tab-pane fade show active" id="General" role="tabpanel">
+                                         <!-- data filters -->
+                                <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-2 mb-4">
+                                    <div class="row">
+                                        <div class="col-md-10 col-12 pl-sm-0 px-md-1 px-lg-2">
+                                            <small class="text-medium invisible">Search</small>
+                                            <div class="md-form md-outline mb-4">
+                                                <input type="text" class="form-control bg-white border-0"
+                                                    placeholder="Search here">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2 col-12 align-self-center pl-sm-0 px-md-1 px-lg-2">
+                                            <button
+                                                class="btn btn-dark btn-search m-0 rounded-2x w-100 mt-2 mt-sm-4 mb-4"
+                                                type="button">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Folder listView & GridView Row-->
+                                <div id="folderResultRow">
+                                    <div class="row filter-results" >
+                                        <div class="col-lg-8 col-12 d-flex align-items-center">
+                                            <div class="clearfix d-flex align-items-baseline rounded-3x ">
+                                                <nav class="breadcrumb-list">
+                                                    <ul class="d-flex align-items-center flex-wrap">
+                                                        <li> <a href="#" class="d-flex align-items-center">
+                                                            <i class="icon-folder text-black-50 ic-3x mr-1"></i>
+                                                            <span class="font-small text-black-50 text-semibold">Library</span>
+                                                        </a></li>
+                                                        <li><a href="javascript:void(0)">
+                                                            <span class="font-small text-black-50 text-semibold">12 Items</span>
+                                                        </a></li>
+                                                       
+                                                    </ul>
+                                                </nav>
+                                              </div> 
+                                        </div>
+                                        <div class="col-lg-4 col-12 text-lg-right mt-3 mt-lg-0">
+                                            <div class="toggle-lib d-inline-block ml-3">
+                                                <a href="javascript:void(0)"
+                                                    class="ic-bg mr-2 rounded-circle p-2 active show-listView"><i
+                                                        class="icon-list"></i></a>
+                                                <a href="javascript:void(0)" class="ic-bg rounded-circle p-2 show-gridView"><i
+                                                        class="icon-grid"></i></a>
+                                                        <button class="btn btn-primary rounded-4x m-0 px-3 mr-1" type="button" data-toggle="modal" data-target="#addNewFolder">
+                                                             Add New <i class="fas fa-angle-down ml-1"></i>
+                                                        </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="mb-4">
+                                </div>
+                                 <!-- Folder listView & GridView Row end-->
+                                 <!--folder list view start -->
+                                <div class="listView active">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-12">
+                                            <div
+                                                class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                <div class="item-icon">
+                                                    <a href="#">
+                                                        <i class="icon-folder text-primary ic-4x mr-2"></i>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="caption d-flex justify-content-between align-items-center w-100">
+                                                    <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="font-small m-0">12 Files</h6>
+                                                    <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                    <div class="quick-nav dropleft">
+                                                        <button type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false"
+                                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">View</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Edit</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Reminder</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Report</a>
+                                                            <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                note</a>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                <div class="item-icon">
+                                                    <a href="#">
+                                                        <i class="icon-folder text-primary ic-4x mr-2"></i>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="caption d-flex justify-content-between align-items-center w-100">
+                                                    <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="font-small m-0">12 Files</h6>
+                                                    <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                    <div class="quick-nav dropleft">
+                                                        <button type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false"
+                                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">View</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Edit</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Reminder</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Report</a>
+                                                            <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                note</a>
+                                                        </div>
+                                                    </div> 
+
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                <div class="item-icon">
+                                                    <a href="#">
+                                                        <i class="icon-folder text-primary ic-4x mr-2"></i>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="caption d-flex justify-content-between align-items-center w-100">
+                                                    <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="font-small m-0">12 Files</h6>
+                                                    <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                    <div class="quick-nav dropleft">
+                                                        <button type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false"
+                                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">View</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Edit</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Reminder</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Report</a>
+                                                            <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                note</a>
+                                                        </div>
+                                                    </div> 
+
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                <div class="item-icon">
+                                                    <a href="#">
+                                                        <i class="icon-folder text-primary ic-4x mr-2"></i>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="caption d-flex justify-content-between align-items-center w-100">
+                                                    <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="font-small m-0">12 Files</h6>
+                                                    <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                    <div class="quick-nav dropleft">
+                                                        <button type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false"
+                                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">View</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Edit</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Reminder</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Report</a>
+                                                            <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                note</a>
+                                                        </div>
+                                                    </div> 
+
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                <div class="item-icon">
+                                                    <a href="#">
+                                                        <i class="icon-folder text-primary ic-4x mr-2"></i>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="caption d-flex justify-content-between align-items-center w-100">
+                                                    <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="font-small m-0">12 Files</h6>
+                                                    <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                    <div class="quick-nav dropleft">
+                                                        <button type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false"
+                                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">View</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Edit</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Reminder</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Report</a>
+                                                            <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                note</a>
+                                                        </div>
+                                                    </div> 
+
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                <div class="item-icon">
+                                                    <a href="#">
+                                                        <i class="icon-folder text-primary ic-4x mr-2"></i>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="caption d-flex justify-content-between align-items-center w-100">
+                                                    <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="font-small m-0">12 Files</h6>
+                                                    <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                    <div class="quick-nav dropleft">
+                                                        <button type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false"
+                                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">View</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Edit</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Reminder</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Report</a>
+                                                            <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                note</a>
+                                                        </div>
+                                                    </div> 
+
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                <div class="item-icon">
+                                                    <a href="#">
+                                                        <i class="icon-folder text-primary ic-4x mr-2"></i>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="caption d-flex justify-content-between align-items-center w-100">
+                                                    <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="font-small m-0">12 Files</h6>
+                                                    <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                    <div class="quick-nav dropleft">
+                                                        <button type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false"
+                                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">View</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Edit</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Reminder</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                href="#">Report</a>
+                                                            <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                note</a>
+                                                        </div>
+                                                    </div> 
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--folder list view end -->
+
+                                <!--folder grid view -->
+                                <div class="gridView" id="grids">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete
+                                                        </a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete
+                                                        </a>
+                                                        
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#files-view" class="file-show">
+                                                        <i class="icon-folder text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                    <h6 class="small m-0 text-center text-black-50">12 Files</h6>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#" data-toggle="modal" data-target="#gridMap">Map</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>  
+                                    </div>
+                                </div>
+                                <!--folder grid view end -->
+
+                                <!-- FileDetail listView & GridView Row-->
+                                <div class="files-view" id="files-view">
+                                    <div class="fileDetailRow">
+                                        <div class="row filter-results">
+                                            <div class="col-lg-8 col-12 d-flex align-items-center">
+                                                <div class="clearfix d-flex align-items-baseline rounded-3x  item">
+                                                    <nav class="breadcrumb-list">
+                                                        <ul class="d-flex align-items-center flex-wrap">
+                                                            <li> <a href="#grids" id="fileGrids-show">
+                                                                <i class="icon-folder text-primary ic-3x"></i>
+                                                            </a></li>
+                                                            <li> <a href="#">
+                                                                <i class="icon-folder text-primary ic-3x"></i>
+                                                            </a></li>
+                                                            <li> <a href="#">
+                                                                <i class="icon-folder text-primary ic-3x"></i>
+                                                            </a></li>
+                                                            <li> <a href="#" class="d-flex align-items-center">
+                                                                <i class="icon-folder text-black-50 ic-3x mr-1"></i>
+                                                                    <small class="font-small text-black-50 text-semibold">Phoenix HSE and Safeguarding
+                                                                        training videos</small>
+                                                            </a></li>
+                                                            <li><a href="javascript:void(0)">
+                                                                <span class="font-small text-black-50 text-semibold">6 Items</span>
+                                                            </a></li>
+                                                           
+                                                        </ul>
+                                                    </nav>
+                                                  </div> 
+                                            </div>
+                                            <div class="col-lg-4 col-12 text-lg-right mt-3 mt-lg-0">
+                                                <div class="toggle-lib d-inline-block ml-3">
+                                                    <a href="javascript:void(0)"
+                                                        class="ic-bg mr-2 rounded-circle p-2 active show-fileListView"><i
+                                                            class="icon-list"></i></a>
+                                                    <a href="javascript:void(0)" class="ic-bg rounded-circle p-2 show-fileGridView"><i
+                                                            class="icon-grid"></i></a>
+                                                            <button class="btn btn-primary rounded-4x m-0 px-3 mr-1" type="button" data-toggle="modal" data-target="#addNewFile">
+                                                                 Add New <i class="fas fa-angle-down ml-1"></i>
+                                                            </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <hr class="mb-4">
+                                    </div>
+                                <!--File list view start -->    
+                                    <div class="fileListView active" id="fileListView">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-12">
+                                                <div
+                                                    class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                    <div class="item-icon">
+                                                        <a href="#">
+                                                            <i class="icon-file-text text-primary ic-4x mr-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="caption d-flex justify-content-between align-items-center w-100">
+                                                        <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                            training videos</h5>
+                                                        <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                        <div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                    <div class="item-icon">
+                                                        <a href="#">
+                                                            <i class="icon-file-text text-primary ic-4x mr-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="caption d-flex justify-content-between align-items-center w-100">
+                                                        <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                            training videos</h5>
+                                                        <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                        <div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div> 
+    
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                    <div class="item-icon">
+                                                        <a href="#">
+                                                            <i class="icon-file-text text-primary ic-4x mr-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="caption d-flex justify-content-between align-items-center w-100">
+                                                        <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                            training videos</h5>
+                                                        <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                        <div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div> 
+    
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                    <div class="item-icon">
+                                                        <a href="#">
+                                                            <i class="icon-file-text text-primary ic-4x mr-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="caption d-flex justify-content-between align-items-center w-100">
+                                                        <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                            training videos</h5>
+                                                        <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                        <div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div> 
+    
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                    <div class="item-icon">
+                                                        <a href="#">
+                                                            <i class="icon-file-text text-primary ic-4x mr-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="caption d-flex justify-content-between align-items-center w-100">
+                                                        <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                            training videos</h5>
+                                                        <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                        <div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div> 
+    
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                    <div class="item-icon">
+                                                        <a href="#">
+                                                            <i class="icon-file-text text-primary ic-4x mr-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="caption d-flex justify-content-between align-items-center w-100">
+                                                        <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                            training videos</h5>
+                                                        <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                        <div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div> 
+    
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center clearfix border-bottom pb-2 item mb-3">
+                                                    <div class="item-icon">
+                                                        <a href="#">
+                                                            <i class="icon-file-text text-primary ic-4x mr-2"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="caption d-flex justify-content-between align-items-center w-100">
+                                                        <h5 class="font-small m-0">Phoenix HSE and Safeguarding
+                                                            training videos</h5>
+                                                        <!-- <h6 class="font-small m-0">23.40 Mb</h6> -->
+                                                        <div class="quick-nav dropleft">
+                                                            <button type="button" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"
+                                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">View</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Edit</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Reminder</a>
+                                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                    href="#">Report</a>
+                                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                    note</a>
+                                                            </div>
+                                                        </div> 
+    
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!--File list view end -->
+                                <!--File grid view start-->
+                                <div class="fileGridView" id="fileGridView">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-12">
+                                            <div
+                                                class="clearfix rounded-3x pb-3 px-3 pt-5 item mb-3 position-relative">
+                                                <div class="item-icon mb-3 text-center">
+                                                    <a href="#">
+                                                        <i class="icon-file-text text-primary ic-5x"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="caption w-100">
+                                                    <h5 class="font-small text-center">Phoenix HSE and Safeguarding
+                                                        training videos</h5>
+                                                </div>
+                                                <div class="quick-nav dropleft mt-3 position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div> 
+                                            </div>                              
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--File grid view end -->
+                                </div>
+                                <!-- Inside listView end-->
+
+
+
+                                <!-- data filters end -->
+                                    </div>
+                                    <div class="tab-pane fade" id="Safeguarding" role="tabpanel">
+                                        <!-- data filters -->
+                                        <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-2 mb-4">
+                                            <div class="row">
+                                                <div class="col-md-10 col-12 pl-sm-0 px-md-1 px-lg-2">
+                                                    <small class="text-medium invisible">Search</small>
+                                                    <div class="md-form md-outline mb-4">
+                                                        <input type="text" class="form-control bg-white border-0"
+                                                            placeholder="Search here">
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-md-2 col-12 align-self-center pl-sm-0 px-md-1 px-lg-2">
+                                                    <button
+                                                        class="btn btn-dark btn-search m-0 rounded-2x w-100 mt-2 mt-sm-4 mb-4"
+                                                        type="button">Search
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- data filters end-->
+                                       <!-- filter result -->
+                                       <div class="row d-flex align-items-end filter-results">
+                                        <div class="col-lg-6 col-12">
+                                            <ul>
+                                                <li><span class="font-16 text-black-50 text-semibold text-medium d-inline-flex m-0 mr-3 align-items-end">6 Items</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6 col-12 d-flex justify-content-end mt-3 mb-2 mt-lg-0">
+                                            <div class="download-selection md-form md-outline m-0 d-flex d-sm-inline-flex">
+                                                <select class="selectpicker" data-dropdown-align-right="true" title="Newest to Oldest" data-style="rounded-5x py-1" data-width="fit">
+                                                    <option>As PDF</option>
+                                                    <option>As Excel</option>
+                                                </select>
+                                            </div>
+                                            <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3 py-1 ml-2" type="button" data-toggle="modal" data-target="#safeAddNew">
+                                                Add File
+                                            </button>
+                                        </div>
+                                       </div>
+                                       <!-- filter result end -->
+                                       <hr class="mt-2 m-0">
+                                       <div class="row">
+                                          <div class="col-md-12 col-12">
+                                            <article class="border-bottom border-default position-relative file-data mt-3">
+                                                <div class="quick-nav dropleft position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div>
+                                              <div class="d-flex flex-column flex-md-row">
+                                                <i class="icon-file-text ic-5x mr-2 text-primary overflow-hidden"></i>
+                                               <div class="right-heading">
+                                                   <p class="text-black text-medium font-small text-semibold m-0 p-0">Phoenix HSE and Safeguarding.doc</p>
+                                                   <ul class="d-flex flex-column flex-md-row">
+                                                       <li class="text-black text-medium font-small border-right border-default pr-sm-3">Uploaded by : Joseph jail</li>
+                                                       <li><span class="timestamp text-black text-medium font-small line-height-1 d-block d-sm-inline-block  ml-sm-3 mt-2 mt-sm-0">
+                                                         5:30 PM, 12 June 2021
+                                                    </span></li>
+                                                    </ul>
+                                               </div>
+                                              </div> 
+                                              <p class="font-small small-text ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos omnis numquam at fugit assumenda nesciunt error perspiciatis blanditiis soluta.</p>
+                                            </article>
+                                            <article class="border-bottom border-default position-relative file-data mt-3">
+                                                <div class="quick-nav dropleft position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div>
+                                              <div class="d-flex flex-column flex-md-row">
+                                                <i class="icon-file-text ic-5x mr-2 text-primary overflow-hidden"></i>
+                                               <div class="right-heading">
+                                                   <p class="text-black text-medium font-small text-semibold m-0 p-0">Phoenix HSE and Safeguarding.doc</p>
+                                                   <ul class="d-flex flex-column flex-md-row">
+                                                       <li class="text-black text-medium font-small border-right border-default pr-sm-3">Uploaded by : Joseph jail</li>
+                                                       <li><span class="timestamp text-black text-medium font-small line-height-1 d-block d-sm-inline-block  ml-sm-3 mt-2 mt-sm-0">
+                                                         5:30 PM, 12 June 2021
+                                                    </span></li>
+                                                    </ul>
+                                               </div>
+                                              </div> 
+                                              <p class="font-small small-text ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos omnis numquam at fugit assumenda nesciunt error perspiciatis blanditiis soluta.</p>
+                                            </article>
+                                            <article class="border-bottom border-default position-relative file-data mt-3">
+                                                <div class="quick-nav dropleft position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div>
+                                              <div class="d-flex flex-column flex-md-row">
+                                                <i class="icon-file-text ic-5x mr-2 text-primary overflow-hidden"></i>
+                                               <div class="right-heading">
+                                                   <p class="text-black text-medium font-small text-semibold m-0 p-0">Phoenix HSE and Safeguarding.doc</p>
+                                                   <ul class="d-flex flex-column flex-md-row">
+                                                       <li class="text-black text-medium font-small border-right border-default pr-sm-3">Uploaded by : Joseph jail</li>
+                                                       <li><span class="timestamp text-black text-medium font-small line-height-1 d-block d-sm-inline-block  ml-sm-3 mt-2 mt-sm-0">
+                                                         5:30 PM, 12 June 2021
+                                                    </span></li>
+                                                    </ul>
+                                               </div>
+                                              </div> 
+                                              <p class="font-small small-text ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos omnis numquam at fugit assumenda nesciunt error perspiciatis blanditiis soluta.</p>
+                                            </article>
+                                            <article class="border-bottom border-default position-relative file-data mt-3">
+                                                <div class="quick-nav dropleft position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div>
+                                              <div class="d-flex flex-column flex-md-row">
+                                                <i class="icon-file-text ic-5x mr-2 text-primary overflow-hidden"></i>
+                                               <div class="right-heading">
+                                                   <p class="text-black text-medium font-small text-semibold m-0 p-0">Phoenix HSE and Safeguarding.doc</p>
+                                                   <ul class="d-flex flex-column flex-md-row">
+                                                       <li class="text-black text-medium font-small border-right border-default pr-sm-3">Uploaded by : Joseph jail</li>
+                                                       <li><span class="timestamp text-black text-medium font-small line-height-1 d-block d-sm-inline-block  ml-sm-3 mt-2 mt-sm-0">
+                                                         5:30 PM, 12 June 2021
+                                                    </span></li>
+                                                    </ul>
+                                               </div>
+                                              </div> 
+                                              <p class="font-small small-text ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos omnis numquam at fugit assumenda nesciunt error perspiciatis blanditiis soluta.</p>
+                                            </article>
+                                            <article class="border-bottom border-default position-relative file-data mt-3">
+                                                <div class="quick-nav dropleft position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div>
+                                              <div class="d-flex flex-column flex-md-row">
+                                                <i class="icon-file-text ic-5x mr-2 text-primary overflow-hidden"></i>
+                                               <div class="right-heading">
+                                                   <p class="text-black text-medium font-small text-semibold m-0 p-0">Phoenix HSE and Safeguarding.doc</p>
+                                                   <ul class="d-flex flex-column flex-md-row">
+                                                       <li class="text-black text-medium font-small border-right border-default pr-sm-3">Uploaded by : Joseph jail</li>
+                                                       <li><span class="timestamp text-black text-medium font-small line-height-1 d-block d-sm-inline-block  ml-sm-3 mt-2 mt-sm-0">
+                                                         5:30 PM, 12 June 2021
+                                                    </span></li>
+                                                    </ul>
+                                               </div>
+                                              </div> 
+                                              <p class="font-small small-text ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos omnis numquam at fugit assumenda nesciunt error perspiciatis blanditiis soluta.</p>
+                                            </article>
+                                            <article class="border-bottom border-default position-relative file-data mt-3">
+                                                <div class="quick-nav dropleft position-absolute">
+                                                    <button type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add
+                                                            note</a>
+                                                    </div>
+                                                </div>
+                                              <div class="d-flex flex-column flex-md-row">
+                                                <i class="icon-file-text ic-5x mr-2 text-primary overflow-hidden"></i>
+                                               <div class="right-heading">
+                                                   <p class="text-black text-medium font-small text-semibold m-0 p-0">Phoenix HSE and Safeguarding.doc</p>
+                                                   <ul class="d-flex flex-column flex-md-row">
+                                                       <li class="text-black text-medium font-small border-right border-default pr-sm-3">Uploaded by : Joseph jail</li>
+                                                       <li><span class="timestamp text-black text-medium font-small line-height-1 d-block d-sm-inline-block  ml-sm-3 mt-2 mt-sm-0">
+                                                         5:30 PM, 12 June 2021
+                                                    </span></li>
+                                                    </ul>
+                                               </div>
+                                              </div> 
+                                              <p class="font-small small-text ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos omnis numquam at fugit assumenda nesciunt error perspiciatis blanditiis soluta.</p>
+                                            </article>
+                                            
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="Uploaded" role="tabpanel">Uploaded</div>
+                                </div>    
+                                 <!-- tab end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- library end -->
+        </div>
+    </main>
+
+     <!-- General Add New Folder drawer -->
+    <div class="modal fade right uploadMedia addNew-drawer" id="addNewFolder" tabindex="-1" role="dialog"
+     aria-labelledby="" aria-hidden="true">
+     <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+         <div class="modal-content rounded-0">
+             <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                 <h5 class="modal-title w-100 text-primary text-semibold text-medium line-height-1" id="myModalLabel">Add New Folder</h5>
+                 <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                     <i class="icon-cross ic-3x text-primary"></i>
+                 </button>
+             </div>
+             <div class="modal-body p-4">
+                <div class="clearfix d-flex align-items-baseline rounded-3x p-4 item mb-3">
+                    <div class="item-icon mr-3">
+                        <a href="#">
+                            <i class="icon-folder text-primary ic-3x"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="caption w-100">
+                        <h5 class="font-16 text-semibold text-black-50 pb-3 border-bottom border-default">Phoenix HSE and Safeguarding
+                            training videos
+                        </h5>
+                        <div class="clearfix d-flex align-items-baseline rounded-3x pt-3 item mb-3">
+                            <div class="item-icon mr-3">
+                                <a href="#">
+                                    <i class="icon-folder text-primary ic-3x"></i>
+                                </a>
+                            </div>
+                           <form action="" class="w-100">
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white" placeholder="Folder Name">
+                            </div>
+                           </form>
+                        </div> 
+
+                    </div>
+                </div> 
+             </div>
+             <div class="modal-footer justify-content-end border-0 py-2">
+                 <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                 <button class="btn btn-primary m-0" type="button">Save</button>
+             </div>
+         </div>
+     </div>
+    </div>
+ <!-- General Add New Folder drawer end -->
+
+    <!-- General Add New File drawer -->
+    <div class="modal fade right uploadMedia addNewFile-drawer" id="addNewFile" tabindex="-1" role="dialog"
+        aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Add New File</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                   <div class="addNewPopup">
+                    <div class="clearfix d-flex align-items-baseline rounded-3x p-4 item mb-3">
+                    <div class="item-icon mr-3">
+                        <a href="#">
+                            <i class="icon-folder text-primary ic-3x"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="caption w-100">
+                        <h5 class="font-small text-semibold text-black-50 pb-3 border-bottom border-default">Phoenix HSE and Safeguarding
+                            training videos</h5>
+
+                            <!-- <div class="uploaderWidget uploaderWidget-lg">
+                                <input class="fileUploader" type="file" id="file-3" multiple>
+                            </div>
+                            <p class="font-small text-semibold text-black-50 mt-2">Supported File Types are : .dox, .xls and pdf. </p> -->
+                            <div class="uploaderWidget uploaderWidget-lg text-center">
+                                <input class="fileUploader" type="file" id="file-3" multiple>
+                            </div>
+                    </div>
+                  </div> 
+                   </div>
+                   <div class="modal-footer justify-content-end border-0 py-2">
+                    <!-- <button class="btn btn-outline-primary m-0 mr-2" type="button">Browse</button> -->
+                    <button class="btn btn-primary m-0" type="button" disabled>Done</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- General Add New File drawer end -->
+
+     <!-- Grid Map drawer -->
+     <div class="modal fade right uploadMedia gridMap-drawer" id="gridMap" tabindex="-1" role="dialog"
+     aria-labelledby="" aria-hidden="true">
+     <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+         <div class="modal-content rounded-0">
+             <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                 <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Add File</h5>
+                 <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                     <i class="icon-cross ic-3x text-primary"></i>
+                 </button>
+             </div>
+             <div class="modal-body p-4">
+                <div class="row align-items-end">
+                   <div class="col-md-6 col-12">
+                    <div class="category">
+                        <small class="text-medium">Location</small>
+                        <div class="md-form md-outline mb-3">
+                            <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="USA">
+                                <option value="1">Accident</option>
+                                <option value="23">Child Safeguarding</option>
+                                <option value="4">Environmental Incident</option>
+                                <option value="29">Fire</option>
+                                <option value="2">Illness</option>
+                            </select>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="col-md-6 col-12">
+                    <div class="category">
+                        <!-- <small class="text-medium">Treated by</small> -->
+                        <div class="md-form md-outline mb-3">
+                            <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="DUBAI">
+                                <option value="1">Accident</option>
+                                <option value="23">Child Safeguarding</option>
+                                <option value="4">Environmental Incident</option>
+                                <option value="29">Fire</option>
+                                <option value="2">Illness</option>
+                            </select>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-4 col-12">
+                     <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="Select-All">
+                         <label class="custom-control-label" for="Select-All">Select All</label>
+                     </div>
+                    </div> 
+                    <div class="col-md-4 col-12">
+                     <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="GGI">
+                         <label class="custom-control-label" for="GGI">UAE | DUBAI | Garden Grove </label>
+                     </div>
+                    </div> 
+                    <div class="col-md-4 col-12">
+                     <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="GCOI">
+                         <label class="custom-control-label" for="GCOI">UAE | DUBAI | Garden Clove </label>
+                     </div>
+                    </div>
+                </div>
+             </div>
+             <div class="modal-footer justify-content-end border-0 py-2">
+                 <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                 <button class="btn btn-primary m-0" type="button">Save</button>
+             </div>
+         </div>
+     </div>
+     </div>
+    <!--  Grid Map drawer End --> 
+
+    <!-- Safeguarding Add New drawer -->
+    <div class="modal fade right uploadMedia addNew-drawer" id="safeAddNew" tabindex="-1" role="dialog"
+     aria-labelledby="" aria-hidden="true">
+     <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+         <div class="modal-content rounded-0">
+             <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                 <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Add File</h5>
+                 <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                     <i class="icon-cross ic-3x text-primary"></i>
+                 </button>
+             </div>
+             <div class="modal-body p-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="uploaderWidget uploaderWidget-lg text-center">
+                            <input class="fileUploader" type="file" id="file-3" multiple>
+                        </div>
+                    </div>
+                   </div>
+                <div class="row">
+                    <div class="col-12">
+                        <small class="text-medium">Description</small>
+                        <div class="md-form md-outline">
+                            <textarea id="txtarea" class="md-textarea form-control" rows="6"></textarea>
+                        </div>
+                    </div>
+                </div>  
+             </div>
+             <div class="modal-footer justify-content-end border-0 py-2">
+                 <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                 <button class="btn btn-primary m-0" type="button">Save</button>
+             </div>
+         </div>
+     </div>
+    </div>
+    <!-- Safeguarding Add New drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+
+    <script type="text/javascript" src="js/addons/fileinput/piexif.min.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/sortable.min.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/fileinput.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/ar.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/fas-theme.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/explorer-fas-theme.js"></script>
+    <script type="text/javascript" src="js/file-uploader-config.js"></script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+             //toggle grid - list view
+             $('body').on('click', '.show-listView', function() {
+                $(this).addClass('active');
+                $('.show-gridView').removeClass('active');
+                $('.gridView').removeClass('active');
+                $('.listView').addClass('active');
+                
+            });
+            $('body').on('click', '.show-gridView', function() {
+                $(this).addClass('active');
+                $('.show-listView').removeClass('active');
+                $('.listView').removeClass('active');
+                $('.gridView').addClass('active');
+            });
+
+            $('body').on('click', '.show-fileListView', function() {
+                $(this).addClass('active');
+                $('.show-fileGridView').removeClass('active');
+                $('.fileGridView').removeClass('active');
+                $('.fileListView').addClass('active');
+                
+            });
+            $('body').on('click', '.show-fileGridView', function() {
+                $(this).addClass('active');
+                $('.show-fileListView').removeClass('active');
+                $('.fileListView').removeClass('active');
+                $('.fileGridView').addClass('active');
+            });
+
+                $(".file-show").click(function(){
+                $(".gridView").removeClass('active');
+                $("#files-view").addClass('active');
+                $("#folderResultRow").hide();
+                });
+
+                $("#fileGrids-show").click(function(){
+                $(".gridView").addClass('active');
+                $("#folderResultRow").show();
+                $("#files-view").removeClass('active');
+                });
+
+                $(".show-listView").click(function(){
+                $("#files-view").hide();
+                });
+
+                $(".show-gridView").click(function(){
+                $("#files-view").hide();
+                });
+            })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Reports</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid covid-19 mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-primary text-semibold m-0">Reports</h3>
+                            <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium text-black-50"><a href="#">Home</a></li>
+                                <li class="font-small text-medium text-black-50">Reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+
+
+            <!-- reports data -->
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pill-panel p-4">
+                                <div class="row">
+                                    <div class="col-md-4 col-12">
+                                        <h4 class="font-16 text-semibold mb-3">
+                                            Incidents</h4>
+                                        <div class="incidents">
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">View All Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Hour of Day</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Day of Week</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Time Taken To Record
+                                                    Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Injured Body
+                                                    Parts</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Category</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Severity</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Multi-Category Comparison</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Multi-Category Comparison by
+                                                    Severity</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Sub-Category</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare School Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Custom Attribute</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12">
+                                        <h4 class="font-16 text-semibold mb-3">
+                                            Tasks</h4>
+                                        <div class="tasks">
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">View All Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Hour of Day</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Day of Week</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Time Taken To Record
+                                                    Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Injured Body
+                                                    Parts</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Category</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Severity</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Multi-Category Comparison</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Multi-Category Comparison by
+                                                    Severity</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12">
+                                        <h4 class="font-16 text-semibold mb-3">
+                                            Audits</h4>
+                                        <div class="audits">
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">View All Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Hour of Day</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Day of Week</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Time Taken To Record
+                                                    Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Incident By Injured Body
+                                                    Parts</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Incident</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Category</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-light p-3 rounded-2x d-flex justify-content-between mb-3">
+                                                <span class="font-small text-medium">Compare Severity</span>
+                                                <i class="icon-arrow-right text-primary text-semibold"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- reports end -->
+        </div>
+    </main>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

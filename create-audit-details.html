@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Create Audit Details</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+	<!-- Material Design Bootstrap -->
+	<link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+							<div class="animated-icon1"><span></span><span></span><span></span></div>
+						</button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span> English
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span> Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions" class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+	<main class="pt-5 mx-lg-1 mt-4">
+		<div class="container-fluid mt-3 mb-4 create-audit-details">
+			<!-- subheader start -->
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="sub-header bg-white rounded-2x d-flex align-items-center justify-content-between pl-4 pr-2">
+						<div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+							<h3 class="page-title text-blue text-semibold m-0"> Audit</h3>
+							<ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+								<li class="font-small text-medium text-black-50"><a class="text-primary" href="#">Home</a></li>
+								<li class="font-small text-medium text-blue"><a class="text-blue" href="#">List & Create </a></li>
+                                <li class="font-small text-medium text-blue">Create</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- subheader end -->
+            <!--audit Details Box -->
+            <div class="row">
+                <div class="col-12 audit-details">
+                    <article class="py-3 bg-white rounded-4x pl-4 pr-2 position-relative">
+                        <div class="incident-meta d-flex align-items-center ">
+                            <div class="meta-left d-inline-flex align-md-items-center flex-column flex-md-row">
+                                <h4 class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">ID #11075623</h4>
+                                <h4 class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 pr-3 d-none d-sm-inline-block border-right">Active</h4>
+                                <h4 class="text-black text-semibold font-small border-right border-default line-height-1 m-0 pr-3 mr-3">Created on: 3.20 Pm, 24 May 2021</h4>
+                                <h4 class="text-black text-semibold font-small  border-default line-height-1 m-0 pr-3 mr-3">Created By: Joseph</h4>
+                            </div>
+                            <div class="meta-right position-absolute details-action-right">
+                                <div class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                    <div class="quick-nav dropleft">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu z-depth-1 border-0">
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">View</a>
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Edit</a>
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Reminder</a>
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Report</a>
+                                            <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="incident-title font-small mt-3 mb-2 d-inline-flex align-items-start align-items-sm-center">
+                            <span class="d-inline-flex align-items-start align-items-sm-center">
+                                <span class="schoolName font-small text-medium text-black text-semibold mt-sm-1">Monthly First Aid Contents</span>
+                            </span>
+                        </h3>
+                        <div class="Contents-data">
+                            <p class="small text-black-50 text-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam nisi ullam saepe, consequatur laboriosam nostrum esse est, totam sapiente tenetur ducimus facere animi enim sequi molestiae numquam sint cum ea!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!--Audit Details box end -->
+
+            			<!-- Audit data -->
+			<div class="row mt-3">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+							<div class="pill-panel p-4">
+								<ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab" role="tablist">
+									<li class="nav-item">
+									  	<a class="nav-link bg-white text-medium px-0 active" data-toggle="pill" href="#Question" role="tab" aria-controls="pills-home" aria-selected="true">Questions</a>
+									</li>
+									<li class="nav-item">
+									  <a class="nav-link bg-white text-medium px-0 " id="investigate-tab" data-toggle="pill" href="#Schedule" role="tab" aria-selected="false">Schedule</a>
+									</li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="document-tab" data-toggle="pill" href="#Map" role="tab" aria-selected="false">Map</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="document-tab" data-toggle="pill" href="#Unmap" role="tab" aria-selected="false">Unmap</a>
+                                    </li>
+								</ul>
+								<div class="tab-content" id="">
+									<!-- Question tab -->
+									<div class="tab-pane fade show active" id="Question" role="tabpanel">
+                                        <div class="vertical-nav-panel">
+                                            <div class="row">
+                                              <div class="col-md-3 mb-3 border-default border-right">
+                                                   <!-- ---------Nav Pills---------   -->
+                                                <!-- <div class="version-control">
+                                                    <a href="#" class="btn btn-outline-primary font-small w-100">Create New</a>
+                                                </div> -->
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="font-16 text-black text-semibold">Versions(4)</h5>
+                                                    <span class="font-16 text-semibold"><a href="#" class="text-primary">Add <i class="icon-plus text-semibold ic-2x mr-1"></i> </a></span>
+                                                </div>
+                                                <hr class="text-black-50 mt-0">
+                                              <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                              <a class="nav-link active" id="version1-tab" data-toggle="tab" href="#version1" role="tab" aria-controls="version1" aria-selected="false" >
+                                                  <div class="d-flex align-items-center py-1">
+                                                    <div class="mr-auto">
+                                                        <h6 class="m-0 p-0">Version 1 <i class="fas fa-medal mx-2"></i> </h6> 
+                                                    <span class="small text-black-50 text-semibold text-medium">3 June 2021</span>
+                                                    </div>
+                                                    <span class="small text-black-50 text-semibold text-medium text-uppercase">Mapped</span>
+                                                  </div>
+                                              </a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="Victim-tab" data-toggle="tab" href="#version2" role="tab" aria-controls="version2" aria-selected="true"> 
+                                                <div class="d-flex align-items-center py-1">
+                                                <div class="mr-auto">
+                                                    <h6 class="m-0 p-0">Version 2 <i class="fas fa-medal mx-2"></i> </h6> 
+                                                <span class="small text-black-50 text-semibold text-medium">3 June 2021</span>
+                                                </div>
+                                                <span class="small text-black-50 text-semibold text-medium text-uppercase">Daft</span>
+                                                </div>
+                                              </a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="Assailant-tab" data-toggle="tab" href="#version3" role="tab" aria-controls="version3" aria-selected="false">  <div class="d-flex align-items-center py-1">
+                                                <div class="mr-auto">
+                                                    <h6 class="m-0 p-0">Version 3 <i class="fas fa-medal mx-2"></i> </h6> 
+                                                <span class="small text-black-50 text-semibold text-medium">3 June 2021</span>
+                                                </div>
+                                                <span class="small text-black-50 text-semibold text-medium text-uppercase">Mapped</span>
+                                              </div>
+                                              </a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="External-tab" data-toggle="tab" href="#version4" role="tab" aria-controls="version4" aria-selected="true"> 
+                                                <div class="d-flex align-items-center py-2">
+                                                <div class="mr-auto">
+                                                    <h6 class="m-0 p-0">Version 4 <i class="fas fa-medal mx-2"></i> </h6> 
+                                                <span class="small text-black-50 text-semibold text-medium">3 June 2021</span>
+                                                </div>
+                                                <span class="small text-black-50 text-semibold text-medium text-uppercase">Mapped</span>
+                                               </div>
+                                              </a>
+                                            </li>
+                                           
+                                              </ul>
+                                                  <!-- ---------Nav Pills end---------   -->
+                                              </div>
+                                              <!-- /.col-md-4 -->
+                                            <div class="col-md-9">
+                                          <div class="tab-content" id="myTabContent">
+                                               <!-- ---------version1 Pills---------   -->
+                                            <div class="tab-pane fade fade show active" id="version1" role="tabpanel" aria-labelledby="version1-tab">
+                                                <div class="d-flex justify-content-between border-default border-bottom">
+                                                    <h5 class=" text-bold">Version 1</h5>
+                                                    <ul class="d-flex">
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                            <i class="fas fa-medal d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Incident Awards"></i> 
+                                                        </button>  </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                            <i class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Delete"></i> 
+                                                        </button> </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                            <i class="icon-download d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Download"></i> 
+                                                        </button>  </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                            <i class="icon-check-circle d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Checked"></i> 
+                                                        </button> </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- Accordion Section -->
+                                                <div class="accordion column-padding with-border pr-3 pr-lg-0 pr-md-0" id="auditVersionAccordian" role="tablist" aria-multiselectable="true">
+                                                    <div class="bg-light rounded-2x my-3">
+                                                        <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                    </div>
+            
+                                                    <!-- section 1 start -->
+                                                    <div class="card">
+                                                        <div class="card-header" role="tab">
+                                                            <a data-toggle="collapse" data-parent="#auditVersionAccordian" href="#section-1" aria-expanded="true" aria-controls="section-1">
+                                                                <h5 class="mb-0">
+                                                                    Safety and security <i class="fas fa-angle-down rotate-icon float-right"></i>
+                                                                </h5>
+                                                            </a>
+                                                        </div>
+                                                        <div id="section-1" class="collapse show" role="tabpanel" data-parent="#auditVersionAccordian">
+                                                            <div class="card-body column-padding">
+                                                                <div class="bg-light rounded-2x my-3">
+                                                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold mr-2"></i>  Add Question</a></h4>
+                                                                </div>
+                                                                <div class="row mb-3">
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <ul class="d-flex align-item-center question-data">
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Answer Type</h6>
+                                                                                <p>Yes</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Severity</h6>
+                                                                                <p>High</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Positive %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Negative %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <h6 class="info-label">Description</h6>
+                                                                                <p>There are many variations of passages</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <hr class="mb-4 mt-3 border-default">
+                                                                <div class="row mb-3">
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <ul class="d-flex align-item-center question-data">
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Answer Type</h6>
+                                                                                <p>Yes</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Severity</h6>
+                                                                                <p>High</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Positive %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Negative %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <h6 class="info-label">Description</h6>
+                                                                                <p>There are many variations of passages</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                    </div>
+                                                    <!-- section 1 end -->
+                                                
+                                                    <!-- section 2 start -->
+                                                    <div class="card border-default">
+                                                        <div class="card-header" role="tab">
+                                                            <a class="collapsed" data-toggle="collapse" data-parent="#auditVersionAccordian" href="#section-2"
+                                                            aria-expanded="false" aria-controls="section-2">
+                                                                <h5 class="mb-0">
+                                                                    Traffic management plan relevant <i class="fas fa-angle-down rotate-icon float-right"></i>
+                                                                </h5>
+                                                            </a>
+                                                        </div>
+                                                        <div id="section-2" class="collapse" role="tabpanel" data-parent="#auditVersionAccordian">
+                                                            <div class="card-body column-padding">
+                                                                <div class="bg-light rounded-2x my-3">
+                                                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold mr-2"></i>  Add Question</a></h4>
+                                                                </div>
+                                                                <div class="row mb-3">
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <ul class="d-flex align-item-center question-data">
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Answer Type</h6>
+                                                                                <p>Yes</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Severity</h6>
+                                                                                <p>High</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Positive %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Negative %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <h6 class="info-label">Description</h6>
+                                                                                <p>There are many variations of passages</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <hr class="mb-4 mt-3 border-default">
+                                                                <div class="row mb-3">
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <ul class="d-flex align-item-center question-data">
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Answer Type</h6>
+                                                                                <p>Yes</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Severity</h6>
+                                                                                <p>High</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Positive %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Negative %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <h6 class="info-label">Description</h6>
+                                                                                <p>There are many variations of passages</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- section 2 end -->
+                                                
+                                                    <!-- section 3 start -->
+                                                    <div class="card">
+                                                        <div class="card-header" role="tab">
+                                                            <a class="collapsed" data-toggle="collapse" data-parent="#auditVersionAccordian" href="#section-3"
+                                                            aria-expanded="false" aria-controls="section-3">
+                                                                <h5 class="mb-0">
+                                                                    Property / Vehicle <i class="fas fa-angle-down rotate-icon float-right"></i>
+                                                                </h5>
+                                                            </a>
+                                                        </div>
+                                                        <div id="section-3" class="collapse" role="tabpanel" data-parent="#auditVersionAccordian">
+                                                            <div class="card-body column-padding">
+                                                                <div class="bg-light rounded-2x my-3">
+                                                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold mr-2"></i>  Add Question</a></h4>
+                                                                </div>
+                                                                <div class="row mb-3">
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <ul class="d-flex align-item-center question-data">
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Answer Type</h6>
+                                                                                <p>Yes</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Severity</h6>
+                                                                                <p>High</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Positive %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Negative %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <h6 class="info-label">Description</h6>
+                                                                                <p>There are many variations of passages</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <hr class="mb-4 mt-3 border-default">
+                                                                <div class="row mb-3">
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                                        <ul class="d-flex align-item-center question-data">
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Answer Type</h6>
+                                                                                <p>Yes</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Severity</h6>
+                                                                                <p>High</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Positive %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li class="mr-3">
+                                                                                <h6 class="info-label">Negative %</h6>
+                                                                                <p>39%</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <h6 class="info-label">Description</h6>
+                                                                                <p>There are many variations of passages</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- section 3 end -->
+                                                
+                                                </div>
+                                                <!-- Accordion Section End-->
+
+                                            </div>
+                                                <!-- ---------version1 Pills end---------   -->
+                                                 <!-- ---------Victim Pills---------   -->
+                                              <!-- ---------version2 Pills---------   -->
+                                              <div class="tab-pane" id="version2" role="tabpanel" aria-labelledby="version1-tab">
+                                                <div class="d-flex justify-content-between border-default border-bottom">
+                                                    <h5 class=" text-bold">Version 2</h5>
+                                                    <ul class="d-flex">
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                            <i class="fas fa-medal d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Incident Awards"></i> 
+                                                        </button>  </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                            <i class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Delete"></i> 
+                                                        </button> </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                            <i class="icon-download d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Download"></i> 
+                                                        </button>  </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                            <i class="icon-check-circle d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Checked"></i> 
+                                                        </button> </li>
+                                                    </ul>
+                                                </div>
+                                             <!-- Accordion Section -->
+                                             <div class="accordion column-padding with-border pr-3 pr-lg-0 pr-md-0" id="auditVersionAccordian" role="tablist" aria-multiselectable="true">
+                                                <div class="bg-light rounded-2x my-3">
+                                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                </div>
+        
+                                                <!-- section 1 start -->
+                                                <div class="card">
+                                                    <div class="card-header" role="tab">
+                                                        <a data-toggle="collapse" data-parent="#auditVersionAccordian" href="#section-1" aria-expanded="true" aria-controls="section-1">
+                                                            <h5 class="mb-0">
+                                                                Safety and security <i class="fas fa-angle-down rotate-icon float-right"></i>
+                                                            </h5>
+                                                        </a>
+                                                    </div>
+                                                    <div id="section-1" class="collapse show" role="tabpanel" data-parent="#auditVersionAccordian">
+                                                        <div class="card-body column-padding">
+                                                            <div class="bg-light rounded-2x my-3">
+                                                                <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold mr-2"></i>  Add Question</a></h4>
+                                                            </div>
+                                                            <div class="row mb-3">
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                </div>
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <ul class="d-flex align-item-center question-data">
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Answer Type</h6>
+                                                                            <p>Yes</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Severity</h6>
+                                                                            <p>High</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Positive %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Negative %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h6 class="info-label">Description</h6>
+                                                                            <p>There are many variations of passages</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="mb-4 mt-3 border-default">
+                                                            <div class="row mb-3">
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                </div>
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <ul class="d-flex align-item-center question-data">
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Answer Type</h6>
+                                                                            <p>Yes</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Severity</h6>
+                                                                            <p>High</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Positive %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Negative %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h6 class="info-label">Description</h6>
+                                                                            <p>There are many variations of passages</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            
+                                                </div>
+                                                <!-- section 1 end -->
+                                            
+                                                <!-- section 2 start -->
+                                                <div class="card">
+                                                    <div class="card-header" role="tab">
+                                                        <a class="collapsed" data-toggle="collapse" data-parent="#auditVersionAccordian" href="#section-2"
+                                                        aria-expanded="false" aria-controls="section-2">
+                                                            <h5 class="mb-0">
+                                                                Traffic management plan relevant <i class="fas fa-angle-down rotate-icon float-right"></i>
+                                                            </h5>
+                                                        </a>
+                                                    </div>
+                                                    <div id="section-2" class="collapse" role="tabpanel" data-parent="#auditVersionAccordian">
+                                                        <div class="card-body column-padding">
+                                                            <div class="bg-light rounded-2x my-3">
+                                                                <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold mr-2"></i>  Add Question</a></h4>
+                                                            </div>
+                                                            <div class="row mb-3">
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                </div>
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <ul class="d-flex align-item-center question-data">
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Answer Type</h6>
+                                                                            <p>Yes</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Severity</h6>
+                                                                            <p>High</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Positive %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Negative %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h6 class="info-label">Description</h6>
+                                                                            <p>There are many variations of passages</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="mb-4 mt-3 border-default">
+                                                            <div class="row mb-3">
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                </div>
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <ul class="d-flex align-item-center question-data">
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Answer Type</h6>
+                                                                            <p>Yes</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Severity</h6>
+                                                                            <p>High</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Positive %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Negative %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h6 class="info-label">Description</h6>
+                                                                            <p>There are many variations of passages</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- section 2 end -->
+                                            
+                                                <!-- section 3 start -->
+                                                <div class="card">
+                                                    <div class="card-header" role="tab">
+                                                        <a class="collapsed" data-toggle="collapse" data-parent="#auditVersionAccordian" href="#section-3"
+                                                        aria-expanded="false" aria-controls="section-3">
+                                                            <h5 class="mb-0">
+                                                                Property / Vehicle <i class="fas fa-angle-down rotate-icon float-right"></i>
+                                                            </h5>
+                                                        </a>
+                                                    </div>
+                                                    <div id="section-3" class="collapse" role="tabpanel" data-parent="#auditVersionAccordian">
+                                                        <div class="card-body column-padding">
+                                                            <div class="bg-light rounded-2x my-3">
+                                                                <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold mr-2"></i>  Add Question</a></h4>
+                                                            </div>
+                                                            <div class="row mb-3">
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                </div>
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <ul class="d-flex align-item-center question-data">
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Answer Type</h6>
+                                                                            <p>Yes</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Severity</h6>
+                                                                            <p>High</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Positive %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Negative %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h6 class="info-label">Description</h6>
+                                                                            <p>There are many variations of passages</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="mb-4 mt-3 border-default">
+                                                            <div class="row mb-3">
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <h4 class="font-16 text-black text-medium">2.1 Is the traffic management plan relevant, current and shared? <a href="#" class="float-right"><i class="fas fa-pencil-alt"></i></a></h4>
+                                                                </div>
+                                                                <div class="col-lg-12 col-md-12 col-12">
+                                                                    <ul class="d-flex align-item-center question-data">
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Answer Type</h6>
+                                                                            <p>Yes</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Severity</h6>
+                                                                            <p>High</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Positive %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li class="mr-3">
+                                                                            <h6 class="info-label">Negative %</h6>
+                                                                            <p>39%</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h6 class="info-label">Description</h6>
+                                                                            <p>There are many variations of passages</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- section 3 end -->
+                                            
+                                            </div>
+                                            <!-- Accordion Section End-->
+
+                                            </div>
+                                                <!-- ---------version2 Pills end---------   -->
+                                            <!-- ---------version3 Pills---------   -->
+                                            <div class="tab-pane fade" id="version3" role="tabpanel" aria-labelledby="version3-tab">
+                                                 <div class="d-flex justify-content-between border-default border-bottom">
+                                                    <h5 class=" text-bold">Version 3</h5>
+                                                    <ul class="d-flex">
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                            <i class="fas fa-medal d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Incident Awards"></i> 
+                                                        </button>  </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                            <i class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Delete"></i> 
+                                                        </button> </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                            <i class="icon-download d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Download"></i> 
+                                                        </button>  </li>
+                                                        <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                            <i class="icon-check-circle d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Checked"></i> 
+                                                        </button> </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="bg-light rounded-2x my-3">
+                                                    <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                </div>
+                                                <!-- Accordion Section -->
+                                        <div class="accordion pr-3 pr-lg-0 pr-md-0 mb-4" id="sectionAccordianv2" role="tablist"
+                                        aria-multiselectable="true">
+    
+                                        <!-- section 1 start -->
+                                        <div class="card rounded-2x">
+                                            <div class="card-header bg-light py-4" role="tab">
+                                                <a data-toggle="collapse" data-parent="#sectionAccordianv2"
+                                                    href="#sectionv2-1" aria-expanded="true" aria-controls="section-1">
+                                                    <div class="tittle-wrapper">
+                                                        <h5 class="mb-0 font-small text-black-50 mb-3">
+                                                            Section 1
+                                                            <i class="fas fa-angle-down rotate-icon float-right text-black-50 text-semibold ic-4x mt-1"></i>
+                                                            <i
+                                                            class="icon-trash rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i> 
+                                                            <i
+                                                            class="icon-edit rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i>
+                                                         </h5>
+                                                         <h5 class="text-semibold font-16">Accidents and Accidents/Incidents Investigation</h5>
+                                                    </div>
+                                                    
+                                                </a>
+                                            </div>
+                                            <div id="sectionv2-1" class="collapse show" role="tabpanel"
+                                                data-parent="#sectionAccordianv2">
+                                                <div class="card-body bg-light column-padding">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-12">
+                                                            <div class="bg-white rounded-2x my-3">
+                                                                <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                            </div>
+                                                            <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                                <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                    <div class="text-capitalize col-10">
+                                                                        <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.1</span>
+                                                                     <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                    <div class="document-actions col-2 text-right p-0">
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-download ic-2x"></i> 
+                                                                     </button> 
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-trash ic-2x ml-3"></i> 
+                                                                     </button> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0 mb-4">
+                                                                    <div class="col-6 col-sm-3">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                        <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                        <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0">
+                                                                    <div class="col-12">
+                                                                        <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                        <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                                <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                    <div class="text-capitalize col-10">
+                                                                        <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.2</span>
+                                                                     <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                    <div class="document-actions col-2 text-right p-0">
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-download ic-2x"></i> 
+                                                                     </button> 
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-trash ic-2x ml-3"></i> 
+                                                                     </button> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0 mb-4">
+                                                                    <div class="col-6 col-sm-3">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                        <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                        <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0">
+                                                                    <div class="col-12">
+                                                                        <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                        <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- section 1 end -->
+    
+                                          <!-- section 2 start -->
+                                          <div class="card rounded-2x">
+                                            <div class="card-header bg-light py-4" role="tab">
+                                                <a data-toggle="collapse" data-parent="#sectionAccordianv2"
+                                                    href="#sectionv2-2" aria-expanded="true" aria-controls="section-2">
+                                                    <div class="tittle-wrapper">
+                                                        <h5 class="mb-0 font-small text-black-50 mb-3">
+                                                            Section 2
+                                                            <i class="fas fa-angle-down rotate-icon float-right text-black-50 text-semibold ic-4x mt-1"></i>
+                                                            <i
+                                                            class="icon-trash rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i> 
+                                                            <i
+                                                            class="icon-edit rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i>
+                                                         </h5>
+                                                         <h5 class="text-semibold font-16">Accidents and Accidents/Incidents Investigation</h5>
+                                                    </div>
+                                                    
+                                                </a>
+                                            </div>
+                                            <div id="sectionv2-2" class="collapse show" role="tabpanel"
+                                                data-parent="#sectionAccordianv2">
+                                                <div class="card-body bg-light column-padding">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-12">
+                                                            <div class="bg-white rounded-2x my-3">
+                                                                <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                            </div>
+                                                            <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                                <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                    <div class="text-capitalize col-10">
+                                                                        <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.1</span>
+                                                                     <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                    <div class="document-actions col-2 text-right p-0">
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-download ic-2x"></i> 
+                                                                     </button> 
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-trash ic-2x ml-3"></i> 
+                                                                     </button> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0 mb-4">
+                                                                    <div class="col-6 col-sm-3">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                        <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                        <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0">
+                                                                    <div class="col-12">
+                                                                        <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                        <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- section 2 end -->
+                                        
+                                          <!-- section 3 start -->
+                                          <div class="card rounded-2x">
+                                            <div class="card-header bg-light py-4" role="tab">
+                                                <a data-toggle="collapse" data-parent="#sectionAccordianv2"
+                                                    href="#sectionv2-3" aria-expanded="false" aria-controls="section-3">
+                                                    <div class="tittle-wrapper">
+                                                        <h5 class="mb-0 font-small text-black-50 mb-3">
+                                                            Section 3
+                                                            <i class="fas fa-angle-down rotate-icon float-right text-black-50 text-semibold ic-4x mt-1"></i>
+                                                            <i
+                                                            class="icon-trash rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i> 
+                                                            <i
+                                                            class="icon-edit rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i>
+                                                         </h5>
+                                                         <h5 class="text-semibold font-16">Accidents and Accidents/Incidents Investigation</h5>
+                                                    </div>
+                                                    
+                                                </a>
+                                            </div>
+                                            <div id="sectionv2-3" class="collapse" role="tabpanel"
+                                                data-parent="#sectionAccordianv2">
+                                                <div class="card-body bg-light column-padding">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-12">
+                                                            <div class="bg-white rounded-2x my-3">
+                                                                <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                            </div>
+                                                            <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                                <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                    <div class="text-capitalize col-10">
+                                                                        <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.1</span>
+                                                                     <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                    <div class="document-actions col-2 text-right p-0">
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-download ic-2x"></i> 
+                                                                     </button> 
+                                                                     <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                         <i class="icon-trash ic-2x ml-3"></i> 
+                                                                     </button> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0 mb-4">
+                                                                    <div class="col-6 col-sm-3">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                        <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                        <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                    <div class="col-6 col-sm-3 text-center">
+                                                                        <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                        <h4 class="text-semibold font-small ">6</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mx-0">
+                                                                    <div class="col-12">
+                                                                        <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                        <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- section 3 end -->
+                                    </div>
+                                    <!-- Accordion Section End-->
+
+                                            </div>
+                                                <!-- ---------version3 Pills end---------   -->
+                                           <!-- ---------version4 Pills---------   -->
+                                           <div class="tab-pane fade" id="version4" role="tabpanel" aria-labelledby="version1-tab">
+                                            <div class="d-flex justify-content-between border-default border-bottom">
+                                                <h5 class=" text-bold">Version 4</h5>
+                                                <ul class="d-flex">
+                                                    <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                        <i class="fas fa-medal d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Incident Awards"></i> 
+                                                    </button>  </li>
+                                                    <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                        <i class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Delete"></i> 
+                                                    </button> </li>
+                                                    <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 waves-effect waves-light">
+                                                        <i class="icon-download d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Download"></i> 
+                                                    </button>  </li>
+                                                    <li><button class="btn plus-btn-round z-depth-0 font-16 text-medium mx-3 p-0 mt-sm-0 ml-2 waves-effect waves-light">
+                                                        <i class="icon-check-circle d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-primary" data-toggle="tooltip" title="Checked"></i> 
+                                                    </button> </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bg-light rounded-2x my-3">
+                                                <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                            </div>
+                                            <!-- Accordion Section -->
+                                    <div class="accordion pr-3 pr-lg-0 pr-md-0 mb-4" id="sectionAccordianv4" role="tablist"
+                                    aria-multiselectable="true">
+
+                                    <!-- section 1 start -->
+                                    <div class="card rounded-2x">
+                                        <div class="card-header bg-light py-4" role="tab">
+                                            <a data-toggle="collapse" data-parent="#sectionAccordianv4"
+                                                href="#sectionv4-1" aria-expanded="true" aria-controls="sectionv4-1">
+                                                <div class="tittle-wrapper">
+                                                    <h5 class="mb-0 font-small text-black-50 mb-3">
+                                                        Section 1
+                                                        <i class="fas fa-angle-down rotate-icon float-right text-black-50 text-semibold ic-4x mt-1"></i>
+                                                        <i
+                                                        class="icon-trash rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i> 
+                                                        <i
+                                                        class="icon-edit rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i>
+                                                     </h5>
+                                                     <h5 class="text-semibold font-16">Accidents and Accidents/Incidents Investigation</h5>
+                                                </div>
+                                                
+                                            </a>
+                                        </div>
+                                        <div id="sectionv4-1" class="collapse show" role="tabpanel"
+                                            data-parent="#sectionAccordianv4">
+                                            <div class="card-body bg-light column-padding">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                        <div class="bg-white rounded-2x my-3">
+                                                            <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                        </div>
+                                                        <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                            <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                <div class="text-capitalize col-10">
+                                                                    <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.1</span>
+                                                                 <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                <div class="document-actions col-2 text-right p-0">
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-download ic-2x"></i> 
+                                                                 </button> 
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-trash ic-2x ml-3"></i> 
+                                                                 </button> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0 mb-4">
+                                                                <div class="col-6 col-sm-3">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                    <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                    <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0">
+                                                                <div class="col-12">
+                                                                    <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                    <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                            <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                <div class="text-capitalize col-10">
+                                                                    <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.2</span>
+                                                                 <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                <div class="document-actions col-2 text-right p-0">
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-download ic-2x"></i> 
+                                                                 </button> 
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-trash ic-2x ml-3"></i> 
+                                                                 </button> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0 mb-4">
+                                                                <div class="col-6 col-sm-3">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                    <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                    <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0">
+                                                                <div class="col-12">
+                                                                    <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                    <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- section 1 end -->
+
+                                      <!-- section 2 start -->
+                                      <div class="card rounded-2x">
+                                        <div class="card-header bg-light py-4" role="tab">
+                                            <a data-toggle="collapse" data-parent="#sectionAccordianv4"
+                                                href="#sectionv4-2" aria-expanded="true" aria-controls="sectionv4-2">
+                                                <div class="tittle-wrapper">
+                                                    <h5 class="mb-0 font-small text-black-50 mb-3">
+                                                        Section 2
+                                                        <i class="fas fa-angle-down rotate-icon float-right text-black-50 text-semibold ic-4x mt-1"></i>
+                                                        <i
+                                                        class="icon-trash rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i> 
+                                                        <i
+                                                        class="icon-edit rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i>
+                                                     </h5>
+                                                     <h5 class="text-semibold font-16">Accidents and Accidents/Incidents Investigation</h5>
+                                                </div>
+                                                
+                                            </a>
+                                        </div>
+                                        <div id="sectionv4-2" class="collapse show" role="tabpanel"
+                                            data-parent="#sectionAccordianv4">
+                                            <div class="card-body bg-light column-padding">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                        <div class="bg-white rounded-2x my-3">
+                                                            <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                        </div>
+                                                        <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                            <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                <div class="text-capitalize col-10">
+                                                                    <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.1</span>
+                                                                 <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                <div class="document-actions col-2 text-right p-0">
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-download ic-2x"></i> 
+                                                                 </button> 
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-trash ic-2x ml-3"></i> 
+                                                                 </button> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0 mb-4">
+                                                                <div class="col-6 col-sm-3">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                    <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                    <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0">
+                                                                <div class="col-12">
+                                                                    <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                    <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- section 2 end -->
+                                    
+                                      <!-- section 3 start -->
+                                      <div class="card rounded-2x">
+                                        <div class="card-header bg-light py-4" role="tab">
+                                            <a data-toggle="collapse" data-parent="#sectionAccordianv4"
+                                                href="#sectionv4-3" aria-expanded="false" aria-controls="sectionv4-3">
+                                                <div class="tittle-wrapper">
+                                                    <h5 class="mb-0 font-small text-black-50 mb-3">
+                                                        Section 3
+                                                        <i class="fas fa-angle-down rotate-icon float-right text-black-50 text-semibold ic-4x mt-1"></i>
+                                                        <i
+                                                        class="icon-trash rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i> 
+                                                        <i
+                                                        class="icon-edit rotate-icon float-right text-black-50 text-semibold  mt-1 mr-3"></i>
+                                                     </h5>
+                                                     <h5 class="text-semibold font-16">Accidents and Accidents/Incidents Investigation</h5>
+                                                </div>
+                                                
+                                            </a>
+                                        </div>
+                                        <div id="sectionv4-3" class="collapse" role="tabpanel"
+                                            data-parent="#sectionAccordianv4">
+                                            <div class="card-body bg-light column-padding">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                        <div class="bg-white rounded-2x my-3">
+                                                            <h4><a href="#" class="text-primary d-flex justify-content-center font-16 text-semibold py-3"> <i class="icon-plus text-semibold"></i>  Add New Section</a></h4>
+                                                        </div>
+                                                        <div class="accident-questions rounded-2x bg-white p-3 mb-3 ">
+                                                            <div class=" row d-flex justify-content-between  border-bottom border-default mx-0 pb-2 mb-3">
+                                                                <div class="text-capitalize col-10">
+                                                                    <span class="badge badge-warning rounded-1x text-uppercase shadow-none text-semibold px-3 mr-2">1.1</span>
+                                                                 <span class="text-black text-semibold font-small"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, harum vero rem sed ea, ullam fugit architecto laborum? </span></div>
+                                                                <div class="document-actions col-2 text-right p-0">
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-download ic-2x"></i> 
+                                                                 </button> 
+                                                                 <button class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0 waves-effect waves-light">
+                                                                     <i class="icon-trash ic-2x ml-3"></i> 
+                                                                 </button> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0 mb-4">
+                                                                <div class="col-6 col-sm-3">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Answer Type</span>
+                                                                    <h4 class="text-semibold font-small text-uppercase">Yes/No/NA</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">sevarity</span>
+                                                                    <h4 class="text-semibold font-small ">Moderate</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Positive %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3 text-center">
+                                                                    <span class="font-small text-black-50 text-semibold mb-2">Negative %</span>
+                                                                    <h4 class="text-semibold font-small ">6</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mx-0">
+                                                                <div class="col-12">
+                                                                    <h6 class="font-small text-black-50 text-semibold"> Help Text</h6>
+                                                                    <h4 class="font-small text-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem atque dicta quidem iste, aliquam dolorem, modi earum dolor recusandae fugit porro labore ut cupiditate nisi. Eum sint nisi obcaecati?</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- section 3 end -->
+                                </div>
+                                <!-- Accordion Section End-->
+
+                                        </div>
+                                            <!-- ---------version4 Pills end---------   -->
+                                       
+                                          </div>
+                                            </div>
+                                              <!-- /.col-md-8 -->
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <!-- Question tab end-->
+                                    <!-- Schedule tab -->
+                                    <div class="tab-pane fade" id="Schedule" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center border-dark border-bottom py-3">
+                                                    <h4 class="font-16 text-semibold mb-0">Schedule List</h4>
+                                                    <button class="btn btn-outline-primary m-0 mr-2 waves-effect waves-light rounded-4x mr-2 d-flex align-items-center" type="button" ><i class="icon-plus ic-2x text-semibold "></i> Add</button>
+                                                </div> 
+                                            </div>
+                                            <div class="col-12 t mt-3">
+                                                
+                                                <table id="scheduleListTable" class="table table-hover table-responsive-md" cellspacing="0"
+                                                    width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Frequency</th>
+                                                            <th>Start Date</th>
+                                                            <th>End Date</th>
+                                                            <th>Map</th>
+                                                            <th class="text-center">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="font-small text-medium text-black">Monthly</td>
+                                                            <td class="font-small text-medium text-black">24 June 2021</td>
+                                                            <td class="font-small text-medium text-black">24 July 2021</td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary"> <a href="javascript:void(0)" class="text-primary">Map</a></span>
+                                                            </td>
+                                                            <td class="text-center" style="text-align: -webkit-center;">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-eye d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-small text-medium text-black">Monthly</td>
+                                                            <td class="font-small text-medium text-black">24 June 2021</td>
+                                                            <td class="font-small text-medium text-black">24 July 2021</td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary"> <a href="javascript:void(0)" class="text-primary">Map</a></span>
+                                                            </td>
+                                                            <td class="text-center" style="text-align: -webkit-center;">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-eye d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-small text-medium text-black">Monthly</td>
+                                                            <td class="font-small text-medium text-black">24 June 2021</td>
+                                                            <td class="font-small text-medium text-black">24 July 2021</td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary"> <a href="javascript:void(0)" class="text-primary">Map</a></span>
+                                                            </td>
+                                                            <td class="text-center" style="text-align: -webkit-center;">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-eye d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-small text-medium text-black">Monthly</td>
+                                                            <td class="font-small text-medium text-black">24 June 2021</td>
+                                                            <td class="font-small text-medium text-black">24 July 2021</td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary"> <a href="javascript:void(0)" class="text-primary">Map</a></span>
+                                                            </td>
+                                                            <td class="text-center" style="text-align: -webkit-center;">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-eye d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-small text-medium text-black">Monthly</td>
+                                                            <td class="font-small text-medium text-black">24 June 2021</td>
+                                                            <td class="font-small text-medium text-black">24 July 2021</td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary"> <a href="javascript:void(0)" class="text-primary">Map</a></span>
+                                                            </td>
+                                                            <td class="text-center" style="text-align: -webkit-center;">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-eye d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-small text-medium text-black">Monthly</td>
+                                                            <td class="font-small text-medium text-black">24 June 2021</td>
+                                                            <td class="font-small text-medium text-black">24 July 2021</td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary"> <a href="javascript:void(0)" class="text-primary">Map</a></span>
+                                                            </td>
+                                                            <td class="text-center" style="text-align: -webkit-center;">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-eye d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-small text-medium text-black">Monthly</td>
+                                                            <td class="font-small text-medium text-black">24 June 2021</td>
+                                                            <td class="font-small text-medium text-black">24 July 2021</td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary"> <a href="javascript:void(0)" class="text-primary">Map</a></span>
+                                                            </td>
+                                                            <td class="text-center" style="text-align: -webkit-center;">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                    <button class="btn plus-btn-round z-depth-0 font-16 text-primary mx-2 p-0 mt-sm-0 waves-effect waves-light">
+                                                                        <i class="icon-eye d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i> 
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Schedule tab end -->
+                                    <!-- Map tab  -->
+                                    <div class="tab-pane fade" id="Map" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="md-form md-outline mb-3">
+                                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Monthly-1 Sep 2020 to 31 Aug 2021">
+                                                        <option>Schedule</option>
+                                                        <option>Monthly-1 Sep 2020 to 31 Aug 2021</option>
+                                                        <option>Monthly-1 Sep 2020 to 31 Aug 2021</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <!-- Location search section -->
+                                        <div class="column-padding">
+                                            <div class="row align-items-end mb-3">
+                                                <div class="col-md-4 col-12">
+                                                    <div class="category">
+                                                        <small class="text-medium text-black">Locations</small>
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker" data-style="btn-white px-3 text-black-50 text-semibold" data-size="5" title="All">
+                                                                <option value="1">Accident</option>
+                                                                <option value="23">Child Safeguarding</option>
+                                                                <option value="4">Environmental Incident</option>
+                                                                <option value="29">Fire</option>
+                                                                <option value="2">Illness</option>
+                                                                <option value="3">Near Miss</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12">
+                                                    <div class="category w-100">
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker" data-style="btn-white px-3 text-black-50 text-semibold" data-size="5" title="All">
+                                                                <option value="1">Accident</option>
+                                                                <option value="23">Child Safeguarding</option>
+                                                                <option value="4">Environmental Incident</option>
+                                                                <option value="29">Fire</option>
+                                                                <option value="2">Illness</option>
+                                                                <option value="3">Near Miss</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12 px-md-1 px-lg-2">
+                                                    <div class="md-form md-outline mb-3 rounded-2x d-flex align-items-center flex-row-reverse bg-light flex-1 search-field-front-icon">
+                                                        <input type="text" class="form-control border-0 flex-1 p-0  m-0 ml-2"
+                                                            placeholder="Search">
+                                                        <!-- <img src="img/svg/search.svg" alt="" class="text-primary"> -->
+                                                        <i class="icon-search text-primary text-semibold ic-2x"></i>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <!-- selectbox -->
+                                            <div class="school-selection border rounded p-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Select-All">
+                                                            <label class="custom-control-label text-capitalize" for="Select-All">Select All</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="liberty">
+                                                            <label class="custom-control-label text-capitalize" for="liberty">Liberty School for boys (LBS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="GGI">
+                                                            <label class="custom-control-label text-capitalize" for="GGI">Garden Grove Institute(GGI)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Oyster">
+                                                            <label class="custom-control-label text-capitalize" for="Oyster">Oyster harbour School(OHS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Gems">
+                                                            <label class="custom-control-label text-capitalize" for="Gems">Gems virtual School(GVS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- selectbox end -->
+                                            <div class="row">
+                                                  <div class="col-md-12 col-12 text-right mb-2">
+                                                    <button type="button" class="btn btn-primary waves-effect waves-light">Done</button>
+                                                  </div>
+                                            </div>
+                                        </div> 
+                                        <!-- Location search section end-->
+                                    </div>
+                                    <!-- Map tab end -->
+                                    <!-- Unmap tab  -->
+                                    <div class="tab-pane fade" id="Unmap" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="md-form md-outline mb-3">
+                                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5" title="Monthly-1 Sep 2020 to 31 Aug 2021">
+                                                        <option>Schedule</option>
+                                                        <option>Monthly-1 Sep 2020 to 31 Aug 2021</option>
+                                                        <option>Monthly-1 Sep 2020 to 31 Aug 2021</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <!-- Location search section -->
+                                        <div class="column-padding">
+                                            <div class="row align-items-end mb-3">
+                                                <div class="col-md-4 col-12">
+                                                    <div class="category">
+                                                        <small class="text-medium text-black">Locations</small>
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker" data-style="btn-white px-3 text-black-50 text-semibold" data-size="5" title="All">
+                                                                <option value="1">Accident</option>
+                                                                <option value="23">Child Safeguarding</option>
+                                                                <option value="4">Environmental Incident</option>
+                                                                <option value="29">Fire</option>
+                                                                <option value="2">Illness</option>
+                                                                <option value="3">Near Miss</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12">
+                                                    <div class="category w-100">
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker" data-style="btn-white px-3 text-black-50 text-semibold" data-size="5" title="All">
+                                                                <option value="1">Accident</option>
+                                                                <option value="23">Child Safeguarding</option>
+                                                                <option value="4">Environmental Incident</option>
+                                                                <option value="29">Fire</option>
+                                                                <option value="2">Illness</option>
+                                                                <option value="3">Near Miss</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12 px-md-1 px-lg-2">
+                                                    <div class="md-form md-outline mb-3 rounded-2x d-flex align-items-center flex-row-reverse bg-light flex-1 search-field-front-icon">
+                                                        <input type="text" class="form-control border-0 flex-1 p-0  m-0 ml-2"
+                                                            placeholder="Search">
+                                                        <!-- <img src="img/svg/search.svg" alt="" class="text-primary"> -->
+                                                        <i class="icon-search text-primary text-semibold ic-2x"></i>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <!-- selectbox -->
+                                            <div class="school-selection border rounded p-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Select-All">
+                                                            <label class="custom-control-label text-capitalize" for="Select-All">Select All</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="liberty">
+                                                            <label class="custom-control-label text-capitalize" for="liberty">Liberty School for boys (LBS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="GGI">
+                                                            <label class="custom-control-label text-capitalize" for="GGI">Garden Grove Institute(GGI)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Oyster">
+                                                            <label class="custom-control-label text-capitalize" for="Oyster">Oyster harbour School(OHS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Gems">
+                                                            <label class="custom-control-label text-capitalize" for="Gems">Gems virtual School(GVS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="pioneer">
+                                                            <label class="custom-control-label text-capitalize" for="pioneer">Pioneer School Of Girls(PSG)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="custom-control custom-checkbox py-2">
+                                                            <input type="checkbox" class="custom-control-input" id="Phoenix">
+                                                            <label class="custom-control-label text-capitalize" for="Phoenix">Phoenix Model School (PMS)</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- selectbox end -->
+                                            <div class="row">
+                                                  <div class="col-md-12 col-12 text-right mb-2">
+                                                    <button type="button" class="btn btn-primary waves-effect waves-light">Done</button>
+                                                  </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <!-- Unmap tab end -->
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                         
+        </div>
+    </main>      
+
+    <!-- Upload File drawer -->
+     <div class="modal fade right" id="documentUploadDrawer" tabindex="-1" role="dialog"
+     aria-labelledby="" aria-hidden="true">
+     <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+         <div class="modal-content rounded-0">
+             <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                 <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Document</h5>
+                 <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                     <i class="icon-cross ic-3x text-primary"></i>
+                 </button>
+             </div>
+             <div class="modal-body p-4">
+                Document
+             </div>
+             <div class="modal-footer justify-content-end border-0 py-2">
+                 <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                 <button class="btn btn-primary m-0" type="button">Save</button>
+             </div>
+         </div>
+     </div>
+     </div>
+    <!-- Upload File drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+
+    <script src="js/addons/datatables.min.js" rel="stylesheet"></script>
+    <script src="js/addons/datatables-select.min.js" rel="stylesheet"></script>
+    <script src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/js/dataTables.checkboxes.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+    
+
+    
+
+    <script>
+        $(document).ready(function () {
+            //$('#advancedFilter').modal('show');
+            /* $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'M/DD hh:mm A',
+                }
+            }); */
+            var scheduleListTbl =  $('#scheduleListTable').DataTable({
+                bLengthChange: false,
+                ordering: true,
+                columnDefs: [ 
+                    {
+                        orderable: true,
+                        targets: [0,1,2]
+                    },
+                    {
+                        orderable: false,
+                        targets: [3,4]
+                    }
+                ],
+                "lengthMenu": [ 4, 10, 15, 20, 25 ],
+                select: {
+                    style:    'multi',
+                    selector: 'td:first-child'
+                },
+                //order: [[ 0, 'asc' ]]
+            });
+            $(".dataTables_filter").hide();
+            $('.userRoleSearch').keyup(function(){
+                userRoleTbl.search($(this).val()).draw();
+            })
+            var start = moment().subtract(7, 'days');
+            var end = moment();
+
+            function cb(start) {
+                $('#dateTimeRange span').html(start.format(' hh:mm A, M/DD/YYYY'));
+            }
+
+            $('#dateTimeRange').daterangepicker({
+                startDate: start,
+                // endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start);
+        })
+    </script>
+</body>
+</html>     

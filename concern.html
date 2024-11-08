@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Concern</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white rounded-2x d-flex align-items-center justify-content-between  pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-blue text-semibold m-0">Concern</h3>
+                            <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium"><a href="#" class="text-primary">Home</a></li>
+                                <li class="font-small text-medium text-blue">Concern</li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-primary d-flex align-items-center rounded-1x m-0 px-3" type="button" href="concern-report-concern.html">Report a Concern
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+
+            <!-- incidents data -->
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pill-panel p-4">
+                                <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                                    role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0 active" data-toggle="pill"
+                                            href="#all" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0"
+                                            data-toggle="pill" href="#draft" role="tab"
+                                            aria-selected="false">Draft</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0"
+                                            data-toggle="pill" href="#approval" role="tab" aria-selected="false">Approval Pending</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0"
+                                            data-toggle="pill" href="#open" role="tab"
+                                            aria-selected="false">Open</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0"
+                                            data-toggle="pill" href="#reopen" role="tab"
+                                            aria-selected="false">Reopened</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0"
+                                            data-toggle="pill" href="#closed" role="tab"
+                                            aria-selected="false">Closed</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0"
+                                            data-toggle="pill" href="#unapproved" role="tab"
+                                            aria-selected="false">Unapproved</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="">
+                                    <!-- All tab -->
+                                    <div class="tab-pane fade show active" id="all" role="tabpanel">
+                                        <!-- data filters -->
+                                        <div class="row no-gutters">
+                                            <div class="col-xl-5">
+                                                <div class="md-form md-outline mb-0">
+                                                    <div class="search-box d-flex justify-content-between align-items-center mb-2">
+                                                            <input type="text" class="rounded-1x line-height-2 w-100 py-1 px-2" placeholder="Search a keyword">
+                                                        <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <div class="d-flex align-items-baseline">
+                                                    <button
+                                                    class="btn bg-blue text-white d-flex align-items-center rounded-1x m-0 px-2 mb-2 mr-2 py-2 line-height-2 ml-md-2"
+                                                    type="button" data-toggle="modal"
+                                                    data-target="#advancedFilter">
+                                                    <i class="icon-filter text-semibold ic-2x mr-1"></i> Filter
+                                                    <span class="filter-count ml-1">(4)</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 d-flex justify-content-end flex-column flex-md-row">
+                                                <div class="order-category d-flex mr-2 flex-shrink-0 mb-2">
+                                                    <div
+                                                        class="box-height d-flex d-sm-inline-flex align-items-center line-height-1 border rounded-1x py-2 pl-2 my-2 my-sm-0">
+                                                        <span class="d-inline-block font-14 flex-shrink-0">Order By
+                                                            :</span>
+                                                        <div class="md-form md-outline m-0">
+                                                            <select class="selectpicker"
+                                                                data-dropdown-align-right="true"
+                                                                data-style="border-0 font-14 py-0 px-1"
+                                                                data-width="123px">
+                                                                <option selected="selected">Severity</option>
+                                                                <option>Data Created</option>
+                                                                <option>Category</option>
+                                                                <option>Date Occured</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="download-data flex-shrink-0">
+                                                    <div class="quick-nav dropdown show">
+                                                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn-download text-regular d-flex align-items-center justify-content-between btn border rounded-1x  m-0">
+                                                           <span class="font-14 ">Download All Data</span>  <i class="icon-chevron-down ic-2x ml-2 text-primary text-semibold"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu w-100 z-depth-1 border-0" x-placement="left-start">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">As Exel</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">As PDF</a>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- data filters end -->
+                                        <hr class="mb-0">
+
+                                        <!-- incident list -->
+                                        <div class="incidentList">
+                                            <!-- incident 1 -->
+                                            <article class="py-3">
+                                                <div class="incident-meta d-flex align-items-center">
+                                                    <div class="meta-left d-inline-flex align-items-center">
+                                                        <span
+                                                            class="badge badge-primary rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                                        <h4
+                                                            class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                            ID #11075623</h4>
+                                                    </div>
+                                                    <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                                        <h4
+                                                            class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                            Accident <span
+                                                                class="text-medium text-black-50 text-initial ml-2">(
+                                                                Struck by Object, Drawing, Chocking, .. )</span>
+                                                        </h4>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="btn p-0 border-0 m-0 z-depth-0 mr-2">
+                                                                    <i class="icon-users-filled text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div
+                                                                    class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center p-3">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            Persons Involved</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <ul class="overflow-auto px-3">
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-2.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Abigail Baker
+                                                                                    [12501800007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-1.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Lorri Lavine
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-3.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Weston Seyal
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold staff">Staff</span>
+                                                                                    - Witness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-6.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Maria Salvato
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold other">Other</span>
+                                                                                    - Vitness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn p-0 border-0 m-0  z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center px-3 py-2">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            More</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <div class="px-3">
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">View</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Edit</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Reminder</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Report</a>
+                                                                        <a class="dropdown-item px-0 py-2" href="#">Add
+                                                                            note</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="incident-title font-small mt-3 mb-2">
+                                                    <span class="d-inline-flex align-items-start align-items-sm-center">
+                                                        <i class="icon-school-1 ic-2x mr-2"></i>
+                                                        <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                                            Academy Silicon Oasis (WSO)</span>
+                                                    </span>
+                                                    <span
+                                                        class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                                        <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                                    </span>
+                                                </h3>
+                                                <div class="incident-info">
+                                                    <p class="m-0 addReadMore showlesscontent">Antonio was brought to the clinic by his nanny at 2
+                                                        p.m. According to the nanny, Antonio hit his head on the corner
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding.
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding.
+                                                     </p>
+                                                </div>
+                                            </article>
+                                            <!-- incident 1 end -->
+
+                                            <!-- incident 2 -->
+                                            <article class="py-3">
+                                                <div class="incident-meta d-flex align-items-center">
+                                                    <div class="meta-left d-inline-flex align-items-center">
+                                                        <span
+                                                            class="badge bg-pink rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Major</span>
+                                                        <h4
+                                                            class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                            ID #11075623</h4>
+                                                    </div>
+                                                    <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                                        <h4
+                                                            class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                            Accident <span
+                                                                class="text-medium text-black-50 text-initial ml-2">(
+                                                                Struck by Object, Drawing, Chocking, .. )</span>
+                                                        </h4>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <a class="cat d-flex justify-content-center align-items-center rounded-2x mr-2"><i class="icon-sand-clock"></i>
+                                                            </a>
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn p-0 border-0 m-0  z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center px-3 py-2">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            More</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <div class="px-3">
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">View</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Edit</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Reminder</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Report</a>
+                                                                        <a class="dropdown-item px-0 py-2" href="#">Add
+                                                                            note</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="incident-title font-small mt-3 mb-2">
+                                                    <span class="d-inline-flex align-items-start align-items-sm-center">
+                                                        <i class="icon-school-1 ic-2x mr-2"></i>
+                                                        <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                                            Academy Silicon Oasis (WSO)</span>
+                                                    </span>
+                                                    <span
+                                                        class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                                        <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                                    </span>
+                                                </h3>
+                                                <div class="incident-info">
+                                                    <!-- <p class="m-0">Antonio was brought to the clinic by his nanny at 2
+                                                        p.m. According to the nanny, Antonio hit his head on the corner
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding. </p> -->
+                                                        <p class="addReadMore showlesscontent">Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach "lorem ipsum" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks)Es ist ein lang erwiesener Fakt</p>
+                                                </div>
+                                            </article>
+                                            <!-- incident 2 end -->
+
+                                            <!-- incident 3 -->
+                                            <article class="py-3">
+                                                <div class="incident-meta d-flex align-items-center">
+                                                    <div class="meta-left d-inline-flex align-items-center">
+                                                        <span
+                                                            class="badge bg-orange rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Minor</span>
+                                                        <h4
+                                                            class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                            ID #11075623</h4>
+                                                    </div>
+                                                    <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                                        <h4
+                                                            class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                            Accident <span
+                                                                class="text-medium text-black-50 text-initial ml-2">(
+                                                                Struck by Object, Drawing, Chocking, .. )</span>
+                                                        </h4>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <a class="cat d-flex justify-content-center align-items-center rounded-2x mr-2"><i class="icon-sand-clock"></i>
+                                                            </a>
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="btn  p-0 border-0 m-0  z-depth-0 mr-2">
+                                                                    <i class="icon-users-filled text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div
+                                                                    class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center p-3">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            Persons Involved</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <ul class="overflow-auto px-3">
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-2.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Abigail Baker
+                                                                                    [12501800007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-1.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Lorri Lavine
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-3.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Weston Seyal
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold staff">Staff</span>
+                                                                                    - Witness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-6.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Maria Salvato
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold other">Other</span>
+                                                                                    - Vitness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn p-0 border-0 m-0 z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center px-3 py-2">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            More</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <div class="px-3">
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">View</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Edit</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Reminder</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Report</a>
+                                                                        <a class="dropdown-item px-0 py-2" href="#">Add
+                                                                            note</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="incident-title font-small mt-3 mb-2">
+                                                    <span class="d-inline-flex align-items-start align-items-sm-center">
+                                                        <i class="icon-school-1 ic-2x mr-2"></i>
+                                                        <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                                            Academy Silicon Oasis (WSO)</span>
+                                                    </span>
+                                                    <span
+                                                        class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                                        <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                                    </span>
+                                                </h3>
+                                                <div class="incident-info">
+                                                    <p class="m-0">Antonio was brought to the clinic by his nanny at 2
+                                                        p.m. According to the nanny, Antonio hit his head on the corner
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding. </p>
+                                                </div>
+                                            </article>
+                                            <!-- incident 3 end -->
+
+                                            <!-- incident 4 -->
+                                            <article class="py-3">
+                                                <div class="incident-meta d-flex align-items-center">
+                                                    <div class="meta-left d-inline-flex align-items-center">
+                                                        <span
+                                                            class="badge bg-grey rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">None</span>
+                                                        <h4
+                                                            class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                            ID #11075623</h4>
+                                                    </div>
+                                                    <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                                        <h4
+                                                            class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                            Accident <span
+                                                                class="text-medium text-black-50 text-initial ml-2">(
+                                                                Struck by Object, Drawing, Chocking, .. )</span>
+                                                        </h4>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="btn  p-0 border-0 m-0  z-depth-0 mr-2">
+                                                                    <i class="icon-users-filled text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div
+                                                                    class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center p-3">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            Persons Involved</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <ul class="overflow-auto px-3">
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-2.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Abigail Baker
+                                                                                    [12501800007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-1.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Lorri Lavine
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-3.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Weston Seyal
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold staff">Staff</span>
+                                                                                    - Witness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-6.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Maria Salvato
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold other">Other</span>
+                                                                                    - Vitness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn p-0 border-0 m-0 z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center px-3 py-2">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            More</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <div class="px-3">
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">View</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Edit</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Reminder</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Report</a>
+                                                                        <a class="dropdown-item px-0 py-2" href="#">Add
+                                                                            note</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="incident-title font-small mt-3 mb-2">
+                                                    <span class="d-inline-flex align-items-start align-items-sm-center">
+                                                        <i class="icon-school-1 ic-2x mr-2"></i>
+                                                        <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                                            Academy Silicon Oasis (WSO)</span>
+                                                    </span>
+                                                    <span
+                                                        class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                                        <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                                    </span>
+                                                </h3>
+                                                <div class="incident-info">
+                                                    <p class="m-0">Antonio was brought to the clinic by his nanny at 2
+                                                        p.m. According to the nanny, Antonio hit his head on the corner
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding. </p>
+                                                </div>
+                                            </article>
+                                            <!-- incident 4 end -->
+
+                                            <!-- incident 5 -->
+                                            <article class="py-3">
+                                                <div class="incident-meta d-flex align-items-center">
+                                                    <div class="meta-left d-inline-flex align-items-center">
+                                                        <span
+                                                            class="badge badge-primary rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                                        <h4
+                                                            class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                            ID #11075623</h4>
+                                                    </div>
+                                                    <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                                        <h4
+                                                            class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                            Accident <span
+                                                                class="text-medium text-black-50 text-initial ml-2">(
+                                                                Struck by Object, Drawing, Chocking, .. )</span>
+                                                        </h4>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <div
+                                                                    class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center p-3">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            Persons Involved</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <ul class="overflow-auto px-3">
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-2.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Abigail Baker
+                                                                                    [12501800007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/students/avatar-1.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Lorri Lavine
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold student">Student</span>
+                                                                                    - Victim
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-3.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Weston Seyal
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold staff">Staff</span>
+                                                                                    - Witness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="d-flex align-items-center py-2">
+                                                                            <span
+                                                                                class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                                <img src="img/avatars/avatar-6.jpg"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            <div class="info">
+                                                                                <h3 class="small mb-0">Maria Salvato
+                                                                                    [12501675007260]</h3>
+                                                                                <small class="text-medium d-block">
+                                                                                    <span
+                                                                                        class="text-uppercase text-semibold other">Other</span>
+                                                                                    - Vitness
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn p-0 border-0 m-0  z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center px-3 py-2">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            More</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <div class="px-3">
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">View</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Edit</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Reminder</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Report</a>
+                                                                        <a class="dropdown-item px-0 py-2" href="#">Add
+                                                                            note</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="incident-title font-small mt-3 mb-2">
+                                                    <span class="d-inline-flex align-items-start align-items-sm-center">
+                                                        <i class="icon-school-1 ic-2x mr-2"></i>
+                                                        <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                                            Academy Silicon Oasis (WSO)</span>
+                                                    </span>
+                                                    <span
+                                                        class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                                        <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                                    </span>
+                                                </h3>
+                                                <div class="incident-info">
+                                                    <p class="m-0 addReadMore showlesscontent">Antonio was brought to the clinic by his nanny at 2
+                                                        p.m. According to the nanny, Antonio hit his head on the corner
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding.
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding.
+                                                     </p>
+                                                </div>
+                                            </article>
+                                            <!-- incident 5 end -->
+
+                                            <!-- incident 6 -->
+                                            <article class="py-3">
+                                                <div class="incident-meta d-flex align-items-center">
+                                                    <div class="meta-left d-inline-flex align-items-center">
+                                                        <span
+                                                            class="badge bg-pink rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Major</span>
+                                                        <h4
+                                                            class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                            ID #11075623</h4>
+                                                    </div>
+                                                    <div class="meta-right d-inline-flex align-items-center flex-1 w-25">
+                                                        <h4
+                                                            class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                            Accident <span
+                                                                class="text-medium text-black-50 text-initial ml-2">(
+                                                                Struck by Object, Drawing, Chocking, .. )</span>
+                                                        </h4>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn p-0 border-0 m-0  z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <div
+                                                                        class="dropdown-header border-bottom d-flex justify-content-between align-items-center px-3 py-2">
+                                                                        <h4
+                                                                            class="font-small text-semibold mb-0 text-dark">
+                                                                            More</h4>
+                                                                        <a href="javascript:void(0)" class="p-0"><i
+                                                                                class="icon-x-circle font-16"></i></a>
+                                                                    </div>
+                                                                    <div class="px-3">
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">View</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Edit</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Reminder</a>
+                                                                        <a class="dropdown-item border-bottom border-light px-0 py-2"
+                                                                            href="#">Report</a>
+                                                                        <a class="dropdown-item px-0 py-2" href="#">Add
+                                                                            note</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="incident-title font-small mt-3 mb-2">
+                                                    <span class="d-inline-flex align-items-start align-items-sm-center">
+                                                        <i class="icon-school-1 ic-2x mr-2"></i>
+                                                        <span class="schoolName font-small mt-sm-1">GEMS Wellington
+                                                            Academy Silicon Oasis (WSO)</span>
+                                                    </span>
+                                                    <span
+                                                        class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                                        <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                                    </span>
+                                                </h3>
+                                                <div class="incident-info">
+                                                    <!-- <p class="m-0">Antonio was brought to the clinic by his nanny at 2
+                                                        p.m. According to the nanny, Antonio hit his head on the corner
+                                                        of an open window. He had a 2-3 mm slightly gaping wound on his
+                                                        left upper forehead with minimal bleeding. </p> -->
+                                                        <p class="addReadMore showlesscontent">Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach "lorem ipsum" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks)Es ist ein lang erwiesener Fakt</p>
+                                                </div>
+                                            </article>
+                                            <!-- incident 6 end -->
+                                        </div>
+                                        <!-- incident list end -->
+
+                                        <!-- pagination -->
+                                        <div class="row border-top pt-3 no-gutters">
+                                            <div class="col-md-5 col-12 d-flex align-items-center mb-3 mb-sm-0">
+                                                <div class="md-form md-outline m-0 mr-3">
+                                                    <select class="selectpicker" data-dropdown-align-right="true"
+                                                        data-style="rounded-1x text-blue border py-1 px-2 bg-light" data-width="fit">
+                                                        <option selected="selected">10</option>
+                                                        <option>20</option>
+                                                        <option>30</option>
+                                                        <option>40</option>
+                                                    </select>
+                                                </div>
+                                                <p class="font-small text-blue text-medium m-0">Showing 1 - 10 of 509 entries</p>
+                                            </div>
+                                            <div class="col-md-7 col-12">
+                                                <nav>
+                                                    <ul class="pagination justify-content-end">
+                                                        <li class="page-item">
+                                                            <a class="page-link page-first" aria-label="Previous">
+                                                                <i class="icon-chevrons-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-prev" aria-label="Previous">
+                                                                <i class="icon-arrow-right transform-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link rounded">1</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link">2</a></li>
+                                                        <li class="page-item"><a class="page-link">3</a></li>
+                                                        <li class="page-item"><a class="page-link">....</a></li>
+                                                        <li class="page-item"><a class="page-link">4</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-next" aria-label="Previous">
+                                                                <i class="icon-arrow-right"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-last" aria-label="Next">
+                                                                <i class="icon-chevrons-right"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <!-- pagination end -->
+
+                                    </div>
+                                    <!-- All tab end -->
+
+                                    <!-- Draft tab -->
+                                    <div class="tab-pane fade" id="draft" role="tabpanel">
+                                        Draft
+                                    </div>
+                                    <!-- Draft tab end -->
+
+                                    <!-- approval tab -->
+                                    <div class="tab-pane fade" id="approval" role="tabpanel">
+                                        Approval Pending
+                                    </div>
+                                    <!-- approval tab end -->
+
+                                    <!-- open tab -->
+                                    <div class="tab-pane fade" id="open" role="tabpanel">
+                                        open 
+                                    </div>
+                                    <!-- open tab end -->
+
+                                    <!-- reopen tab -->
+                                    <div class="tab-pane fade" id="reopen" role="tabpanel">
+                                        Reopened 
+                                    </div>
+                                    <!-- reopen tab end -->
+
+                                    <!-- Closed tab -->
+                                    <div class="tab-pane fade" id="closed" role="tabpanel">
+                                        Closed 
+                                    </div>
+                                    <!-- Closed tab end -->
+
+                                    <!-- unapproved tab -->
+                                    <div class="tab-pane fade" id="unapproved" role="tabpanel">
+                                        unapproved
+                                    </div>
+                                    <!-- unapproved tab end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- incidents data end -->
+        </div>
+    </main>
+     
+    
+    <!-- advanced filter drawer -->
+    <div class="modal fade right advancedFilter-drawer" id="advancedFilter" tabindex="-1" role="dialog"
+        aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-right modal-dialog-scrollable" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title w-100 text-blue text-medium text-bold line-height-1" id="myModalLabel">Advanced
+                        Search</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <section class="mb-5">
+                        <h5 class="text-bold font-16 text-medium text-blue">Select Date Range</h5>
+                        <div class="mb-3">
+                            <div class="custom-control custom-radio custom-control-inline mr-5">
+                                <input type="radio" class="custom-control-input" id="occured"
+                                    name="inlineDefaultRadiosExample">
+                                <label class="custom-control-label" for="occured">Occured</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="created"
+                                    name="inlineDefaultRadiosExample">
+                                <label class="custom-control-label" for="created">Created</label>
+                            </div>
+                        </div>
+                        <small class="text-medium text-black text-semibold">From Date</small>
+                        <div
+                            class="date-range-selector bg-white rounded-1x d-flex align-items-start align-items-sm-center flex-column flex-sm-row mb-3 p-2 border">
+                            <div id="dateTimeRange"
+                                class="dateTimeRangee cursor-pointer flex-shrink-0 position-relative pl-2 mb-2 ml-1 mb-sm-0 ml-sm-0 pl-sm-0 d-flex justify-content-between w-100">
+                                <span class="font-small"></span> <i class="icon-calendar text-blue ic-2x"></i>
+                            </div>
+                        </div>
+                        <small class="text-medium text-black text-semibold">To Date</small>
+                        <div
+                            class="date-range-selector bg-white rounded-1x d-flex align-items-start align-items-sm-center flex-column flex-sm-row mb-3 p-2 border">
+                            <div id="dateTimeRange"
+                                class="dateTimeRangee cursor-pointer flex-shrink-0 position-relative pl-2 mb-2 ml-1 mb-sm-0 ml-sm-0 pl-sm-0 d-flex justify-content-between w-100">
+                                <span class="font-small"></span> <i class="icon-calendar text-blue ic-2x"></i>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="mb-5">
+                        <h5 class="text-bold font-16 text-medium text-blue mb-1">Select School/Location</h5>
+                        <div class="country">
+                            <small class="text-medium text-black">Country</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker"
+                                    data-style="btn-white px-3 text-semibold"
+                                    data-size="5" title="All" data-dropdown-align-right="true">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding Accident Environmental optainonga ldlllllllll jfieef akdllllll dlfja</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                    <option value="3">Near Miss</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="region">
+                            <small class="text-medium text-black">Region</small>
+                            <div class="md-form md-outline mb-3">
+                                <select class="selectpicker"
+                                    data-style="btn-white px-3 text-semibold"
+                                    data-size="5" title="All">
+                                    <option value="1">Accident</option>
+                                    <option value="23">Child Safeguarding</option>
+                                    <option value="4">Environmental Incident</option>
+                                    <option value="29">Fire</option>
+                                    <option value="2">Illness</option>
+                                    <option value="3">Near Miss</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-height">
+                            <!-- <select class="" multiple="multiple">
+                                <option selected="selected">orange</option>
+                                <option>white</option>
+                                <option selected="selected">purple</option>
+                            </select> -->
+                            <small class="text-medium text-black">Select School</small>
+                            <select class="js-example-basic-multiple" name="states[]"
+                                multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+                    </section>
+                    <section class="mb-5">
+                        <h5 class="text-bold font-16 text-medium text-blue mb-3">Incident Status</h5>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-1">
+                            <label class="custom-control-label" for="chkbox-1">None</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-2">
+                            <label class="custom-control-label" for="chkbox-2">Open</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-3">
+                            <label class="custom-control-label" for="chkbox-3">Close</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-4" checked>
+                            <label class="custom-control-label" for="chkbox-4">Re-open</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-5">
+                            <label class="custom-control-label" for="chkbox-5">Yet to approve</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-6">
+                            <label class="custom-control-label" for="chkbox-6">Yet to submit</label>
+                        </div>
+                    </section>
+                    <section class="mb-5">
+                        <h5 class="text-bold font-16 text-medium text-blue mb-3">Invetigation Status</h5>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-7">
+                            <label class="custom-control-label" for="chkbox-7">Select All</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-8">
+                            <label class="custom-control-label" for="chkbox-8">Submitted</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-9">
+                            <label class="custom-control-label" for="chkbox-9">Approved</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-10">
+                            <label class="custom-control-label" for="chkbox-10">Unlimited</label>
+                        </div>
+                    </section>
+                    <section class="mb-5">
+                        <h5 class="text-bold font-16 text-medium text-blue mb-3">Victim / Person Injured Type</h5>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-11">
+                            <label class="custom-control-label" for="chkbox-11">Select All</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-12">
+                            <label class="custom-control-label" for="chkbox-12">Student</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-13">
+                            <label class="custom-control-label" for="chkbox-13">Staff</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-14">
+                            <label class="custom-control-label" for="chkbox-14">Parent</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-15">
+                            <label class="custom-control-label" for="chkbox-15">Other</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-16">
+                            <label class="custom-control-label" for="chkbox-16">No Victim / Person Injured</label>
+                        </div>
+                    </section>
+                    <section class="mb-5">
+                        <h5 class="text-bold font-16 text-medium text-blue mb-3">Incident Category</h5>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-17">
+                            <label class="custom-control-label" for="chkbox-17">
+                                <i class="fa fa-plus text-blue mr-2"></i>Accident</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-18">
+                            <label class="custom-control-label" for="chkbox-18">
+                                <i class="fa fa-plus text-blue mr-2"></i>Illness</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-19">
+                            <label class="custom-control-label" for="chkbox-19">
+                                <i class="fa fa-plus text-blue mr-2"></i>Near Miss</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-20">
+                            <label class="custom-control-label" for="chkbox-20">
+                                <i class="fa fa-plus text-blue mr-2"></i>Environmental Incident</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-21">
+                            <label class="custom-control-label" for="chkbox-21"><i
+                                    class="fa fa-plus text-blue mr-2"></i>Vehicle</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-22">
+                            <label class="custom-control-label" for="chkbox-22">
+                                <i class="fa fa-plus text-blue mr-2"></i>Security</label>
+                        </div>
+                        <div id="accordion">
+                            <div class="panel">
+                                <div class="panel-header">
+                                    <a class="panel-link font-16 text-medium text-capitalize" data-toggle="collapse"
+                                        href="#collapseOne">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="chkbox-23">
+                                            <label class="custom-control-label font-small" for="chkbox-23"><i
+                                                    class="fa fa-minus text-blue mr-2"></i> Property Damage</label>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        <div class="pl-4">
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" class="custom-control-input" id="chkbox-24">
+                                                <label class="custom-control-label" for="chkbox-24">Collision with
+                                                    Property</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" class="custom-control-input" id="chkbox-25"
+                                                    checked>
+                                                <label class="custom-control-label" for="chkbox-25">Property
+                                                    Damage</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-header">
+                                    <a class="collapsed panel-link" data-toggle="collapse" href="#collapseTwo">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="chkbox-26">
+                                            <label class="custom-control-label font-small" for="chkbox-26"><i
+                                                    class="fa fa-plus text-blue mr-2"></i> Child Safeguarding</label>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        <div class="pl-4">
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" class="custom-control-input" id="chkbox-27">
+                                                <label class="custom-control-label" for="chkbox-27">Sub Child
+                                                    Safeguarding</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-23">
+                            <label class="custom-control-label" for="chkbox-23">
+                                <i class="fa fa-plus text-blue mr-2"></i>Child Safeguarding</label>
+                        </div> -->
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-28">
+                            <label class="custom-control-label" for="chkbox-28">
+                                <i class="fa fa-plus text-blue mr-2"></i>Adult Safeguarding</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="chkbox-29">
+                            <label class="custom-control-label" for="chkbox-29">
+                                <i class="fa fa-plus text-blue mr-2"></i>Fire</label>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer justify-content-center border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- advaned filter drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        $(function () {
+            //$('#advancedFilter').modal('show');
+            /* $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'M/DD hh:mm A',
+                }
+            }); */
+            var start = moment().subtract(7, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#dateTimeRange span').html(start.format('M/DD/YYYY') + ' - ' + end.format('M/DD/YYYY'));
+            }
+
+            $('#dateTimeRange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                // drops:'up',
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start, end);
+        })
+        $(document).ready(function () { 
+            $("#dateTimeRange").click(function(){
+              $('.show-calendar').addClass('mr-3');
+            //   $('.show-calendar').addClass('rtl');
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#accordion .panel .panel-link").click(function () {
+                if ($(this).find("i.fa").hasClass("fa-minus")) {
+                    $(this).find("i.fa").removeClass("fa-minus");
+                    $(this).find("i.fa").addClass("fa-plus");
+                }
+                else if ($(this).find("i.fa").hasClass("fa-plus")) {
+                    $(this).find("i.fa").removeClass("fa-plus");
+                    $(this).find("i.fa").addClass("fa-minus");
+                }
+                $(this).parents(".panel").siblings().find(".panel-header .panel-link i.fa").removeClass("fa-minus");
+                $(this).parents(".panel").siblings().find(".panel-header .panel-link i.fa").addClass("fa-plus");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
+    <script>
+        function AddReadMore() {
+            //This limit you can set after how much characters you want to show Read More.
+            var carLmt = 300;
+            // Text to show when text is collapsed
+            var readMoreTxt = " ... Read More";
+            // Text to show when text is expanded
+            var readLessTxt = " Read Less";
+    
+    
+            //Traverse all selectors with this class and manupulate HTML part to show Read More
+            $(".addReadMore").each(function() {
+                if ($(this).find(".firstSec").length)
+                    return;
+    
+                var allstr = $(this).text();
+                if (allstr.length > carLmt) {
+                    var firstSet = allstr.substring(0, carLmt);
+                    var secdHalf = allstr.substring(carLmt, allstr.length);
+                    var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + readMoreTxt + "</span><span class='readLess' title='Click to Show Less'>" + readLessTxt + "</span>";
+                    $(this).html(strtoadd);
+                }
+    
+            });
+            //Read More and Read Less Click Event binding
+            $(document).on("click", ".readMore,.readLess", function() {
+                $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+            });
+        }
+        $(function() {
+            //Calling function after Page Load
+            AddReadMore();
+        });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
+  <defs>
+    <clipPath id="clip-iPad_1">
+      <rect width="20" height="16"/>
+    </clipPath>
+  </defs>
+  <g id="iPad_1" data-name="iPad – 1" clip-path="url(#clip-iPad_1)">
+    <g id="dashboard" transform="translate(0.495 -52.348)">
+      <g id="Group_2" data-name="Group 2" transform="translate(0 52.499)">
+        <g id="Group_1" data-name="Group 1" transform="translate(0 0)">
+          <path id="Path_1" data-name="Path 1" d="M204.826,123.714a.736.736,0,0,0-.935-.088c-1.1.75-6.624,4.524-7.217,5.118a2.208,2.208,0,0,0,3.122,3.122c.593-.594,4.367-6.116,5.118-7.217A.736.736,0,0,0,204.826,123.714Zm-6.071,7.111a.736.736,0,0,1-1.041-1.04c.231-.228,1.8-1.346,3.728-2.687C200.1,129.027,198.983,130.594,198.755,130.825Z" transform="translate(-188.816 -120.886)" fill="#fff"/>
+          <path id="Path_2" data-name="Path 2" d="M3.393,65.34l-.908.443a7.91,7.91,0,0,1-.5-6.687l1.041.5a.736.736,0,1,0,.636-1.327l-1.028-.493A7.957,7.957,0,0,1,8.683,54v1.107a.736.736,0,0,0,1.472,0V54a7.856,7.856,0,0,1,2.53.667.736.736,0,1,0,.605-1.341A9.411,9.411,0,0,0,1.6,67.146a.736.736,0,0,0,.934.252l1.508-.736a.736.736,0,1,0-.645-1.323Z" transform="translate(0 -52.499)" fill="#fff"/>
+          <path id="Path_3" data-name="Path 3" d="M393.653,191.927a.736.736,0,1,0-1.341.605A7.921,7.921,0,0,1,392,199.67l-.948-.452a.736.736,0,1,0-.633,1.329l1.545.736a.736.736,0,0,0,.928-.255,9.4,9.4,0,0,0,.766-9.1Z" transform="translate(-375.646 -186.38)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

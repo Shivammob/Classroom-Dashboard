@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Tasks</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- Material Design Bootstrap -->
+    <!-- file upload css -->
+    <link href="css/addons/fileinput/fileinput.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/fileinput/explorer-fas-theme.css" rel="stylesheet" type="text/css">
+
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid incident-tasks mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white rounded-2x d-flex align-items-center justify-content-between pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-blue text-semibold m-0">Tasks</h3>
+                            <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium"><a href="#" class="text-primary">Home</a></li>
+                                <li class="font-small text-medium text-blue">Tasks</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary d-flex align-items-center rounded-1x m-0 px-3" type="button"
+                            data-toggle="modal" data-target="#addtask">
+                            <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Task
+                        </button>
+                        <!-- <button class="trigger-advanced-search btn btn-transparent z-depth-0 text-primary text-medium d-inline-flex align-items-center line-height-1 m-0 p-0 ml-sm-3 mt-3 mt-sm-0" data-toggle="modal" data-target="#advancedFilter">
+                            <i class="icon-plus-circle ic-2x mr-1"></i> Advanced Search
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+
+            <!-- incidents data -->
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pill-panel p-4">
+                                <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                                    role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0 active" data-toggle="pill"
+                                            href="#all" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab"
+                                            data-toggle="pill" href="#my-tasks" role="tab"
+                                            aria-selected="false">My Tasks</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab"
+                                            data-toggle="pill" href="#general" role="tab"
+                                            aria-selected="false">General</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="pills-contact-tab"
+                                            data-toggle="pill" href="#incident" role="tab"
+                                            aria-selected="false">Incident</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="pills-contact-tab"
+                                            data-toggle="pill" href="#inspection" role="tab"
+                                            aria-selected="false">Inspection</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="pills-contact-tab"
+                                            data-toggle="pill" href="#safeguarding" role="tab"
+                                            aria-selected="false">Safeguarding</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="">
+                                    <!-- all tab -->
+                                    <div class="tab-pane fade show active" id="all" role="tabpanel">All</div>
+                                    <!-- all tab end -->
+                                    <!-- my task tab -->
+                                    <div class="tab-pane fade" id="my-tasks" role="tabpanel">
+                                        <div class="row no-gutters">
+                                            <div class="col-xl-5">
+                                                <div class="md-form md-outline mb-0">
+                                                    <div class="search-box d-flex justify-content-between align-items-center mb-2">
+                                                            <input type="text" class="rounded-1x line-height-2 w-100 py-1 px-2" placeholder="Search a keyword">
+                                                        <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <div class="d-flex align-items-baseline">
+                                                    <button
+                                                    class="btn bg-blue text-white d-flex align-items-center rounded-1x m-0 px-2 mb-2 mr-2 py-2 line-height-2 ml-md-2"
+                                                    type="button" data-toggle="modal"
+                                                    data-target="#advancedFilter">
+                                                    <i class="icon-filter text-semibold ic-2x mr-1"></i> Filter
+                                                    <span class="filter-count ml-1">(4)</span>
+                                                    </button>
+                                                    <a href="" type="button" class="text-primary text-underline font-small text-medium ml-1"> Clear All</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 d-flex justify-content-end flex-column flex-md-row">
+                                                <div class="download-data flex-shrink-0">
+                                                    <div class="quick-nav dropdown show">
+                                                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn-download text-regular d-flex align-items-center justify-content-between btn border rounded-1x  m-0">
+                                                           <span class="font-14 ">Download</span>  <i class="icon-chevron-down ic-2x ml-2 text-primary text-semibold"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu z-depth-1 border-0 ml-n2" x-placement="left-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-162px, 0px, 0px);">
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">As Exel</a>
+                                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">As PDF</a>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <hr>
+                                        <div class="taskList">
+                                            <article class="py-3 border-bottom">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <span class="badge bg-pink rounded-4x text-uppercase shadow-none text-semibold px-2 mr-2">Medium</span>
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li class="font-small text-semibold text-capitalize text-truncate pr-3 mr-3  border-right border-default d-none d-sm-inline-block">
+                                                                <a href="javascript:void(0)">Due Date-24 May 2021</a>
+                                                                </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" >
+                                                                <span class="text-success">COMPLETED</span>  <span class="font-small text-initial text-black">- 24 May 2021</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="py-3 border-bottom">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <span class="badge bg-pink rounded-4x text-uppercase shadow-none text-semibold px-2 mr-2">Medium</span>
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li class="font-small text-semibold text-capitalize text-truncate pr-3 mr-3  border-right border-default d-none d-sm-inline-block">
+                                                                <a href="javascript:void(0)">Due Date-24 May 2021</a>
+                                                                </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" >
+                                                                <span class="text-success">COMPLETED</span>  <span class="font-small text-initial text-black">- 24 May 2021</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="py-3 border-bottom">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <span class="badge bg-pink rounded-4x text-uppercase shadow-none text-semibold px-2 mr-2">Medium</span>
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li class="font-small text-semibold text-capitalize text-truncate pr-3 mr-3  border-right border-default d-none d-sm-inline-block">
+                                                                <a href="javascript:void(0)">Due Date-24 May 2021</a>
+                                                                </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" >
+                                                                <span class="text-success">COMPLETED</span>  <span class="font-small text-initial text-black">- 24 May 2021</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="py-3 border-bottom">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <span class="badge bg-pink rounded-4x text-uppercase shadow-none text-semibold px-2 mr-2">Medium</span>
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li class="font-small text-semibold text-capitalize text-truncate pr-3 mr-3  border-right border-default d-none d-sm-inline-block">
+                                                                <a href="javascript:void(0)">Due Date-24 May 2021</a>
+                                                                </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" >
+                                                                <span class="text-success">COMPLETED</span>  <span class="font-small text-initial text-black">- 24 May 2021</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="py-3 border-bottom">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <span class="badge bg-pink rounded-4x text-uppercase shadow-none text-semibold px-2 mr-2">Medium</span>
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li class="font-small text-semibold text-capitalize text-truncate pr-3 mr-3  border-right border-default d-none d-sm-inline-block">
+                                                                <a href="javascript:void(0)">Due Date-24 May 2021</a>
+                                                                </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" >
+                                                                <span class="text-success">COMPLETED</span>  <span class="font-small text-initial text-black">- 24 May 2021</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="py-3 border-bottom">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <span class="badge bg-pink rounded-4x text-uppercase shadow-none text-semibold px-2 mr-2">Medium</span>
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li class="font-small text-semibold text-capitalize text-truncate pr-3 mr-3  border-right border-default d-none d-sm-inline-block">
+                                                                <a href="javascript:void(0)">Due Date-24 May 2021</a>
+                                                                </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" >
+                                                                <span class="text-success">COMPLETED</span>  <span class="font-small text-initial text-black">- 24 May 2021</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="py-3 border-bottom">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <span class="badge bg-pink rounded-4x text-uppercase shadow-none text-semibold px-2 mr-2">Medium</span>
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li class="font-small text-semibold text-capitalize text-truncate pr-3 mr-3  border-right border-default d-none d-sm-inline-block">
+                                                                <a href="javascript:void(0)">Due Date-24 May 2021</a>
+                                                                </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" >
+                                                                <span class="text-success">COMPLETED</span>  <span class="font-small text-initial text-black">- 24 May 2021</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="quick-nav dropleft">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            
+                                        </div>
+                                        <!-- pagination -->
+                                        <div class="row mt-3">
+                                            <div class="col-md-5 col-12 d-flex align-items-center mb-3 mb-sm-0">
+                                                <div class="md-form md-outline m-0 mr-3">
+                                                    <select class="selectpicker" data-dropdown-align-right="true"
+                                                        data-style="rounded border-0 p-2 bg-light" data-width="fit">
+                                                        <option selected="selected">10</option>
+                                                        <option>20</option>
+                                                        <option>30</option>
+                                                        <option>40</option>
+                                                    </select>
+                                                </div>
+                                                <p class="font-small text-medium m-0">Showing 1 - 10 of 509 entries</p>
+                                            </div>
+                                            <div class="col-md-7 col-12">
+                                                <nav>
+                                                    <ul class="pagination justify-content-end">
+                                                        <li class="page-item">
+                                                            <a class="page-link page-first" aria-label="Previous">
+                                                                <i class="icon-chevrons-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-prev" aria-label="Previous">
+                                                                <i class="icon-arrow-right transform-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link rounded">1</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link">2</a></li>
+                                                        <li class="page-item"><a class="page-link">3</a></li>
+                                                        <li class="page-item"><a class="page-link">...</a></li>
+                                                        <li class="page-item"><a class="page-link">18</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-next" aria-label="Previous">
+                                                                <i class="icon-arrow-right"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-last" aria-label="Next">
+                                                                <i class="icon-chevrons-right"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <!-- pagination end -->
+                                    </div>
+                                    <!-- my task tab end -->
+                                    <!-- General tab -->
+                                    <div class="tab-pane fade" id="general" role="tabpanel">
+                                        <!-- data filters -->
+                                        <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-3">
+                                            <div class="row">
+                                                <div class="col-md-2 col-12 pl-sm-0 px-md-1 px-lg-2">
+                                                    <small class="text-medium">Search</small>
+                                                    <div class="md-form md-outline mb-3">
+                                                        <input type="text" class="form-control bg-white border-0"
+                                                            placeholder="Search here">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12 pl-sm-0 px-md-1 px-lg-2">
+                                                    <div class="priority">
+                                                        <small class="text-medium">Priority</small>
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker"
+                                                                data-style="btn-white border-0 px-3" data-size="5"
+                                                                title="All Task">
+                                                                <option>Minor</option>
+                                                                <option>Sesrious</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12 pl-sm-0 px-md-1 px-lg-2">
+                                                    <div class="statuss">
+                                                        <small class="text-medium">Status</small>
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker"
+                                                                data-style="btn-white border-0 px-3" data-size="5"
+                                                                title="Pending">
+                                                                <option>Minor</option>
+                                                                <option>Sesrious</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 px-lg-0 px-md-1 px-lg-2">
+                                                    <small class="text-medium">Date Range</small>
+                                                    <div
+                                                        class="date-range-selector bg-white rounded-2x d-flex align-items-start align-items-sm-center flex-column flex-sm-row mb-3 p-2 ">
+                                                        <div id="dateTimeRange"
+                                                            class="dateTimeRangee cursor-pointer flex-shrink-0 position-relative pl-2 mb-2 ml-1 mb-sm-0 ml-sm-0 pl-sm-0 d-flex align-items-center justify-content-between w-100">
+                                                            <span class="font-small"></span>
+                                                            <i class="icon-calendar ic-2x"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12 align-self-center pl-sm-0 px-md-1 px-lg-2">
+                                                    <button
+                                                        class="btn btn-dark btn-search m-0 rounded-2x w-100 mt-2 mt-sm-4 mb-3"
+                                                        type="button">Search</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5 col-12 align-self-center mb-2 mb-sm-0">
+                                                    <button class="reset-search btn btn-transparent z-depth-0 text-primary text-medium d-inline-flex align-items-center line-height-1 m-0 p-0">
+                                                        <i class="icon-rotate-cw ic-2x mr-1"></i> Reset Filters
+                                                    </button>
+                                                </div>
+                                                <div class="col-sm-7 col-12 text-sm-right">
+                                                    <button class="reset-search btn btn-transparent z-depth-0 text-primary text-medium d-inline-flex align-items-center line-height-1 m-0 p-0">
+                                                        <i class="icon-plus-circle ic-2x mr-1"></i> Advanced Search
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- data filters end -->
+
+                                        <!-- incident list -->
+                                        <div class="incidentList">
+                                            <!-- incident 1 -->
+                                            <article class="py-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                                <a href="javascript:void(0)" class="text-black-50">
+                                                                    ID #11075623</a>
+                                                            </li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block border-right border-default"><a href="javascript:void(0)" class="text-success">
+                                                                COMPLETED</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase flex-1 text-truncate mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="">
+                                                                Medium <span class="small text-initial">-
+                                                                    Priority</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2 mt-2 mt-md-0">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="due-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Due Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="comp-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Comp. Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="quick-nav dropleft mt-3">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#" data-toggle="modal"
+                                                                        data-target="#userActivityForTask">Activity</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!-- incident 1 end -->
+
+                                            <!-- incident 2 -->
+                                            <article class="py-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                                ID #11075623</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-primary text-truncate pr-3 mr-3 d-none d-sm-inline-block border-right border-default"><a href="javascript:void(0)" class="text-primary">
+                                                                OVERDUE</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase flex-1 text-truncate mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="">
+                                                                high <span class="small text-initial">-
+                                                                    Priority</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Virginia
+                                                                    Greene
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="due-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Due Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="comp-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Comp. Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center">
+                                                                    <!--<i
+                                                                        class="icon-calendar ic-2x mr-1"></i>-->
+                                                                    -
+                                                                </span>
+                                                            </div>
+                                                            <div class="quick-nav dropleft mt-3">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!-- incident 2 end -->
+
+                                            <!-- incident 3 -->
+                                            <article class="py-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                                ID #11075623</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block border-right border-default"><a href="javascript:void(0)" class="text-success">
+                                                                COMPLETED</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase flex-1 text-truncate mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="">
+                                                                Medium <span class="small text-initial">-
+                                                                    Priority</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="due-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Due Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="comp-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Comp. Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="quick-nav dropleft mt-3">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!-- incident 3 end -->
+
+                                            <!-- incident 4 -->
+                                            <article class="py-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                                ID #11075623</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-primary text-truncate pr-3 mr-3 d-none d-sm-inline-block border-right border-default"><a href="javascript:void(0)" class="text-primary">
+                                                                OVERDUE</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase flex-1 text-truncate mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="">
+                                                                high <span class="small text-initial">-
+                                                                    Priority</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Virginia
+                                                                    Greene
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="due-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Due Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="comp-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Comp. Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center">
+                                                                    <!--<i
+                                                                        class="icon-calendar ic-2x mr-1"></i>-->
+                                                                    -
+                                                                </span>
+                                                            </div>
+                                                            <div class="quick-nav dropleft mt-3">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!-- incident 4 end -->
+
+                                            <!-- incident 5 -->
+                                            <article class="py-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                                ID #11075623</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block border-right border-default"><a href="javascript:void(0)" class="text-success">
+                                                                COMPLETED</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase flex-1 text-truncate mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="">
+                                                                Medium <span class="small text-initial">-
+                                                                    Priority</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="due-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Due Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="comp-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Comp. Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="quick-nav dropleft mt-3">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!-- incident 5 end -->
+
+                                            <!-- incident 6 -->
+                                            <article class="py-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                                ID #11075623</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-primary text-truncate pr-3 mr-3 d-none d-sm-inline-block border-right border-default"><a href="javascript:void(0)" class="text-primary">
+                                                                OVERDUE</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase flex-1 text-truncate mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="">
+                                                                high <span class="small text-initial">-
+                                                                    Priority</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Virginia
+                                                                    Greene
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="due-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Due Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="comp-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Comp. Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center">
+                                                                    <!--<i
+                                                                        class="icon-calendar ic-2x mr-1"></i>-->
+                                                                    -
+                                                                </span>
+                                                            </div>
+                                                            <div class="quick-nav dropleft mt-3">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!-- incident 6 end -->
+
+                                            <!-- incident 7 -->
+                                            <article class="py-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <ul class="incident-meta d-flex align-items-center">
+                                                            <li
+                                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3"><a href="javascript:void(0)" class="text-black-50">
+                                                                ID #11075623</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase text-success text-truncate pr-3 mr-3 d-none d-sm-inline-block border-right border-default"><a href="javascript:void(0)" class="text-success">
+                                                                COMPLETED</a></li>
+                                                            <li
+                                                                class="font-small text-semibold m-0 text-uppercase flex-1 text-truncate mr-3 d-none d-sm-inline-block"><a href="javascript:void(0)" class="">
+                                                                Medium <span class="small text-initial">-
+                                                                    Priority</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="col-md-12 col-12 d-flex justify-content-between align-items-start flex-column flex-md-row">
+                                                        <div class="section-left">
+                                                            <ul class="incident-title font-small mb-2">
+                                                                <li
+                                                                    class="d-inline-flex align-items-start align-items-sm-center">
+                                                                    <i class="icon-school-1 ic-2x mr-2"></i>
+                                                                    <span
+                                                                        class="schoolName font-small mt-sm-1 text-semibold">Garden
+                                                                        Grove
+                                                                        Institute, Dubai - UAE
+                                                                </li>
+                                                                <li
+                                                                    class="assign font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-semibold pl-2">
+                                                                    <span class="mr-2 text-black-50 text-medium">Assign
+                                                                        to</span>
+                                                                    <i class="icon-user mr-2 text-semibold"></i>Abagael
+                                                                    Skynner
+                                                                </li>
+                                                            </ul>
+                                                            <div class="incident-info">
+                                                                <p class="m-0">Control Students from jokingly pushing
+                                                                    each other in the classroom.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                            <div class="due-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Due Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="comp-date mr-2">
+                                                                <h4 class="small mb-1 text-center">Comp. Date</h4>
+                                                                <span
+                                                                    class="d-block small bg-light py-2 px-2 widt-bg rounded-4x text-center"><i
+                                                                        class="icon-calendar ic-2x mr-1"></i>
+                                                                    24 May 2021</span>
+                                                            </div>
+                                                            <div class="quick-nav dropleft mt-3">
+                                                                <button type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false"
+                                                                    class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">View</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Edit</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Reminder</a>
+                                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                                        href="#">Report</a>
+                                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                                        note</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!-- incident 7 end -->
+                                        </div>
+                                        <!-- incident list end -->
+
+                                        <!-- pagination -->
+                                        <div class="row">
+                                            <div class="col-md-5 col-12 d-flex align-items-center mb-3 mb-sm-0">
+                                                <div class="md-form md-outline m-0 mr-3">
+                                                    <select class="selectpicker" data-dropdown-align-right="true"
+                                                        data-style="rounded border-0 p-2 bg-light" data-width="fit">
+                                                        <option selected="selected">10</option>
+                                                        <option>20</option>
+                                                        <option>30</option>
+                                                        <option>40</option>
+                                                    </select>
+                                                </div>
+                                                <p class="font-small text-medium m-0">Showing 1 - 10 of 509 entries</p>
+                                            </div>
+                                            <div class="col-md-7 col-12">
+                                                <nav>
+                                                    <ul class="pagination justify-content-end">
+                                                        <li class="page-item">
+                                                            <a class="page-link page-first" aria-label="Previous">
+                                                                <i class="icon-chevrons-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-prev" aria-label="Previous">
+                                                                <i class="icon-arrow-right transform-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link rounded">1</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link">2</a></li>
+                                                        <li class="page-item"><a class="page-link">3</a></li>
+                                                        <li class="page-item"><a class="page-link">...</a></li>
+                                                        <li class="page-item"><a class="page-link">18</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-next" aria-label="Previous">
+                                                                <i class="icon-arrow-right"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-last" aria-label="Next">
+                                                                <i class="icon-chevrons-right"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <!-- pagination end -->
+
+                                    </div>
+                                    <!-- general tab end -->
+
+                                    <!-- incident tab -->
+                                    <div class="tab-pane fade" id="incident" role="tabpanel">Incident</div>
+                                    <!-- incident tab end -->
+
+                                    <!-- inspection tab -->
+                                    <div class="tab-pane fade" id="inspection" role="tabpanel">Inspection</div>
+                                    <!-- inspection tab end -->
+
+                                    <!-- safeguarding tab -->
+                                    <div class="tab-pane fade" id="safeguarding" role="tabpanel">Safeguarding</div>
+                                    <!-- safeguarding tab end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- incidents data end -->
+        </div>
+    </main>
+
+    <!-- advanced filter drawer -->
+    <div class="modal fade right advancedFilter-drawer" id="advancedFilter" tabindex="-1" role="dialog"
+        aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-right modal-dialog-scrollable" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Advanced
+                        Search</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <section>
+                        <div class="col-md-12 col-12 pl-sm-0 px-md-1 px-lg-2">
+                            <div class="priority">
+                                <small class="text-medium">Priority</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white border px-3" data-size="6"
+                                        title="All Task" data-live-search="true">
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-12 col-12 pl-sm-0 px-md-1 px-lg-2">
+                            <div class="priority">
+                                <small class="text-medium">Priority</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white border px-3" data-size="5"
+                                        title="All Task">
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                        <option>Minor</option>
+                                        <option>Sesrious</option>
+                                        <option>Major</option>
+                                        <option>Seous</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer justify-content-center border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button">Clear</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- advaned filter drawer end -->
+
+    <!-- Add Task drawer -->
+    <div class="modal fade right uploadMedia addTask-drawer" id="addtask" tabindex="-1" role="dialog" aria-labelledby=""
+        aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Add Task</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="category">
+                                <small class="text-medium">Type</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Select">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <small class="text-medium">Priority</small>
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="category">
+                                <small class="text-medium">Choose Country</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Select">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <small class="text-medium">Choose City</small>
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white" placeholder="Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="category">
+                                <small class="text-medium">Business Unit <span class="text-primary">*</span></small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker"
+                                        data-style="btn-white px-3 text-medium text-black text-semibold" data-size="5"
+                                        title="Garden Grove Institute, Dubai-UAE">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="category">
+                                <small class="text-medium">Assign to</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="Select">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <small class="text-medium"><i class="fas fa-calendar-alt"></i> Due Date</small>
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                            <small class="text-medium">Task Name <span class="text-primary">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <small class="text-medium">Description <span class="text-primary">*</span></small>
+                            <div class="md-form md-outline">
+                                <textarea id="txtarea" class="md-textarea form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="uploaderWidget uploaderWidget-lg text-center">
+                                <input class="fileUploader" type="file" id="file-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Task drawer end -->
+
+    <!-- User Activity for task drawer-->
+    <div class="modal fade right userActivity-drawer" id="userActivityForTask" tabindex="-1" role="dialog"
+        aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">User Activity
+                        For Task : 2139 </h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <ul class="timeline">
+                        <li>
+                            <!-- begin timeline-time -->
+                            <div class="timeline-time">
+                                <span class="date text-primary">20 Octo 2021</span>
+                            </div>
+                            <!-- end timeline-time -->
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="header-box">
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div
+                                            class="added-box text-light rounded-4x px-3 py-2 d-flex align-items-center">
+                                            <h5 class="font-16 m-0 text-semibold">Added</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-body card mt-3 px-3 py-3 rounded-2x">
+                                <div class="timeline-header d-flex justify-content-between">
+                                    <div class="img-header">
+                                        <span class="userimage">
+                                            <!-- <img src="./img/avatar-1.jpg" alt="profile-img"> -->
+                                            <span class="comment-initial">KM</span>
+                                        </span>
+                                        <span class="username text-black text-bold font-small">Abagael
+                                            Skynner<small></small></span>
+                                    </div>
+                                    <small class="text-black-50 font-small text-semibold">Event on : 12 octo 2021,
+                                        02:30PM</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <ul>
+                                        <li class="mb-2"><span
+                                                class="text-black-50 text-semibold font-small d-inline-block items">Model
+                                                Name </span> <span
+                                                class="text-black-50 text-semibold font-small px-1">:</span> <span
+                                                class="text-black-50 text-bold font-small">TASK TIME LOGS</span></li>
+                                        <li><span
+                                                class="text-black-50 text-semibold font-small d-inline-block items">Name
+                                            </span> <span class="text-black-50 text-semibold font-small px-1">:</span>
+                                            <span class="text-black-50 text-bold font-small">Justine to attend zoom
+                                                meeting</span>
+                                        </li>
+                                    </ul>
+                                    <p class="font-small text-semibold text-black mt-2 mb-1">Description</p>
+                                    <p class="font-small text-black-50 mb-0">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Aliquam vel tenetur sint. Aut voluptatem nesciunt quisquam a
+                                        culpa facilis fugit!</p>
+                                </div>
+                            </div>
+                            <!-- end timeline-body -->
+                        </li>
+                        <li>
+                            <!-- begin timeline-time -->
+
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;" class="mail-circle">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="header-box">
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div class="mail-box text-light rounded-4x px-3 py-2 d-flex align-items-center">
+                                            <h5 class="font-16 m-0 text-semibold">Mail Notified</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-body card mt-3 px-3 py-3 rounded-2x">
+                                <div class="timeline-header d-flex justify-content-between">
+                                    <div class="img-header">
+                                        <span class="userimage">
+                                            <!-- <img src="./img/avatar-1.jpg" alt="profile-img"> -->
+                                            <span class="comment-initial">KM</span>
+                                        </span>
+                                        <span class="username text-black text-bold font-small">Abagael
+                                            Skynner<small></small></span>
+                                    </div>
+                                    <small class="text-black-50 font-small text-semibold">Event on : 12 octo 2021,
+                                        02:30PM</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <ul>
+                                        <li class="mb-2"><span
+                                                class="text-black-50 text-semibold font-small d-inline-block items">Model
+                                                Name </span> <span
+                                                class="text-black-50 text-semibold font-small px-1">:</span> <span
+                                                class="text-black-50 text-bold font-small">TASK TIME LOGS</span></li>
+                                        <li><span
+                                                class="text-black-50 text-semibold font-small d-inline-block items">Name
+                                            </span> <span class="text-black-50 text-semibold font-small px-1">:</span>
+                                            <span class="text-black-50 text-bold font-small">Justine to attend zoom
+                                                meeting</span>
+                                        </li>
+                                    </ul>
+                                    <p class="font-small text-semibold text-black mt-2 mb-1">Description</p>
+                                    <p class="font-small text-black-50 mb-0">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Aliquam vel tenetur sint. Aut voluptatem nesciunt quisquam a
+                                        culpa facilis fugit!</p>
+                                </div>
+                            </div>
+                            <!-- end timeline-body -->
+                        </li>
+                        <li>
+                            <!-- begin timeline-time -->
+                            <div class="timeline-time">
+                                <span class="date text-primary">20 Octo 2021</span>
+                            </div>
+                            <!-- end timeline-time -->
+                            <!-- begin timeline-icon -->
+                            <div class="timeline-icon">
+                                <a href="javascript:;" class="success-circle">&nbsp;</a>
+                            </div>
+                            <!-- end timeline-icon -->
+                            <!-- begin timeline-body -->
+                            <div class="header-box">
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div
+                                            class="completed-box text-light rounded-4x px-3 py-2 d-flex align-items-center">
+                                            <h5 class="font-16 m-0 text-semibold">Completed</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-body card mt-3 px-3 py-3 rounded-2x">
+                                <div class="timeline-header d-flex justify-content-between">
+                                    <div class="img-header">
+                                        <span class="userimage">
+                                            <img src="./img/avatar-1.jpg" alt="profile-img">
+                                            <!-- <span class="comment-initial">KM</span> -->
+                                        </span>
+                                        <span class="username text-black text-bold font-small">Abagael
+                                            Skynner<small></small></span>
+                                    </div>
+                                    <small class="text-black-50 font-small text-semibold">Event on : 12 octo 2021,
+                                        02:30PM</small>
+                                </div>
+                                <div class="timeline-content">
+                                    <ul>
+                                        <li class="mb-2"><span
+                                                class="text-black-50 text-semibold font-small d-inline-block items">Model
+                                                Name </span> <span
+                                                class="text-black-50 text-semibold font-small px-1">:</span> <span
+                                                class="text-black-50 text-bold font-small">TASK TIME LOGS</span></li>
+                                        <li><span
+                                                class="text-black-50 text-semibold font-small d-inline-block items">Name
+                                            </span> <span class="text-black-50 text-semibold font-small px-1">:</span>
+                                            <span class="text-black-50 text-bold font-small">Justine to attend zoom
+                                                meeting</span>
+                                        </li>
+                                    </ul>
+                                    <p class="font-small text-semibold text-black mt-2 mb-1">Description</p>
+                                    <p class="font-small text-black-50 mb-0">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Aliquam vel tenetur sint. Aut voluptatem nesciunt quisquam a
+                                        culpa facilis fugit!</p>
+                                </div>
+                            </div>
+                            <!-- end timeline-body -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- User Activity for task drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+    <!-- File Input Upload -->
+    <script type="text/javascript" src="js/addons/fileinput/piexif.min.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/sortable.min.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/fileinput.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/ar.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/fas-theme.js"></script>
+    <script type="text/javascript" src="js/addons/fileinput/explorer-fas-theme.js"></script>
+    <script type="text/javascript" src="js/file-uploader-config.js"></script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script>
+        $(function () {
+            var start = moment().subtract(7, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#dateTimeRange span').html(start.format('M/DD hh:mm A') + ' - ' + end.format('M/DD hh:mm A'));
+            }
+
+            $('#dateTimeRange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start, end);
+        })
+    </script>
+</body>
+
+</html>

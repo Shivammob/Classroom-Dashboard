@@ -1,0 +1,52 @@
+// header .main-nav ul.login-actions li {
+//     height: 35px;
+// }
+// .dropdown-divider {
+//     height: 0!important;
+// }
+// header .main-nav ul li .dropdown-menu .login-actions a:hover {
+//     background: none!important;
+// }
+// header .main-nav .dropdown-menu.profile-dropdown .profile-actions.login-actions li a {
+//     padding: 10px;
+//     width: rem(150px);
+// }
+// header .main-nav ul.right-nav li > a i {
+//     margin-right: 0.5rem;
+//     font-size: rem(12px) !important;
+// }
+//  span.icon-check.active {
+//     display: block;
+// }
+// span.icon-check {
+//     display: none;
+// }
+header{
+    .main-nav{
+        .login-actions{
+            li {
+                height: 35px;
+                a{
+                    padding: rem(10px);
+                    min-width: rem(166px);
+                    &:hover{
+                        background: none!important;
+                    }
+                    i {
+                        margin-right: 0.5rem;
+                        font-size: rem(12px) !important;
+                    }
+                }
+                span.icon-check.active {
+                    display: block;
+                }
+                span.icon-check {
+                    display: none;
+                }
+            }
+            .dropdown-divider {
+                height: 0!important;
+            }
+        } 
+    }
+} 

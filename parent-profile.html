@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Student Profile</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col">
+                <!--Navbar -->
+                <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                    <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                        <span class="portal-name position-absolute">HSE</span>
+                        <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                    </a>
+                    <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                        <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                    </a>
+                    <button class="navbar-toggler first-button" type="button">
+                        <div class="animated-icon1"><span></span><span></span><span></span></div>
+                    </button>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                            <li class="nav-item dropdown language-switcher mr-4">
+                                <button
+                                    class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                    type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                    English
+                                </button>
+                                <div
+                                    class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                    <a class="dropdown-item d-block" href="#">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                        Arabic
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                    class="loggedInUser d-flex align-items-center my-3">
+                                    <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                        <img src="img/avatar-1.jpg" alt="">
+                                    </span>
+                                    <h3 class="text-medium font-small m-0 mr-2">
+                                        Jasmine Welch
+                                        <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                    </h3>
+                                    <i class="icon-chevron-down"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--/.Navbar -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+        <div class="list-group list-group-flush overflow-auto mh-100">
+            <a href="dashboard.html" class="list-group-item mt-2">
+                <span class="ic-dashboard title-icon"></span>Dashboard
+            </a>
+            <a href="incidents.html" class="list-group-item active">
+                <span class="ic-incidents title-icon"></span>Incidents
+            </a>
+            <a href="staff.html" class="list-group-item">
+                <span class="ic-staff title-icon"></span>Staff Student
+            </a>
+            <a href="covid19.html" class="list-group-item">
+                <span class="ic-covid-19 title-icon"></span>Covid-19
+            </a>
+
+
+            <a href="audits.html" class="list-group-item waves-effect">
+                <span class="ic-create-audit title-icon"></span>Create Audit
+            </a>
+            <!-- <div id="auditmenu" class="collapse sub-menu">
+                <a href="#">View Audit</a>
+                <a href="#">Edit Audit</a>
+            </div> -->
+            <a href="audit-scheduled.html" class="list-group-item">
+                <span class="ic-audit-inspection title-icon"></span>Perform Audit
+            </a>
+            <a href="tasklist.html" class="list-group-item">
+                <span class="ic-tasks title-icon"></span>Tasks Details
+            </a>
+            <a href="library.html" class="list-group-item">
+                <span class="ic-library title-icon"></span>Library
+            </a>
+            <a href="reports.html" class="list-group-item">
+                <span class="ic-reports title-icon"></span>Reports
+            </a>
+            <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                <span class="ic-score title-icon"></span>Score Card YTD
+            </a>
+        </div>
+    </div>
+    <!-- Sidebar -->
+  </header>
+  <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-primary text-capitalize text-semibold m-0">parent Profile</h3>
+                            <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium text-black-50"><a href="#">Home</a></li>
+                                <li class="font-small text-medium text-black-50"><a href="#">Incidents</a></li>
+                                <li class="font-small text-capitalize text-medium text-black-50">Student Profile</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button">
+                            <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Incident
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+
+            <!-- student profile incidents data -->
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between flex-column flex-md-row">
+                                <div class="d-flex">
+                                    <figure class="mr-3 rounded-2x">
+                                        <img src="img/student.png" alt="" class="img-fluid-backend">
+                                    </figure>
+                                    <div class="d-block grade-list-border">
+                                        <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                        <h4
+                                            class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">
+                                           <span>Relation</span> : <span>Father</span> 
+                                        </h4>
+                                        <ul class="d-flex flex-column flex-md-row">
+                                            <li
+                                                class="text-black-50 text-semibold font-small line-height-1 m-0 pr-md-2  border-right border-default">
+                                                Abagael.Skynner@Phoenixhse.com</li>
+                                            <li
+                                                class="text-black-50 text-semibold font-small line-height-1 m-0 pt-1 pt-md-0 px-md-2">
+                                                +971567488499
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="spouser-btn">
+                                    <button class="btn btn-outline-primary m-0 px-3" type="button"  data-toggle="modal" data-target="#spouseInfoPopup">Spouse Info</button>
+                                </div>
+                            </div>
+                            <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3">
+                                <h3 class="font-16 text-black text-capitalize text-semibold mb-4">children</h3>
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-6 col-12 px-0">
+                                        <div class="d-flex flex-md-row">
+                                            <figure class="mr-2 rounded-2x avatar-small">
+                                                <img src="img/student.png" alt="" class="">
+                                            </figure>
+                                            <div class="d-block grade-list-border">
+                                                <h3 class="font-small text-black-50 text-bold m-0  ">Aaron Avery
+                                                </h3>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    ID : 12501800992704
+                                                </h4>
+                                                <ul class="d-flex flex-md-row">
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 pr-2  border-right border-default">
+                                                        <span>Grade </span> : <span>08</span>
+                                                    </li>
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 px-2">
+                                                        <span>Section </span> : <span>A</span>
+                                                    </li>
+                                                </ul>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    GGI, Dubai - UAE
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 col-12 px-0">
+                                        <div class="d-flex flex-md-row">
+                                            <figure class="mr-2 rounded-2x avatar-small">
+                                                <img src="img/student.png" alt="" class="">
+                                            </figure>
+                                            <div class="d-block grade-list-border">
+                                                <h3 class="font-small text-black-50 text-bold m-0  ">Aaron Avery
+                                                </h3>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    ID : 12501800992704
+                                                </h4>
+                                                <ul class="d-flex flex-md-row">
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 pr-2  border-right border-default">
+                                                        <span>Grade </span> : <span>08</span>
+                                                    </li>
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 px-2">
+                                                        <span>Section </span> : <span>A</span>
+                                                    </li>
+                                                </ul>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    GGI, Dubai - UAE
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 col-12 px-0">
+                                        <div class="d-flex flex-md-row">
+                                            <figure class="mr-2 rounded-2x avatar-small">
+                                                <img src="img/student.png" alt="" class="">
+                                            </figure>
+                                            <div class="d-block grade-list-border">
+                                                <h3 class="font-small text-black-50 text-bold m-0  ">Aaron Avery
+                                                </h3>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    ID : 12501800992704
+                                                </h4>
+                                                <ul class="d-flex flex-md-row">
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 pr-2  border-right border-default">
+                                                        <span>Grade </span> : <span>08</span>
+                                                    </li>
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 px-2">
+                                                        <span>Section </span> : <span>A</span>
+                                                    </li>
+                                                </ul>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    GGI, Dubai - UAE
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 col-12 px-0">
+                                        <div class="d-flex flex-md-row">
+                                            <figure class="mr-2 rounded-2x avatar-small">
+                                                <img src="img/student.png" alt="" class="">
+                                            </figure>
+                                            <div class="d-block grade-list-border">
+                                                <h3 class="font-small text-black-50 text-bold m-0  ">Aaron Avery
+                                                </h3>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    ID : 12501800992704
+                                                </h4>
+                                                <ul class="d-flex flex-md-row">
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 pr-2  border-right border-default">
+                                                        <span>Grade </span> : <span>08</span>
+                                                    </li>
+                                                    <li
+                                                        class="text-black-50 text-semibold small line-height-1 m-0 px-2">
+                                                        <span>Section </span> : <span>A</span>
+                                                    </li>
+                                                </ul>
+                                                <h4
+                                                    class="text-black-50 text-semibold small line-height-1 m-0 py-1 py-md-2">
+                                                    GGI, Dubai - UAE
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body p-4">
+                            <!-- filter result -->
+                            <div class="row filter-results">
+                                <div class="col-lg-5 col-12 d-flex align-items-center">
+                                    <h3 class="font-16 text-black text-semibold m-0 text-bold">Incidents</h3>
+                                </div>
+                                <div class="col-lg-7 col-12 text-lg-right mt-3 mt-lg-0">
+                                    <p class="three-result-purple text-medium d-inline-flex m-0 mr-3">3 Results</p>
+                                    <div class="download-selection md-form md-outline m-0 d-flex d-sm-inline-flex">
+                                        <select class="selectpicker" data-dropdown-align-right="true" title="Download"
+                                            data-style="rounded-5x py-1" data-width="fit">
+                                            <option>As PDF</option>
+                                            <option>As Excel</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- filter result end -->
+                            <hr class="mb-4">
+                            <!-- data filters -->
+
+                            <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-3">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-12 px-md-1 px-lg-2">
+                                        <small class="text-medium">Search</small>
+                                        <div class="md-form md-outline mb-3">
+                                            <input type="text" class="form-control bg-white border-0"
+                                                placeholder="Search here">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-12 col-12">
+                                        <div class="row">
+                                            <div class="col-md-5 col-12 px-md-1 px-lg-2">
+                                                <div class="category">
+                                                    <small class="text-medium">Incident Category</small>
+                                                    <div class="md-form md-outline mb-3">
+                                                        <select class="selectpicker"
+                                                            data-style="btn-white border-0 px-3" data-size="5"
+                                                            title="Select">
+                                                            <option value="1" selected>Accident</option>
+                                                            <option value="23">Child Safeguarding</option>
+                                                            <option value="4">Environmental Incident</option>
+                                                            <option value="29">Fire</option>
+                                                            <option value="2">Illness</option>
+                                                            <option value="3">Near Miss</option>
+                                                            <option value="7">Property Damage</option>
+                                                            <option value="6">Security</option>
+                                                            <option value="5">Vehicle</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-12 pl-sm-0 px-md-1 px-lg-2">
+                                                <div class="severity">
+                                                    <small class="text-medium">Severity</small>
+                                                    <div class="md-form md-outline mb-3">
+                                                        <select class="selectpicker"
+                                                            data-style="btn-white border-0 px-3" data-size="5"
+                                                            title="Select">
+                                                            <option selected>Minor</option>
+                                                            <option>Sesrious</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-12 align-self-center pl-sm-0 px-md-1 px-lg-2">
+                                                <button
+                                                    class="btn btn-dark btn-search m-0 rounded-2x w-100 mt-2 mt-sm-4 mb-3"
+                                                    type="button">Search</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5 col-12 align-self-center mb-3 mb-sm-0">
+                                        <button
+                                            class="reset-search btn btn-transparent z-depth-0 text-primary text-medium d-inline-flex align-items-center line-height-1 m-0 p-0 mr-3">
+                                            <i class="icon-rotate-cw ic-2x mr-1"></i> Reset Filters
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- data filters end -->
+
+                            <!-- incident list -->
+                            <div class="incidentList">
+                                <!-- incident 1 -->
+                                <article class="py-3">
+                                    <div class="incident-meta d-flex align-items-center">
+                                        <div class="meta-left d-inline-flex align-items-center">
+                                            <span
+                                                class="badge badge-primary rounded-4x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                            <h4
+                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                ID #11075623</h4>
+                                        </div>
+                                        <div class="meta-right d-inline-flex align-items-center flex-1">
+                                            <h4
+                                                class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                Accident <span class="text-medium text-black-50 text-initial ml-2">(
+                                                    Struck by Object, Drawing, Chocking, .. )</span>
+                                            </h4>
+                                            <div
+                                                class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                        class="btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0 mr-2">
+                                                        <i class="icon-users-filled text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                                        <h4
+                                                            class="font-small text-semibold border-bottom px-3 pb-3 pt-2">
+                                                            Persons Involved</h4>
+                                                        <ul class="overflow-auto px-3">
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/students/avatar-2.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Abigail Baker
+                                                                        [12501800007260]</h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold student">Student</span>
+                                                                        - Victim
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/students/avatar-1.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Lorri Lavine
+                                                                        [12501675007260]
+                                                                    </h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold student">Student</span>
+                                                                        - Victim
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/avatar-3.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Weston Seyal
+                                                                        [12501675007260]
+                                                                    </h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold staff">Staff</span>
+                                                                        - Witness
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/avatar-6.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Maria Salvato
+                                                                        [12501675007260]</h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold other">Other</span>
+                                                                        - Vitness
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                        class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="incident-title font-small mt-3 mb-2">
+                                        <span class="d-inline-flex align-items-start align-items-sm-center">
+                                            <i class="icon-school-1 ic-2x mr-2"></i>
+                                            <span class="schoolName font-small mt-sm-1">Garden Grove Institute,
+                                                Dubai -
+                                                UAE</span>
+                                        </span>
+                                        <span
+                                            class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                            <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                        </span>
+                                    </h3>
+                                    <div class="incident-info">
+                                        <p class="m-0">Antonio was brought to the clinic by his nanny at 2 p.m.
+                                            According to the nanny, Antonio hit his head on the corner of an open
+                                            window. He had a 2-3 mm slightly gaping wound on his left upper forehead
+                                            with minimal bleeding.</p>
+                                    </div>
+                                </article>
+                                <!-- incident 1 end -->
+
+                                <!-- incident 2 -->
+                                <article class="py-3">
+                                    <div class="incident-meta d-flex align-items-center">
+                                        <div class="meta-left d-inline-flex align-items-center">
+                                            <span
+                                                class="badge badge-primary rounded-4x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                            <h4
+                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                ID #11075623</h4>
+                                        </div>
+                                        <div class="meta-right d-inline-flex align-items-center flex-1">
+                                            <h4
+                                                class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                Accident <span class="text-medium text-black-50 text-initial ml-2">(
+                                                    Struck by Object, Drawing, Chocking, .. )</span>
+                                            </h4>
+                                            <div
+                                                class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                        class="btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0 mr-2">
+                                                        <i class="icon-users-filled text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                                        <h4
+                                                            class="font-small text-semibold border-bottom px-3 pb-3 pt-2">
+                                                            Persons Involved</h4>
+                                                        <ul class="overflow-auto px-3">
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/students/avatar-2.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Abigail Baker
+                                                                        [12501800007260]</h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold student">Student</span>
+                                                                        - Victim
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/students/avatar-1.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Lorri Lavine
+                                                                        [12501675007260]
+                                                                    </h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold student">Student</span>
+                                                                        - Victim
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/avatar-3.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Weston Seyal
+                                                                        [12501675007260]
+                                                                    </h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold staff">Staff</span>
+                                                                        - Witness
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/avatar-6.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Maria Salvato
+                                                                        [12501675007260]</h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold other">Other</span>
+                                                                        - Vitness
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                        class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="incident-title font-small mt-3 mb-2">
+                                        <span class="d-inline-flex align-items-start align-items-sm-center">
+                                            <i class="icon-school-1 ic-2x mr-2"></i>
+                                            <span class="schoolName font-small mt-sm-1">Garden Grove Institute,
+                                                Dubai -
+                                                UAE</span>
+                                        </span>
+                                        <span
+                                            class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                            <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                        </span>
+                                    </h3>
+                                    <div class="incident-info">
+                                        <p class="m-0">Antonio was brought to the clinic by his nanny at 2 p.m.
+                                            According to the nanny, Antonio hit his head on the corner of an open
+                                            window. He had a 2-3 mm slightly gaping wound on his left upper forehead
+                                            with minimal bleeding.</p>
+                                    </div>
+                                </article>
+                                <!-- incident 2 end -->
+
+                                <!-- incident 3 -->
+                                <article class="py-3">
+                                    <div class="incident-meta d-flex align-items-center">
+                                        <div class="meta-left d-inline-flex align-items-center">
+                                            <span
+                                                class="badge badge-primary rounded-4x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                            <h4
+                                                class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                                ID #11075623</h4>
+                                        </div>
+                                        <div class="meta-right d-inline-flex align-items-center flex-1">
+                                            <h4
+                                                class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                Accident <span class="text-medium text-black-50 text-initial ml-2">(
+                                                    Struck by Object, Drawing, Chocking, .. )</span>
+                                            </h4>
+                                            <div
+                                                class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                        class="btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0 mr-2">
+                                                        <i class="icon-users-filled text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                                        <h4
+                                                            class="font-small text-semibold border-bottom px-3 pb-3 pt-2">
+                                                            Persons Involved</h4>
+                                                        <ul class="overflow-auto px-3">
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/students/avatar-2.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Abigail Baker
+                                                                        [12501800007260]</h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold student">Student</span>
+                                                                        - Victim
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/students/avatar-1.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Lorri Lavine
+                                                                        [12501675007260]
+                                                                    </h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold student">Student</span>
+                                                                        - Victim
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/avatar-3.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Weston Seyal
+                                                                        [12501675007260]
+                                                                    </h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold staff">Staff</span>
+                                                                        - Witness
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex align-items-center py-2">
+                                                                <span
+                                                                    class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                                    <img src="img/avatars/avatar-6.jpg" alt="">
+                                                                </span>
+                                                                <div class="info">
+                                                                    <h3 class="small mb-0">Maria Salvato
+                                                                        [12501675007260]</h3>
+                                                                    <small class="text-medium d-block">
+                                                                        <span
+                                                                            class="text-uppercase text-semibold other">Other</span>
+                                                                        - Vitness
+                                                                    </small>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                        class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                            href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="incident-title font-small mt-3 mb-2">
+                                        <span class="d-inline-flex align-items-start align-items-sm-center">
+                                            <i class="icon-school-1 ic-2x mr-2"></i>
+                                            <span class="schoolName font-small mt-sm-1">Garden Grove Institute,
+                                                Dubai -
+                                                UAE</span>
+                                        </span>
+                                        <span
+                                            class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                            <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                        </span>
+                                    </h3>
+                                    <div class="incident-info">
+                                        <p class="m-0">Antonio was brought to the clinic by his nanny at 2 p.m.
+                                            According to the nanny, Antonio hit his head on the corner of an open
+                                            window. He had a 2-3 mm slightly gaping wound on his left upper forehead
+                                            with minimal bleeding.</p>
+                                    </div>
+                                </article>
+                                <!-- incident 3 end -->
+                            </div>
+                            <!-- incident list end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--student profile incidents data end -->
+        </div>
+    </main>
+
+    <!--Spouse Info popup start -->
+    <div class="modal fade" id="spouseInfoPopup" tabindex="-1" role="dialog" aria-labelledby="spouseInfoPopup" aria-hidden="true">
+        <form action="" class="m-0">
+            <div class="modal-dialog modal-dialog-scrollable modal-md w-50" role="document">
+                <div class="modal-content rounded-4x">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 col-12">
+                                <div class="d-flex student-meta flex-column flex-md-row">
+                                    <figure class="mr-3 rounded-2x">
+                                        <img src="img/student.png" alt="" class="img-fluid-backend">
+                                    </figure>
+                                    <div class="d-block grade-list-border">
+                                        <h3 class="font-16 text-black text-semibold m-0 ">Aaron Avery</h3>
+                                        <h4
+                                            class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">
+                                           <span>Relation</span> : <span>Father</span> 
+                                        </h4>
+                                        <h4
+                                            class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">
+                                            Abagael.Skynner@Phoenixhse.com
+                                        </h4>
+                                        <h4
+                                            class="text-black-50 text-semibold font-small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">
+                                            +971567488499
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                   
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light px-5 mr-2" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary waves-effect waves-light px-5">Save</button>
+                    </div> -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-primary">×</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--Spouse Info popup start -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>  

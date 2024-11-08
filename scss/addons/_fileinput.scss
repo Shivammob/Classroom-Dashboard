@@ -1,0 +1,50 @@
+.fileinput-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: dashed 1px $grey-icon-color;
+    padding: rem(5px);
+    border-radius: $default-border-radius;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-size: rem($base-font-size - 2);
+    min-height: rem(75px);
+    .fileinput {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+        color: #000;
+        background: url("../img/svg/ic-upload.svg") no-repeat left center;
+        line-height: rem(35px);
+        padding-left: rem(50px);
+        input {
+            &[type=file], &[type=file]:focus, &[type=file]:hover {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                opacity: 0;
+                -ms-filter: 'alpha(opacity=0)';
+                font-size: 200px;
+                direction: ltr;
+                cursor: pointer;
+                outline: 0;
+            }
+
+        }
+    }
+    .fileinput-name {
+        margin-left: rem(8px);
+        .fileinput-clear.close {
+            float: none;
+            margin-left: rem(8px);
+            vertical-align: middle;
+            color: inherit;
+            position: initial;
+            margin-top: rem(-5px);
+        }
+    }
+}

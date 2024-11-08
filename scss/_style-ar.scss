@@ -1,0 +1,638 @@
+//@import url('https://fonts.googleapis.com/css?family=Cairo:300,400,600&display=swap&subset=arabic');
+/* @import url('https://fonts.googleapis.com/css?family=Cairo:300,400,600,700&display=swap&subset=arabic'); */
+// @import url('https://fonts.googleapis.com/css?family=Almarai:300,400,700&display=swap&subset=arabic');
+// @font-face {
+//     font-family: 'Arabic_Web';
+//     src: url('../font/arabic/ge_ss_text_italic.eot?1');
+//     src: url('../font/arabic/ge_ss_text_italic.eot?#iefix1') format('embedded-opentype'),
+//     url('../font/arabic/ge_ss_text_italic.woff2?1') format('woff2'),
+//     url('../font/arabic/ge_ss_text_italic.woff?1') format('woff'),
+//     url('../font/arabic/ge_ss_text_italic.ttf?1') format('truetype'),
+//     url('../font/arabic/ge_ss_text_italic.svg?1#svgFontName') format('svg');
+
+// }
+@font-face {
+    font-family: 'Arabic_Web';
+    // src: fontPath("ge_ss_text_italic.eot?1", font/arabic);
+    // src: fontPath("ge_ss_text_italic.eot?#iefix1", font/arabic) format('embedded-opentype'),
+    //      fontPath("ge_ss_text_italic.woff2?1", font/arabic) format('woff2'),
+    //      fontPath("ge_ss_text_italic.woff?1", font/arabic) format('woff'),
+    //      fontPath("ge_ss_text_italic.ttf?1", font/arabic) format('truetype'),
+    //      fontPath("ge_ss_text_italic.svg?1#svgFontName", font/arabic) format('svg');
+
+
+    src: url('/Content/HSE/font/arabic/ge_ss_text_italic.eot?1');
+    src: url('/Content/HSE/font/arabic/ge_ss_text_italic.eot?#iefix1') format('embedded-opentype'),
+    url('/Content/HSE/font/arabic/ge_ss_text_italic.woff2?1') format('woff2'),
+    url('/Content/HSE/font/arabic/ge_ss_text_italic.woff?1') format('woff'),
+    url('/Content/HSE/font/arabic/ge_ss_text_italic.ttf?1') format('truetype'),
+    url('/Content/HSE/font/arabic/ge_ss_text_italic.svg?1#svgFontName') format('svg'); 
+
+}
+
+html:lang(ar) {
+    .arabictxt { font-family: 'Arabic_Web';}
+    body {
+        //font-family: "GE SS Two Light";
+        //font-family: "B Elham";
+        font-family: 'Almarai', sans-serif;
+        font-weight: 500;
+        overflow-x: hidden;
+        &.modal-open {
+            padding-left: 0 !important;
+        }
+    }
+ 
+    $heading-slug: h !default;
+    .card {
+        .card-body {
+            @for $i from 1 through 6 {
+                #{$heading-slug}#{$i} {
+                    font-weight: 600;
+                    //color: var(--indigo);
+                }
+            }
+        }
+    }
+    /*---------- Dropdown  style ----------*/
+    .dropdown {
+        .dropdown-toggle{
+            &:after {
+                margin-left: 0;
+                margin-right: 5px;
+            }
+        }
+    }
+    /*---------- Paggination  style ----------*/
+    .pagination .page-item {
+        margin-left: 0.25rem;
+    }
+    /*---------- Data table  style ----------*/
+    table.dataTable{
+        thead{
+            .sorting span:before, .sorting_asc span:before, .sorting_desc span:before, .sorting_asc_disabled span:before, .sorting_desc_disabled span:before {
+                right:initial;
+                left: -18px;
+            }
+            .sorting span:after, .sorting_asc span:after, .sorting_desc span:after, .sorting_asc_disabled span:after, .sorting_desc_disabled span:after {
+                right:initial;
+                left: -18px;
+            }
+        }
+    }
+
+    // just check for test
+    table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting {
+        padding-right: 10px;
+    }
+
+    /*---------- Breadcrum  style ----------*/
+    .sub-header {
+        .breadcrumb {
+            li {
+                a {
+                    padding-right: 0;
+                    padding-left: 0.875rem;
+                    margin-right: 0;
+                    margin-left: 0.625rem;
+                    &:after{
+                        left: 0;
+                        right: initial;
+                        content: "\f104";
+                        // transform: rotate(180deg);
+                        // top: 0;
+                    }
+                }
+            }
+        }
+    }
+    /*---------- header style ----------*/
+    @include media-breakpoint-up(lg) {
+        // .navbar, .page-footer, main {
+        //     padding-left: initial;
+        //     padding-right: rem(220px);
+        // }
+        .page-footer, main {
+            padding-left: initial;
+            padding-right: 15.25rem;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        // .sidebar-fixed {
+        //     /* display:none */
+        //     left: initial;
+        //     right: -237px;
+        // }
+    }
+    .mobile-user-profile {
+        .quick-nav {
+            right: initial;
+            left: rem(10px);
+            .dropdown-menu {
+                i {
+                    margin-right: initial;
+                    margin-left: rem(10px);
+                }
+            }
+        }
+    }
+
+    /*---------- sidebar navigation style -----------*/
+    span {
+        &.title-icon {
+            margin-right: initial;
+            margin-left: rem(15px);
+        }
+    }
+    .mobile-subheader {
+        .page-title {
+            span {
+                &.title-icon {
+                    margin-right: initial;
+                    margin-left: rem(5px);
+                }
+            }
+        }
+    }
+    header {
+        .main-nav {
+            .dropdown-menu {
+                &.profile-dropdown {
+                    .profile-actions {
+                        li {
+                            a {
+                                img {
+                                    margin-right: initial;
+                                    margin-left: rem(15px);
+                                }
+                            }
+                        }
+                    }
+                    .profile-card {
+                        .profile-img {
+                            margin-right: initial;
+                            margin-left: rem(15px);
+                            .edit-profile-img {
+                                right: initial;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar-fixed {
+            .list-group {
+                .list-group-item {
+                    span {
+                        &.pagename {
+                            font-size: rem($base-font-size - 3);
+                        }
+                    }
+                    &:hover {
+                        span {
+                            // margin-left: initial;
+                            margin-right: 0;
+                            // &.pagename {
+                            //     margin-left: initial;
+                            //     margin-right: rem(22px);
+                            // }
+                        }
+                    }
+                    &.active, &:hover {
+                        &:before {
+                            right: initial;
+                            left: rem(-10px);
+                            border-left-color: lighten($primary-color, 55%);
+                            border-right-color: transparent;
+                        }
+                    }
+                    &.has-submenu {
+                        &:after {
+                            right: initial;
+                            left: rem(15px);
+                        }
+                    }
+                }
+                .sub-menu {
+                    margin: rem(8px 45px 10px 0);
+                }
+            }
+            &.slideout {
+                right: 0;
+            }
+        }
+        .header-info {
+            padding-left: initial;
+            padding-right: rem(25px);
+            .btn-back {
+                margin-right: 0;
+                margin-left: 0.625rem;
+                transform: rotate(180deg);
+            }
+            .breadcrumbs {
+                li {
+                    float: right;
+                    padding-right: 0;
+                    padding-left: rem(15px);
+                    margin-right: 0;
+                    margin-left: rem(10px);
+                    &:after {
+                        transform: rotate(180deg);
+                        right: initial;
+                        left: 0;
+                    }
+                }
+            } 
+        }
+        .logo {
+            margin: 0 0 0 1.5625rem;
+        }
+    }
+  /*---------- Dashboard -----------*/
+    .h-progress {
+        .h-progressbar {
+            .progressRail {
+                right: 0;
+                left: initial;
+            }
+            .progressCount {
+                left: -10px;
+                right: initial;
+            }
+        }
+    }
+    
+    /*---------- Incident Covid 19 style -----------*/
+    .covid-19 {
+        .recovery-cases {
+            
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .active-cases {
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+    .pill-panel {
+        .incident-pills {
+            .nav-item {
+                .nav-link {
+                    margin-left: 1.875rem;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    /*---------- Incident and Add Incident style -----------*/
+    .studentList{
+        article {
+            .student-right {
+                left: 0.0625rem;
+                right: initial;
+            }
+        }
+    } 
+    .vertical-nav-panel {
+        .victim-concerned {
+            article {
+                .student-right {
+                    left: 0.625rem;
+                    right: initial;
+                }
+            }
+        }
+    }
+    .injury-desktop{
+        .hand-injuries, .foot-injuries{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .left-hand-injuries{
+            img{
+                margin-left: 3rem;
+            }
+        }
+    }
+    .selectpicker-width{
+        &::after{
+            left: 15px;
+            right: initial;  
+        }
+    }
+    /*---------- Incident Details style -----------*/
+    .details-action-right {
+        left: 1.375rem;
+        right: initial;
+    }
+    .incident-title{
+        .timestamp{
+            .icon-clock{
+                float: right;
+            }
+        }
+    }
+    .pill-panel {
+        .sg-Investigation {
+            .comment-wrrapper {
+                .user-comment {
+                    margin-right: 1rem;
+                    margin-left: 0;
+                    &:before{
+                        border-left-color: #F6F8F8;
+                        border-right-color: transparent;
+                        left: 100%;
+                        right: initial;
+                    }
+                }
+            }
+        }
+    }
+    .document-names{
+        display: flex;
+    }
+    .vertical-nav-panel {
+        .nav-pills {
+            .nav-item {
+                .active{
+                    &::after {
+                        left: -6px;
+                        right: initial;
+                    }
+                }
+            }
+        }
+    }
+    .custom-control{
+        &.custom-radio {
+            .custom-control-label{
+                &:after {
+                    top: 0rem;
+                }
+            }
+        }
+    }
+
+    /*---------- create-audit-details style -----------*/
+    .create-audit-details{
+        .audit-details {
+            .incident-meta {
+                .details-action-right {
+                    left: 1.375rem;
+                    right: initial;
+                }
+            }
+        }
+    } 
+    /*---------- Library page style -----------*/
+    .library {
+        .card {
+            .card-body {
+                .breadcrumb-list {
+                    ul {
+                        li {
+                            padding-left: rem(15px);
+                            padding-right: initial;
+                            margin-left: rem(7px);
+                            &:after { 
+                                left: 0; 
+                                right: initial;
+                                transform: rotate(180deg);
+                                top: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+
+
+// Drawer css
+    .modal {
+        .modal-content {
+            .close {
+                left: 1.25rem !important;
+                right: initial !important;
+            }
+            
+        }
+    }
+ /*---------- manage user page-----------*/  
+.add-user{
+    .chk-customs {
+      .custom-control-label {
+          padding-left: 1.5rem;
+          padding-right: initial;
+      }
+      .custom-control-label:before, .custom-control-label:after {
+          left: 0;
+          right: initial;
+       }
+    }
+  }
+  /*---------- Login page-----------*/ 
+  .login_container{
+    .login-left{
+        .md-form.md-outline>input[type]:-webkit-autofill:not(.browser-default):not([type="search"])+label, .md-form.md-outline>input[type=time]:not(.browser-default)+label {
+            right: 8px;
+            left: initial;
+        }
+    }
+    .login-right{
+        padding-right: 4.0625rem;
+        padding-left: initial;
+        h2::after {
+            right: 0;
+            left: initial;
+        }
+    }
+  }
+  /*---------- pagination arrow-icon css rotate -----------*/
+    .pagination {
+        .page-item {
+            .page-first, .page-prev, .page-next, .page-last {
+                transform: rotate(180deg);
+                transition: 0s;
+            }
+        }
+    }
+    .ar-translate-arrow{
+        i{
+            transform: rotate(180deg);
+        }
+    }
+
+  /*---------- label move label to right -----------*/  
+    .md-form {
+        &.md-outline {
+            label {
+                right: 8px;
+                left: initial;
+                &.active {
+                    right: 8px;
+                    left: initial;
+                }
+            }
+        }
+    }
+    
+    .md-form {
+        &.md-outline {
+            .remark-ar-label {
+                right: 8px;
+                left: initial;
+            }
+        }
+    }
+  /*----------selectpicker dropdown text move label to right -----------*/  
+    .bootstrap-select {
+        .dropdown-toggle {
+            .filter-option-inner-inner {
+                text-align: right;
+            }
+        }
+    }
+    /*----------Date Range Picker calendar icon move label to right -----------*/  
+   // set for temporary test
+   .daterangepicker{
+     .ranges{
+        float: right;
+        li {
+            text-align: right;
+        }
+     }
+      .drp-calendar{
+        float: right;
+        &.left {
+            clear: none !important;
+            border-right: 1px solid #DDD;
+            border-left: none !important;
+        }
+        .calendar-table{
+            .next span {
+                transform: rotate(135deg);
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
+            .prev span {
+                transform: rotate(315deg);
+                position: absolute;
+                top: 18px;
+                right: 10rem;
+            }
+        } 
+     } 
+     .drp-buttons {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: center;
+    }
+    td.available:hover, th.available:hover {
+        background: none;
+    }
+    &.opensright::after, &.opensright::before {
+        right: 20px;
+        left: initial !important;
+    }    
+   }
+    /*----------Date Time Picker calendar icon move label to right -----------*/  
+    .bootstrap-datetimepicker-widget {
+        .prev span, .next span {
+            transform: rotate(-180deg) !important;
+          }
+    }
+    /*----------File upload btn move label to right -----------*/ 
+    .uploaderWidget{
+        .btn-browse {
+            float: right;
+        }  
+        .btn-upload {
+            float: left;
+        }
+    }
+    /*----------File upload btn cross button -----------*/
+    .modal {
+        .modal-content {
+            .file-error-message {
+                .close.kv-error-close {
+                    top: 1rem !important;
+                    left: 0.2rem !important;
+                }    
+            }
+        }
+    }
+
+    .profile-audit {
+        .card {
+            .card-body {
+                .inspection-Location{
+                    ul li{
+                        border-left: 2px solid $pillpanle-text-active;
+                        border-right: initial;
+                        &:last-child {
+                            border-left: none;
+                            border-right: initial;
+                        }
+                        @include media-breakpoint-down(sm) {
+                            border-left:none;
+                            border-right:initial;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+/*----------  Task Details -----------*/
+.task-ar-question{
+    direction: ltr !important;
+}
+// .drawer-reminder{
+//     .custom-control {
+//         padding-right: 1.8755rem;
+//         padding-left: initial;
+//     }
+// }
+/*----------  User Activity for Task drawer -----------*/
+
+.timeline {
+    &::before{
+        right: 20%;
+        left: initial;
+    }
+    .timeline-time {
+        right: 0;
+        left: initial;
+    }
+    .timeline-icon {
+        right: 15%;
+        left: initial;
+    }
+    .header-box{ 
+        margin-right: 23%;
+        margin-left: initial;
+    }
+    .timeline-body {
+        margin-right: 23%;
+        margin-left: initial;
+        .timeline-header {
+            .userimage {
+                float: right;
+                margin: -2px 0 -2px 10px;
+            }
+        }
+    }  
+}
+
+
+
+
+}

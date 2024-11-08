@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'filetypes';
+    src: fontPath('filetypes.eot?9bumht');
+    src: fontPath('filetypes.eot?9bumht#iefix') format('embedded-opentype'),
+         fontPath('filetypes.ttf?9bumht') format('truetype'),
+         fontPath('filetypes.woff?9bumht') format('woff'),
+         fontPath('filetypes.svg?9bumht#filetypes') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="file-type-"], [class*=" file-type-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'filetypes';
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .file-type-external-link:before {
+    content: "\e90c";
+    color: #189AB4;
+  }
+  .file-type-zip:before {
+    content: "\e90b";
+    color: #eb8909;
+  }
+  .file-type-audio:before {
+    content: "\e900";
+    color: #eb8909;
+  }
+  .file-type-excel:before {
+    content: "\e901";
+    color: #299438;
+  }
+  .file-type-google-drive:before {
+    content: "\e902";
+    color: #884dff;
+  }
+  .file-type-image:before {
+    content: "\e903";
+    color: #3f82ef;
+  }
+  .file-type-one-drive:before {
+    content: "\e904";
+    color: #3f82ef;
+  }
+  .file-type-pdf:before {
+    content: "\e905";
+    // color: #de4c4a;
+  }
+  .file-type-ppt:before {
+    content: "\e906";
+    // color: #de4c4a;
+  }
+  .file-type-text:before {
+    content: "\e907";
+    color: #884dff;
+  }
+  .file-type-unknown:before {
+    content: "\e908";
+    color: #707070;
+  }
+  .file-type-video:before {
+    content: "\e909";
+    color: #de4c4a;
+  }
+  .file-type-word:before {
+    content: "\e90a";
+    color: #3f82ef;
+  }

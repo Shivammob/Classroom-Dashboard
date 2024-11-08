@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> My Tasks</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/asProgress.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+    <!-- <style>
+        header .main-nav .profile-actions li {
+        height: 10px !important;
+}
+    </style> -->
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-3x text-uppercase text-dark z-depth-0 m-0 mt-3 px-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <!-- <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span> English -->En
+                                    </button>
+                                    <div class="dropdown-menu w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block text-uppercase" href="#">
+                                            <!-- <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span> Arabic -->
+                                            Ar
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" class="loggedInUser d-flex align-items-center my-3 dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2 font-small text-medium text-black">Logging in as</span> 
+                                        </a>
+                                        <div class="dropdown-item">
+                                            <a class="d-flex align-items-end ml-n2 px-2 bg-light">
+                                                <i class="icon-school-1 mr-2"></i>
+                                                <span href="#" class="small text-medium text-black">School Staff</span>
+                                            </a>
+                                        </div>
+                                        <div class="dropdown-item mt-2">
+                                            <a class="d-flex align-items-end ml-n2 px-2 bg-light" disabled>
+                                                <i class="icon-settings text-semibold mr-2"></i>
+                                                <span href="#" class="small text-medium text-black">Admin</span>
+                                            </a>
+                                        </div>
+                                        <div class="dropdown-item mt-2">
+                                            <a class="d-flex align-items-end ml-n2 px-2 bg-light" disabled>
+                                                <i class="icon-user-2 text-semibold mr-2"></i>
+                                                <span href="#" class="small text-medium text-black">Others</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+                                        <h6 class="login-status text-semibold font-small px-3">Logged in as</h6>
+                                        <ul class="profile-actions login-actions">
+                                            <li class="bg-light mx-3 rounded-1x px-2 mb-2 d-flex align-items-center">
+                                                <a href="javascript:void(0)" class="px-1"><i
+                                                        class="icon-school-1 small text-semibold mr-2"></i><span
+                                                        class="small text-semibold">School Staff</span> </a>
+                                                <span class="icon-check text-semibold text-primary active"></span>
+                                            </li>
+                                            <li class="bg-light mx-3 rounded-1x px-2 mb-2 d-flex align-items-center">
+                                                <a href="javascript:void(0)" class="px-1"><i
+                                                        class="icon-settings text-semibold mr-2"></i><span
+                                                        class="small text-semibold">Admin</span>
+                                                </a>
+                                                <span class="icon-check text-semibold text-primary"></span>
+                                            </li>
+                                            <li class="bg-light mx-3 rounded-1x px-2 mb-3 d-flex align-items-center">
+                                                <a href="javascript:void(0)" class="px-1"><i
+                                                        class="icon-disc text-semibold mr-2"></i><span
+                                                        class="small text-semibold">Other</span>
+                                                </a>
+                                                <span class="icon-check text-semibold text-primary"></span>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="my-2 mx-3">
+                                                <a href="javascript:void(0)">My account</a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="my-2 mx-3">
+                                                <a href="javascript:void(0)" class="text-primary">Signout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item active mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid mt-3 mb-4">
+
+            <div class="row">
+                <div class="col-md-8 col-12">
+                    <!-- incident types widget -->
+                    <div class="card mb-4 task-widget">
+                        <div class="card-body">
+                            <div class="myTaskList column-padding">
+                                <div
+                                    class="d-flex align-items-center justify-content-between border-bottom border-default mb-0 pb-2 pt-3">
+                                    <h3 class="font-16 text-semibold flex-1 mr-2 mb-0">My Tasks</h3>
+                                    <button class="btn header-action-btn rounded-4x m-0 btn-sm" type="button">View
+                                        All</button>
+                                </div>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <span class="flex-shrink-0 bu-code text-semibold rounded px-2 mr-2">GGI</span>
+                                        <!-- <p class="small text-medium text-black-50 flex-1 m-0">22 Days ago</p> -->
+                                        <ul class="d-flex align-items-center flex-1">
+                                            <li
+                                                class="font-small text-black-50 text-medium pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                                Created on : 12 June 2021</li>
+                                            <li
+                                                class="font-small text-black-50 text-medium">
+                                                Created By : Edwin George</li>
+                                        </ul>
+                                        <span class="status status-completed flex-shrink-0 rounded-3x mr-3">Completed</span>
+                                        <div class="quick-nav dropleft">
+                                            <button type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"
+                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">View</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Edit</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Reminder</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Report</a>
+                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                    note</a>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <ul class="d-flex align-items-center flex-1 mb-1">
+                                        <li
+                                            class="font-small text-bold pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                            Due Date : 12 Oct 2021</li>
+                                        <li
+                                            class="font-small text-bold">
+                                            Assigned to : Edwin George</li>
+                                    </ul>
+                                    <p class="small text-medium m-0">2.2 Have the findings of the risk assessments been
+                                        communicated to relevant employee?</p>
+                                </article>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <span class="flex-shrink-0 bu-code text-semibold rounded px-2 mr-2">GIC</span>
+                                        <!-- <p class="small text-medium text-black-50 flex-1 m-0">22 Days ago</p> -->
+                                        <ul class="d-flex align-items-center flex-1">
+                                            <li
+                                                class="font-small text-black-50 text-medium pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                                Created on : 12 June 2021</li>
+                                            <li
+                                                class="font-small text-black-50 text-medium">
+                                                Created By : Edwin George</li>
+                                        </ul>
+                                        <span class="status status-overdue flex-shrink-0 rounded-3x mr-3">Overdue</span>
+                                        <div class="quick-nav dropleft">
+                                            <button type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"
+                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">View</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Edit</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Reminder</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Report</a>
+                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                    note</a>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <ul class="d-flex align-items-center flex-1 mb-1">
+                                        <li
+                                            class="font-small text-bold pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                            Due Date : 12 Oct 2021</li>
+                                        <li
+                                            class="font-small text-bold">
+                                            Assigned to : Edwin George</li>
+                                    </ul>
+                                    <p class="small text-medium m-0">2.2 Have the findings of the risk assessments been
+                                        communicated to relevant employee?</p>
+                                </article>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <span class="flex-shrink-0 bu-code text-semibold rounded px-2 mr-2">GGI</span>
+                                        <!-- <p class="small text-medium text-black-50 flex-1 m-0">22 Days ago</p> -->
+                                        <ul class="d-flex align-items-center flex-1">
+                                            <li
+                                                class="font-small text-black-50 text-medium pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                                Created on : 12 June 2021</li>
+                                            <li
+                                                class="font-small text-black-50 text-medium">
+                                                Created By : Edwin George</li>
+                                        </ul>
+                                        <span class="status status-inprogress flex-shrink-0 rounded-3x mr-3">In
+                                            Progress</span>
+                                            <div class="quick-nav dropleft">
+                                                <button type="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                    <i class="fas fa-ellipsis-v text-primary"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <div class="dropdown-menu z-depth-1 border-0">
+                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                        href="#">View</a>
+                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                        href="#">Edit</a>
+                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                        href="#">Reminder</a>
+                                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                        href="#">Report</a>
+                                                    <a class="dropdown-item px-3 py-2" href="#">Add
+                                                        note</a>
+                                                </div>
+                                            </div>
+                                    </section>
+                                    <ul class="d-flex align-items-center flex-1 mb-1">
+                                        <li
+                                            class="font-small text-bold pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                            Due Date : 12 Oct 2021</li>
+                                        <li
+                                            class="font-small text-bold">
+                                            Assigned to : Edwin George</li>
+                                    </ul>
+                                    <p class="small text-medium m-0">2.2 Have the findings of the risk assessments been
+                                        communicated to relevant employee?</p>
+                                </article>
+                                <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <span class="flex-shrink-0 bu-code text-semibold rounded px-2 mr-2">GGI</span>
+                                        <!-- <p class="small text-medium text-black-50 flex-1 m-0">22 Days ago</p> -->
+                                        <ul class="d-flex align-items-center flex-1">
+                                            <li
+                                                class="font-small text-black-50 text-medium pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                                Created on : 12 June 2021</li>
+                                            <li
+                                                class="font-small text-black-50 text-medium">
+                                                Created By : Edwin George</li>
+                                        </ul>
+                                        <span class="status status-completed flex-shrink-0 rounded-3x mr-3">Completed</span>
+                                        <div class="quick-nav dropleft">
+                                            <button type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"
+                                                class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                <i class="fas fa-ellipsis-v text-primary"></i>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <div class="dropdown-menu z-depth-1 border-0">
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">View</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Edit</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Reminder</a>
+                                                <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                    href="#">Report</a>
+                                                <a class="dropdown-item px-3 py-2" href="#">Add
+                                                    note</a>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <ul class="d-flex align-items-center flex-1 mb-1">
+                                        <li
+                                            class="font-small text-bold pr-3 mr-3 d-none d-sm-inline-block border-right border-default">
+                                            Due Date : 12 Oct 2021</li>
+                                        <li
+                                            class="font-small text-bold">
+                                            Assigned to : Edwin George</li>
+                                    </ul>
+                                    <p class="small text-medium m-0">2.2 Have the findings of the risk assessments been
+                                        communicated to relevant employee?</p>
+                                </article>
+                                <!-- <article class="py-3">
+                                    <section class="d-flex align-items-center mb-2">
+                                        <span class="flex-shrink-0 bu-code text-semibold rounded px-2 mr-2">GGI</span>
+                                        <p class="small text-medium text-black-50 flex-1 m-0">22 Days ago</p>
+                                        <span class="status status-completed flex-shrink-0 rounded-3x">Completed</span>
+                                    </section>
+                                    <p class="small text-medium m-0">2.2 Have the findings of the risk assessments been
+                                        communicated to relevant employee?</p>
+                                </article> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- incident types widget end -->
+  
+                    <!-- incident category widget -->
+                    <div class="card mb-4 task-widget">
+                        <div class="card-body">
+                            <div class="myTaskList column-padding">
+                                <div
+                                    class="d-flex align-items-center justify-content-between border-bottom border-default mb-0 pb-2 pt-3">
+                                    <h3 class="font-16 text-semibold flex-1 mr-2 mb-0">Incidents</h3>
+                                    <button class="btn btn-primary rounded-4x py-2" type="button">
+                                        Add New <i class="fas fa-angle-down ml-1"></i>
+                                   </button>
+                                </div>
+                                <!-- incident 1 -->
+                                <article class="py-3">
+                                    <div class="incident-meta d-flex align-items-center flex-wrap">
+                                        <div class="meta-left d-inline-flex align-items-center">
+                                            <span class="badge badge-primary rounded-4x text-uppercase shadow-none text-semibold px-2 py-1 mr-3">Serious</span>
+                                            <h4 class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">ID #11075623</h4>
+                                        </div>
+                                        <div class="meta-right d-inline-flex align-items-center flex-1">
+                                            <h4 class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                Accident <span class="text-medium text-black-50 text-initial ml-2">( Struck by Object, Drawing, Chocking, .. )</span>
+                                            </h4>
+                                            <div class="d-inline-flex align-items-center flex-shrink-0">
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="incident-title font-small mt-3 mb-2">
+                                        <span class="d-inline-flex align-items-start align-items-sm-center">
+                                            <i class="icon-school-1 ic-2x mr-2"></i>
+                                            <span class="schoolName font-small mt-sm-1 text-bold">Garden Grove Institute, Dubai - UAE</span>
+                                        </span>
+                                        <span class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-bold">
+                                            <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                        </span>
+                                    </h3>
+                                    <div class="incident-info">
+                                        <p class="m-0">Antonio was brought to the clinic by his nanny at 2 p.m. According to the nanny, Antonio hit his head on the corner of an open window. He had a 2-3 mm slightly gaping wound on his left upper forehead with minimal bleeding. </p>
+                                    </div>
+                                </article>
+                                <!-- incident 1 end -->
+                                <!-- incident 2 -->
+                                <article class="py-3">
+                                    <div class="incident-meta d-flex align-items-center flex-wrap">
+                                        <div class="meta-left d-inline-flex align-items-center">
+                                            <span class="badge badge-primary rounded-4x text-uppercase shadow-none text-semibold px-2 py-1 mr-3">Serious</span>
+                                            <h4 class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">ID #11075623</h4>
+                                        </div>
+                                        <div class="meta-right d-inline-flex align-items-center flex-1">
+                                            <h4 class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                                Accident <span class="text-medium text-black-50 text-initial ml-2">( Struck by Object)</span>
+                                            </h4>
+                                            <div class="d-inline-flex align-items-center flex-shrink-0">
+                                                <div class="quick-nav dropleft">
+                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="more-actions btn btn-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                                        <i class="fas fa-ellipsis-v text-primary"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu z-depth-1 border-0">
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">View</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Edit</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Reminder</a>
+                                                        <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">Report</a>
+                                                        <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="incident-title font-small mt-3 mb-2">
+                                        <span class="d-inline-flex align-items-start align-items-sm-center">
+                                            <i class="icon-school-1 ic-2x mr-2"></i>
+                                            <span class="schoolName font-small mt-sm-1 text-bold">Garden Grove Institute, Dubai - UAE</span>
+                                        </span>
+                                        <span class="timestamp font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0 text-bold">
+                                            <i class="fas fa-clock mr-2"></i> 3:29 PM, 24 May 2021
+                                        </span>
+                                    </h3>
+                                    <div class="incident-info">
+                                        <p class="m-0">Antonio was brought to the clinic by his nanny at 2 p.m. According to the nanny, Antonio hit his head on the corner of an open window. He had a 2-3 mm slightly gaping wound on his left upper forehead with minimal bleeding. </p>
+                                    </div>
+                                </article>
+                                <!-- incident 2 end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- incident category widget end -->
+
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <!-- view files widget -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="column-padding d-flex align-items-center py-4">
+                                <img src="img/svg/stack-folders.svg" class="flex-shrink-0" alt="">
+                                <h3 class="m-0 font-16 text-semibold text-primary flex-1 mx-2">72 Files <span
+                                        class="d-block text-black-50 font-small text-medium">Library</span></h3>
+                                <button class="btn btn-primary flex-shrink-0 rounded-4x m-0" type="button">View
+                                    Files</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- view files widget end -->
+
+                    <!-- task widget -->
+                    <div class="card mb-4 task-widget">
+                        <div class="card-body">
+                            <div class="title-with-fields">
+                                <h3 class="card-title">Tasks</h3>
+                                <button class="btn header-action-btn rounded-4x m-0 btn-sm" type="button">Add
+                                    Task</button>
+                            </div>
+                            <div class="graph-container column-padding pb-3">
+                                <div class="rounded-progressbar position-relative">
+                                    <div class="position-absolute highPriority" data-donutty data-min="0" data-max="100"
+                                        data-value="70" data-color="#AB244E" data-bg="#fff" data-padding="0"
+                                        data-thickness="7">
+                                        <span class="count position-absolute text-medium">High Priority <span
+                                                class="text-bold">7 (70%)</span></span>
+                                    </div>
+                                    <div class="position-absolute medPriority" data-donutty data-min="0" data-max="100"
+                                        data-value="20" data-color="#FDAD27" data-bg="#fff" data-padding="0"
+                                        data-thickness="10">
+                                        <span class="count position-absolute text-medium">Medium Priority <span
+                                                class="text-bold">2 (20%)</span></span>
+                                    </div>
+                                    <div class="position-absolute lowPriority" data-donutty data-min="0" data-max="100"
+                                        data-value="10" data-color="#20A5DE" data-bg="#fff" data-padding="0"
+                                        data-thickness="18">
+                                        <span class="count position-absolute text-medium">Low Priority <span
+                                                class="text-bold">1 (10%)</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="task-stats bg-primary rounded-4x mx-3 mb-4 py-3">
+                                <div class="row no-gutters pr-3">
+                                    <div class="col-4 text-center">
+                                        <h3 class="text-white text-semibold m-0">10 <small
+                                                class="d-block mt-2 text-medium">Open</small></h3>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <h3 class="text-white text-semibold m-0">9 <small
+                                                class="d-block mt-2 text-medium">Overdue</small></h3>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <h3 class="text-white text-semibold m-0">1 <small
+                                                class="d-block mt-2 text-medium">In Progress</small></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- task widget end -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer start -->
+    <footer class="page-footer">
+        <p class="m-0 text-center">&copy; Copyright, GEMS Education</p>
+    </footer>
+    <!-- footer end -->
+
+    <div class="modal fade right userActions" id="userActions" tabindex="-1" role="dialog" aria-labelledby=""
+        aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-right" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <div class="d-flex align-items-start">
+                        <div class="user-dp rounded-3x overflow-hidden flex-shrink-0 mr-2">
+                            <img src="img/avatar-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="user-info flex-1">
+                            <h3 class="font-16 text-medium mb-2">
+                                Jasmine Welch <span class="d-block font-small text-black-50 text-medium">School
+                                    Nurse</span>
+                            </h3>
+                            <a href="#" class="btn-logout text-medium rounded-3x line-height-1 small">Sign Out</a>
+                        </div>
+                    </div>
+                    <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="list-group">
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">My Tasks <i
+                                class="icon-arrow-right font-16 text-primary"></i></a>
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">Incidents added
+                            by me <i class="icon-arrow-right font-16 text-primary"></i></a>
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">Files added By me
+                            <i class="icon-arrow-right font-16 text-primary"></i></a>
+                        <a href="#!" class="list-group-item font-small text-medium line-height-1 py-3">Saved Search <i
+                                class="icon-arrow-right font-16 text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0 py-1"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- <script type="text/javascript" src="js/charts.js"></script>
+	<script type="text/javascript" src="js/addons/chartjs-labels.js"></script> -->
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/donutty.min.js"></script>
+    <!-- <script type="text/javascript" src="js/addons/jquery-asProgress.js"></script> -->
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$('#userActions').modal('show');
+
+            $('.h-progressbar').each(function () {
+                var progressCount = $(this).attr('data-count');
+                var progressMaxCount = $(this).attr('data-maxcount');
+                var count = progressCount / progressMaxCount;
+                var result = count * 100;
+                $(this).find('.progressCount').text(progressCount);
+                $(this).find('.progressRail').width(result + '%');
+            })
+
+            $('ul.login-actions li').click(function () {
+                $('span.icon-check.active').removeClass('active');
+                $(this).children().addClass("active");
+            });
+            /* var totalCase = 22;
+            var solvedCase =  16;
+            var count = solvedCase / totalCase;
+            var result = count * 100;
+            console.log(result); */
+        });
+    </script>
+
+</body>
+
+</html>

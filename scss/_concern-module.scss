@@ -1,0 +1,29 @@
+.basic-Details {
+    .add-sub-category{
+        .multiselect-btns {
+            .btn {
+                font-weight: 400;
+                box-shadow: none;
+                background: #F3F6F9;
+                border-radius: 6px;
+                font-size: $base-font-size - 4;
+                text-transform: capitalize;
+                padding: 3px 15px;
+                margin: 0 5px 10px 0;
+                &.active, &:hover {
+                    color: $primary-color;
+                    box-shadow: none;
+                }
+                i{
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+.student-img{
+    height: 90px;
+    width: 90px;
+    border: 3px solid white;
+}

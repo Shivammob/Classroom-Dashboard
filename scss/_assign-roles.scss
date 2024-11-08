@@ -1,0 +1,147 @@
+/***  Assign Role table  ****/
+.assign-role-table{
+    table{
+      tbody{
+        td{
+          padding-left: 0;
+        }
+      }
+    }
+}
+/***  Assign Role table  ****/
+.school-admin{
+    table{
+        .userList{
+            .avatar{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+/***  roles-school-admin add user drawer  ****/
+.add-user-modal{
+    .user-img{
+        width: 130px;
+        height: 130px;
+        margin-top: -70px;
+        border: 7px solid #fff;
+    }
+}
+/***  roles-school-admin add user drawer   ****/
+
+/**  roles add user   ***/
+.avatar.small-img {
+  width: rem(35px);
+  height: rem(35px);
+}
+.add-user {
+  .vertical-nav-panel {
+      .label-small{
+         font-size: rem(12px);
+      }
+      .tab-scroll {
+        max-height: calc(100vh - 100px) !important;
+      }
+      .school-list-scroll {
+        max-height: calc(100vh - 100px) !important;
+      }
+      .nav-pills {
+          .nav-item.corner-edge .active::after {
+              top: rem(25px);
+          }  
+      }
+  }
+  .chk-customs {
+    /**  overwriting display none class while add d-flex to html  **/
+    .userList {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+    .checkbox-right {
+      padding-right: rem(30px);
+    }
+    .custom-control-label {
+        padding-right: 1.5rem;
+    }
+    .custom-control-label:before, .custom-control-label:after {
+        right: 0;
+        left: auto;
+     }
+  }
+}
+.user-role{
+  &__left{
+    width: 43%;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      border-right: none!important;
+    }
+  }
+  &__right{
+    width: 57%;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}
+.search-field-front-icon {
+padding: rem(10px 16px);
+}
+/**  roles add user  end ***/
+
+/***  role-permission   ****/
+
+// .role_permission{
+//   .sub-panel-tabs{
+//     .nav-pills{
+//       .nav-item{
+//         margin: rem(5px) 0;
+//         .nav-link.active, .nav-pills .show>.nav-link {
+//           color: $pillpanle-text-active; 
+//           background-color: $bg-grey; 
+//         }
+//       }
+//       .nav-item > a:before {
+//         float: left;
+//         font-family: "Font Awesome 5 Free"; 
+//         font-weight: 900;
+//         content:"\f067";
+//         padding-right: rem(9px);
+//       }
+//       .nav-item > a.active:before {
+//         float: left;
+//         content:"\f068";
+//         color:$primary-color;
+//       }
+//     }
+//   }
+// }
+
+/***  role-permission  end ****/
+
+/***  manage user   ****/
+.manage-user{
+  // #add-edit-roles{
+    .red-dot{
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: $primary-color;
+    }
+  // }
+  .chk-customs {
+    .custom-control-label {
+        padding-right: 1.5rem;
+    }
+    .custom-control-label:before, .custom-control-label:after {
+        right: 0;
+        left: auto;
+     }
+  }
+}
+
+
+
+

@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>HSE - Manage User</title>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+      <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+      <!-- Material Design Bootstrap -->
+      <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <!-- header start -->
+      <header>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 col-md-12 col">
+                  <!--Navbar -->
+                  <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                     <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                     <span class="portal-name position-absolute">HSE</span>
+                     <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                     </a>
+                     <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                     <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                     </a>
+                     <button class="navbar-toggler first-button" type="button">
+                        <div class="animated-icon1"><span></span><span></span><span></span></div>
+                     </button>
+                     <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                           <li class="nav-item dropdown language-switcher mr-4">
+                              <button
+                                 class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                 type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                              English
+                              </button>
+                              <div
+                                 class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                 <a class="dropdown-item d-block" href="#">
+                                 <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                 Arabic
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                 class="loggedInUser d-flex align-items-center my-3">
+                                 <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                 <img src="img/avatar-1.jpg" alt="">
+                                 </span>
+                                 <h3 class="text-medium font-small m-0 mr-2">
+                                    Jasmine Welch
+                                    <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                 </h3>
+                                 <i class="icon-chevron-down"></i>
+                              </a>
+                           </li>
+                           <!-- <li class="nav-item dropdown notifications">
+                              <a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              	<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+                              	<a class="dropdown-item" href="#">English</a>
+                              	<a class="dropdown-item" href="#">Arabic</a>
+                              </div>
+                              </li>
+                              <li class="nav-item avatar dropdown">
+                              <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              	<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+                              	<div class="profile-card clearfix d-flex">
+                              		<div class="profile-img float-left d-block">
+                              			<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+                              		</div>
+                              		<div class="profile-name float-left d-block align-middle align-self-center">
+                              			<h3>Emilia Clark</h3>
+                              			<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+                              				<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+                              			</a>
+                              		</div>
+                              	</div>
+                              	<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+                              	<ul class="profile-actions">
+                              		<li class="dropdown-divider"></li>
+                              		<li><a href="">View Profile</a></li>
+                              		<li><a href="">Account Settings</a></li>
+                              		<li class="dropdown-divider"></li>
+                              		<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+                              	</ul>
+                              </div>
+                              </li> -->
+                        </ul>
+                     </div>
+                  </nav>
+                  <!--/.Navbar -->
+               </div>
+            </div>
+         </div>
+         <!-- Sidebar -->
+         <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+               <a href="dashboard.html" class="list-group-item mt-2">
+               <span class="ic-dashboard title-icon"></span>Dashboard
+               </a>
+               <a href="incidents.html" class="list-group-item active">
+               <span class="ic-incidents title-icon"></span>Incidents
+               </a>
+               <a href="staff.html" class="list-group-item">
+               <span class="ic-staff title-icon"></span>Staff Student
+               </a>
+               <a href="covid19.html" class="list-group-item">
+               <span class="ic-covid-19 title-icon"></span>Covid-19
+               </a>
+               <!-- <a href="audits.html" class="list-group-item waves-effect">
+                  <span class="ic-audits title-icon"></span>Create Audit
+                  </a> -->
+               <!-- <div id="auditmenu" class="collapse sub-menu">
+                  <a href="#">View Audit</a>
+                  <a href="#">Edit Audit</a>
+                  </div> -->
+               <a href="audit-scheduled.html" class="list-group-item">
+               <span class="ic-audit-inspection title-icon"></span>Perform Audit
+               </a>
+               <a href="tasklist.html" class="list-group-item">
+               <span class="ic-tasks title-icon"></span>Tasks Details
+               </a>
+               <a href="library.html" class="list-group-item">
+               <span class="ic-library title-icon"></span>Library
+               </a>
+               <a href="reports.html" class="list-group-item">
+               <span class="ic-reports title-icon"></span>Reports
+               </a>
+               <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+               <span class="ic-score title-icon"></span>Score Card YTD
+               </a>
+            </div>
+         </div>
+         <!-- Sidebar -->
+      </header>
+      <!-- header end -->
+      <main class="pt-5 mx-lg-1 mt-4">
+         <div class="container-fluid student-profile manage-user mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+               <div class="col-12">
+                  <div
+                     class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+                     <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                        <h3 class="page-title text-primary text-semibold m-0">Manage User</h3>
+                        <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                           <li class="font-small text-medium text-black-50"><a href="#">Home</a></li>
+                           <li class="font-small text-medium text-black-50"><a href="#">Roles</a></li>
+                           <li class="font-small text-medium text-black-50">Manage User</li>
+                        </ul>
+                     </div>
+                     <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button">
+                     <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Accidents
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <!-- subheader end -->
+            <!-- manage user  -->
+            <div class="row">
+               <div class="col-md-12 col-12">
+                  <div class="card mb-3">
+                     <div class="card-body p-4">
+                        <div class="d-flex student-meta flex-column flex-md-row">
+                           <figure class="mr-3 rounded-2x mb-0">
+                              <img src="img/student.png" alt="" class="img-fluid-backend">
+                           </figure>
+                           <div class="d-block grade-list-border">
+                              <h3 class="font-16 text-black text-semibold m-0 ">Abba Lacopati</h3>
+                              <h6
+                                 class="text-black-50 text-semibold small line-height-1 pr-3 mr-3 m-0 py-1 py-md-2">
+                                 p.mcloughlin_wis
+                              </h6>
+                              <h6 class="text-black-50 text-semibold font-small line-height-1 m-0 pr-md-2">GEMS
+                                 Virtual School (GVS)
+                              </h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 col-12">
+                  <div class="card mb-3">
+                     <div class="card-body p-4">
+                        <div class="pill-panel">
+                           <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                              role="tablist">
+                              <li class="nav-item">
+                                 <a class="nav-link bg-white text-medium px-0 active" data-toggle="pill"
+                                    href="#assigned-locations" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">Assigned Locations</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab"
+                                    data-toggle="pill" href="#assigned-roles" role="tab"
+                                    aria-selected="false">Assigned Roles</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab"
+                                    data-toggle="pill" href="#add-edit-roles" role="tab"
+                                    aria-selected="false">Add/Edit Roles</a>
+                              </li>
+                           </ul>
+                           <div class="tab-content" id="">
+                              <!-- assigned-locations tab -->
+                              <div class="tab-pane fade show active" id="assigned-locations" role="tabpanel">
+                                 <div class="row mt-3">
+                                    <div class="col-lg-12 col-12">
+                                       <div
+                                          class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-3">
+                                          <div class="row">
+                                             <div class="col-lg-4 col-md-4 col-12">
+                                                <small class="text-medium">Search</small>
+                                                <div
+                                                   class="md-form md-outline mb-3 rounded-2x d-flex align-items-center flex-row-reverse bg-white flex-1 search-field-front-icon">
+                                                   <input type="text"
+                                                      class="form-control flex-1 p-0 border-0 m-0 ml-2"
+                                                      placeholder="Search">
+                                                   <!-- <img src="img/svg/search.svg" alt="" class="text-primary"> -->
+                                                   <i
+                                                      class="icon-search text-primary text-semibold ic-2x"></i>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-4 col-md-4 col-12 px-md-1 px-lg-2">
+                                                <div class="locations">
+                                                   <small class="text-medium">Locations</small>
+                                                   <div class="md-form md-outline mb-0 ">
+                                                      <select class="selectpicker"
+                                                         data-style="btn-white border-0 px-3"
+                                                         data-size="5" title="All">
+                                                         <option value="1">Accident</option>
+                                                         <option value="23">Child Safeguarding</option>
+                                                         <option value="4">Environmental Incident
+                                                         </option>
+                                                         <option value="29">Fire</option>
+                                                         <option value="2">Illness</option>
+                                                         <option value="3">Near Miss</option>
+                                                         <option value="7">Property Damage</option>
+                                                         <option value="6">Security</option>
+                                                         <option value="5">Vehicle</option>
+                                                      </select>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-4 col-md-4 col-12 px-md-1 px-lg-2">
+                                                <div class="category">
+                                                   <small class="text-medium">Roles</small>
+                                                   <div class="md-form md-outline mb-0">
+                                                      <select class="selectpicker"
+                                                         data-style="btn-white border-0 px-3"
+                                                         data-size="5" title="All">
+                                                         <option value="1">Gems Virtual School (GVS)
+                                                         </option>
+                                                         <option value="2">Gems Virtual School (GVS)
+                                                         </option>
+                                                         <option value="3">Gems Virtual School (GVS)
+                                                         </option>
+                                                         <option value="4">Gems Virtual School (GVS)
+                                                         </option>
+                                                         <option value="5">Gems Virtual School (GVS)
+                                                         </option>
+                                                      </select>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <table id="manageuserListTable"
+                                          class="table table-hover table-responsive-md" cellspacing="0"
+                                          width="100%">
+                                          <thead>
+                                             <tr>
+                                                <th style="width: 500px;">Locations</th>
+                                                <th>Roles</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr>
+                                                <td>
+                                                   <div class="locations">
+                                                      <h5
+                                                         class="text-medium text-black text-bold font-small mb-1">
+                                                         Liberty School For Boys (LBS)
+                                                      </h5>
+                                                      <h5
+                                                         class="text-medium text-black-50 mb-0 font-small">
+                                                         Dubai - UAE
+                                                      </h5>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h6
+                                                      class="small text-medium text-black-50 text-semibold">
+                                                      School Admin, Medical Staff, Safeguard Lead
+                                                   </h6>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td>
+                                                   <div class="locations">
+                                                      <h5
+                                                         class="text-medium text-black text-bold font-small mb-1">
+                                                         Garden Grove Institute (GGI)
+                                                      </h5>
+                                                      <h5
+                                                         class="text-medium text-black-50 mb-0 font-small">
+                                                         Dubai - UAE
+                                                      </h5>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h6
+                                                      class="small text-medium text-black-50 text-semibold">
+                                                      Safeguard Lead
+                                                   </h6>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td>
+                                                   <div class="locations">
+                                                      <h5
+                                                         class="text-medium text-black text-bold font-small mb-1">
+                                                         Oyster Harbour School (OHS)
+                                                      </h5>
+                                                      <h5
+                                                         class="text-medium text-black-50 mb-0 font-small">
+                                                         Dubai - UAE
+                                                      </h5>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h6
+                                                      class="small text-medium text-black-50 text-semibold">
+                                                      School Admin, Medical Staff, Safeguard Lead, HSE
+                                                      Committee, Other
+                                                   </h6>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td>
+                                                   <div class="locations">
+                                                      <h5
+                                                         class="text-medium text-black text-bold font-small mb-1">
+                                                         Gems Virtual School (GVS)
+                                                      </h5>
+                                                      <h5
+                                                         class="text-medium text-black-50 mb-0 font-small">
+                                                         Dubai - UAE
+                                                      </h5>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h6
+                                                      class="small text-medium text-black-50 text-semibold">
+                                                      School Admin, Medical Staff, Safeguard Lead
+                                                   </h6>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td>
+                                                   <div class="locations">
+                                                      <h5
+                                                         class="text-medium text-black text-bold font-small mb-1">
+                                                         Gems Virtual School (GVS)
+                                                      </h5>
+                                                      <h5
+                                                         class="text-medium text-black-50 mb-0 font-small">
+                                                         Dubai - UAE
+                                                      </h5>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h6
+                                                      class="small text-medium text-black-50 text-semibold">
+                                                      School Admin, Safeguard Lead
+                                                   </h6>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td>
+                                                   <div class="locations">
+                                                      <h5
+                                                         class="text-medium text-black text-bold font-small mb-1">
+                                                         Gems Virtual School (GVS)
+                                                      </h5>
+                                                      <h5
+                                                         class="text-medium text-black-50 mb-0 font-small">
+                                                         Dubai - UAE
+                                                      </h5>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                   <h6
+                                                      class="small text-medium text-black-50 text-semibold">
+                                                      HSE Committee
+                                                   </h6>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- assigned-locations -->
+                              <!-- assigned-roles -->
+                              <div class="tab-pane fade" id="assigned-roles" role="tabpanel">
+                                 <div class="row mt-3">
+                                    <div class="col-lg-12 col-12">
+                                       <div class="vertical-nav-panel">
+                                          <div class="row">
+                                             <div class="col-md-3 mb-3">
+                                                <!-- ---------Nav Pills---------   -->
+                                                <ul class="nav nav-pills flex-column" id="myTab"
+                                                   role="tablist">
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-admin-tab" data-toggle="tab"
+                                                         href="#school-admin" role="tab"
+                                                         aria-controls="school-admin"
+                                                         aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link active py-3 mb-0 border-bottom"
+                                                         id="safeguarding-lead-tab" data-toggle="tab"
+                                                         href="#safeguarding-lead" role="tab"
+                                                         aria-controls="safeguarding-lead"
+                                                         aria-selected="false">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-semibold mb-1">
+                                                            Safeguarding Lead
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            4
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="hse-committee-tab" data-toggle="tab"
+                                                         href="#hse-committee" role="tab"
+                                                         aria-controls="hse-committee"
+                                                         aria-selected="false">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            HSE Committee
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            12
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0" id="medical-staff-tab"
+                                                         data-toggle="tab" href="#medical-staff"
+                                                         role="tab" aria-controls="medical-staff"
+                                                         aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            Medical Staff
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            1
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                </ul>
+                                                <!-- ---------Nav Pills end---------   -->
+                                             </div>
+                                             <!-- /.col-md-4 -->
+                                             <div class="col-md-9 border-left pl-4">
+                                                <div class="tab-content" id="myTabContent">
+                                                   <!-- ---------school-admin Pills---------   -->
+                                                   <div class="tab-pane fade" id="school-admin"
+                                                      role="tabpanel" aria-labelledby="school-admin-tab">
+                                                      <h5
+                                                         class="text-black text-semibold text-capitalize mt-1 mb-0">
+                                                         School Admin
+                                                      </h5>
+                                                   </div>
+                                                   <!-- ---------school-admin Pills end---------   -->
+                                                   <!-- ---------safeguarding-lead---------   -->
+                                                   <div class="tab-pane fade active show"
+                                                      id="safeguarding-lead" role="tabpanel"
+                                                      aria-labelledby="safeguarding-lead">
+                                                      <div class="row">
+                                                         <div class="col-lg-12 col-12">
+                                                            <div
+                                                               class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-3">
+                                                               <div class="row">
+                                                                  <div
+                                                                     class="col-lg-4 col-md-4 col-12">
+                                                                     <small
+                                                                        class="text-medium">Search</small>
+                                                                     <div
+                                                                        class="md-form md-outline mb-3 rounded-2x d-flex align-items-center flex-row-reverse bg-white flex-1 search-field-front-icon">
+                                                                        <input type="text"
+                                                                           class="form-control flex-1 p-0 border-0 m-0 ml-2"
+                                                                           placeholder="Search">
+                                                                        <!-- <img src="img/svg/search.svg" alt="" class="text-primary"> -->
+                                                                        <i
+                                                                           class="icon-search text-primary text-semibold ic-2x"></i>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="col-lg-4 col-md-4 col-12 px-md-1 px-lg-2">
+                                                                     <div class="locations">
+                                                                        <small
+                                                                           class="text-medium">Locations</small>
+                                                                        <div
+                                                                           class="md-form md-outline mb-0 ">
+                                                                           <select
+                                                                              class="selectpicker"
+                                                                              data-style="btn-white border-0 px-3"
+                                                                              data-size="5"
+                                                                              title="All">
+                                                                              <option value="1">
+                                                                                 Accident
+                                                                              </option>
+                                                                              <option value="23">
+                                                                                 Child
+                                                                                 Safeguarding
+                                                                              </option>
+                                                                              <option value="4">
+                                                                                 Environmental
+                                                                                 Incident
+                                                                              </option>
+                                                                              <option value="29">
+                                                                                 Fire
+                                                                              </option>
+                                                                              <option value="2">
+                                                                                 Illness
+                                                                              </option>
+                                                                              <option value="3">
+                                                                                 Near Miss
+                                                                              </option>
+                                                                              <option value="7">
+                                                                                 Property Damage
+                                                                              </option>
+                                                                              <option value="6">
+                                                                                 Security
+                                                                              </option>
+                                                                              <option value="5">
+                                                                                 Vehicle
+                                                                              </option>
+                                                                           </select>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="col-lg-4 col-md-4 col-12 px-md-1 px-lg-2">
+                                                                     <div class="category">
+                                                                        <small
+                                                                           class="text-medium">Label</small>
+                                                                        <div
+                                                                           class="md-form md-outline mb-0">
+                                                                           <select
+                                                                              class="selectpicker"
+                                                                              data-style="btn-white border-0 px-3"
+                                                                              data-size="5"
+                                                                              title="All">
+                                                                              <option value="1">
+                                                                                 Gems Virtual
+                                                                                 School (GVS)
+                                                                              </option>
+                                                                              <option value="2">
+                                                                                 Gems Virtual
+                                                                                 School (GVS)
+                                                                              </option>
+                                                                              <option value="3">
+                                                                                 Gems Virtual
+                                                                                 School (GVS)
+                                                                              </option>
+                                                                              <option value="4">
+                                                                                 Gems Virtual
+                                                                                 School (GVS)
+                                                                              </option>
+                                                                              <option value="5">
+                                                                                 Gems Virtual
+                                                                                 School (GVS)
+                                                                              </option>
+                                                                           </select>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <table id="assignrolesTable"
+                                                               class="table table-hover table-responsive-md"
+                                                               cellspacing="0" width="100%">
+                                                               <thead>
+                                                                  <tr>
+                                                                     <th>
+                                                                        Locations
+                                                                     </th>
+                                                                  </tr>
+                                                               </thead>
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <div class="locations">
+                                                                           <h5
+                                                                              class="text-medium text-black-50 font-small mb-1">
+                                                                              Liberty School For
+                                                                              Boys (LBS)
+                                                                           </h5>
+                                                                           <h5
+                                                                              class="text-medium text-black-50 mb-0 font-small">
+                                                                              Dubai - UAE
+                                                                           </h5>
+                                                                        </div>
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <div class="locations">
+                                                                           <h5
+                                                                              class="text-medium text-black-50 font-small mb-1">
+                                                                              Liberty School For
+                                                                              Boys (LBS)
+                                                                           </h5>
+                                                                           <h5
+                                                                              class="text-medium text-black-50 mb-0 font-small">
+                                                                              Dubai - UAE
+                                                                           </h5>
+                                                                        </div>
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <div class="locations">
+                                                                           <h5
+                                                                              class="text-medium text-black-50 font-small mb-1">
+                                                                              Liberty School For
+                                                                              Boys (LBS)
+                                                                           </h5>
+                                                                           <h5
+                                                                              class="text-medium text-black-50 mb-0 font-small">
+                                                                              Dubai - UAE
+                                                                           </h5>
+                                                                        </div>
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <div class="locations">
+                                                                           <h5
+                                                                              class="text-medium text-black-50 font-small mb-1">
+                                                                              Liberty School For
+                                                                              Boys (LBS)
+                                                                           </h5>
+                                                                           <h5
+                                                                              class="text-medium text-black-50 mb-0 font-small">
+                                                                              Dubai - UAE
+                                                                           </h5>
+                                                                        </div>
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <!-- ---------safeguarding Pills end---------   -->
+                                                   <div class="tab-pane fade" id="hse-committee"
+                                                      role="tabpanel" aria-labelledby="hse-committee-tab">
+                                                      <h5>HSE Committee</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="medical-staff"
+                                                      role="tabpanel" aria-labelledby="medical-staff">
+                                                      <h5>Medical Staff</h5>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.col-md-8 -->
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- assigned-roles -->
+                              <!-- add-edit-roles -->
+                              <div class="tab-pane fade" id="add-edit-roles" role="tabpanel">
+                                 <div class="row mt-3">
+                                    <div class="col-lg-12 col-12">
+                                       <div class="vertical-nav-panel">
+                                          <div class="row">
+                                             <div class="col-md-3 mb-3">
+                                                <!-- ---------Nav Pills---------   -->
+                                                <ul class="nav nav-pills flex-column" id="myTab"
+                                                   role="tablist">
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-tab" data-toggle="tab" href="#school"
+                                                         role="tab" aria-controls="school"
+                                                         aria-selected="true">
+                                                         <div class="d-flex align-items-center justify-content-between ">
+                                                            <div class="titles">
+                                                               <h6
+                                                                  class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                                  School Admin
+                                                               </h6>
+                                                               <h6 class="small text-black-50 text-medium m-0">
+                                                                  3
+                                                                  Locations
+                                                               </h6>
+                                                            </div>
+                                                            <div class="red-dot"></div>
+                                                         </div>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link active py-3 mb-0 border-bottom"
+                                                         id="safeguarding-tab" data-toggle="tab"
+                                                         href="#safeguarding" role="tab"
+                                                         aria-controls="safeguarding"
+                                                         aria-selected="false">
+                                                         <div class="d-flex align-items-center justify-content-between ">
+                                                            <div class="titles">
+                                                               <h6
+                                                                  class="font-small m-0 p-0 text-capitalize text-semibold mb-1">
+                                                                  Safeguarding Lead
+                                                               </h6>
+                                                               <h6 class="small text-black-50 text-medium m-0">
+                                                                  4
+                                                                  Locations
+                                                               </h6>
+                                                            </div>
+                                                            <div class="red-dot"></div>
+                                                         </div>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="committee-tab" data-toggle="tab"
+                                                         href="#committee" role="tab"
+                                                         aria-controls="committee" aria-selected="false">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            HSE Committee
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            12
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="medical-tab" data-toggle="tab"
+                                                         href="#medical" role="tab"
+                                                         aria-controls="medical" aria-selected="true">
+                                                         <div class="d-flex align-items-center justify-content-between ">
+                                                            <div class="titles">
+                                                               <h6
+                                                                  class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                                  Medical Staff
+                                                               </h6>
+                                                               <h6 class="small text-black-50 text-medium m-0">
+                                                                  1
+                                                                  Locations
+                                                               </h6>
+                                                            </div>
+                                                            <div class="red-dot"></div>
+                                                         </div>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-tab1" data-toggle="tab"
+                                                         href="#school1" role="tab"
+                                                         aria-controls="school1" aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-tab2" data-toggle="tab"
+                                                         href="#school2" role="tab"
+                                                         aria-controls="school2" aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-tab3" data-toggle="tab"
+                                                         href="#school3" role="tab"
+                                                         aria-controls="school3" aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-tab4" data-toggle="tab"
+                                                         href="#school4" role="tab"
+                                                         aria-controls="school4" aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-tab5" data-toggle="tab"
+                                                         href="#school5" role="tab"
+                                                         aria-controls="school5" aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0 border-bottom"
+                                                         id="school-tab6" data-toggle="tab"
+                                                         href="#school6" role="tab"
+                                                         aria-controls="school6" aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link py-3 mb-0" id="school-tab7"
+                                                         data-toggle="tab" href="#school7" role="tab"
+                                                         aria-controls="school7" aria-selected="true">
+                                                         <h6
+                                                            class="font-small m-0 p-0 text-capitalize text-black-50 text-semibold mb-1">
+                                                            School Admin
+                                                         </h6>
+                                                         <h6 class="small text-black-50 text-medium m-0">
+                                                            3
+                                                            Locations
+                                                         </h6>
+                                                      </a>
+                                                   </li>
+                                                </ul>
+                                                <!-- ---------Nav Pills end---------   -->
+                                             </div>
+                                             <!-- /.col-md-4 -->
+                                             <div class="col-md-9 border-left pl-4">
+                                                <div class="tab-content" id="myTabContent">
+                                                   <!-- ---------school Pills---------   -->
+                                                   <div class="tab-pane fade" id="school" role="tabpanel"
+                                                      aria-labelledby="school-tab">
+                                                      <h5
+                                                         class="text-black text-semibold text-capitalize mt-1 mb-0">
+                                                         School Admin
+                                                      </h5>
+                                                   </div>
+                                                   <!-- ---------school Pills end---------   -->
+                                                   <!-- ---------safeguarding-lead---------   -->
+                                                   <div class="tab-pane fade active show" id="safeguarding"
+                                                      role="tabpanel" aria-labelledby="safeguarding">
+                                                      <div class="row">
+                                                         <div class="col-lg-12 col-12">
+                                                            <div class="school-location">
+                                                               <h5 class="mb-4 text-semibold">Safeguard
+                                                                  Lead
+                                                               </h5>
+                                                               <!-- data filters -->
+                                                               <div
+                                                                  class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-3">
+                                                                  <div class="row">
+                                                                     <div
+                                                                        class="col-lg-4 col-12 px-md-1 px-lg-2">
+                                                                        <small
+                                                                           class="text-medium">Search</small>
+                                                                        <div
+                                                                           class="md-form md-outline mb-3 rounded-2x d-flex align-items-center flex-row-reverse bg-white flex-1 search-field-front-icon">
+                                                                           <input type="text"
+                                                                              class="form-control flex-1 p-0 border-0 m-0 ml-2"
+                                                                              placeholder="Search">
+                                                                           <!-- <img src="img/svg/search.svg" alt="" class="text-primary"> -->
+                                                                           <i
+                                                                              class="icon-search text-primary text-semibold ic-2x"></i>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div
+                                                                        class="col-lg-8 col-md-12 col-12">
+                                                                        <div class="row">
+                                                                           <div
+                                                                              class="col-md-6 col-12 px-md-1 px-lg-2">
+                                                                              <div
+                                                                                 class="locations">
+                                                                                 <small
+                                                                                    class="text-medium">Locations</small>
+                                                                                 <div
+                                                                                    class="md-form md-outline mb-3">
+                                                                                    <select
+                                                                                       class="selectpicker"
+                                                                                       data-style="btn-white border-0 px-3"
+                                                                                       data-size="5"
+                                                                                       title="All">
+                                                                                       <option
+                                                                                          value="1">
+                                                                                          Accident
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="23">
+                                                                                          Child
+                                                                                          Safeguarding
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="4">
+                                                                                          Environmental
+                                                                                          Incident
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="29">
+                                                                                          Fire
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="2">
+                                                                                          Illness
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="3">
+                                                                                          Near
+                                                                                          Miss
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="7">
+                                                                                          Property
+                                                                                          Damage
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="6">
+                                                                                          Security
+                                                                                       </option>
+                                                                                       <option
+                                                                                          value="5">
+                                                                                          Vehicle
+                                                                                       </option>
+                                                                                    </select>
+                                                                                 </div>
+                                                                              </div>
+                                                                           </div>
+                                                                           <div
+                                                                              class="col-md-6 col-12 pl-sm-0 px-md-1 px-lg-2">
+                                                                              <div class="label">
+                                                                                 <small
+                                                                                    class="text-medium">Label</small>
+                                                                                 <div
+                                                                                    class="md-form md-outline mb-3">
+                                                                                    <select
+                                                                                       class="selectpicker"
+                                                                                       data-style="btn-white border-0 px-3"
+                                                                                       data-size="5"
+                                                                                       title="All">
+                                                                                       <option>
+                                                                                          Minor
+                                                                                       </option>
+                                                                                       <option>
+                                                                                          Sesrious
+                                                                                       </option>
+                                                                                    </select>
+                                                                                 </div>
+                                                                              </div>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class="row">
+                                                                     <div
+                                                                        class="col-sm-5 col-12 align-self-center mb-3 mb-sm-0">
+                                                                        <div
+                                                                           class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                           <input type="checkbox"
+                                                                              class="custom-control-input"
+                                                                              id="chkbox12">
+                                                                           <label
+                                                                              class="custom-control-label small label-small"
+                                                                              for="chkbox12">Show
+                                                                           Only Checked</label>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                               <!-- data filters end -->
+                                                               <div
+                                                                  class="chk-customs d-flex justify-content-between align-items-center pb-2 border-bottom border-dark">
+                                                                  <h6
+                                                                     class="text-black text-medium text-semibold text-capitalize mb-n2">
+                                                                     School locations
+                                                                  </h6>
+                                                                  <div
+                                                                     class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                     <input type="checkbox"
+                                                                        class="custom-control-input"
+                                                                        id="all">
+                                                                     <label
+                                                                        class="custom-control-label"
+                                                                        for="all">All</label>
+                                                                  </div>
+                                                               </div>
+                                                               <div
+                                                                  class="school-location-lists chk-customs">
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox14">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox14"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox15">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox15"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox16">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox16"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox17">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox17"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox18">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox18"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox19">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox19"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox20">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox20"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox21">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox21"></label>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div
+                                                                     class="userList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                                     <div class="userData ml-2">
+                                                                        <h5
+                                                                           class="text-medium text-black-50 text-medium font-small mb-1">
+                                                                           Liberty School For Boys
+                                                                           (LBS)
+                                                                        </h5>
+                                                                        <h5
+                                                                           class="text-medium text-black-50 mb-0 font-small">
+                                                                           Dubai - UAE
+                                                                        </h5>
+                                                                     </div>
+                                                                     <div
+                                                                        class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                        <input type="checkbox"
+                                                                           class="custom-control-input"
+                                                                           id="chkbox22">
+                                                                        <label
+                                                                           class="custom-control-label"
+                                                                           for="chkbox22"></label>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                               <div
+                                                                  class="d-flex justify-content-end mt-4">
+                                                                  <button class="btn btn-primary m-0"
+                                                                     type="button">Save</button>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <!-- ---------safeguarding Pills end---------   -->
+                                                   <div class="tab-pane fade" id="committee"
+                                                      role="tabpanel" aria-labelledby="committee-tab">
+                                                      <h5>HSE Committee</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="medical" role="tabpanel"
+                                                      aria-labelledby="medical">
+                                                      <h5>Medical Staff</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="school1" role="tabpanel"
+                                                      aria-labelledby="school1">
+                                                      <h5>school1</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="school2" role="tabpanel"
+                                                      aria-labelledby="school2">
+                                                      <h5>school2</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="school3" role="tabpanel"
+                                                      aria-labelledby="school3">
+                                                      <h5>school3</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="school4" role="tabpanel"
+                                                      aria-labelledby="school4">
+                                                      <h5>school4</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="school5" role="tabpanel"
+                                                      aria-labelledby="school5">
+                                                      <h5>school5</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="school6" role="tabpanel"
+                                                      aria-labelledby="school6">
+                                                      <h5>school6</h5>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="school7" role="tabpanel"
+                                                      aria-labelledby="school7">
+                                                      <h5>school7</h5>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.col-md-8 -->
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- add-edit-roles -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--manage user end -->
+         </div>
+      </main>
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/popper.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/mdb.min.js"></script>
+      <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+      <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+      <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+      <script></script>
+   </body>
+</html>

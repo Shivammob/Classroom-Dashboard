@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Concern - Details</title>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+      <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+      <!-- Material Design Bootstrap -->
+      <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <!-- header start -->
+      <header>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 col-md-12 col">
+                  <!--Navbar -->
+                  <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                     <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                     <span class="portal-name position-absolute">HSE</span>
+                     <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                     </a>
+                     <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                     <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                     </a>
+                     <button class="navbar-toggler first-button" type="button">
+                        <div class="animated-icon1"><span></span><span></span><span></span></div>
+                     </button>
+                     <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                           <li class="nav-item dropdown language-switcher mr-4">
+                              <button
+                                 class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                 type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                              English
+                              </button>
+                              <div
+                                 class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                 <a class="dropdown-item d-block" href="#">
+                                 <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                 Arabic
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                 class="loggedInUser d-flex align-items-center my-3">
+                                 <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                 <img src="img/avatar-1.jpg" alt="">
+                                 </span>
+                                 <h3 class="text-medium font-small m-0 mr-2">
+                                    Jasmine Welch
+                                    <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                 </h3>
+                                 <i class="icon-chevron-down"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+                  <!--/.Navbar -->
+               </div>
+            </div>
+         </div>
+         <!-- Sidebar -->
+         <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+               <a href="dashboard.html" class="list-group-item mt-2">
+               <span class="ic-dashboard title-icon"></span>Dashboard
+               </a>
+               <a href="incidents.html" class="list-group-item active">
+               <span class="ic-incidents title-icon"></span>Incidents
+               </a>
+               <a href="staff.html" class="list-group-item">
+               <span class="ic-staff title-icon"></span>Staff Student
+               </a>
+               <a href="covid19.html" class="list-group-item">
+               <span class="ic-covid-19 title-icon"></span>Covid-19
+               </a>
+               <!-- <a href="audits.html" class="list-group-item waves-effect">
+                  <span class="ic-audits title-icon"></span>Create Audit
+                  </a> -->
+               <!-- <div id="auditmenu" class="collapse sub-menu">
+                  <a href="#">View Audit</a>
+                  <a href="#">Edit Audit</a>
+                  </div> -->
+               <a href="audit-scheduled.html" class="list-group-item">
+               <span class="ic-audit-inspection title-icon"></span>Perform Audit
+               </a>
+               <a href="tasklist.html" class="list-group-item">
+               <span class="ic-tasks title-icon"></span>Tasks Details
+               </a>
+               <a href="library.html" class="list-group-item">
+               <span class="ic-library title-icon"></span>Library
+               </a>
+               <a href="reports.html" class="list-group-item">
+               <span class="ic-reports title-icon"></span>Reports
+               </a>
+               <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+               <span class="ic-score title-icon"></span>Score Card YTD
+               </a>
+            </div>
+         </div>
+         <!-- Sidebar -->
+      </header>
+      <!-- header end -->
+      <main class="pt-5 mx-lg-1 mt-4">
+         <div class="container-fluid mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+               <div class="col-12">
+                  <div
+                     class="sub-header bg-white rounded-2x d-flex align-items-center justify-content-between pl-4 pr-2">
+                     <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                        <h3 class="page-title text-blue text-semibold m-0">Concern Details</h3>
+                        <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                           <li class="font-small text-medium text-black-50"><a class="text-primary" href="#">Home</a></li>
+                           <li class="font-small text-medium text-black-50"><a href="#" class="text-primary">Concern</a></li>
+                           <li class="font-small text-medium text-blue">Concern Details</li>
+                        </ul>
+                     </div>
+                     <button class="btn btn-primary d-flex align-items-center rounded-1x m-0 px-3" type="button">
+                     <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Concern
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <!-- subheader end -->
+            <!--incidents Details Box -->
+            <div class="row">
+               <div class="col-12 incidentList">
+                  <article class="py-3 bg-white rounded-2x pl-4 pr-2 position-relative">
+                     <div class="incident-meta d-flex align-items-center ">
+                        <div class="meta-left d-inline-flex align-items-center">
+                           <span
+                              class="badge badge-primary rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                           <h4
+                              class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                              ID #11075623
+                           </h4>
+                           <h4
+                              class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                              Accident <span class="text-medium text-black-50 text-initial"> - Behavioural, Chocking
+                              </span>
+                           </h4>
+                        </div>
+                        <div class="meta-right position-absolute details-action-right">
+                           <div class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                              <div class="quick-nav dropleft">
+                                 <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"
+                                    class="more-actions btn bg-light-pink p-0 border-0 m-0 rounded-circle z-depth-0">
+                                 <i class="fas fa-ellipsis-v text-primary"></i>
+                                 <span class="sr-only">Toggle Dropdown</span>
+                                 </button>
+                                 <div class="dropdown-menu z-depth-1 border-0">
+                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                       href="#">View</a>
+                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                       href="#">Edit</a>
+                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                       href="#">Reminder</a>
+                                    <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                       href="#">Report</a>
+                                    <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <h3
+                        class="incident-title font-small mt-3 mb-2 d-inline-flex align-items-start align-items-sm-center">
+                        <span class="d-inline-flex align-items-start align-items-sm-center">
+                        <i class="icon-school-1 ic-2x mr-2"></i>
+                        <span class="schoolName font-small text-medium text-black text-semibold mt-sm-1">Garden Grove Institute, Dubai - UAE</span>
+                        </span>
+                        <span
+                           class="timestamp text-medium text-black text-semibold font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                        <i class="icon-clock mr-2"></i> 3:29 PM, 24 May 2021
+                        </span>
+                     </h3>
+                  </article>
+               </div>
+            </div>
+            <!--incidents Details box end -->
+            <!-- incidents data -->
+            <div class="row mt-3">
+               <div class="col-md-12 col-12">
+                  <div class="card mb-3">
+                     <div class="card-body">
+                        <div class="pill-panel p-4">
+                           <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                              role="tablist">
+                              <li class="nav-item">
+                                 <a class="nav-link text-blue bg-white text-medium px-0 active" data-toggle="pill"
+                                    href="#overview" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">Overview</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link bg-white text-medium px-0" id="hsinvestigate-tab"
+                                    data-toggle="pill" href="#investigation" role="tab"
+                                    aria-selected="false">Investigation</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link bg-white text-medium px-0" id="hsinvestigate-tab"
+                                    data-toggle="pill" href="#documents" role="tab"
+                                    aria-selected="false">Documents</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link bg-white text-medium px-0" id="hsinvestigate-tab"
+                                    data-toggle="pill" href="#notes" role="tab"
+                                    aria-selected="false">Notes</a>
+                              </li>
+                           </ul>
+                           <div class="tab-content" id="">
+                              <!-- Overview tab -->
+                              <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                                 <div class="row">
+                                    <div class="col-md-8">
+                                       <div class="overview-details">
+                                          <div class="row">
+                                             <div class="col-12">
+                                                <div class="school mb-4">
+                                                   <h6 class="font-14 text-black-50 mb-1">School</h6>
+                                                   <h6 class="font-14 text-black-50">Garden Grove Institute (GGI), Dubai - UAE</h6>
+                                                </div>
+                                                <div class="location mb-4">
+                                                   <h6 class="font-14 text-black-50 mb-1">Location</h6>
+                                                   <h6 class="font-14 text-black-50">Garden Grove Institute (GGI), Dubai - UAE</h6>
+                                                </div>
+                                                <div class="victim">
+                                                   <h3 class="font-16 text-semibold">Victim</h3>
+                                                   <div class="d-flex student-meta mb-3 rounded-1x p-3 justify-content-between flex-wrap bg-light">
+                                                      <div class="d-flex student-details">
+                                                         <figure class="mr-3 mb-0 rounded-2x">
+                                                            <img src="img/student.png" alt="" class="img-fluid-backend">
+                                                         </figure>
+                                                         <div class="d-block grade-list-border">
+                                                            <h3 class="font-16 text-semibold text-black text-underline">Aaron Avery</h3>
+                                                            <ul class="d-flex flex-wrap">
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 pr-2 border-right border-default">
+                                                                  Student ID : 12501800992704
+                                                               </li>
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                                  Grade : 08
+                                                               </li>
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                                  GGI
+                                                               </li>
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2">
+                                                                  GGI
+                                                               </li>
+                                                            </ul>
+                                                            <ul class="d-flex flex-wrap">
+                                                               <li>
+                                                                  <a href="javascript:void(0)" class="text-primary text-regular text-underline small border-right pr-2">5 Incidents</a> 
+                                                               </li>
+                                                               <li>
+                                                                  <a href="javascript:void(0)" class="text-primary pl-2 text-regular text-underline small">View Body Maping</a>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="d-flex student-meta mb-4 rounded-1x p-3 justify-content-between flex-wrap bg-light">
+                                                      <div class="d-flex student-details">
+                                                         <figure class="mr-3 mb-0 rounded-2x">
+                                                            <img src="img/student.png" alt="" class="img-fluid-backend">
+                                                         </figure>
+                                                         <div class="d-block grade-list-border">
+                                                            <h3 class="font-16 text-semibold text-black text-underline">Aaron Avery</h3>
+                                                            <ul class="d-flex flex-wrap">
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 pr-2 border-right border-default">
+                                                                  Student ID : 12501800992704
+                                                               </li>
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                                  Grade : 08
+                                                               </li>
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2 border-right border-default">
+                                                                  GGI
+                                                               </li>
+                                                               <li
+                                                                  class="text-black-50 text-semibold font-small line-height-1 mb-2 mb-sm-0 px-2">
+                                                                  GGI
+                                                               </li>
+                                                            </ul>
+                                                            <ul class="d-flex flex-wrap">
+                                                               <li>
+                                                                  <a href="javascript:void(0)" class="text-primary text-regular text-underline small border-right pr-2">5 Incidents</a> 
+                                                               </li>
+                                                               <li>
+                                                                  <a href="javascript:void(0)" class="text-primary pl-2 text-regular text-underline small">View Body Maping</a>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="row">
+                                             <div class="col-12">
+                                                <div class="incident-occur mb-4">
+                                                   <label class="text-black font-16 text-semibold">Where did incident occur?</label>
+                                                   <h6 class="text-medium text-black-50 font-14">Section - Class room</h6>
+                                                </div>
+                                                <div class="incident-category mb-4">
+                                                   <label class="text-black font-16 text-semibold">Incident Category</label>
+                                                   <h6 class="text-medium text-black-50 font-14">Accident</h6>
+                                                </div>
+                                                <div class="incident-category mb-4">
+                                                   <label class="text-black font-16 text-semibold">Incident Sub Category</label>
+                                                   <h6 class="text-medium text-black-50 font-14">Behavioural</h6>
+                                                   <h6 class="text-medium text-black-50 font-14">Chocking</h6>
+                                                </div>
+                                                <div class="severity mb-4">
+                                                   <label class="text-black font-16 text-semibold">Severity</label>
+                                                   <h6 class="text-medium text-black-50 font-14">Major</h6>
+                                                </div>
+                                                <div class="severity mb-4">
+                                                   <label class="text-black font-16 text-semibold">Incident Occured On</label>
+                                                   <h6 class="text-medium text-black-50 font-14">3:29 PM, 24 May 2021</h6>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="row mb-4">
+                                             <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-baseline">
+                                                   <label class="text-capitalize font-16 text-medium text-black text-semibold d-block">Incident Description</label>
+                                                </div>
+                                                <div class="bg-light p-3 rounded-2x d-flex justify-content-between">
+                                                   <p class="font-14 text-regular mb-0 addReadMore showlesscontent">Met with Aida Bugg Mother in PTC meeting and updated her on Allie ’s recent comment about his parents’ divorce. I offered our school counsellor support and she has asked me to email Allie ’s Father asking for permission. I offered our school counsellor support and she has asked me to email Allie ’s Father asking for permission. I will be arranging a meeting between Allie ’s Mother</p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="row">
+                                             <div class="col-12">
+                                                <div class="severity mb-4">
+                                                   <label class="text-black font-16 text-semibold">Incident Reported by</label>
+                                                   <h6 class="text-medium text-black-50 font-14">Self</h6>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3 border-left">
+                                       <div class="documents mb-4">
+                                          <h3 class="font-16 text-semibold">Add Document</h3>
+                                          <div class="d-flex justify-content-between
+                                             align-items-center p-3 rounded-1x bg-light">
+                                             <span class="small text-medium d-flex align-items-end">
+                                             <i class="file-type-pdf ic-3x text-primary text-semibold mr-2"></i>
+                                             Document Name.pdf
+                                             </span>
+                                          </div>
+                                       </div>
+                                       <div class="linked-students mb-4">
+                                          <h3 class="font-16 text-semibold">Witness</h3>
+                                          <div class="d-flex justify-content-between
+                                             align-items-baseline bg-light p-3 rounded-1x mb-3">
+                                             <div class="avtar d-flex">
+                                                <figure class="avatar small-img mb-0">
+                                                   <img src="img/student.png" alt="" class="img-fluid rounded-1x">
+                                                </figure>
+                                                <div class="userData ml-2">
+                                                   <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Edwin George</h5>
+                                                   <h6 class="text-black-50 text-medium font-14">
+                                                      Student
+                                                   </h6>
+                                                   <ul class="d-flex flex-wrap mb-2">
+                                                      <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                                         12501800992704
+                                                      </li>
+                                                      <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                                         Grade : 08
+                                                      </li>
+                                                   </ul>
+                                                   <h6 class="text-medium text-primary mb-0 small text-underline">View Statement</h6>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between
+                                             align-items-baseline bg-light p-3 rounded-1x">
+                                             <div class="avtar d-flex">
+                                                <figure class="avatar small-img mb-0">
+                                                   <img src="img/student2.png" alt="" class="img-fluid rounded-1x">
+                                                </figure>
+                                                <div class="userData ml-2">
+                                                   <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Michael John</h5>
+                                                   <h6 class="text-black-50 text-medium font-14">
+                                                      Student
+                                                   </h6>
+                                                   <ul class="d-flex flex-wrap mb-2">
+                                                      <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                                         12501800992704
+                                                      </li>
+                                                      <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                                         Grade : 08
+                                                      </li>
+                                                   </ul>
+                                                   <h6 class="text-medium text-primary mb-0 small text-underline">View Statement</h6>
+                                                </div>
+                                            </div>
+                                          </div>
+                                       </div>
+                                       <div class="assailant mb-4">
+                                        <h3 class="font-16 text-semibold">Assailant</h3>
+                                        <div class="d-flex justify-content-between
+                                           align-items-baseline bg-light p-3 rounded-1x mb-3">
+                                           <div class="avtar d-flex">
+                                              <figure class="avatar small-img mb-0">
+                                                 <img src="img/student.png" alt="" class="img-fluid rounded-1x">
+                                              </figure>
+                                              <div class="userData ml-2">
+                                                 <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Edwin George</h5>
+                                                 <h6 class="text-black-50 text-medium font-14">
+                                                    Student
+                                                 </h6>
+                                                 <ul class="d-flex flex-wrap mb-2">
+                                                    <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                                       12501800992704
+                                                    </li>
+                                                    <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                                       Grade : 08
+                                                    </li>
+                                                 </ul>
+                                                 <h6 class="text-medium text-primary mb-0 small text-underline">View Actions</h6>
+                                              </div>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between
+                                           align-items-baseline bg-light p-3 rounded-1x">
+                                           <div class="avtar d-flex">
+                                              <figure class="avatar small-img mb-0">
+                                                 <img src="img/student2.png" alt="" class="img-fluid rounded-1x">
+                                              </figure>
+                                              <div class="userData ml-2">
+                                                 <h5 class="text-semibold text-dark font-small mb-1 text-underline font-16">Michael John</h5>
+                                                 <h6 class="text-black-50 text-medium font-14">
+                                                    Student
+                                                 </h6>
+                                                 <ul class="d-flex flex-wrap mb-2">
+                                                    <li class="text-black-50 text-medium font-14 line-height-1 pr-2 border-right border-default">
+                                                       12501800992704
+                                                    </li>
+                                                    <li class="text-black-50 text-medium font-14 line-height-1 px-2">
+                                                       Grade : 08
+                                                    </li>
+                                                 </ul>
+                                                 <h6 class="text-medium text-primary mb-0 small text-underline">View Actions</h6>
+                                              </div>
+                                          </div>
+                                        </div>
+                                     </div>
+                                       <div class="assailant-data">
+                                          <h3 class="font-16 text-semibold">Assailant</h3>
+                                          <div class="bg-light rounded-1x mb-3">
+                                             <h4><a href="#" class="d-flex justify-content-center font-small text-medium text-black-50 py-4">No Data</a></h4>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- Overview tab end-->
+                              <!-- Investigation -->
+                              <div class="tab-pane fade" id="investigation"
+                                 role="tabpanel">Investigation
+                              </div>
+                              <!-- Investigation end  -->
+                              <!-- Documents -->
+                              <div class="tab-pane fade" id="documents"
+                                 role="tabpanel">Documents
+                              </div>
+                              <!-- Documents end  -->
+                              <!-- Notes -->
+                              <div class="tab-pane fade" id="notes"
+                                 role="tabpanel">Notes
+                              </div>
+                              <!-- Notes end  -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+      </main>
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/popper.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/mdb.min.js"></script>
+      <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+      <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+      <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+
+      <script>
+        function AddReadMore() {
+            //This limit you can set after how much characters you want to show Read More.
+            var carLmt = 300;
+            // Text to show when text is collapsed
+            var readMoreTxt = " ... Read More";
+            // Text to show when text is expanded
+            var readLessTxt = " Read Less";
+    
+    
+            //Traverse all selectors with this class and manupulate HTML part to show Read More
+            $(".addReadMore").each(function() {
+                if ($(this).find(".firstSec").length)
+                    return;
+    
+                var allstr = $(this).text();
+                if (allstr.length > carLmt) {
+                    var firstSet = allstr.substring(0, carLmt);
+                    var secdHalf = allstr.substring(carLmt, allstr.length);
+                    var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + readMoreTxt + "</span><span class='readLess' title='Click to Show Less'>" + readLessTxt + "</span>";
+                    $(this).html(strtoadd);
+                }
+    
+            });
+            //Read More and Read Less Click Event binding
+            $(document).on("click", ".readMore,.readLess", function() {
+                $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+            });
+        }
+        $(function() {
+            //Calling function after Page Load
+            AddReadMore();
+        });
+     </script>
+   </body>
+</html>

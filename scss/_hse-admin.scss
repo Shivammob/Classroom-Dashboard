@@ -1,0 +1,31 @@
+.bulk-password-list{
+    .staff-list{
+       max-height: calc(100vh - 300px);  
+    } 
+}
+
+.myUserTable{
+        tr{
+            // th:nth-child(1), td:nth-child(1){
+            //     width: 8% !important;
+            // }
+            // th:nth-child(2), td:nth-child(2){
+            //     width: 16% !important;
+            // }
+            th:nth-child(3),td:nth-child(3){
+                width: 220px !important;
+                text-overflow: ellipsis;
+                word-break: break-all;
+            }
+            // th:nth-child(4), td:nth-child(4){
+            //     width: 17% !important;
+            // }
+            // th:nth-child(5), td:nth-child(5){
+            //     width: 12% !important;
+            // }
+            // th:nth-child(6){
+            //     width: 210px !important;
+            // }
+        }
+}
+

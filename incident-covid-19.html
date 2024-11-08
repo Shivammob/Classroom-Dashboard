@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Covid- 19</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid covid-19 mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-blue text-semibold m-0">Covid- 19</h3>
+                            <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium text-primary"><a href="#" class="text-primary">Home</a></li>
+                                <li class="font-small text-medium text-blue">Covid- 19</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button">
+                            <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Accidents
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="active-cases badge p-5">
+                        <h2 class="mb-1 text-semibold">56</h2>
+                        <h6 class="text-semibold">Active Cases</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="today-cases badge pt-4 px-5 pb-5">
+                        <h4 class="mb-3 text-semibold">24</h4>
+                        <h6 class="text-semibold bord pb-3">Today Cases</h6>
+                        <h6 class="font-small text-semibold pt-2">Total Cases 68</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="recovery-cases badge pt-4 px-5 pb-5">
+                        <h4 class="mb-3 text-semibold">33</h4>
+                        <h6 class="text-semibold bord pb-3">Today Recoveries</h6>
+                        <h6 class="font-small text-semibold pt-2">Total Recoveries 78</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- covid data -->
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pill-panel p-4">
+                                <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                                    role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0 active" data-toggle="pill"
+                                            href="#dashboard" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">Dashboard</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab"
+                                            data-toggle="pill" href="#cases" role="tab" aria-selected="false">Cases</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="">
+                                    <!-- dashboard tab -->
+                                    <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                                        <!-- data filters -->
+                                        <div class="row">
+                                            <div
+                                                class="col-md-12 col-12 d-flex search-filter justify-content-between align-items-start flex-column flex-md-row">
+                                                <div class="md-form md-outline mb-0 w-75">
+                                                    <div class="d-flex w-100 flex-wrap">
+                                                        <div
+                                                            class="search-box d-flex justify-content-between align-items-center w-75 mr-2 mb-2">
+                                                            <input type="text" class="form-control bg-white border m-0 "
+                                                                placeholder="Search a keyword">
+                                                            <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                                        </div>
+                                                        <button
+                                                            class="btn bg-blue text-white d-flex align-items-center rounded-2x m-0 px-3 mb-2"
+                                                            type="button" data-toggle="modal"
+                                                            data-target="#add-task-filter">
+                                                            <i class="icon-filter text-semibold ic-2x mr-1"></i> Filter
+                                                            <span class="filter-count ml-1">(4)</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="order-category">
+                                                    <div
+                                                        class="box-height d-flex d-sm-inline-flex align-items-center border rounded-2x py-2 pl-2 my-2 my-sm-0">
+                                                        <span class="d-inline-block font-small flex-shrink-0">Order By
+                                                            :</span>
+                                                        <div class="md-form md-outline m-0">
+                                                            <select class="selectpicker"
+                                                                data-dropdown-align-right="true"
+                                                                data-style="border-0 font-small py-0 px-1"
+                                                                data-width="130px">
+                                                                <option selected="selected">Complete</option>
+                                                                <option>incomplete</option>
+                                                                <option>Category</option>
+                                                                <option>Date Occured</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row px-2 py-2">
+                                            <div class="col-md-12 col-12 d-flex align-items-center justify-content-end">
+                                                <div class="download-selection md-form md-outline m-0 d-flex d-sm-inline-flex">
+                                                    <select class="selectpicker" data-dropdown-align-right="true" title="Download"
+                                                        data-style="rounded-5x py-1" data-width="fit">
+                                                        <!-- <option>As PDF</option> -->
+                                                        <option>As Excel</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <!-- data filters end -->
+                                        <div class="row">
+                                            <div class="col-lg-12 col-12">
+                                                <table class="table table-hover table-responsive-md" cellspacing="0"
+                                                    width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Incident Date</th>
+                                                            <th class="text-center">Confirmed</th>
+                                                            <th class="text-center">Active</th>
+                                                            <th class="text-center">Recovered</th>
+                                                            <th class="text-center">Dececed</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2020-09-01</td>
+                                                            <td class="text-center">34</td>
+                                                            <td class="text-center">22</td>
+                                                            <td class="text-center">56</td>
+                                                            <td class="text-center">56</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <!-- pagination -->
+                                        <div class="row">
+                                            <div class="col-md-5 col-12 d-flex align-items-center mb-3 mb-sm-0">
+                                                <div class="md-form md-outline m-0 mr-3">
+                                                    <select class="selectpicker" data-dropdown-align-right="true"
+                                                        data-style="rounded border-0 p-2 bg-light" data-width="fit">
+                                                        <option selected="selected">10</option>
+                                                        <option>20</option>
+                                                        <option>30</option>
+                                                        <option>40</option>
+                                                    </select>
+                                                </div>
+                                                <p class="font-small text-medium m-0">Showing 1 - 10 of 509 entries</p>
+                                            </div>
+                                            <div class="col-md-7 col-12">
+                                                <nav>
+                                                    <ul class="pagination justify-content-end">
+                                                        <li class="page-item">
+                                                            <a class="page-link page-first" aria-label="Previous">
+                                                                <i class="icon-chevrons-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-prev" aria-label="Previous">
+                                                                <i class="icon-arrow-right"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link rounded">1</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link">2</a></li>
+                                                        <li class="page-item"><a class="page-link">3</a></li>
+                                                        <li class="page-item"><a class="page-link">...</a></li>
+                                                        <li class="page-item"><a class="page-link">18</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-next" aria-label="Previous">
+                                                                <i class="icon-arrow-right"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link page-last" aria-label="Next">
+                                                                <i class="icon-chevrons-right"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <!-- pagination end -->
+
+                                    </div>
+                                    <!-- dashboard tab end -->
+
+                                    <!-- cases tab -->
+                                    <div class="tab-pane fade" id="cases" role="tabpanel">Cases</div>
+                                    <!-- cases tab end -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- perform audit end -->
+        </div>
+    </main>
+
+    <!--covid-19-filter drawer -->
+    <div class="modal fade right uploadMedia" id="covid-19-filter" tabindex="-1" role="dialog" aria-labelledby=""
+        aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title w-100 text-primary text-medium line-height-1" id="myModalLabel">Add Task</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="show-by">
+                                <small class="text-medium">Show by</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="All">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="School">
+                                <small class="text-medium">Person Type</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="All">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                            <div class="person-type">
+                                <small class="text-medium">School</small>
+                                <div class="md-form md-outline mb-3">
+                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                        title="All">
+                                        <option value="1">Accident</option>
+                                        <option value="23">Child Safeguarding</option>
+                                        <option value="4">Environmental Incident</option>
+                                        <option value="29">Fire</option>
+                                        <option value="2">Illness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6 col-12">
+                            <small class="text-medium">Date Range</small>
+                            <div
+                                class="date-range-selector bg-white rounded-2x d-flex align-items-start align-items-sm-center flex-column flex-sm-row mb-3 p-2 border">
+                                <div id="dateTimeRange"
+                                    class="dateTimeRangee cursor-pointer flex-shrink-0 position-relative pl-2 mb-2 ml-1 mb-sm-0 ml-sm-0 pl-sm-0 d-flex align-items-center justify-content-between w-100">
+                                    <span class="font-small"></span>
+                                     <i class="icon-calendar ic-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-12 col-12">
+                            <div class="md-form md-outline mb-0">
+                                <div class=" d-flex justify-content-between align-items-center">
+                                    <input type="text" class="form-control bg-white border m-0 "
+                                    placeholder="Search a keyword">
+                                    <i class="icon-search ic-2x px-2 ml-n5"></i>
+                                </div>   
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--covid-19-filter drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script>
+        $(function () {
+            //$('#advancedFilter').modal('show');
+            /* $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'M/DD hh:mm A',
+                }
+            }); */
+            var start = moment().subtract(7, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#dateTimeRange span').html(start.format('M/DD hh:mm A') + ' - ' + end.format('M/DD hh:mm A'));
+            }
+
+            $('#dateTimeRange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start, end);
+        })
+
+
+        $(document).ready(function () { 
+            $(".date-range-selector").click(function(){
+              $('.show-calendar').addClass('mr-5');
+              $('.show-calendar').addClass('rtl');
+            })
+        })
+
+        // $(document).ready(function () {
+        //     $("body").click(function () {
+        //         $('.daterangepicker.show-calendar').appendTo('.covid-19');
+        //     })
+        // });
+    </script>
+</body>
+
+</html>

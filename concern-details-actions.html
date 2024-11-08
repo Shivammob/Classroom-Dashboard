@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Concern - details-actions</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid mt-3 mb-4">
+            <!-- subheader start -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div
+                        class="sub-header bg-white rounded-2x d-flex align-items-center justify-content-between pl-4 pr-2">
+                        <div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <h3 class="page-title text-blue text-semibold m-0">Concern Details</h3>
+                            <!-- <ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+                                <li class="font-small text-medium text-black-50"><a class="text-primary" href="#">Home</a></li>
+                                <li class="font-small text-medium text-black-50"><a href="#">Incidents</a></li>
+                                <li class="font-small text-medium text-blue">Incident Details</li>
+                            </ul> -->
+                        </div>
+                        <button class="btn btn-primary d-flex align-items-center rounded-2x m-0 px-3" type="button">
+                            <i class="icon-plus text-semibold ic-2x mr-1"></i> Add Accidents
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- subheader end -->
+            <!--incidents Details Box -->
+            <div class="row">
+                <div class="col-12 incidentList">
+                    <article class="py-3 bg-white rounded-2x pl-4 pr-2 position-relative">
+                        <div class="incident-meta d-flex align-items-center ">
+                            <div class="meta-left d-inline-flex align-items-center">
+                                <span
+                                    class="badge badge-primary rounded-1x text-uppercase shadow-none text-semibold px-2 mr-3">Serious</span>
+                                <h4
+                                    class="text-black-50 text-semibold font-16 border-right border-default line-height-1 m-0 pr-3 mr-3">
+                                    ID #11075623</h4>
+                                <h4
+                                    class="font-small text-semibold m-0 text-uppercase text-warning flex-1 text-truncate mr-3 d-none d-sm-inline-block">
+                                    Accident <span class="text-medium text-black-50 text-initial"> - Struck by Object
+                                    </span>
+                                </h4>
+                            </div>
+                            <div class="meta-right position-absolute details-action-right">
+                                <div class="incident-actions d-inline-flex align-items-center flex-shrink-0">
+                                    <div class="quick-nav dropdown mr-2">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn-download text-regular d-flex align-items-center justify-content-between btn border rounded-1x w-100 rounded-4x bg-light border-0 m-0">
+                                           <span class="font-14 text-black-50">open</span>  <i class="icon-chevron-down ic-2x ml-2 text-primary text-semibold"></i>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu w-25 z-depth-1 border-0" x-placement="left-start">
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">As Exel</a>
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2" href="#">As PDF</a>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="quick-nav dropleft">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"
+                                            class="btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0 mr-2">
+                                            <i class="icon-users-filled text-primary"></i>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="involvedPersons dropdown-menu z-depth-1 border-0">
+                                            <h4 class="font-small text-semibold border-bottom px-3 pb-3 pt-2">Persons
+                                                Involved</h4>
+                                            <ul class="overflow-auto px-3">
+                                                <li class="d-flex align-items-center py-2">
+                                                    <span
+                                                        class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                        <img src="img/avatars/students/avatar-2.jpg" alt="">
+                                                    </span>
+                                                    <div class="info">
+                                                        <h3 class="small mb-0">Abigail Baker [12501800007260]</h3>
+                                                        <small class="text-medium d-block">
+                                                            <span
+                                                                class="text-uppercase text-semibold student">Student</span>
+                                                            - Victim
+                                                        </small>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-items-center py-2">
+                                                    <span
+                                                        class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                        <img src="img/avatars/students/avatar-1.jpg" alt="">
+                                                    </span>
+                                                    <div class="info">
+                                                        <h3 class="small mb-0">Lorri Lavine [12501675007260]</h3>
+                                                        <small class="text-medium d-block">
+                                                            <span
+                                                                class="text-uppercase text-semibold student">Student</span>
+                                                            - Victim
+                                                        </small>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-items-center py-2">
+                                                    <span
+                                                        class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                        <img src="img/avatars/avatar-3.jpg" alt="">
+                                                    </span>
+                                                    <div class="info">
+                                                        <h3 class="small mb-0">Weston Seyal [12501675007260]</h3>
+                                                        <small class="text-medium d-block">
+                                                            <span
+                                                                class="text-uppercase text-semibold staff">Staff</span>
+                                                            - Witness
+                                                        </small>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-items-center py-2">
+                                                    <span
+                                                        class="avatar rounded-circle border border-light overflow-hidden d-inline-block flex-shrink-0 mr-2">
+                                                        <img src="img/avatars/avatar-6.jpg" alt="">
+                                                    </span>
+                                                    <div class="info">
+                                                        <h3 class="small mb-0">Maria Salvato [12501675007260]</h3>
+                                                        <small class="text-medium d-block">
+                                                            <span
+                                                                class="text-uppercase text-semibold other">Other</span>
+                                                            - Vitness
+                                                        </small>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="quick-nav dropleft">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"
+                                            class="more-actions btn bg-light p-0 border-0 m-0 rounded-circle z-depth-0">
+                                            <i class="fas fa-ellipsis-v text-primary"></i>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu z-depth-1 border-0">
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                href="#">View</a>
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                href="#">Edit</a>
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                href="#">Reminder</a>
+                                            <a class="dropdown-item border-bottom border-light px-3 py-2"
+                                                href="#">Report</a>
+                                            <a class="dropdown-item px-3 py-2" href="#">Add note</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3
+                            class="incident-title font-small mt-3 mb-2 d-inline-flex align-items-start align-items-sm-center">
+                            <span class="d-inline-flex align-items-start align-items-sm-center">
+                                <i class="icon-school-1 ic-2x mr-2"></i>
+                                <span class="schoolName font-small text-medium text-black text-semibold mt-sm-1">GEMS
+                                    Wellington Academy Silicon Oasis (WSO)</span>
+                            </span>
+                            <span
+                                class="timestamp text-medium text-black text-semibold font-small border-left line-height-1 d-block d-sm-inline-block pl-sm-3 ml-sm-3 mt-2 mt-sm-0">
+                                <i class="icon-clock mr-2"></i> 3:29 PM, 24 May 2021
+                            </span>
+                        </h3>
+                    </article>
+                </div>
+            </div>
+            <!--incidents Details box end -->
+
+            <!-- incidents data -->
+            <div class="row mt-3">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pill-panel p-4">
+                                <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab"
+                                    role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0" data-toggle="pill"
+                                            href="#Overview" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">Overview</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-white text-medium px-0 active" id="hsinvestigate-tab"
+                                            data-toggle="pill" href="#Concern-Action" role="tab"
+                                            aria-selected="false">Actions</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="">
+                                    <!-- Overview tab -->
+                                    <div class="tab-pane fade" id="Overview" role="tabpanel">
+                                        Overview
+                                    </div>
+                                    <!-- Overview tab end-->
+        
+                                    <!-- Concern-Action -->
+                                    <div class="tab-pane fade show active sg-Investigation" id="Concern-Action"
+                                        role="tabpanel">
+                                        <!-- Concern-Action Card Section  -->
+                                        <div class="row">
+                                            <!-- Concern-Action 1st Card  -->
+                                            <div class="col-md-12">
+                                                <div class="card border-light">
+                                                    <div class="card-body px-4 pt-3 pb-2">
+                                                        <div class="row">
+                                                            <div
+                                                                class="col-md-12 col-12 d-flex justify-content-between">
+                                                                <ul
+                                                                    class="incident-meta d-flex flex-column flex-md-row">
+                                                                    <li
+                                                                        class="text-black-50 text-semibold font-16 border-right border-default  m-0 pr-3 mr-3 text-uppercase text-success text-truncate">
+                                                                        COMPLETED</li>
+                                                                    <!-- <li
+                                                                        class="font-small text-semibold m-0 text-uppercase text-truncate pr-3 mr-3 d-sm-inline-block border-right border-default">
+                                                                        Medium
+                                                                        <span class="small text-initial text-black-50">-
+                                                                            Priority
+                                                                        </span>
+                                                                    </li> -->
+                                                                    <li
+                                                                        class="font-small text-black m-0 text-capitalize text-truncate mr-3 d-sm-inline-block text-medium text-black-50">
+                                                                        Due Date
+                                                                        <span class="font-small text-initial">:
+                                                                            24 May 2021
+                                                                        </span>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="d-flex">
+                                                                    <li><button
+                                                                            class="btn plus-btn-round z-depth-0 text-primary text-medium m-0 p-0 mt-sm-0">
+                                                                            <i
+                                                                                class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i>
+                                                                        </button> </li>
+                                                                    <li><button
+                                                                            class="btn plus-btn-round z-depth-0 text-primary text-medium m-0 p-0 mt-sm-0 ml-2">
+                                                                            <i
+                                                                                class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i>
+                                                                        </button> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pb-2 mt-2">
+                                                            <div class="col-md-12 col-12">
+                                                                <div
+                                                                    class="d-flex student-meta flex-md-row border-top border-bottom border-default pt-2">
+                                                                    <figure
+                                                                        class="mr-2 d-flex">
+                                                                        <img src="img/staff2.png"
+                                                                            alt="student" class="avatar img-fluid rounded-circle">
+                                                                    </figure>
+                                                                    <div class="d-block grade-list-border">
+                                                                        <h3
+                                                                            class="small text-blue text-medium mb-1">
+                                                                            Assign to
+                                                                        </h3>
+                                                                        <h4 class="font-small text-semibold m-0">
+                                                                            Abagael Skynner</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 col-12 pt-2">
+                                                                <p class="small text-black-50 text-medium">Lorem ipsum
+                                                                    dolor sit amet consectetur adipisicing elit. Quidem
+                                                                    ullam velit autem expedita blanditiis inventore, nam
+                                                                    itaque nesciunt, vel, suscipit officia veritatis
+                                                                    officiis hic illo unde eos earum non dolores.</p>
+                                                            </div>
+                                                            <div class="col-12 col-md-12">
+                                                                <div
+                                                                    class="add-actions d-flex justify-content-between align-items-center pb-2 border-bottom">
+                                                                    <h6
+                                                                        class="text-primary text-semibold text-capitalize mb-n2">
+                                                                        2 Actions</h6>
+                                                                    <button
+                                                                        class="btn btn-outline-primary rounded-4x m-0 px-2 py-1 mr-1 waves-effect waves-light"
+                                                                        type="button">
+                                                                        <i class="icon-plus text-semibold ml-1"></i> add
+                                                                        action
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment-wrrapper pt-3">
+                                                            <div class="row">
+                                                                <div
+                                                                    class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-start">
+                                                                    <div
+                                                                        class="comment-avatar rounded-circle overflow-hidden">
+                                                                        <img src="img/avatar-1.jpg" alt=""
+                                                                            class="img-fluid">
+                                                                        <!-- <span class="comment-initial rounded-circle">KM</span> -->
+                                                                    </div>
+                                                                    <div class="user-comment p-2 pr-3 pl-3">
+                                                                        <div
+                                                                            class="d-flex justify-content-between align-items-center">
+                                                                            <h3
+                                                                                class="font-small text-black text-semibold text-capitalize">
+                                                                                Abagael Skynner <span
+                                                                                    class="small text-black-50 text-semibold ml-3">20
+                                                                                    June 2021, 3:30 PM</span></h3>
+                                                                            <div class="d-flex">
+                                                                                <button
+                                                                                    class="btn plus-btn-round z-depth-0 text-black-50 text-semibold text-medium m-0 p-0 mt-sm-0">
+                                                                                    <i
+                                                                                        class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle ic-2x"></i>
+                                                                                </button>
+                                                                                <button
+                                                                                    class="btn plus-btn-round z-depth-0 text-black-50 text-semibold text-medium m-0 p-0 mt-sm-0 ml-2">
+                                                                                    <i
+                                                                                        class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle ic-2x"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="small text-black-50 text-medium">Lorem
+                                                                            ipsum dolor sit amet consectetur adipisicing
+                                                                            elit. Quidem ullam velit autem expedita
+                                                                            blanditiis inventore, nam itaque nesciunt,
+                                                                            vel, suscipit officia veritatis officiis hic
+                                                                            illo unde eos earum non dolores.</p>
+                                                                        <div
+                                                                            class="upload-document py-2 px-3 bg-white rounded-2x">
+                                                                            <div
+                                                                                class="doc-uploaded d-flex justify-content-between align-items-center">
+                                                                                <div
+                                                                                    class="document-names text-capitalize">
+                                                                                    <i
+                                                                                        class="icon-paperclip text-primary mr-1"></i><span
+                                                                                        class="text-black text-semibold font-small">incident
+                                                                                        investigation from-2020-10-eric
+                                                                                        reece.pdf</span>
+                                                                                </div>
+                                                                                <div class="document-actions">
+                                                                                    <button
+                                                                                        class="btn plus-btn-round z-depth-0 text-blue text-bold m-0 p-0 mt-sm-0">
+                                                                                        <i
+                                                                                            class="icon-download ic-2x"></i>
+                                                                                    </button>
+                                                                                    <button
+                                                                                        class="btn plus-btn-round z-depth-0 text-blue text-medium m-0 p-0 mt-sm-0">
+                                                                                        <i
+                                                                                            class="icon-trash ic-2x ml-3"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-1">
+                                                                <div
+                                                                    class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-start">
+                                                                    <div
+                                                                        class="comment-avatar rounded-circle overflow-hidden">
+                                                                        <img src="./img/staff2.png" alt=""
+                                                                            class="img-fluid">
+                                                                    </div>
+                                                                    <div class="user-comment p-2 pr-3 pl-3">
+                                                                        <div
+                                                                            class="d-flex justify-content-between align-items-center">
+                                                                                <h3
+                                                                                class="font-small text-black text-semibold text-capitalize">
+                                                                                Abagael Skynner <span
+                                                                                    class="small text-black-50 text-semibold ml-3">20
+                                                                                    June 2021, 3:30 PM</span></h3>
+                                                                            <div class="d-flex">
+                                                                                <button
+                                                                                    class="btn plus-btn-round z-depth-0 text-black-50 text-semibold text-medium m-0 p-0 mt-sm-0">
+                                                                                    <i
+                                                                                        class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle ic-2x"></i>
+                                                                                </button>
+                                                                                <button
+                                                                                    class="btn plus-btn-round z-depth-0 text-black-50 text-semibold text-medium m-0 p-0 mt-sm-0 ml-2">
+                                                                                    <i
+                                                                                        class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle ic-2x"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="small text-black-50 text-medium">Lorem
+                                                                            ipsum dolor sit amet consectetur adipisicing
+                                                                            elit. Quidem ullam velit autem expedita
+                                                                            blanditiis inventore, nam itaque nesciunt,
+                                                                            vel, suscipit officia veritatis officiis hic
+                                                                            illo unde eos earum non dolores.</p>
+                                                                        <div
+                                                                            class="upload-document py-2 px-3 bg-white rounded-2x">
+                                                                            <div
+                                                                                class="doc-uploaded d-flex justify-content-between align-items-center">
+                                                                                <div
+                                                                                    class="document-names text-capitalize">
+                                                                                    <i
+                                                                                        class="icon-paperclip text-primary mr-1"></i><span
+                                                                                        class="text-black text-semibold font-small">incident
+                                                                                        investigation from-2020-10-eric
+                                                                                        reece.pdf</span>
+                                                                                </div>
+                                                                                <div class="document-actions">
+                                                                                    <button
+                                                                                        class="btn plus-btn-round z-depth-0 text-blue text-bold m-0 p-0 mt-sm-0">
+                                                                                        <i
+                                                                                            class="icon-download ic-2x"></i>
+                                                                                    </button>
+                                                                                    <button
+                                                                                        class="btn plus-btn-round z-depth-0 text-blue text-medium m-0 p-0 mt-sm-0">
+                                                                                        <i
+                                                                                            class="icon-trash ic-2x ml-3"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Concern-Action 1st Card end  -->
+                                            <!-- Concern-Action 2st Card  -->
+                                            <div class="col-md-12 mt-2">
+                                                <div class="card border-light">
+                                                    <div class="card-body px-4 pt-3 pb-2">
+                                                        <div class="row">
+                                                            <div
+                                                                class="col-md-12 col-12 d-flex justify-content-between">
+                                                                <ul
+                                                                    class="incident-meta d-flex flex-column flex-md-row">
+                                                                    <li
+                                                                        class="text-black-50 text-semibold font-16 border-right border-default  m-0 pr-3 mr-3 text-uppercase text-success text-truncate">
+                                                                        COMPLETED</li>
+                                                                    <li
+                                                                        class="font-small text-semibold m-0 text-uppercase text-truncate pr-3 mr-3 d-sm-inline-block border-right border-default">
+                                                                        Medium
+                                                                        <span class="small text-initial text-black-50">-
+                                                                            Priority
+                                                                        </span>
+                                                                    </li>
+                                                                    <li
+                                                                        class="font-small text-black m-0 text-capitalize text-truncate mr-3 d-sm-inline-block text-medium text-black-50">
+                                                                        Due Date
+                                                                        <span class="font-small text-initial">:
+                                                                            24 May 2021
+                                                                        </span>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="d-flex">
+                                                                    <li><button
+                                                                            class="btn plus-btn-round z-depth-0 text-primary text-medium m-0 p-0 mt-sm-0">
+                                                                            <i
+                                                                                class="icon-edit d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i>
+                                                                        </button> </li>
+                                                                    <li><button
+                                                                            class="btn plus-btn-round z-depth-0 text-primary text-medium m-0 p-0 mt-sm-0 ml-2">
+                                                                            <i
+                                                                                class="icon-trash d-inline-flex align-items-center justify-content-center bg-light rounded-circle"></i>
+                                                                        </button> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pb-2 mt-2">
+                                                            <div class="col-md-12 col-12">
+                                                                <div
+                                                                    class="d-flex student-meta flex-md-row border-top border-bottom border-default pt-2">
+                                                                    <figure
+                                                                        class="mr-2 d-flex">
+                                                                        <img src="img/avatars/students/avatar-2.jpg"
+                                                                            alt="" class="avatar img-fluid rounded-circle">
+                                                                    </figure>
+                                                                    <div class="d-block grade-list-border">
+                                                                        <h3
+                                                                            class="small text-blue text-medium mb-1">
+                                                                            Assign to
+                                                                        </h3>
+                                                                        <h4 class="font-small text-semibold m-0">
+                                                                            Abagael Skynner</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 col-12 pt-2">
+                                                                <p class="small text-black-50 text-medium">Lorem ipsum
+                                                                    dolor sit amet consectetur adipisicing elit. Quidem
+                                                                    ullam velit autem expedita blanditiis inventore, nam
+                                                                    itaque nesciunt, vel, suscipit officia veritatis
+                                                                    officiis hic illo unde eos earum non dolores.</p>
+                                                                <div
+                                                                    class="upload-document py-2 px-3 bg-light rounded-2x mb-3">
+                                                                    <div
+                                                                        class="doc-uploaded d-flex justify-content-between align-items-center">
+                                                                        <div class="document-names text-capitalize">
+                                                                            <i
+                                                                                class="icon-paperclip text-primary mr-1"></i><span
+                                                                                class="text-black text-semibold font-small">incident
+                                                                                investigation from-2020-10-eric
+                                                                                reece.pdf</span>
+                                                                        </div>
+                                                                        <div class="document-actions">
+                                                                            <button
+                                                                                class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0">
+                                                                                <i class="icon-download ic-2x"></i>
+                                                                            </button>
+                                                                            <button
+                                                                                class="btn plus-btn-round z-depth-0 text-black-50 text-medium m-0 p-0 mt-sm-0">
+                                                                                <i class="icon-trash ic-2x ml-3"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-md-12">
+                                                                <div
+                                                                    class="add-actions d-flex justify-content-between align-items-center pb-2 border-bottom">
+                                                                    <h6
+                                                                        class="text-primary text-semibold text-capitalize mb-n2">
+                                                                        Actions</h6>
+                                                                    <button
+                                                                        class="btn btn-outline-primary rounded-4x m-0 px-2 py-1 mr-1 waves-effect waves-light"
+                                                                        type="button">
+                                                                        <i class="icon-plus text-semibold ml-1"></i> add
+                                                                        action
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 col-12">
+                                                                <p class="text-center text-medium text-black pt-3 mb-0">
+                                                                    Lorem ipsum dolor sit, amet consectetur adipisicing.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Concern-Action 2st Card end  -->
+                                        </div>
+                                        <!-- Concern-Action Card Section end -->
+                                        <!-- <div class="row">
+                                            <div class="col-md-12 col-12">
+                                                <a href="" type="button"
+                                                    class="btn btn-outline-primary px-4 py-2 m-0 waves-effect waves-light">Back
+                                                    to list</a>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <!-- Concern-Action end  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

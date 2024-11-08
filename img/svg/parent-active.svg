@@ -1,0 +1,5 @@
+<svg id="parent-active" xmlns="http://www.w3.org/2000/svg" width="16.005" height="16" viewBox="0 0 16.005 16">
+  <path id="Path_25" data-name="Path 25" d="M0,0H16V16H0Z" fill="none"/>
+  <path id="Path_26" data-name="Path 26" d="M13.667,10.333a2,2,0,1,1,2-2A2,2,0,0,1,13.667,10.333Zm-6-2a2.667,2.667,0,1,1,2.667-2.667A2.667,2.667,0,0,1,7.667,8.333Z" transform="translate(-1.667 -1)" fill="#7e89b9" opacity="0.3"/>
+  <path id="Path_27" data-name="Path 27" d="M11.734,14.334c2.271.025,4.125,1.173,4.265,3.6a.34.34,0,0,1-.362.4h-2.57a6.637,6.637,0,0,0-1.333-4ZM0,17.8C.259,14.618,2.841,13,5.989,13,9.181,13,11.8,14.529,12,17.8a.458.458,0,0,1-.5.533H.485A.738.738,0,0,1,0,17.8Z" transform="translate(0 -4.333)" fill="#b10000"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg id="Group_49" data-name="Group 49" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Rectangle_393" data-name="Rectangle 393" width="24" height="24" fill="none"/>
+  <path id="Path_32" data-name="Path 32" d="M14.293,16.707a1,1,0,0,1,1.414-1.414l4,4a1,1,0,0,1-1.414,1.414Z" fill="#999" opacity="0.3"/>
+  <path id="Path_33" data-name="Path 33" d="M11,16a5,5,0,1,0-5-5A5,5,0,0,0,11,16Zm0,2a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z" fill="#999"/>
+  <path id="Path_34" data-name="Path 34" d="M10.5,10.5v-1a.5.5,0,0,1,1,0v1h1a.5.5,0,0,1,0,1h-1v1a.5.5,0,0,1-1,0v-1h-1a.5.5,0,0,1,0-1Z" fill="#999" fill-rule="evenodd" opacity="0.3"/>
+</svg>

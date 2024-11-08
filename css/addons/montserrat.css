@@ -1,0 +1,111 @@
+/** =================== MONTSERRAT =================== **/
+
+/** Montserrat Light **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    src: url("../../font/primary-font/Montserrat-Light.eot");
+    src: url("../../font/primary-font/Montserrat-Light.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-Light.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-Light.woff") format("woff");
+}
+
+/** Montserrat Light-Italic **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: italic;
+    src: url("../../font/primary-font/Montserrat-LightItalic.eot");
+    src: url("../../font/primary-font/Montserrat-LightItalic.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-LightItalic.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-LightItalic.woff") format("woff");
+}
+
+/** Montserrat Regular **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../font/primary-font/Montserrat-Regular.eot");
+    src: url("../../font/primary-font/Montserrat-Regular.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-Regular.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-Regular.woff") format("woff");
+}
+
+/** Montserrat Regular-Italic **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../../font/primary-font/Montserrat-Italic.eot");
+    src: url("../../font/primary-font/Montserrat-Italic.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-Italic.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-Italic.woff") format("woff");
+}
+
+/** Montserrat Medium **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../../font/primary-font/Montserrat-Medium.eot");
+    src: url("../../font/primary-font/Montserrat-Medium.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-Medium.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-Medium.woff") format("woff");
+}
+
+/** Montserrat Medium-Italic **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-style: italic;
+    src: url("../../font/primary-font/Montserrat-MediumItalic.eot");
+    src: url("../../font/primary-font/Montserrat-MediumItalic.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-MediumItalic.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-MediumItalic.woff") format("woff");
+}
+
+/** Montserrat SemiBold **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    src: url("../../font/primary-font/Montserrat-SemiBold.eot");
+    src: url("../../font/primary-font/Montserrat-SemiBold.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-SemiBold.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-SemiBold.woff") format("woff");
+}
+
+/** Montserrat SemiBold-Italic **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: italic;
+    src: url("../../font/primary-font/Montserrat-SemiBoldItalic.eot");
+    src: url("../../font/primary-font/Montserrat-SemiBoldItalic.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-SemiBoldItalic.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-SemiBoldItalic.woff") format("woff");
+}
+
+/** Montserrat Bold **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../../font/primary-font/Montserrat-Bold.eot");
+    src: url("../../font/primary-font/Montserrat-Bold.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-Bold.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-Bold.woff") format("woff");
+}
+
+/** Montserrat Bold-Italic **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: italic;
+    src: url("../../font/primary-font/Montserrat-BoldItalic.eot");
+    src: url("../../font/primary-font/Montserrat-BoldItalic.eot?#iefix") format('embedded-opentype'),
+         url("../../font/primary-font/Montserrat-BoldItalic.woff2") format("woff2"),
+         url("../../font/primary-font/Montserrat-BoldItalic.woff") format("woff");
+}

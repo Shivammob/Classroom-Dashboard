@@ -1,0 +1,21 @@
+.incident-tasks {
+    .incidentList {
+        .incident-actions {
+            .dropleft {
+                button {
+                     transform: rotate(90deg);
+                     display: inline-flex;
+                     align-items: center;
+                     justify-content: center;
+                     width: 1.875rem;
+                     height: 1.875rem;
+                     background: #F3F6F9 !important;
+                }
+            }
+        }
+    }
+}
+.widt-bg {
+    width: 150px;
+    font-size: rem(12px);
+}

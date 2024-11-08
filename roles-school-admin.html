@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HSE - Roles School Admin</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> -->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+    <!-- dataTable css -->
+    <link href="css/addons/datatables.min.css" rel="stylesheet">
+    <link href="css/addons/datatables-select.min.css" rel="stylesheet">
+
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid library mt-3 mb-4">
+            <!-- subheader start -->
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+						<div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+                            <i class="icon-arrow-left mr-2 text-black text-medium ic-3x"></i>
+							<h3 class="page-title text-primary text-semibold m-0">School Admin</h3>
+							<ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+								<li class="font-small text-medium text-black-50"><a href="#">Home</a></li>
+								<li class="font-small text-medium text-black-50"><a href="#">Roles</a></li>
+								<li class="font-small text-medium text-black-50">Manage Roles</li>
+							</ul>
+						</div>
+						<button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button" data-toggle="modal" data-target="#created-user_role">
+							<i class="icon-plus text-semibold ic-2x mr-1"></i> Create Role
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- subheader end -->
+
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+							<div class="pill-panel school-admin p-4">
+								<ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab" role="tablist">
+									<li class="nav-item">
+									  	<a class="nav-link bg-white text-capitalize text-medium px-0" data-toggle="pill" href="#users" role="tab" aria-controls="pills-users" aria-selected="true">users</a>
+									</li>
+									<li class="nav-item">
+									  <a class="nav-link bg-white text-capitalize text-medium px-0 active" id="pills-permissions" data-toggle="pill" href="#Permissions" role="tab" aria-selected="false">Permissions</a>
+									</li>
+								</ul>
+								  <div class="tab-content" id="">
+                                    <div class="tab-pane fade" id="users" role="tabpanel">
+                                        <!--Data-filter users -->
+                                        <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-3">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-12 px-md-1 px-lg-2">
+                                                    <div class="category">
+                                                        <small class="text-medium">Country</small>
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker" data-style="btn-white border-0 px-3" data-size="5" title="UAE">
+                                                                <option value="1">Accident</option>
+                                                                <option value="23">Child Safeguarding</option>
+                                                                <option value="4">Environmental Incident</option>
+                                                                <option value="29">Fire</option>
+                                                                <option value="2">Illness</option>
+                                                                <option value="3">Near Miss</option>
+                                                                <option value="7">Property Damage</option>
+                                                                <option value="6">Security</option>
+                                                                <option value="5">Vehicle</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-12 px-md-1 px-lg-2">
+                                                    <div class="category">
+                                                        <small class="text-medium">Region</small>
+                                                        <div class="md-form md-outline mb-3">
+                                                            <select class="selectpicker" data-style="btn-white border-0 px-3" data-size="5" title="Dubai">
+                                                                <option value="1">Accident</option>
+                                                                <option value="23">Child Safeguarding</option>
+                                                                <option value="4">Environmental Incident</option>
+                                                                <option value="29">Fire</option>
+                                                                <option value="2">Illness</option>
+                                                                <option value="3">Near Miss</option>
+                                                                <option value="7">Property Damage</option>
+                                                                <option value="6">Security</option>
+                                                                <option value="5">Vehicle</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-7 col-12 px-lg-3 px-md-1">
+                                                            <div class="category">
+                                                                <small class="text-medium">School</small>
+                                                                <div class="md-form md-outline mb-3">
+                                                                    <select class="selectpicker" data-style="btn-white border-0 px-3" data-size="5" title="All School">
+                                                                        <option value="1">Accident</option>
+                                                                        <option value="23">Child Safeguarding</option>
+                                                                        <option value="4">Environmental Incident</option>
+                                                                        <option value="29">Fire</option>
+                                                                        <option value="2">Illness</option>
+                                                                        <option value="3">Near Miss</option>
+                                                                        <option value="7">Property Damage</option>
+                                                                        <option value="6">Security</option>
+                                                                        <option value="5">Vehicle</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-5 col-12 px-md-1 px-lg-2">
+                                                            <button
+                                                            class="btn btn-dark btn-search m-0 rounded-2x w-100 mt-2 mt-sm-4 mb-4"
+                                                            type="button">Search</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <!--Data-filter users end-->
+                                        <!-- School Admin List row -->
+                                        <div class="row">
+                                            <div class="col-12 col-md-12">
+                                                <div class="add-actions d-flex justify-content-between align-items-center pb-2 border-bottom border-dark">
+                                                    <h6 class="text-black text-medium text-semibold text-capitalize mb-n2">School Admin List</h6>
+                                                <button class="btn btn-outline-primary rounded-4x m-0 px-2 py-1 mr-1 waves-effect waves-light" type="button" data-toggle="modal" data-target="#role_add-user">
+                                                    <i class="icon-plus text-semibold ml-1"></i> add User
+                                               </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- School Admin List row end-->
+                                        <!-- School Admin List Table-->
+                                         <div class="row mt-3">
+                                            <div class="col-lg-12 col-12">
+                                                <table id="schoolAdminTable" class="table table-hover table-responsive-md" cellspacing="0"
+                                                    width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Users</th>
+                                                            <th>Label</th>
+                                                            <th>School Admin Role</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">12 Locations</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">Garden grove Institute (GGI)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">12 Locations</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">Oyster Harbour School (OHS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">12 Locations</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">Phoenix Model School (PMS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">12 Locations</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">Librety School For Boys (LSB)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">12 Locations</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls 
+                                                            </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">12 Locations</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">Garden grove Institute (GGI)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">12 Locations</a></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div> 
+                                        <!-- School Admin List Table end-->
+                                    </div>
+                                    <!-- Role Permissions Tabs -->
+                                    <div class="tab-pane fade show active" id="Permissions" role="tabpanel">
+                                        <div class="role_permission">
+                                            <div class="row permissions">
+                                                <div class="col-md-6">
+                                                    <div class="permisson-module">
+                                                        <h5 class="text-bold">Module</h5>
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="category flex-1 mr-2">
+                                                                <small class="text-medium">label</small>
+                                                                <div class="md-form md-outline mb-3">
+                                                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                                                        title="HSE">
+                                                                        <option value="1">Accident</option>
+                                                                        <option value="23">Child Safeguarding</option>
+                                                                        <option value="4">Environmental Incident</option>
+                                                                        <option value="29">Fire</option>
+                                                                        <option value="2">Illness</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="category flex-1">
+                                                                <small class="text-medium">label</small>
+                                                                <div class="md-form md-outline mb-3">
+                                                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                                                        title="All">
+                                                                        <option value="1">Accident</option>
+                                                                        <option value="23">Child Safeguarding</option>
+                                                                        <option value="4">Environmental Incident</option>
+                                                                        <option value="29">Fire</option>
+                                                                        <option value="2">Illness</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="accordion">
+                                                        <div class="panel">
+                                                          <div class="panel-header mb-3">
+                                                            <a class="panel-link font-16 text-medium text-capitalize" data-toggle="collapse" href="#collapseOne">
+                                                              <i class="fa fa-minus"></i>
+                                                              Home 
+                                                            </a>
+                                                          </div>
+                                                          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                                            <div class="panel-body">
+                                                               <div class="sub-panel-tabs pl-3">
+                                                               <!-- nested Tabs start -->
+                                                               <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                                                                <li class="nav-item w-50">
+                                                                    <a class="nav-link" id="incident-tab" data-toggle="tab" href="#permi-incidents" role="tab" aria-controls="permi-incident" aria-selected="true"><h6 class="m-0 py-1">Incidents</h6></a>
+                                                                </li>   
+                                                                <li class="nav-item w-50">
+                                                                  <a class="nav-link active" id="student-staff-tab" data-toggle="tab" href="#student-staff" role="tab" aria-controls="basic-Details" aria-selected="true"><h6 class="m-0 py-1">Student/Staff</h6></a>
+                                                                </li>
+                                                                <li class="nav-item w-50">
+                                                                    <a class="nav-link" id="create-audit-tab" data-toggle="tab" href="#create-audit" role="tab" aria-controls="basic-Details" aria-selected="true"><h6 class="m-0 py-1">Create Audit</h6></a>
+                                                                </li>
+                                                            </ul> 
+                                                               <!-- nested Tabs end-->
+                                                               </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Right side Data -->
+                                               <div class="col-md-6 border-left">
+                                                <div class="tab-content" id="myTabContent">
+                                                    <!-- ---------Student-staff Pills---------   -->
+                                                    <div class="tab-pane fade" id="permi-incidents" role="tabpanel" aria-labelledby="incident-tab">
+                                                       h
+                                                    </div>
+                                                   <div class="tab-pane fade show active module-list" id="student-staff" role="tabpanel" aria-labelledby="student-staff-tab">
+                                                    <div class="permisson-module-content">
+                                                        <h5 class="text-bold">Permissions</h5>
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="category flex-1 mr-4">
+                                                                <small class="text-medium">label</small>
+                                                                <div class="md-form md-outline mb-3">
+                                                                    <select class="selectpicker" data-style="btn-white px-3" data-size="5"
+                                                                        title="All">
+                                                                        <option value="1">Accident</option>
+                                                                        <option value="23">Child Safeguarding</option>
+                                                                        <option value="4">Environmental Incident</option>
+                                                                        <option value="29">Fire</option>
+                                                                        <option value="2">Illness</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox custom-control-inline mr-0 flex-1">
+                                                                <input type="checkbox"
+                                                                class="custom-control-input"
+                                                                id="chkbox12">
+                                                                <label class="custom-control-label small label-small" for="chkbox12">Show Only Checked
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="permission-scoll">
+                                                        <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                            <div class="permissionsData ml-2">
+                                                                <h5
+                                                                    class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                    View Incidents
+                                                                </h5>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                <input type="checkbox" class="custom-control-input" id="viewIncident">
+                                                                <label class="custom-control-label" for="viewIncident"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                            <div class="permissionsData ml-2">
+                                                                <h5
+                                                                    class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                    Update Incidents
+                                                                </h5>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                <input type="checkbox" class="custom-control-input" id="updateIncident">
+                                                                <label class="custom-control-label" for="updateIncident"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                            <div class="permissionsData ml-2">
+                                                                <h5
+                                                                    class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                   Add Incidents Investigation
+                                                                </h5>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                <input type="checkbox" class="custom-control-input" id="addIncident" checked>
+                                                                <label class="custom-control-label" for="addIncident"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                            <div class="permissionsData ml-2">
+                                                                <h5
+                                                                    class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                   CC in Investigation email
+                                                                </h5>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                                <input type="checkbox" class="custom-control-input" id="emailIncident" checked>
+                                                                <label class="custom-control-label" for="emailIncident"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                           <div class="permissionsData ml-2">
+                                                               <h5
+                                                                   class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                  View Reported by any
+                                                               </h5>
+                                                           </div>
+                                                           <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                               <input type="checkbox" class="custom-control-input" id="viewbyany">
+                                                               <label class="custom-control-label" for="viewbyany"></label>
+                                                           </div>
+                                                        </div>
+                                                        <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                           <div class="permissionsData ml-2">
+                                                               <h5
+                                                                   class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                  CC in Investigation email
+                                                               </h5>
+                                                           </div>
+                                                           <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                               <input type="checkbox" class="custom-control-input" id="ccInEmail" checked>
+                                                               <label class="custom-control-label" for="ccInEmail"></label>
+                                                           </div>
+                                                         </div>
+                                                         <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                           <div class="permissionsData ml-2">
+                                                               <h5
+                                                                   class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                  Approve HSE Investigation 
+                                                               </h5>
+                                                           </div>
+                                                           <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                               <input type="checkbox" class="custom-control-input" id="approveHSE">
+                                                               <label class="custom-control-label" for="approveHSE"></label>
+                                                           </div>
+                                                        </div>
+                                                       <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                           <div class="permissionsData ml-2">
+                                                               <h5
+                                                                   class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                  Re-Open Incident
+                                                               </h5>
+                                                           </div>
+                                                           <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                               <input type="checkbox" class="custom-control-input" id="reopenIncident">
+                                                               <label class="custom-control-label" for="reopenIncident"></label>
+                                                           </div>
+                                                       </div>
+                                                       <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                        <div class="permissionsData ml-2">
+                                                            <h5
+                                                                class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                View Incidents
+                                                            </h5>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                            <input type="checkbox" class="custom-control-input" id="viewIncident">
+                                                            <label class="custom-control-label" for="viewIncident"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                        <div class="permissionsData ml-2">
+                                                            <h5
+                                                                class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                                Update Incidents
+                                                            </h5>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                            <input type="checkbox" class="custom-control-input" id="updateIncident">
+                                                            <label class="custom-control-label" for="updateIncident"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                        <div class="permissionsData ml-2">
+                                                            <h5
+                                                                class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                               Add Incidents Investigation
+                                                            </h5>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                            <input type="checkbox" class="custom-control-input" id="addIncident" checked>
+                                                            <label class="custom-control-label" for="addIncident"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                        <div class="permissionsData ml-2">
+                                                            <h5
+                                                                class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                               CC in Investigation email
+                                                            </h5>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                            <input type="checkbox" class="custom-control-input" id="emailIncident" checked>
+                                                            <label class="custom-control-label" for="emailIncident"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                       <div class="permissionsData ml-2">
+                                                           <h5
+                                                               class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                              View Reported by any
+                                                           </h5>
+                                                       </div>
+                                                       <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                           <input type="checkbox" class="custom-control-input" id="viewbyany">
+                                                           <label class="custom-control-label" for="viewbyany"></label>
+                                                       </div>
+                                                    </div>
+                                                    <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                       <div class="permissionsData ml-2">
+                                                           <h5
+                                                               class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                              CC in Investigation email
+                                                           </h5>
+                                                       </div>
+                                                       <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                           <input type="checkbox" class="custom-control-input" id="ccInEmail" checked>
+                                                           <label class="custom-control-label" for="ccInEmail"></label>
+                                                       </div>
+                                                     </div>
+                                                     <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                       <div class="permissionsData ml-2">
+                                                           <h5
+                                                               class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                              Approve HSE Investigation 
+                                                           </h5>
+                                                       </div>
+                                                       <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                           <input type="checkbox" class="custom-control-input" id="approveHSE">
+                                                           <label class="custom-control-label" for="approveHSE"></label>
+                                                       </div>
+                                                    </div>
+                                                   <div class="permissionsList d-flex justify-content-between align-items-end border-bottom py-3">
+                                                       <div class="permissionsData ml-2">
+                                                           <h5
+                                                               class="text-medium text-black-50 text-semibold font-small mb-1 text-capitalize">
+                                                              Re-Open Incident
+                                                           </h5>
+                                                       </div>
+                                                       <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                                           <input type="checkbox" class="custom-control-input" id="reopenIncident">
+                                                           <label class="custom-control-label" for="reopenIncident"></label>
+                                                       </div>
+                                                   </div>
+                                                    </div>
+                                                   </div>
+                                                   <div class="tab-pane fade" id="create-audit" role="tabpanel" aria-labelledby="create-audit-tab">
+                                                       create audit
+                                                   </div>
+                                                </div>   
+                                               </div>
+                                               <!-- Right side Data end-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Role Permissions Tabs End-->
+                                  </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                            
+
+        </div>
+    </main>
+
+        <!--Created User Role drawer -->
+        <div class="modal fade right" id="role_add-user" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-full-height modal-md modal-right modal-dialog-scrollable w-50" role="document">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header rounded-0 bg-transparent px-4 border-0">
+                        <h5 class="modal-title text-capitalize w-100 text-primary text-semibold text-medium line-height-1"
+                            id="myModalLabel"></h5>
+                        <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-cross ic-3x text-primary"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body p-4 add-user-modal">
+                        <div class="row">
+                            <div class="col-md-12 col-12">
+                                
+                                <div class="bg-light rounded-2x text-center p-3 mt-5">
+                                    <div class="user-img mx-auto rounded-2x">
+                                        <figure class="avatar mb-0">
+                                            <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x w-100">
+                                        </figure>
+                                    </div>
+                                    <h5 class="text-medium text-black text-bold font-16 mb-1 mt-4">Abba lacopetti</h5>
+                                    <h5 class="text-medium text-black-50  font-small">p.mcloughlin_wis</h5>
+                                    <h5 class="text-medium text-black  font-small mb-3">Gems Virtual School (GVS)</h5>
+                                </div>
+                                <h5 class="border-bottom border-dark text-semibold pb-3 mt-4">12 Locations- As School Admin</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="md-form md-outline mb-2 mt-1">
+                                            <input type="text" class="form-control bg-white border-default userSearch" placeholder="Search">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 py-3 border-bottom">
+                                        <h5 class="text-medium text-black text-bold font-16 mb-1">Liberty School For Boys(LBS)</h5>
+                                    <h5 class="text-medium text-black-50  font-small mb-0">Dubai- UAE</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 py-3 border-bottom">
+                                        <h5 class="text-medium text-black text-bold font-16 mb-1">Garden Grove Institute (GGI)</h5>
+                                    <h5 class="text-medium text-black-50  font-small mb-0">Dubai- UAE</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 py-3 border-bottom">
+                                        <h5 class="text-medium text-black text-bold font-16 mb-1">Oyster Harbour School (OHS)</h5>
+                                    <h5 class="text-medium text-black-50  font-small mb-0">Dubai- UAE</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 py-3 border-bottom">
+                                        <h5 class="text-medium text-black text-bold font-16 mb-1 ">Gems Virtual School (GVS)</h5>
+                                    <h5 class="text-medium text-black-50  font-small mb-0">Dubai- UAE</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 py-3 border-bottom">
+                                        <h5 class="text-medium text-black text-bold font-16 mb-1 ">Pioneer School For Giels(PSG)</h5>
+                                    <h5 class="text-medium text-black-50  font-small mb-0">Dubai- UAE</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 py-3 border-bottom">
+                                        <h5 class="text-medium text-black text-bold font-16 mb-1 ">Phoenix Model School (PMS)</h5>
+                                    <h5 class="text-medium text-black-50  font-small mb-0">Dubai- UAE</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 py-3">
+                                        <h5 class="text-medium text-black text-bold font-16 mb-1">Pioneer School For Giels(PSG</h5>
+                                    <h5 class="text-medium text-black-50  font-small">Dubai- UAE</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Created Audit drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+    <!-- dataTable js -->
+    <script src="js/addons/datatables.min.js" rel="stylesheet"></script>
+    <script src="js/addons/datatables-select.min.js" rel="stylesheet"></script>
+    <script src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/js/dataTables.checkboxes.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //initialize reminderList datatable
+            var schoolAdmin =  $('#schoolAdminTable').DataTable({
+                bLengthChange: false,
+                ordering: true,
+                columnDefs: [ 
+                    {
+                        orderable: true,
+                        targets: [0]
+                    },
+                    {
+                        orderable: false,
+                        targets: [1,2]
+                    }
+                ],
+                "lengthMenu": [ 5, 10, 15, 20, 25 ],
+                select: {
+                    style:    'multi',
+                    selector: 'td:first-child'
+                },
+                //order: [[ 0, 'asc' ]]
+            });
+            $(".dataTables_filter").hide();
+            $(".dataTables_info").hide();
+            $(".dataTables_paginate").hide();
+            // $('.userRoleSearch').keyup(function(){
+            //     schoolAdmin.search($(this).val()).draw();
+            // })
+        });
+    </script>
+ <script>
+    $(document).ready(function(){
+        $("#accordion .panel .panel-link").click(function(){
+            if($(this).find("i.fa").hasClass("fa-minus")){
+                $(this).find("i.fa").removeClass("fa-minus");
+                $(this).find("i.fa").addClass("fa-plus");
+            }
+            else if($(this).find("i.fa").hasClass("fa-plus")){
+                $(this).find("i.fa").removeClass("fa-plus");
+                $(this).find("i.fa").addClass("fa-minus");
+            }
+            $(this).parents(".panel").siblings().find(".panel-header .panel-link i.fa").removeClass("fa-minus");
+            $(this).parents(".panel").siblings().find(".panel-header .panel-link i.fa").addClass("fa-plus");
+        });
+        $(".module-scoll").mCustomScrollbar({
+            autoExpandScrollbar: true,
+            autoHideScrollbar: true,
+            scrollbarPosition: "inside",
+            axis: "y"
+        });
+
+        $(".permission-scoll").mCustomScrollbar({
+            autoExpandScrollbar: true,
+            autoHideScrollbar: true,
+            scrollbarPosition: "inside",
+            axis: "y"
+        });
+    });
+ </script>
+</body>
+
+</html>

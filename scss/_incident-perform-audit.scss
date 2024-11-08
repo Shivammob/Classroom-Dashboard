@@ -1,0 +1,70 @@
+.profile-audit {
+    .card {
+        .card-body {
+            .quick-nav.dropleft button {
+                width: rem(30px);
+                height: rem(30px);
+                background: #F3F6F9 !important;
+                transform: rotate(90deg); 
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .inspection-Location{
+                ul li{
+                    border-right: 2px solid $pillpanle-text-active;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        border-right:none;
+                    }
+                }
+            }
+            .question-number{
+                width: 60%;
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                }
+            }
+            .scheduled_table {
+                thead {
+                    :nth-child(5) {
+                        width: rem(120px)!important;
+                    }
+                    :nth-child(6) {
+                        width: rem(120px)!important;
+                    }
+                    :nth-child(7) {
+                        width: rem(160px)!important;
+                    }
+                }
+                tbody {
+                    td {
+                       max-width: 200px;
+                    }
+                    .btn-width{
+                        width: rem(80px);
+                    }
+                }
+            }
+        }
+        .table-custom {
+            border: 1px solid #EEEEEE;
+            th, td {
+                padding: rem(25px);
+            }
+        }
+    }
+
+}
+
+// download report table sytle 
+.InspectionReportPDF{
+    thead {
+        background-color: #898c8e;
+        color: white;
+        font-weight: 200;
+    }    
+}
+

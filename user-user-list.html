@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>User - User List</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/jquery.minicolors.css" rel="stylesheet" type="text/css">
+    <link href="css/addons/daterangepicker.css" rel="stylesheet" type="text/css">
+     <!-- dataTable css -->
+    <link href="css/addons/datatables.min.css" rel="stylesheet">
+    <link href="css/addons/datatables-select.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/main-hse.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col">
+                    <!--Navbar -->
+                    <nav class="navbar fixed-top white navbar-expand-lg scrolling-navbar main-nav pt-0 pb-0 pl-0">
+                        <a href="dashboard.html" class="position-relative d-block d-lg-none pl-3">
+                            <span class="portal-name position-absolute">HSE</span>
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <a href="dashboard.html" class="header-info d-lg-flex align-items-center d-none d-lg-block">
+                            <img src="img/hse-logo-colored.png" alt="Phoenix" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler first-button" type="button">
+                            <div class="animated-icon1"><span></span><span></span><span></span></div>
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto nav-flex-icons right-nav">
+                                <li class="nav-item dropdown language-switcher mr-4">
+                                    <button
+                                        class="btn btn-light btn-group dropdown-toggle align-items-center rounded-4x z-depth-0 m-0 mt-3 pl-2 pr-3"
+                                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flagimg mr-2"><img src="img/svg/lang-Eng.svg" alt=""></span>
+                                        English
+                                    </button>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right w-100 language-dropdown z-depth-1 animate slideIn">
+                                        <a class="dropdown-item d-block" href="#">
+                                            <span class="flagimg mr-2"><img src="img/svg/lang-Arabic.svg" alt=""></span>
+                                            Arabic
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#userActions"
+                                        class="loggedInUser d-flex align-items-center my-3">
+                                        <span class="user-avatar rounded-circle overflow-hidden mr-2">
+                                            <img src="img/avatar-1.jpg" alt="">
+                                        </span>
+                                        <h3 class="text-medium font-small m-0 mr-2">
+                                            Jasmine Welch
+                                            <span class="d-block text-black-50 text-medium">School Nurse</span>
+                                        </h3>
+                                        <i class="icon-chevron-down"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item dropdown notifications">
+									<a href="javascript:void(0)" class="nav-link has-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-bell position-relative"><span class="notification-count">5</span></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 animate slideIn">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">Arabic</a>
+									</div>
+								</li>
+								<li class="nav-item avatar dropdown">
+									<a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right z-depth-1 profile-dropdown pt-3 pb-0 animate slideIn">
+										<div class="profile-card clearfix d-flex">
+											<div class="profile-img float-left d-block">
+												<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" alt="">
+											</div>
+											<div class="profile-name float-left d-block align-middle align-self-center">
+												<h3>Emilia Clark</h3>
+												<a href="#" data-toggle="modal" data-target="#basicExampleModal" class="change-mood dropdown-toggle">
+													<img src="img/smileys/smiley-happy.svg" alt="Smiley"> Feeling <span>Happy</span>
+												</a>
+											</div>
+										</div>
+										<p class="user-status">Struggle Is What Gives Us Meaning & Makes Us Human!</p>
+										<ul class="profile-actions">
+											<li class="dropdown-divider"></li>
+											<li><a href="">View Profile</a></li>
+											<li><a href="">Account Settings</a></li>
+											<li class="dropdown-divider"></li>
+											<li><a href=""><img src="img/svg/ic-logout.svg" alt="Logout">Logout</a></li>
+										</ul>
+									</div>
+								</li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/.Navbar -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed overflow-hidden ml-3">
+            <div class="list-group list-group-flush overflow-auto mh-100">
+                <a href="dashboard.html" class="list-group-item mt-2">
+                    <span class="ic-dashboard title-icon"></span>Dashboard
+                </a>
+                <a href="incidents.html" class="list-group-item active">
+                    <span class="ic-incidents title-icon"></span>Incidents
+                </a>
+                <a href="staff.html" class="list-group-item">
+                    <span class="ic-staff title-icon"></span>Staff Student
+                </a>
+                <a href="covid19.html" class="list-group-item">
+                    <span class="ic-covid-19 title-icon"></span>Covid-19
+                </a>
+
+
+                <!-- <a href="audits.html" class="list-group-item waves-effect">
+					<span class="ic-audits title-icon"></span>Create Audit
+				</a> -->
+                <!-- <div id="auditmenu" class="collapse sub-menu">
+					<a href="#">View Audit</a>
+					<a href="#">Edit Audit</a>
+				</div> -->
+                <a href="audit-scheduled.html" class="list-group-item">
+                    <span class="ic-audit-inspection title-icon"></span>Perform Audit
+                </a>
+                <a href="tasklist.html" class="list-group-item">
+                    <span class="ic-tasks title-icon"></span>Tasks Details
+                </a>
+                <a href="library.html" class="list-group-item">
+                    <span class="ic-library title-icon"></span>Library
+                </a>
+                <a href="reports.html" class="list-group-item">
+                    <span class="ic-reports title-icon"></span>Reports
+                </a>
+                <a href="reporsnav-item dropdown language-switcher mr-4.html" class="list-group-item">
+                    <span class="ic-score title-icon"></span>Score Card YTD
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+    </header>
+    <!-- header end -->
+
+    <main class="pt-5 mx-lg-1 mt-4">
+        <div class="container-fluid library mt-3 mb-4">
+            <!-- subheader start -->
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="sub-header bg-white rounded-4x d-flex align-items-center justify-content-between rounded-5x pl-4 pr-2">
+						<div class="page-info d-flex align-items-start align-items-sm-center flex-sm-row flex-column">
+							<h3 class="page-title text-primary text-semibold m-0">Assign Role</h3>
+							<ul class="breadcrumb bg-transparent p-0 m-0 ml-sm-3">
+								<li class="font-small text-medium text-black-50"><a href="#">Home</a></li>
+								<li class="font-small text-medium text-black-50">Roles</li>
+							</ul>
+						</div>
+						<button class="btn btn-primary d-flex align-items-center rounded-4x m-0 px-3" type="button" data-toggle="modal" data-target="#created-user_role">
+							<i class="icon-plus text-semibold ic-2x mr-1"></i> Add User
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- subheader end -->
+
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+							<div class="pill-panel p-4 user-list">
+                                <div class="add-actions d-flex justify-content-between align-items-center pb-2 border-bottom border-dark">
+                                    <h6 class="text-black text-medium text-semibold text-capitalize mb-n2">User List</h6>
+                               <div class="download-selection md-form md-outline m-0 d-flex d-sm-inline-flex">
+                                <select class="selectpicker" data-dropdown-align-right="true" title="Download" data-style="rounded-5x py-1" data-width="fit">
+                                    <option>As PDF</option>
+                                    <option>As Excel</option>
+                                </select>
+                            </div>
+                                </div>
+								<!-- <ul class="nav nav-pills incident-pills mb-3 text-capitalize" id="pills-tab" role="tablist">
+									<li class="nav-item">
+									  	<a class="nav-link bg-white text-medium px-0 active" data-toggle="pill" href="#roles" role="tab" aria-controls="pills-roles" aria-selected="true">Roles</a>
+									</li>
+									<li class="nav-item">
+									  <a class="nav-link bg-white text-medium px-0" id="pills-profile-tab" data-toggle="pill" href="#users" role="tab" aria-selected="false">Users</a>
+									</li>
+								</ul> -->
+								<!-- <div class="tab-content" id=""> -->
+									<!--Data-filter Roles -->
+                                    
+                                        <div class="data-filter-form bg-light rounded-4x px-3 px-sm-4 py-3 mt-3 mb-3">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-12 px-md-1 px-lg-2">
+                                                    <div class="category">
+                                                        <small class="text-medium">Select Home Location</small>
+                                                        <div class="md-form md-outline mb-0">
+                                                            <select class="selectpicker" data-style="btn-white border-0 px-3" data-size="5" title="UAE">
+                                                                <option value="1">Gems Virtual School (GVS)</option>
+                                                                <option value="2">Gems Virtual School (GVS)</option>
+                                                                <option value="3">Gems Virtual School (GVS)</option>
+                                                                <option value="4">Gems Virtual School (GVS)</option>
+                                                                <option value="5">Gems Virtual School (GVS)</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-12 px-md-1 px-lg-2">
+                                                    <div class="category">
+                                                        <small class="text-medium">Assigned Location</small>
+                                                        <div class="md-form md-outline mb-0 ">
+                                                            <select class="selectpicker" data-style="btn-white border-0 px-3" data-size="5" title="Dubai">
+                                                                <option value="1">Accident</option>
+                                                                <option value="23">Child Safeguarding</option>
+                                                                <option value="4">Environmental Incident</option>
+                                                                <option value="29">Fire</option>
+                                                                <option value="2">Illness</option>
+                                                                <option value="3">Near Miss</option>
+                                                                <option value="7">Property Damage</option>
+                                                                <option value="6">Security</option>
+                                                                <option value="5">Vehicle</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-12">
+                                                    <small class="text-medium">Search</small>
+                                                    <div class="md-form md-outline mb-0">
+														<input type="text" class="form-control bg-white border-0" placeholder="Name/ ID">
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <!-- Role table -->
+                                        <div class="row mt-3">
+                                            <div class="col-lg-12 col-12">
+                                                <table id="userListTable" class="table table-hover table-responsive-md" cellspacing="0"
+                                                    width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Users</th>
+                                                            <th>Label</th>
+                                                            <th class="text-center">Assigned Location</th>
+                                                            <th class="text-center">Assigned Roles</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti 1</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td><td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">View/Manage</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td><td class="font-small text-medium text-black text-semibold text-center">
+                                                                5
+                                                             </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">View/Manage</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td><td class="font-small text-medium text-black text-semibold text-center">
+                                                                3
+                                                             </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">View/Manage</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td><td class="font-small text-medium text-black text-semibold text-center">
+                                                                6
+                                                             </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">View/Manage</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td><td class="font-small text-medium text-black text-semibold text-center">
+                                                                1
+                                                             </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">View/Manage</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td><td class="font-small text-medium text-black text-semibold text-center">
+                                                                3
+                                                             </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">View/Manage</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="userList d-flex">
+                                                                    <figure class="avatar mb-0">
+                                                                        <img src="./img/avatar-1.jpg" alt="" class="img-fluid rounded-2x">
+                                                                    </figure>
+                                                                    <div class="userData ml-2">
+                                                                        <h5 class="text-medium text-black text-bold font-small mb-1">Abba lacopetti</h5>
+                                                                        <h5 class="text-medium text-black-50 mb-0 font-small">GEMS Virtual School (GVS)</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="font-small text-medium text-black-50 text-semibold">
+                                                               p.mcloughin_wls
+                                                            </td>
+                                                            <td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td><td class="font-small text-medium text-black text-semibold text-center">
+                                                                7
+                                                             </td>
+                                                            <td>
+                                                                <span class="font-small text-medium text-primary bg-light rounded-4x px-2 px-md-3 py-2 ml-md-1 mt-2 mt-md-0 border-0 mr-md-2"> <a href="javascript:void(0)" class="text-primary">View/Manage</a></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div> 
+                                        <!-- Role table end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                            
+
+        </div>
+    </main>
+
+     <!--Created User Role drawer -->
+     <div class="modal fade right" id="created-user_role" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-lg modal-right modal-dialog-scrollable w-50" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0 bg-transparent px-4 border-bottom">
+                    <h5 class="modal-title text-capitalize w-100 text-primary text-semibold text-medium line-height-1"
+                        id="myModalLabel">Create User Role</h5>
+                    <button type="button" class="close p-0 m-0 d-flex" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-cross ic-3x text-primary"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <small class="text-medium">User Role English <span class="text-primary text-semibold">*</span></small>
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                            <small class="text-medium">User Role Arabic</small>
+                            <div class="md-form md-outline mb-3">
+                                <input type="text" class="form-control bg-white">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="Active">
+                                <label class="custom-control-label" for="Active">Active</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end border-0 py-2">
+                    <button class="btn btn-outline-primary m-0 mr-2" type="button" class="close p-0 m-0 d-flex"
+                        data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button class="btn btn-primary m-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Created Audit drawer end -->
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/addons/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/addons/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/addons/daterangepicker.min.js"></script>
+
+     <!-- dataTable js -->
+     <script src="js/addons/datatables.min.js" rel="stylesheet"></script>
+     <script src="js/addons/datatables-select.min.js" rel="stylesheet"></script>
+     <script src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/js/dataTables.checkboxes.min.js"></script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            //initialize reminderList datatable
+            var userRoleTbl =  $('#userListTable').DataTable({
+                bLengthChange: false,
+                ordering: true,
+                columnDefs: [ 
+                    {
+                        orderable: true,
+                        targets: [0]
+                    },
+                    {
+                        orderable: false,
+                        targets: [1,2,3,4]
+                    }
+                ],
+                "lengthMenu": [ 7, 10, 15, 20, 25 ],
+                select: {
+                    style:    'multi',
+                    selector: 'td:first-child'
+                },
+                //order: [[ 0, 'asc' ]]
+            });
+            $(".dataTables_filter").hide();
+            $(".dataTables_info").hide();
+            $(".dataTables_paginate.paging_simple_numbers").hide();
+
+            // $('.userRoleSearch').keyup(function(){
+            //     userRoleTbl.search($(this).val()).draw();
+            // })
+        });
+    </script>
+</body>
+
+</html>
